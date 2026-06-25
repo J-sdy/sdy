@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple & Buddhist Architecture — SSC 2026 Notes</title>
+<style>
+  :root{
+    --bg:#FAF8F3;
+    --paper:#FFFFFF;
+    --ink:#2B2622;
+    --ink-soft:#5A534B;
+    --rule:#E4DDCF;
+    --accent:#A1472F;       /* terracotta - temple stone */
+    --accent-soft:#F4E3DB;
+    --gold:#B6862C;
+    --gold-soft:#FBF0D9;
+    --green:#3F6B4D;
+    --green-soft:#E7F0EA;
+    --blue:#2F5C73;
+    --blue-soft:#E4EEF2;
+    --warn:#9C5B12;
+    --warn-soft:#FDECD2;
+    --num:#8B1E3F;
+    --num-soft:#FBE2E8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Iowan Old Style","Georgia",serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:"Trebuchet MS","Segoe UI",sans-serif;
+    color:var(--accent);
+    letter-spacing:.2px;
+  }
+  /* ===== HEADER ===== */
+  .masthead{
+    background:linear-gradient(135deg,#3A2A20,#5C4030);
+    color:#F6EFE3;
+    padding:22px 18px 18px;
+    text-align:center;
+    border-bottom:4px solid var(--gold);
+  }
+  .masthead h1{
+    color:#F6EFE3;
+    font-size:1.5rem;
+    margin:0 0 4px;
+  }
+  .masthead p{
+    margin:0;
+    font-size:.82rem;
+    color:#D8C9B0;
+    font-family:"Segoe UI",sans-serif;
+  }
+  /* ===== TAB BAR (horizontal scroll, non-sticky) ===== */
+  .tabbar-wrap{
+    background:var(--paper);
+    border-bottom:1px solid var(--rule);
+    padding:10px 0;
+  }
+  .tabbar{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:0 14px 6px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  .tabbar::-webkit-scrollbar{height:6px;}
+  .tabbar::-webkit-scrollbar-thumb{background:var(--rule);border-radius:4px;}
+  .tab-btn{
+    flex:0 0 auto;
+    background:var(--accent-soft);
+    color:var(--accent);
+    border:1px solid #E8C9BC;
+    padding:8px 14px;
+    border-radius:20px;
+    font-family:"Segoe UI",sans-serif;
+    font-size:.78rem;
+    font-weight:600;
+    white-space:nowrap;
+    cursor:pointer;
+    transition:.15s;
+  }
+  .tab-btn.active{
+    background:var(--accent);
+    color:#fff;
+    border-color:var(--accent);
+  }
+  .hint{
+    text-align:center;
+    font-size:.68rem;
+    color:var(--ink-soft);
+    font-family:"Segoe UI",sans-serif;
+    padding-top:2px;
+  }
+  /* ===== LEGEND ===== */
+  .legend{
+    display:flex;flex-wrap:wrap;gap:8px;
+    font-family:"Segoe UI",sans-serif;
+    font-size:.68rem;
+    margin:0 0 14px;
+    padding:8px 10px;
+    background:#fff;
+    border:1px solid var(--rule);
+    border-radius:8px;
+  }
+  .legend span{padding:2px 7px;border-radius:5px;}
+
+  /* ===== CONTENT ===== */
+  .wrap{max-width:760px;margin:0 auto;padding:16px 14px 60px;}
+  .panel{display:none;animation:fade .25s ease;}
+  .panel.active{display:block;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+
+  .card{
+    background:var(--paper);
+    border:1px solid var(--rule);
+    border-radius:12px;
+    padding:14px 16px;
+    margin-bottom:14px;
+    box-shadow:0 1px 3px rgba(0,0,0,.04);
+  }
+  .card h2{
+    font-size:1.05rem;
+    margin:0 0 10px;
+    padding-bottom:6px;
+    border-bottom:2px solid var(--gold);
+  }
+  .card h3{
+    font-size:.92rem;
+    color:var(--blue);
+    margin:14px 0 6px;
+  }
+  .card h4{
+    font-size:.85rem;
+    color:var(--green);
+    margin:10px 0 4px;
+  }
+  ul{margin:4px 0 8px;padding-left:20px;}
+  li{margin-bottom:5px;font-size:.86rem;}
+  li b, p b{color:var(--ink);}
+
+  /* highlight classes */
+  .kw{color:var(--accent);font-weight:700;}                 /* term - terracotta */
+  .kw2{color:var(--green);font-weight:700;}                  /* term - green */
+  .kw3{color:var(--blue);font-weight:700;}                   /* term - blue */
+  .num{
+    color:var(--num);
+    font-weight:700;
+    background:var(--num-soft);
+    padding:0 4px;
+    border-radius:4px;
+  }
+  mark{
+    background:var(--gold-soft);
+    color:var(--ink);
+    padding:0 3px;
+    border-radius:3px;
+    font-weight:700;
+  }
+
+  .pyq{
+    background:var(--blue-soft);
+    border-left:4px solid var(--blue);
+    border-radius:6px;
+    padding:10px 12px;
+    margin:8px 0;
+    font-size:.84rem;
+  }
+  .pyq .tag{
+    display:inline-block;
+    font-size:.65rem;
+    background:var(--blue);
+    color:#fff;
+    padding:2px 7px;
+    border-radius:10px;
+    margin-bottom:4px;
+    font-family:"Segoe UI",sans-serif;
+  }
+  .pyq .ans{color:var(--green);font-weight:700;}
+
+  .tip{
+    background:var(--green-soft);
+    border-left:4px solid var(--green);
+    border-radius:6px;
+    padding:8px 12px;
+    margin:8px 0;
+    font-size:.83rem;
+  }
+  .warn{
+    background:var(--warn-soft);
+    border-left:4px solid var(--warn);
+    border-radius:6px;
+    padding:8px 12px;
+    margin:8px 0;
+    font-size:.83rem;
+  }
+  .mnemonic{
+    background:var(--gold-soft);
+    border:1px dashed var(--gold);
+    border-radius:6px;
+    padding:8px 12px;
+    margin:8px 0;
+    font-size:.83rem;
+  }
+  .eg{
+    background:#F2F2F2;
+    border-radius:6px;
+    padding:8px 12px;
+    margin:8px 0;
+    font-size:.83rem;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.78rem;
+    margin:8px 0;
+  }
+  table caption{
+    text-align:left;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:4px;
+  }
+  th,td{
+    border:1px solid var(--rule);
+    padding:6px 7px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{
+    background:var(--accent);
+    color:#fff;
+    font-family:"Segoe UI",sans-serif;
+    font-weight:600;
+  }
+  tr:nth-child(even) td{background:#FAF6EE;}
+  .tbl-scroll{overflow-x:auto;}
+
+  .flow{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:6px;
+    margin:10px 0;
+    font-size:.78rem;
+    font-family:"Segoe UI",sans-serif;
+  }
+  .flow .step{
+    background:var(--accent);
+    color:#fff;
+    padding:6px 10px;
+    border-radius:8px;
+    font-weight:600;
+  }
+  .flow .arrow{color:var(--gold);font-weight:700;}
+
+  .grid2{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  @media(min-width:600px){.grid2{grid-template-columns:1fr 1fr;}}
+  .minicard{
+    background:#FBF9F4;
+    border:1px solid var(--rule);
+    border-radius:8px;
+    padding:8px 10px;
+    font-size:.82rem;
+  }
+  .minicard .ttl{font-weight:700;color:var(--accent);font-size:.85rem;}
+
+  .summary-box{
+    background:linear-gradient(135deg,#3A2A20,#5C4030);
+    color:#F6EFE3;
+    border-radius:12px;
+    padding:14px 16px;
+  }
+  .summary-box h2{color:#F6EFE3;border-bottom:2px solid var(--gold);}
+  .summary-box li{font-size:.83rem;}
+  .summary-box .kw{color:#F2C9A0;}
+  .summary-box .kw2{color:#A9D8B6;}
+  .summary-box .num{background:#5C3A1E;color:#FFD9A0;}
+
+  hr{border:none;border-top:1px dashed var(--rule);margin:10px 0;}
+
+  /* scroll-to-top */
+  #toTop{
+    position:fixed;
+    bottom:18px;right:18px;
+    width:42px;height:42px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    font-size:1.1rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.25);
+    display:none;
+    cursor:pointer;
+    z-index:50;
+  }
+  #toTop.show{display:block;}
+  .src{font-size:.68rem;color:var(--ink-soft);font-family:"Segoe UI",sans-serif;}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <h1>🛕 Temple Architecture & ☸️ Buddhist Architecture</h1>
+  <p>SSC CGL / CHSL 2026 — Visual Revision Notes (Exam-Highlighted)</p>
+</div>
+
+<div class="tabbar-wrap">
+  <div class="tabbar" id="tabbar">
+    <button class="tab-btn active" data-tab="t0">📝 PYQs</button>
+    <button class="tab-btn" data-tab="t1">🏛️ Basics</button>
+    <button class="tab-btn" data-tab="t2">⛰️ Nagara</button>
+    <button class="tab-btn" data-tab="t3">🌊 Odisha/Konark</button>
+    <button class="tab-btn" data-tab="t4">🗿 Dravida</button>
+    <button class="tab-btn" data-tab="t5">🔱 Chola</button>
+    <button class="tab-btn" data-tab="t6">🔀 Vesara/Hoysala</button>
+    <button class="tab-btn" data-tab="t7">📍 Other Temples</button>
+    <button class="tab-btn" data-tab="t8">📊 Temple Table</button>
+    <button class="tab-btn" data-tab="t9">🎨 Buddhist Schools</button>
+    <button class="tab-btn" data-tab="t10">🛕 Stupas</button>
+    <button class="tab-btn" data-tab="t11">⛏️ Caves</button>
+    <button class="tab-btn" data-tab="t12">✅ Summary</button>
+  </div>
+  <div class="hint">⬅️ Swipe tabs to navigate ➡️</div>
+</div>
+
+<div class="wrap">
+
+<div class="legend">
+  <span style="background:var(--num-soft);color:var(--num);font-weight:700;">Numbers/Dates</span>
+  <span style="background:var(--accent-soft);color:var(--accent);font-weight:700;">Key Term</span>
+  <span style="background:var(--green-soft);color:var(--green);font-weight:700;">Key Term 2</span>
+  <span style="background:var(--blue-soft);color:var(--blue);font-weight:700;">Key Term 3</span>
+  <span style="background:var(--gold-soft);">Exam-asked phrase</span>
+</div>
+
+<!-- TAB 0: PYQs -->
+<div class="panel active" id="t0">
+  <div class="card">
+    <h2>📝 Previous Year Questions</h2>
+
+    <div class="pyq">
+      <span class="tag">SSC CGL Tier 1 · 24 Sept Shift 3</span><br>
+      <b>Meenakshi Temple, Madurai</b> — known for which feature?<br>
+      a) White marble walls b) Hidden underground shrines c) Shikhara in gold d) <mark>Gigantic Gopurams</mark><br>
+      ✅ Ans: <span class="ans">(d) Gigantic Gopurams (gateway towers)</span>
+    </div>
+
+    <div class="pyq">
+      <span class="tag">SSC CGL Tier 1 · 23 Sept Shift 2</span><br>
+      <b>Jagannath Temple, Puri</b> belongs to which style?<br>
+      a) Dravidian b) Maratha c) Nagara (Kalinga) d) Vesara<br>
+      ✅ Ans: <span class="ans">(c) <mark>Nagara (Kalinga)</mark></span>
+    </div>
+
+    <div class="pyq">
+      <span class="tag">SSC CGL Tier 1 · 18 Sept Shift 2</span><br>
+      Match: 1. Vesara–Deccan 2. Rekha-Deul–Odisha 3. Bhumija–Malwa 4. Kalinga–Tamil Nadu<br>
+      a) 1&2 only b) 1,2&3 c) 2&4 only d) only 1<br>
+      ✅ Ans: <span class="ans">(b) 1, 2 & 3 correct</span> — ⚠️ (4 is <b>WRONG</b>: Kalinga = <mark>Odisha</mark>, NOT Tamil Nadu)
+    </div>
+
+    <div class="pyq">
+      <span class="tag">SSC CHSL Tier 1 · 17 Nov Shift 2</span><br>
+      <mark>"Taj Mahal of the South"</mark>?<br>
+      a) Jagannath Puri b) Meenakshi Temple, Madurai c) Tirupati d) Chamundeshwari<br>
+      ✅ Ans: <span class="ans">(b) Meenakshi Temple, Madurai</span>
+    </div>
+
+    <div class="pyq">
+      <span class="tag">SSC CHSL Tier 1 · 17 Nov Shift 1</span><br>
+      Place where main idol is kept = ____<br>
+      a) <mark>Garbhagriha</mark> b) Mandapa c) Shikhara d) Vaahan<br>
+      ✅ Ans: <span class="ans">(a) Garbhagriha</span>
+    </div>
+
+    <div class="tip">💡 <b>Tip:</b> <span class="kw3">Gopuram</span> = South India entrance gate (Dravida); <span class="kw">Shikhara</span> = North India tower (Nagara). Don't mix them up in MCQs!</div>
+    <div class="warn">⚠️ <b>Exam trap:</b> "Taj Mahal of the South" and "Gigantic Gopurams" BOTH point to <mark>Meenakshi Temple, Madurai</mark> — repeatedly asked!</div>
+  </div>
+</div>
+
+<!-- TAB 1: BASICS -->
+<div class="panel" id="t1">
+  <div class="card">
+    <h2>🏛️ Evolution & Basic Features</h2>
+    <div class="flow">
+      <span class="step">600–750 AD</span><span class="arrow">➡️</span>
+      <span class="step">Nagara (North) + Dravida (South) defined</span><span class="arrow">➡️</span>
+      <span class="step">After 750 AD</span><span class="arrow">➡️</span>
+      <span class="step">Vesara (Deccan, hybrid)</span>
+    </div>
+    <ul>
+      <li>⚠️ <span class="num">600–750 A.D.</span> → Nagara (North India) & Dravida (South India) became clearly defined</li>
+      <li>⚠️ <span class="num">After 750 A.D.</span> → <span class="kw2">Vesara</span> developed in <b>Deccan region</b> = hybrid of both</li>
+    </ul>
+    <div class="mnemonic">🧠 <b>Mnemonic:</b> "N-D-V" = <b>N</b>orth-<b>D</b>ravida-<b>V</b>esara in time order: Nagara & Dravida first (<span class="num">600-750</span>), Vesara later (hybrid, <span class="num">after 750</span>).</div>
+
+    <h3>🔑 Core Structural Elements (HIGH-YIELD for MCQs)</h3>
+    <ul>
+      <li>🔹 <span class="kw">Garbhagriha</span> – innermost sanctum housing deity (small → later expanded) — <mark>asked in CHSL 17 Nov</mark></li>
+      <li>🔹 <span class="kw">Mandapa</span> – pillared hall/porch for devotees</li>
+      <li>🔹 <span class="kw">Shikhara/Vimana</span> – tower above sanctum; <i>curvilinear</i> (N. India) / <i>pyramidal</i> (S. India)</li>
+      <li>🔹 <span class="kw">Vahana</span> – deity's vehicle, placed axially in front + dhvaja (flagstaff)</li>
+      <li>🔹 <span class="kw">Pradakshina Patha</span> – circumambulatory path around sanctum</li>
+      <li>🔹 <span class="kw">Dvarapalas</span> – door guardians (Nagas, Yakshas, Nandi, Chanda-Prachanda, Ganga, Yamuna, sages)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⚖️ Nagara vs Dravida vs Vesara</h2>
+    <div class="tbl-scroll">
+    <table>
+      <tr><th>Feature</th><th>Nagara (North)</th><th>Dravida (South)</th><th>Vesara (Deccan)</th></tr>
+      <tr><td>Region</td><td>Himalayas–Vindhyas</td><td>Krishna–Kaveri rivers</td><td>Vindhyas–Krishna river</td></tr>
+      <tr><td>Spire</td><td><b>Curvilinear</b>, slopes inward to point</td><td><b>Pyramidal</b> Vimana, distinct storeys</td><td>Hybrid curvilinear+pyramidal</td></tr>
+      <tr><td>Boundary Walls</td><td>Absent/low</td><td>High, elaborate</td><td>Present, less ornate</td></tr>
+      <tr><td>Main Entrance</td><td>Simple, no grand gate</td><td>Large ornate <b>Gopuram</b></td><td>Smaller, Dravida-influenced</td></tr>
+      <tr><td>Sanctum</td><td>One chamber, square</td><td>Large, single tower over it</td><td>Star-shaped/polygonal</td></tr>
+      <tr><td>Water Tank</td><td>Not standard</td><td><b>Kalyani</b> (mandatory)</td><td>Sometimes present</td></tr>
+      <tr><td>Examples</td><td>Kandariya Mahadeva, Sun Temple Konark</td><td>Brihadeshwara, Meenakshi</td><td>Hoysaleswara, Kailashnath Ellora</td></tr>
+    </table>
+    </div>
+    <div class="warn">⚠️ Exam confusion alert: <span class="kw">Shikhara</span> = curvilinear North tower; <span class="kw3">Vimana</span> = pyramidal South tower — both translate "tower" but <b>different shapes!</b></div>
+  </div>
+</div>
+
+<!-- TAB 2: NAGARA -->
+<div class="panel" id="t2">
+  <div class="card">
+    <h2>⛰️ Nagara Style Temples</h2>
+    <ul>
+      <li>🔹 Distinctive <span class="kw">curvilinear Shikhara</span> — symbolizes cosmic mountain <mark>Mount Meru</mark></li>
+      <li>🔹 Top crowned with <span class="kw">Amalaka</span> (ribbed disk) + <span class="kw">Kalasha</span> (finial) — ⭐ frequently asked pair</li>
+      <li>🔹 ⚠️ Usually <b>NO</b> boundary walls / gopurams — focus on central tower</li>
+      <li>🔹 Garbhagriha + mandapa(s) aligned on single axis</li>
+      <li>🔹 Richly carved exteriors, simpler interiors</li>
+    </ul>
+
+    <h3>📜 Gupta Period Temples (<span class="num">4th–6th c. CE</span>) — Formative Stage</h3>
+    <ul>
+      <li>Built in brick & stone (brick grew more prominent later)</li>
+      <li>Stone temples → relief sculptures; brick temples → carved bricks/terracotta panels</li>
+      <li>Eastern India: stucco later replaced by terracotta</li>
+    </ul>
+    <div class="grid2">
+      <div class="minicard"><span class="ttl">Phase 1</span> — Modest square garbhagriha + flat-roofed portico<br>🔹 Eg: <i>Parvati Temple, Nachna Kuthara</i></div>
+      <div class="minicard"><span class="ttl">Phase 2</span> — Jagati (platform) + roofed pradakshina added<br>🔹 Eg: same Parvati Temple evolved</div>
+      <div class="minicard"><span class="ttl">Phase 3</span> — Towering shikhara introduced; Panchayatana style<br>🔹 Eg: <mark>Deogarh Temple</mark></div>
+      <div class="minicard"><span class="ttl">Bhitargaon Temple (UP)</span> — earliest <b>true arch</b> in India; brick temple; <span class="kw3">triratha plan</span> — ⭐ unique fact</div>
+    </div>
+    <div class="tip">💡 <span class="kw2">Panchayatana</span> = <span class="num">1</span> main shrine + <span class="num">4</span> subsidiary shrines on same platform (total <span class="num">5</span> shrines → "Panch")</div>
+
+    <h3>⏳ Timeline of Nagara Development</h3>
+    <div class="flow">
+      <span class="step">1. Gupta <span class="num" style="background:rgba(255,255,255,.25);color:#fff;">4-6th c.</span> Formation</span><span class="arrow">➡️</span>
+      <span class="step">2. Post-Gupta <span class="num" style="background:rgba(255,255,255,.25);color:#fff;">6-8th c.</span> Development</span><span class="arrow">➡️</span>
+      <span class="step">3. <span class="num" style="background:rgba(255,255,255,.25);color:#fff;">8-10th c.</span> Regional Expansion</span><span class="arrow">➡️</span>
+      <span class="step">4. <span class="num" style="background:rgba(255,255,255,.25);color:#fff;">10-12th c.</span> Maturity/Peak</span><span class="arrow">➡️</span>
+      <span class="step">5. <span class="num" style="background:rgba(255,255,255,.25);color:#fff;">13th c.+</span> Decline</span>
+    </div>
+
+    <h3>🏯 Khajuraho Temples (<span class="num">900–1130 CE</span>) — Mature Nagara</h3>
+    <ul>
+      <li>Free-standing (no boundary walls)</li>
+      <li>Balconied windows with sloping <span class="kw">chhajjas</span></li>
+      <li>Major: <mark>Kandariya Mahadeva</mark>, <mark>Lakshmana</mark>, <mark>Visvanatha</mark> Temples — ⭐ memorize all 3 names</li>
+      <li>Follows <span class="kw2">Panchayatana layout</span>; each mandapa has own shikhara (clustered look)</li>
+      <li>Plan = <span class="kw3">Latin cross layout</span></li>
+      <li>🔹 Famous for extensive, intricate <mark>erotic sculptures</mark> — ⭐ classic exam giveaway clue for Khajuraho</li>
+    </ul>
+    <p class="src">Source: GS Astra Siddhi Prep — Temple Architecture, pgs 3–6</p>
+  </div>
+</div>
+
+<!-- TAB 3: ODISHA / KONARK -->
+<div class="panel" id="t3">
+  <div class="card">
+    <h2>🌊 Odisha Temples (<span class="num">7th c. AD</span>)</h2>
+    <ul>
+      <li>Distinct regional style; tower called <span class="kw">Deul</span> — rises vertically then curves sharply inward at top</li>
+      <li>Mandapa (assembly hall) called <mark>Jagamohana</mark> — ⭐ very commonly tested term</li>
+      <li>Features: square compartments/niches, lavish carvings, boundary walls present</li>
+    </ul>
+    <div class="tbl-scroll">
+    <table>
+      <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+      <tr><td><b>Rekha Deul</b></td><td>Tall curvilinear shikhara</td><td><mark>Lingaraja Temple</mark>, Bhubaneswar</td></tr>
+      <tr><td><b>Pidha Deul</b></td><td>Pyramidal/stepped roof (mandapas)</td><td><mark>Jagannath Temple, Puri</mark> ("White Pagoda")</td></tr>
+      <tr><td><b>Khakra Deul</b></td><td>Elongated wagon-vault roof</td><td>Vaital Deul Temple, Bhubaneswar</td></tr>
+    </table>
+    </div>
+    <div class="mnemonic">🧠 <b>Mnemonic:</b> "Rekha is Round-tall, Pidha is Pyramid, Khakra is wagon(Cart)" — R-tall, P-pyramid, K-cart shape</div>
+    <div class="warn">⚠️ Remember (from PYQ): <b>Kalinga style = Odisha</b>, NOT Tamil Nadu!</div>
+  </div>
+
+  <div class="card">
+    <h2>☀️ Konark Sun Temple</h2>
+    <ul>
+      <li>Built <span class="num">13th c. CE (~1250 CE)</span> by <span class="kw">Narasimhadeva I</span> (Eastern Ganga Dynasty)</li>
+      <li>Dedicated to <b>Surya</b> (Sun God); shaped as giant <span class="kw">stone chariot</span></li>
+      <li>🔹 <span class="num">24 wheels</span> (<span class="num">12</span> pairs) + <span class="num">7 horses</span>; wheels work as <mark>sundials</mark> — ⭐ most-asked Konark fact</li>
+      <li>Main sanctum (deul) collapsed; Jagamohana still stands</li>
+      <li>Built using <span class="kw3">Khondalite stone</span></li>
+      <li>Known as <mark>"Black Pagoda"</mark> by European sailors</li>
+      <li>Oriented <b>East</b> (first sun rays); UNESCO World Heritage Site (<span class="num">1984</span>)</li>
+    </ul>
+    <div class="mnemonic">🧠 <span class="num">24</span> wheels = 24 hours/fortnights; <span class="num">7</span> horses = 7 days of week ☀️</div>
+  </div>
+
+  <div class="card">
+    <h2>🏯 Ayodhya Ram Mandir (Quick Facts)</h2>
+    <ul>
+      <li>Traditional <span class="kw">Nagara style</span>, <span class="num">3</span>-storey, pink sandstone (Mirzapur & Bansi-Paharpur, Rajasthan)</li>
+      <li>Dimensions: <span class="num">250 ft</span> wide × <span class="num">161 ft</span> tall; covers <span class="num">2.67 acres</span>; <span class="num">71 acres</span> total complex</li>
+      <li><span class="num">390</span> pillars, <span class="num">46</span> doorways, <span class="num">5</span> mandaps</li>
+      <li>Garbh Griha houses Ram Lalla idol; also Rang Mandap & Nritya Mandap</li>
+      <li>💡 Sun rays focus on idol every <b>Ram Navami</b> noon via mirror-lens system — <b>no electricity needed</b></li>
+      <li>Idol (<span class="num">51 inches</span>) sculpted by Mysuru sculptor <span class="kw">Arun Yogiraj</span></li>
+      <li>⚠️ <b>No iron</b> used in construction — built to last <span class="num">1000+ years</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- TAB 4: DRAVIDA -->
+<div class="panel" id="t4">
+  <div class="card">
+    <h2>🗿 Dravida Style Temples</h2>
+    <p style="font-size:.85rem;">Flourished in South India, <span class="num">8th – 13th/14th c. AD</span></p>
+    <ul>
+      <li>🔹 <span class="kw">Vimana</span>: stepped, <span class="num">6 or 8</span> sides; topped by round <span class="kw">Stupi</span> (finial)</li>
+      <li>🔹 <span class="kw">Shikhara</span>: pyramidal, progressively smaller storeys</li>
+      <li>🔹 <span class="kw">Gopurams</span>: massive ornamental gateways (added later); with pillared halls/corridors</li>
+      <li>🔹 <span class="kw">Garbhagriha</span>: square sanctum within large covered enclosure</li>
+      <li>🔹 Entire temple enclosed within compound wall</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🏯 Pallava Temples (<span class="num">4th–9th c. CE</span>)</h2>
+    <p style="font-size:.85rem;">Pioneers of Dravidian architecture — shift from <b>rock-cut caves → structural stone temples</b>. Established vimana, mandapa, sculpted gateways.</p>
+    <h3>4 Phases (Pallava Architectural Styles) — ⭐ high-yield sequence</h3>
+    <div class="grid2">
+      <div class="minicard"><span class="ttl">1. Mahendra Style (<span class="num">610–630 AD</span>)</span><br>Rock-cut mandapas in mountain faces; massive square pillars, octagonal mid-shaft<br>🔹 Eg: Mandagapattu, Mahendravadi, Trichy caves</div>
+      <div class="minicard"><span class="ttl">2. Mamalla Style (<span class="num">630–668 AD</span>)</span><br>Free-standing Monolithic Rathas + open-air bas-reliefs<br>🔹 Eg: <mark>Pancha Rathas Mahabalipuram</mark>, Arjuna's Penance</div>
+      <div class="minicard"><span class="ttl">3. Rajasimha Style (<span class="num">690–800 AD</span>)</span><br>Shift to structural temples (stone+mortar); towering vimanas<br>🔹 Eg: Kailasanathar Temple Kanchipuram, Shore Temple Mahabalipuram</div>
+      <div class="minicard"><span class="ttl">4. Nandivarman Style (<span class="num">800–900 AD</span>)</span><br>Decline phase, smaller refined temples; bridge to Chola era<br>🔹 Eg: Vaikunta Perumal Temple, Muktesvara Temple Kanchipuram</div>
+    </div>
+    <div class="mnemonic">🧠 <b>Mnemonic:</b> "My Mom Really Naps" → <b>M</b>ahendra → <b>M</b>amalla → <b>R</b>ajasimha → <b>N</b>andivarman</div>
+    <div class="tip">💡 <b>Pancha Rathas</b> = <span class="num">5</span> monolithic rathas named: Dharmaraja, Bhima, Arjuna, Sahadeva, Draupadi</div>
+  </div>
+</div>
+
+<!-- TAB 5: CHOLA -->
+<div class="panel" id="t5">
+  <div class="card">
+    <h2>🔱 Chola Temples (c. <span class="num">850–1200 CE</span>)</h2>
+    <p style="font-size:.85rem;">Perfected large-scale structural stone temples; massive granite construction, towering vimanas, refined sculpture.</p>
+
+    <div class="flow">
+      <span class="step">Phase 1: Early (small)</span><span class="arrow">➡️</span>
+      <span class="step">Phase 2: Zenith (Rajaraja I & Rajendra I)</span><span class="arrow">➡️</span>
+      <span class="step">Phase 3: Later (ratha-shaped mandapas)</span>
+    </div>
+
+    <h3>Phase 1 — Early</h3>
+    <ul><li>Square vimana + Ardha-mandapa in front; <span class="num">8</span> sub-shrines = <span class="kw">Astaparivaralya</span></li>
+    <li>🔹 Eg: Vijayalaya Choleeswaram</li></ul>
+
+    <h3>Phase 2 — Zenith (Rajaraja I & Rajendra I)</h3>
+    <ul><li>Exquisite sculptural ornamentation</li>
+    <li>🔹 <mark>Brihadisvara Temple, Thanjavur</mark> — built of large granite stones; <b>tallest vimana</b> <span class="num">66m</span>, <span class="num">16 storeys</span> — ⭐ most-asked Chola fact</li></ul>
+
+    <h3>Phase 3 — Later</h3>
+    <ul><li>Additional pillared mandapas, some shaped like <b>ratha</b> (wheeled chariot) drawn by elephants/horses</li>
+    <li>🔹 Eg: Airavatesvara Temple, Darasuram</li></ul>
+  </div>
+
+  <div class="card">
+    <h2>🏯 Brihadeeswara Temple — Key Facts</h2>
+    <ul>
+      <li>Built <span class="num">1010 CE</span> by <span class="kw">Rajaraja Chola I</span>; dedicated to <b>Shiva</b></li>
+      <li>Also called <i>Rajarajesiwaram / Peruvudaiyar Temple</i>; known as <mark>"Dakshina Meru"</mark></li>
+      <li>🔹 First fully <b>granite</b> temple in the world; ~<span class="num">130,000 tons</span> granite; completed in just <span class="num">5 years</span></li>
+      <li>Main tower (Vimana/Srivimana): ~<span class="num">66m</span>, <span class="num">14 storeys</span>; dome from single ~<span class="num">25ft</span> granite block</li>
+      <li>Sanctum: <span class="num">28m</span> square, houses <span class="num">8.7m</span> Shiva Linga</li>
+      <li>Gopurams: Keralantakan Gate (main, <span class="num">30m</span> high), Rajarajan Gate, Tiruvamukam Gate</li>
+      <li>Massive monolithic <span class="kw">Nandi</span> (<span class="num">2nd</span> largest in India); fresco paintings with secular themes</li>
+      <li>UNESCO World Heritage (Great Living Chola Temples, <span class="num">1987</span>)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🏯 Airavatesvara Temple, Darasuram</h2>
+    <ul>
+      <li>Built by <span class="kw">Rajaraja Chola II</span>, <span class="num">12th c. CE (c.1146–1173 CE)</span></li>
+      <li>Dedicated to Shiva (Airavatesvara); named after Airavata (Indra's white elephant)</li>
+      <li>🔹 Famous chariot-shaped (ratha) mandapa with carved stone wheels</li>
+      <li>🔹 <mark>Musical steps</mark> — produce different musical notes when tapped — ⭐ unique distinguishing fact</li>
+      <li>Part of UNESCO Great Living Chola Temples</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TAB 6: VESARA / HOYSALA -->
+<div class="panel" id="t6">
+  <div class="card">
+    <h2>🔀 Vesara Style Temples</h2>
+    <ul>
+      <li>Developed under <span class="kw">Chalukyas of Kalyani</span></li>
+      <li>Fusion of Nagara (North) + Dravida (South)</li>
+      <li>Vimana: early phase flat/sloping roofs → later tower-like</li>
+      <li>Pillared mandapa added in front of four-walled garbhagriha</li>
+      <li>Towers: modified Dravidian towers, reduced height per level, diminishing storeys</li>
+      <li>🔹 Distinct: more <b>vertical profile</b> (unlike inclined Nagara storeys)</li>
+      <li>Examples: <mark>Durga Temple Aihole</mark>, <mark>Meguti Temple Aihole</mark>, <mark>Virupaksha Temple Pattadakal</mark></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⭐ Hoysala Temples (<span class="num">12th–13th c.</span>)</h2>
+    <p style="font-size:.85rem;">Mysore plateau; highly distinctive style — also classed as Vesara/Hybrid (Dravida+Nagara)</p>
+    <ul>
+      <li>🔹 <span class="kw">Stellate (star-shaped) plans</span> — complex platforms, multiple projections</li>
+      <li>Material: <span class="kw">soft soapstone (chloritic schist)</span> — allows extremely fine carvings</li>
+      <li>Layout: Garbhagriha → Antrala (vestibule) → Navaranga/Gudha-mandapa</li>
+      <li>🔹 Eg: <mark>Hoysaleshvara Temple</mark> (c.<span class="num">1150 CE</span>), dark schist stone</li>
+    </ul>
+    <h3>3 UNESCO Sites (inscribed <span class="num">2023</span>, <span class="num">42nd</span> India site)</h3>
+    <div class="grid2">
+      <div class="minicard"><span class="ttl">Chennakeshava (Belur)</span><br>Built by Vishnuvardhana, commemorates victory over Cholas, <span class="num">1116 CE</span></div>
+      <div class="minicard"><span class="ttl">Hoysaleswara (Halebidu)</span><br>Largest of 3; double temple to Shiva; detailed outer wall sculptures</div>
+      <div class="minicard"><span class="ttl">Keshava (Somanathapura)</span><br>Trikuta (<span class="num">3</span>-shrine) temple; high-density detailed carvings</div>
+    </div>
+    <div class="tip">💡 Themes depicted: Hindu epics, mythology, animals, dance & music; lathe-turned pillars are unique.</div>
+  </div>
+</div>
+
+<!-- TAB 7: OTHER TEMPLES -->
+<div class="panel" id="t7">
+  <div class="card">
+    <h2>📍 Kailashnath Temple, Ellora</h2>
+    <ul>
+      <li>Dynasty: <span class="kw">Rashtrakuta</span> (King Krishna I, <span class="num">756–773 AD</span>)</li>
+      <li>Location: Aurangabad, Maharashtra (part of <span class="num">34</span> Ellora Caves)</li>
+      <li>Technique: <span class="kw">Monolithic</span>, carved top-down from single rock</li>
+      <li>🔹 <mark>Largest monolithic structure in the world</mark>; dedicated to Shiva — ⭐ most-asked fact</li>
+      <li>Style: Dravidian; massive pillars, life-sized elephants in courtyard</li>
+      <li>Depicts scenes from <b>Ramayana & Mahabharata</b></li>
+      <li>⚠️ Don't confuse with Kailasanathar Temple, Kanchipuram (built by Pallava king Narasimhavarman II/Rajasimha)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📍 Kamakhya Temple, Assam</h2>
+    <ul>
+      <li>Location: Nilachal Hill, Guwahati; dates to <span class="num">8th–9th c.</span> (Mleccha/Pala dynasty); original destroyed <span class="num">1565</span>, rebuilt by Koch Dynasty</li>
+      <li>Style: <span class="kw">Nilachala Style</span> = Nagara (curvilinear shikhara) + Saracenic/Mughal (domed roofs, arches)</li>
+      <li>Primary site of <b>Tantric practices & Shakti tradition</b></li>
+      <li>🔹 No idol — deity worshipped as <mark>yoni-like cleft</mark> in bedrock with natural spring — ⭐ unique fact</li>
+      <li>Mythology: linked to falling of womb/genitals of Sati</li>
+      <li><span class="kw">Ambubachi Mela</span> — annual <span class="num">4</span>-day festival marking goddess's menstruation</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📍 Modhera Sun Temple</h2>
+    <ul>
+      <li>Finest example of <b>Nagara style in Gujarat</b>; built <span class="num">1026 CE</span> by Bhimdev I (Solanki Dynasty)</li>
+      <li>Dedicated to Surya; large rectangular stepped tank = <span class="kw">Surya Kund</span></li>
+      <li>Ornate <span class="kw">Torana</span> (arched gateway) leads to <span class="kw">Sabha Mandapa</span> (open on all sides)</li>
+      <li>Intricate carvings reflect Gujarati woodcarving tradition</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📍 Angkor Wat (Cambodia)</h2>
+    <ul>
+      <li>🔹 <mark>Largest religious monument in the world</mark>; covers <span class="num">200 acres</span> — ⭐ most-asked fact</li>
+      <li>Built by Khmer King <span class="kw">Suryavarman II</span>, ~<span class="num">1110–1150</span> (~<span class="num">900 years</span> old)</li>
+      <li>Originally dedicated to Vishnu → became Buddhist temple by end of 12th c.</li>
+      <li>UNESCO World Heritage Site (<span class="num">1992</span>)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TAB 8: TEMPLE TABLE -->
+<div class="panel" id="t8">
+  <div class="card">
+    <h2>📊 Major Indian Temples — Quick Reference</h2>
+    <div class="tbl-scroll">
+    <table>
+      <tr><th>#</th><th>Temple (Place)</th><th>Dynasty (Period)</th><th>Dedicated to</th></tr>
+      <tr><td>1</td><td>Meenakshi (Madurai)</td><td>Pandya (6-14th c.), Nayaka (16-17th c.)</td><td>Meenakshi & Shiva</td></tr>
+      <tr><td>2</td><td>Jagannath (Puri)</td><td>Eastern Ganga (12th c.)</td><td>Jagannath (Krishna)</td></tr>
+      <tr><td>3</td><td>Dashavatara (Deogarh, UP)</td><td>Gupta (6th c.)</td><td>Vishnu</td></tr>
+      <tr><td>4</td><td>Bhitargaon (Kanpur, UP)</td><td>Gupta (5th c.)</td><td>Shiva</td></tr>
+      <tr><td>5</td><td>Shore Temple (Mahabalipuram)</td><td>Pallava (8th c.)</td><td>Shiva</td></tr>
+      <tr><td>6</td><td>Kailasa Temple (Ellora)</td><td>Rashtrakuta (8th c.)</td><td>Shiva</td></tr>
+      <tr><td>7</td><td>Sri Venkateswara (Tirupati)</td><td>Pallava-Chola-Vijayanagara</td><td>Vishnu (Balaji)</td></tr>
+      <tr><td>8</td><td>Chamundeshwari (Mysore)</td><td>Wodeyar (17th c.)</td><td>Chamundeshwari</td></tr>
+      <tr><td>9</td><td>Kandariya Mahadeva (Khajuraho)</td><td>Chandela (11th c.)</td><td>Shiva</td></tr>
+      <tr><td>10</td><td>Lingaraja (Bhubaneswar)</td><td>Somavamsi (11th c.)</td><td>Shiva</td></tr>
+      <tr><td>11</td><td>Bhimakali (Sarahan, HP)</td><td>Bushahr rulers</td><td>Bhimakali</td></tr>
+      <tr><td>12</td><td>Jageshwar Complex (Almora, UK)</td><td>Katyuri (7-12th c.)</td><td>Shiva</td></tr>
+      <tr><td>13</td><td>Khajuraho Temples (MP)</td><td>Chandela (10-11th c.)</td><td>Hindu & Jain</td></tr>
+      <tr><td>14</td><td>Kashi Vishwanath (Varanasi)</td><td>Maratha (18th c.)</td><td>Shiva</td></tr>
+      <tr><td>15</td><td>Somnath (Gujarat)</td><td>Ancient-modern rebuild</td><td>Shiva</td></tr>
+      <tr><td>16</td><td>Kedarnath (Uttarakhand)</td><td>Early medieval (8th c.)</td><td>Shiva</td></tr>
+      <tr><td>17</td><td>Badrinath (Uttarakhand)</td><td>Adi Shankaracharya (8th c.)</td><td>Vishnu</td></tr>
+      <tr><td>18</td><td>Virupaksha (Hampi)</td><td>Vijayanagara (14-16th c.)</td><td>Shiva</td></tr>
+      <tr><td>19</td><td>Airavatesvara (Darasuram)</td><td>Chola (12th c.)</td><td>Shiva</td></tr>
+      <tr><td>20</td><td>Chennakesava (Belur)</td><td>Hoysala (12th c.)</td><td>Vishnu</td></tr>
+      <tr><td>21</td><td>Hoysaleswara (Halebidu)</td><td>Hoysala (12th c.)</td><td>Shiva</td></tr>
+      <tr><td>22</td><td>Kamakshi Amman (Kanchipuram)</td><td>Pallava (7-8th c.)</td><td>Kamakshi</td></tr>
+      <tr><td>23</td><td>Chausath Yogini (Morena, MP)</td><td>Kachchhapaghata (10th c.)</td><td>64 Yoginis</td></tr>
+      <tr><td>24</td><td>Baijnath (Kangra, HP)</td><td>Medieval (13th c.)</td><td>Shiva</td></tr>
+      <tr><td>25</td><td>Martand Sun Temple (Anantnag, J&K)</td><td>Karkota (8th c.)</td><td>Surya</td></tr>
+    </table>
+    </div>
+    <div class="warn">⚠️ <b>Note:</b> <mark>Chausath Yogini Temple, Morena</mark> = circular, open-air, roofless, dedicated to <span class="num">64</span> Yoginis — frequently confused with other circular temples.</div>
+  </div>
+</div>
+
+<!-- TAB 9: BUDDHIST SCHOOLS -->
+<div class="panel" id="t9">
+  <div class="card">
+    <h2>🎨 Buddhist Schools of Art</h2>
+    <p style="font-size:.85rem;">Buddhism grew rapidly in <span class="num">1st–2nd c. CE</span> → <span class="num">3</span> main sculpture schools: <span class="kw">Gandhara</span>, <span class="kw2">Mathura</span>, <span class="kw3">Amaravati</span></p>
+
+    <h3>🕉️ Aniconic Phase (initial)</h3>
+    <ul><li>Buddha shown indirectly through <span class="kw">symbols</span>, not physical form (avoided idol worship)</li></ul>
+
+    <div class="tbl-scroll">
+    <table>
+      <caption>Symbols of Buddha's Life Events — ⭐ HIGH-YIELD TABLE</caption>
+      <tr><th>Event</th><th>Symbol</th></tr>
+      <tr><td>Janma (Birth)</td><td><mark>Lotus & Bull</mark></td></tr>
+      <tr><td>Mahabhinishkramana (Renunciation)</td><td><mark>Horse</mark></td></tr>
+      <tr><td>Nirvana/Sambodhi (Enlightenment)</td><td><mark>Bodhi tree</mark></td></tr>
+      <tr><td>Dharmachakra pravartana (1st Sermon)</td><td><mark>Wheel</mark></td></tr>
+      <tr><td>Mahaparinirvana (Death)</td><td><mark>Stupa</mark></td></tr>
+    </table>
+    </div>
+
+    <h3>🟤 Gandhara School</h3>
+    <ul>
+      <li>NW India (~Pakistan, near Peshawar); under Indo-Greek kings, later Sakas & <span class="kw">Kanishka</span></li>
+      <li>Strong <b>Greek/Roman</b> influence → also called <span class="kw">Graeco-Buddhist School</span></li>
+      <li>Influences: Greek, Roman, Persian, Saka, Kushan</li>
+      <li>Features: wavy hair, long nose, slim oval face; bold togas-like drape; jewelry & mustache sometimes; Greek pantheon figures appear too</li>
+      <li>🔹 Found at: <mark>Begram (Afghanistan), Taxila, Jalalabad, Hadda</mark> — ⭐ marked as PYQ in source</li>
+      <li>🔹 <mark>Bamiyan Buddhas</mark> = example of this style</li>
+    </ul>
+
+    <h3>🔴 Mathura School</h3>
+    <ul>
+      <li>Independent indigenous tradition; mainly <span class="kw2">red sandstone</span>; flourished under Kanishka</li>
+      <li>Depicts Vaishnava, Shaiva, Jain Tirthankara & Buddhist images</li>
+      <li>Key centers: Mathura (main), Sarnath, Kausambi</li>
+      <li>Features: round smiling faces, relaxed flesh; fully clothed, transparent robe quality; <b>left shoulder</b> covered; decorated halo</li>
+    </ul>
+
+    <h3>⚪ Amaravati School</h3>
+    <ul>
+      <li>South India, Krishna river banks; under <span class="kw3">Satavahana Dynasty</span></li>
+      <li>Key feature: <mark>"Narrative art"</mark> — circular <span class="kw">medallions</span> show full stories continuously</li>
+      <li>Centers: Amaravati, Nagarjunakonda, Goli, Ghantasala, Vengi</li>
+      <li>Sensuous, flowing, rounded forms; dance/music/daily-life scenes from Jatakas</li>
+      <li>Includes religious + secular images; Stupa built of fine <span class="kw3">white limestone</span></li>
+      <li>Later influenced <b>Pallava & Chola</b> architecture</li>
+    </ul>
+
+    <h3>⚖️ Comparison Table</h3>
+    <div class="tbl-scroll">
+    <table>
+      <tr><th>Feature</th><th>Gandhara</th><th>Mathura</th><th>Amaravati</th></tr>
+      <tr><td>Region</td><td>NW India (Pak/Afghan)</td><td>Central India (Mathura)</td><td>South India (Amaravati)</td></tr>
+      <tr><td>Patronage</td><td>Kushana</td><td>Kushana</td><td>Satavahana</td></tr>
+      <tr><td>Period</td><td>1st BCE–5th CE</td><td>1st BCE–5th CE</td><td>2nd BCE–3rd CE</td></tr>
+      <tr><td>Material</td><td>Bluish-grey/grey sandstone</td><td>Red mottled sandstone</td><td>White marble</td></tr>
+      <tr><td>Style</td><td>Greek+Indian (Hellenistic)</td><td>Indigenous; round face</td><td>Dynamic, fluid, motion</td></tr>
+      <tr><td>Example</td><td>Bamiyan Buddhas</td><td>Buddha in Padmasana</td><td>Great Stupa at Amaravati</td></tr>
+    </table>
+    </div>
+    <div class="mnemonic">🧠 <b>Mnemonic:</b> "GMA" colors = <b>G</b>andhara-Grey, <b>M</b>athura-Maroon(red), <b>A</b>maravati-Alabaster(white)</div>
+  </div>
+</div>
+
+<!-- TAB 10: STUPAS -->
+<div class="panel" id="t10">
+  <div class="card">
+    <h2>🛕 Stupas</h2>
+    <p style="font-size:.85rem;"><b>Definition:</b> Dome-shaped sacred monument containing Buddha's/sacred relics.</p>
+    <ul>
+      <li>Term in Rigveda ("estuka"), Atharvaveda; Pali "<mark>thupa</mark>" = conical heap/shrine with relic</li>
+      <li>Originally a <span class="kw">funerary mound (<span class="num">5th c. BCE</span>)</span> → evolved into religious monument</li>
+      <li>Earliest = simple hemispherical earth/brick mounds → later elaborate, carved</li>
+    </ul>
+
+    <h3>👑 Mauryan Era — Ashoka</h3>
+    <ul>
+      <li><span class="num">8 stupas</span> built before Ashoka to enshrine Buddha's cremated remains at key life-sites</li>
+      <li><span class="kw">Ashoka (<span class="num">268–232 BCE</span>)</span> redistributed relics → built thousands of stupas to spread Buddhism</li>
+      <li>Later stupas also honored arhats, bodhisattvas, local deities</li>
+      <li>Shift: non-iconic → iconic practice with rise of <b>Mahayana</b></li>
+    </ul>
+
+    <h3>🏗️ Stupa Structure (Parts) — ⭐ MOST-ASKED DIAGRAM</h3>
+    <div class="flow">
+      <span class="step">Medhi</span><span class="arrow">→</span>
+      <span class="step">Anda</span><span class="arrow">→</span>
+      <span class="step">Harmika</span><span class="arrow">→</span>
+      <span class="step">Yasti</span><span class="arrow">→</span>
+      <span class="step">Chhatras</span>
+    </div>
+    <ul>
+      <li>🔹 <span class="kw">Medhi</span> – square base platform, surrounded by <mark>Vedika</mark> (boundary wall)</li>
+      <li>🔹 <span class="kw">Anda</span> – hemispherical dome enclosing relic casket</li>
+      <li>🔹 <span class="kw">Harmika</span> – square railing atop dome (sacred enclosure)</li>
+      <li>🔹 <span class="kw">Yasti</span> – central spire/mast = <mark>axis mundi</mark> (cosmic axis)</li>
+      <li>🔹 <span class="kw">Chhatras</span> – parasols above yasti, symbolize protection & teachings</li>
+      <li>🔹 <span class="kw">Toranas</span> – ornate gateways at cardinal directions, tied to Buddha's life events</li>
+      <li>🔹 <span class="kw">Pradakshina Patha</span> – circumambulatory path around medhi</li>
+    </ul>
+    <div class="mnemonic">🧠 <b>Mnemonic:</b> "<b>M</b>y <b>A</b>unt <b>H</b>as <b>Y</b>ellow <b>C</b>hairs" → Medhi-Anda-Harmika-Yasti-Chhatras</div>
+
+    <h3>🌏 Regional Styles</h3>
+    <ul>
+      <li><span class="kw">Sanchi</span> → elaborate carvings & reliefs</li>
+      <li><span class="kw2">Amaravati</span> → intricate sculptures</li>
+      <li>Ladakh/Tibet → distinctive Tibetan style: white dome + colourful banners</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📌 Important Stupas Table</h2>
+    <div class="tbl-scroll">
+    <table>
+      <tr><th>Stupa</th><th>Location</th><th>Significance</th></tr>
+      <tr><td>Sanchi</td><td>Madhya Pradesh</td><td><span class="num">3rd c. BCE</span>; Ashoka; detailed carvings</td></tr>
+      <tr><td>Dhamek (Sarnath)</td><td>Uttar Pradesh</td><td>Marks Buddha's <b>1st sermon</b></td></tr>
+      <tr><td>Mahabodhi (Bodh Gaya)</td><td>Bihar</td><td>Site of <b>Enlightenment</b>; UNESCO <span class="num">2002</span></td></tr>
+      <tr><td>Ramabhar (Kushinagar)</td><td>Uttar Pradesh</td><td>Buddha's <b>cremation</b> site</td></tr>
+      <tr><td>Piprahwa</td><td>Uttar Pradesh</td><td>Ancient Buddha relics; among oldest</td></tr>
+      <tr><td>Nagarjunakonda</td><td>Andhra Pradesh</td><td>Mahayana centre, now on an island</td></tr>
+      <tr><td>Kesaria</td><td>Bihar</td><td><b>Largest & tallest</b> Buddhist stupa; excavated <span class="num">1998</span></td></tr>
+    </table>
+    </div>
+    <div class="tip">💡 Match Stupa↔Event: Sanchi=carvings, Dhamek=1st Sermon, Mahabodhi=Enlightenment, Ramabhar=Death/cremation, Kesaria=Largest!</div>
+  </div>
+
+  <div class="card">
+    <h2>📰 In News: Piprahwa Stupa</h2>
+    <ul>
+      <li>Sacred Piprahwa relics of Buddha returned to India (public-private effort: <span class="kw">Govt of India</span> + <span class="kw">Godrej Industries Group</span>)</li>
+      <li>Discovered <span class="num">1890s</span> at Piprahwa Stupa by <span class="kw">William Peppe</span></li>
+      <li>Officially excavated <span class="num">1898</span>, in UP — believed to be ancient <mark>Kapilavastu</mark> (Buddha's birthplace)</li>
+      <li>Relics: bone fragments, crystal caskets, gold ornaments, ritual offerings</li>
+      <li>Brahmi script inscription links relics to Buddha, deposited by the <span class="kw">Sakya clan</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- TAB 11: CAVES -->
+<div class="panel" id="t11">
+  <div class="card">
+    <h2>⛏️ Buddhist Caves — Overview</h2>
+    <p style="font-size:.85rem;">Rock-cut architecture, <span class="num">3rd c. BCE – 6th c. CE</span> → monastic residences (Viharas) + prayer halls (Chaityas)</p>
+
+    <h3>📅 Key Phases of Evolution — ⭐ exam favourite</h3>
+    <div class="grid2">
+      <div class="minicard"><span class="ttl">Initial Phase (<span class="num">3rd c. BCE</span>)</span><br>By Ashoka, for Ajivika sect<br>🔹 <mark>Barabar Caves (Bihar)</mark> — earliest, polished walls, simple layout</div>
+      <div class="minicard"><span class="ttl">Hinayana Phase (<span class="num">2nd c.BCE–2nd c.CE</span>)</span><br>Western India (Maharashtra); symbolic Buddha worship (Stupa)<br>🔹 Chaityas: Bhaja(earliest), Bedsa, Karle<br>🔹 Viharas: Nasik/Pandavleni, early Ajanta</div>
+      <div class="minicard"><span class="ttl">Mahayana Phase (<span class="num">5th–6th c. CE</span>)</span><br>Idol worship introduced; Buddha statues in chaityas/viharas<br>🔹 Eg: Later Ajanta caves <span class="num">16,17,19,26</span></div>
+      <div class="minicard"><span class="ttl">Final Phase (<span class="num">6th–10th c. CE</span>)</span><br>Multi-storeyed, complex; blend of Buddhist+Hindu+Jain<br>🔹 Eg: Ellora Caves</div>
+    </div>
+
+    <h3>🆚 Chaitya vs Vihara — ⭐ definition-matching favourite</h3>
+    <div class="tbl-scroll">
+    <table>
+      <tr><th>Aspect</th><th>Chaitya (Prayer Hall)</th><th>Vihara (Monastery)</th></tr>
+      <tr><td>Purpose</td><td>Worship & prayer</td><td>Residence for monks</td></tr>
+      <tr><td>Layout</td><td>Apsidal (semi-circular) hall, stupa at end</td><td>Square/rectangular, cells around</td></tr>
+      <tr><td>Main feature</td><td>Stupa (later Buddha image) focal point</td><td>Cells for monks around hall</td></tr>
+      <tr><td>Roof</td><td>Vaulted/arched, ribbed pattern</td><td>Flat or slightly carved</td></tr>
+      <tr><td>Entrance</td><td>Grand horseshoe chaitya-arch window</td><td>Simple pillared verandah</td></tr>
+      <tr><td>Examples</td><td>Ajanta Cave 19, Karla Caves</td><td>Ajanta Cave 1, Ellora Caves</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📍 Major Cave Sites</h2>
+    <h3>Kanheri Caves (Mumbai)</h3>
+    <ul><li><span class="num">2nd–9th c. AD</span>; Hinayana phase, later Mahayana additions (<span class="num">5th c.</span> Buddha image)</li><li>~<span class="num">100</span> caves</li></ul>
+
+    <h3>Bhaja Caves (Pune)</h3>
+    <ul><li>Excavated <span class="num">2nd c. BC</span>; Hinayana sect, Maharashtra</li><li>🔹 Shows awareness of <span class="kw">wooden architecture</span></li><li>🔹 Carvings prove <mark>tabla</mark> used in India for <span class="num">2300+</span> years — ⭐ unique fact</li></ul>
+
+    <h3>Ajanta Caves</h3>
+    <ul>
+      <li>Carved from <span class="kw">flood basalt</span> rock, Deccan Traps; on Waghora River, Sahyadri ranges, near Aurangabad</li>
+      <li>Total <span class="num">29 caves</span>, all Buddhist; period: <span class="num">200 BCE – 650 CE</span>; patronage: <span class="kw">Vakataka kings</span></li>
+      <li>Mentioned by Chinese travellers <span class="kw">Fa-Hien</span> & <span class="kw">Hiuen Tsang</span></li>
+    </ul>
+    <div class="grid2">
+      <div class="minicard"><span class="ttl">Early Phase (Hinayana)</span><br>~<span class="num">2nd c.BCE–1st c.CE</span>; Satavahana patronage; Caves <span class="num">9,10,12,13,15A</span><br>Murals: Jataka tales, no Buddha images</div>
+      <div class="minicard"><span class="ttl">Later Phase (Mahayana)</span><br>~<span class="num">5th–6th c. CE</span>; Vakataka (esp. <b>Harisena</b>)<br>Theistic; Buddha images, elaborate paintings/sculptures</div>
+    </div>
+
+    <h3>Jogeshwari Caves</h3>
+    <ul><li>Island of Salsette; last stages of Mahayana Buddhism; Brahmanical shrines also found; <span class="num">2nd half of 8th c.</span></li></ul>
+  </div>
+</div>
+
+<!-- TAB 12: SUMMARY -->
+<div class="panel" id="t12">
+  <div class="summary-box">
+    <h2>✅ Quick Revision Summary</h2>
+    <h3 style="color:#F2C9A0;">🛕 Temple Architecture</h3>
+    <ul>
+      <li><span class="kw">Nagara</span> = North, curvilinear shikhara, no gopuram/boundary wall</li>
+      <li><span class="kw">Dravida</span> = South, pyramidal vimana, gopurams + compound walls</li>
+      <li><span class="kw2">Vesara</span> = Deccan hybrid, Chalukyas of Kalyani</li>
+      <li>Odisha: Rekha/Pidha/Khakra Deul; Konark = Sun Temple chariot, <span class="num">24</span> wheels, <span class="num">7</span> horses, <span class="num">1250 CE</span></li>
+      <li>Pallava (<span class="num">4</span> phases) → Chola (granite, Brihadisvara <span class="num">66m</span> tallest vimana, <span class="num">1010 CE</span>) → Hoysala (star-shaped, soapstone, <span class="num">12-13th c.</span>)</li>
+      <li>Garbhagriha = sanctum; Mandapa = hall; Shikhara/Vimana = tower; Gopuram = gateway (South only)</li>
+      <li>Khajuraho = <span class="num">900–1130 CE</span>, Chandela, erotic sculptures, Latin cross plan</li>
+    </ul>
+    <h3 style="color:#A9D8B6;">☸️ Buddhist Architecture</h3>
+    <ul>
+      <li><span class="num">3</span> Schools: <span class="kw">Gandhara</span> (Greek-influenced, grey stone) | <span class="kw2">Mathura</span> (red sandstone, indigenous) | <span class="kw">Amaravati</span> (white marble, narrative medallions)</li>
+      <li>Stupa parts: Medhi → Anda → Harmika → Yasti → Chhatras → Torana</li>
+      <li>Ashoka (<span class="num">268–232 BCE</span>) built 1000s of stupas from <span class="num">8</span> original relic stupas</li>
+      <li>Chaitya = prayer hall (apsidal); Vihara = monastery (square, cells)</li>
+      <li>Ajanta = <span class="num">29</span> caves, Hinayana+Mahayana phases, Vakataka patronage, <span class="num">200 BCE–650 CE</span></li>
+      <li>Piprahwa relics returned to India recently — linked to Kapilavastu/Sakya clan, found <span class="num">1898</span></li>
+    </ul>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<button id="toTop" title="Scroll to top">⬆️</button>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      tabs.forEach(b=>b.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+      btn.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+    });
+  });
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll',()=>{
+    toTop.classList.toggle('show', window.scrollY > 300);
+  });
+  toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
