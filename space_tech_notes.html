@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚀 Space Technology – Rapid Revision Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F8FA;
+    --card: #FFFFFF;
+    --border: #E4E7EC;
+    --primary: #1B4F8A;
+    --primary-light: #EBF2FB;
+    --accent: #2563EB;
+    --accent2: #0EA5E9;
+    --green: #15803D;
+    --green-bg: #F0FDF4;
+    --amber: #B45309;
+    --amber-bg: #FFFBEB;
+    --red: #B91C1C;
+    --red-bg: #FEF2F2;
+    --purple: #6D28D9;
+    --purple-bg: #F5F3FF;
+    --text: #1A2233;
+    --text2: #4B5563;
+    --text3: #6B7280;
+    --tab-active-bg: #1B4F8A;
+    --tab-active-text: #FFFFFF;
+    --tab-bg: #E8EDF5;
+    --tab-text: #374151;
+    --highlight-yellow: #FEF9C3;
+    --highlight-blue: #EBF2FB;
+    --highlight-green: #F0FDF4;
+    --tag-bg: #DBEAFE;
+    --tag-text: #1E40AF;
+    --shadow: 0 1px 4px rgba(0,0,0,0.07);
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 18px 20px 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    letter-spacing: 0.3px;
+  }
+  header p { font-size: 0.8rem; color: #BFDBFE; margin-top: 3px; }
+
+  /* ── TAB BAR ── */
+  .tab-bar-wrapper {
+    background: #fff;
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 72px;
+    z-index: 90;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tab-bar-wrapper::-webkit-scrollbar { display: none; }
+
+  .tab-bar {
+    display: flex;
+    padding: 8px 12px 0;
+    gap: 4px;
+    min-width: max-content;
+  }
+
+  .tab-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    background: var(--tab-bg);
+    color: var(--tab-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { background: var(--primary-light); color: var(--primary); }
+  .tab-btn.active {
+    background: var(--tab-active-bg);
+    color: var(--tab-active-text);
+    border-bottom: 3px solid var(--accent2);
+  }
+
+  /* ── CONTENT ── */
+  .content { max-width: 860px; margin: 0 auto; padding: 22px 14px 80px; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 18px 16px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid var(--primary-light);
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 18px 0 8px;
+  }
+
+  /* ── LISTS ── */
+  ul.notes { list-style: none; padding: 0; }
+  ul.notes li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #F3F4F6;
+    color: var(--text2);
+  }
+  ul.notes li:last-child { border-bottom: none; }
+  ul.notes li::before {
+    content: '▸';
+    color: var(--accent);
+    position: absolute;
+    left: 2px;
+    font-size: 0.75rem;
+    top: 7px;
+  }
+
+  ul.notes li.sub {
+    padding-left: 36px;
+    font-size: 0.84rem;
+    color: var(--text3);
+  }
+  ul.notes li.sub::before { content: '–'; color: var(--text3); left: 20px; }
+
+  /* ── HIGHLIGHT TAGS ── */
+  .kw { font-weight: 700; color: var(--text); }
+  .tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .tag.green { background: var(--green-bg); color: var(--green); }
+  .tag.amber { background: var(--amber-bg); color: var(--amber); }
+  .tag.red { background: var(--red-bg); color: var(--red); }
+  .tag.purple { background: var(--purple-bg); color: var(--purple); }
+
+  .hl-yellow { background: var(--highlight-yellow); padding: 1px 5px; border-radius: 3px; font-weight: 600; }
+  .hl-blue { background: var(--highlight-blue); padding: 1px 5px; border-radius: 3px; font-weight: 600; }
+  .hl-green { background: var(--highlight-green); padding: 1px 5px; border-radius: 3px; font-weight: 600; }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    border-left: 4px solid;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 0.84rem;
+  }
+  .callout.tip { border-color: var(--green); background: var(--green-bg); color: var(--green); }
+  .callout.warn { border-color: var(--amber); background: var(--amber-bg); color: var(--amber); }
+  .callout.info { border-color: var(--accent); background: var(--primary-light); color: var(--primary); }
+  .callout.important { border-color: var(--red); background: var(--red-bg); color: var(--red); }
+  .callout strong { display: block; margin-bottom: 3px; font-size: 0.8rem; }
+
+  /* ── TABLES ── */
+  .tbl-wrap { overflow-x: auto; margin: 12px 0; border-radius: 8px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  th {
+    background: var(--primary);
+    color: #fff;
+    padding: 9px 12px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text2); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) { background: #F9FAFB; }
+
+  /* ── MNEMONIC BOX ── */
+  .mnemonic {
+    background: linear-gradient(135deg, #EFF6FF, #F0FDF4);
+    border: 1.5px dashed var(--accent2);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 0.84rem;
+  }
+  .mnemonic .m-title {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── FLOWCHART / VISUAL ── */
+  .flow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0;
+    font-size: 0.8rem;
+  }
+  .flow-box {
+    background: var(--primary-light);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+  .flow-arrow { color: var(--accent2); font-size: 1.1rem; font-weight: 700; }
+
+  /* ── ORBIT VISUAL ── */
+  .orbit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin: 12px 0;
+  }
+  .orbit-card {
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  .orbit-card .oc-title {
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--primary);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .orbit-card ul { list-style: none; padding: 0; }
+  .orbit-card ul li { padding: 2px 0; color: var(--text2); }
+  .orbit-card ul li::before { content: '· '; color: var(--accent2); }
+
+  /* ── SUMMARY BOX ── */
+  .summary {
+    background: linear-gradient(135deg, #1B4F8A, #1e40af);
+    color: #fff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-top: 20px;
+  }
+  .summary h3 { font-size: 0.95rem; margin-bottom: 10px; color: #BFDBFE; }
+  .summary ul { list-style: none; padding: 0; }
+  .summary ul li { padding: 3px 0 3px 18px; font-size: 0.83rem; position: relative; color: #E0EDFF; }
+  .summary ul li::before { content: '✦'; position: absolute; left: 0; color: #93C5FD; font-size: 0.7rem; top: 6px; }
+
+  /* ── SCROLL TO TOP ── */
+  #scrollTop {
+    position: fixed;
+    bottom: 22px;
+    right: 18px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+  }
+  #scrollTop.show { display: flex; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.15rem; }
+    .content { padding: 14px 10px 80px; }
+    .card { padding: 14px 12px; }
+  }
+
+  /* ── YEAR TRICK ── */
+  .year-trick {
+    background: var(--amber-bg);
+    border: 1px solid #FDE68A;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 0.82rem;
+    margin: 8px 0;
+    color: var(--amber);
+  }
+  .year-trick strong { display: block; margin-bottom: 3px; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 10px 0;
+  }
+  @media (max-width: 500px) { .two-col { grid-template-columns: 1fr; } }
+
+  .mini-card {
+    background: var(--primary-light);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    border: 1px solid #BFDBFE;
+  }
+  .mini-card .mc-title { font-weight: 700; color: var(--primary); margin-bottom: 5px; font-size: 0.8rem; }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin: 2px 2px;
+  }
+  .badge-blue { background: #DBEAFE; color: #1E40AF; }
+  .badge-green { background: #D1FAE5; color: #065F46; }
+  .badge-red { background: #FEE2E2; color: #991B1B; }
+  .badge-purple { background: #EDE9FE; color: #5B21B6; }
+  .badge-amber { background: #FEF3C7; color: #92400E; }
+
+  .divider { height: 1px; background: var(--border); margin: 14px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚀 Space Technology — Rapid Revision Notes</h1>
+  <p>ISRO | Orbits | Launch Vehicles | Satellites | Missions | NavIC | ISS | AI & Robotics</p>
+</header>
+
+<!-- TAB BAR -->
+<div class="tab-bar-wrapper">
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="showTab('t1',this)">🏛️ ISRO Basics</button>
+    <button class="tab-btn" onclick="showTab('t2',this)">🌐 Orbits</button>
+    <button class="tab-btn" onclick="showTab('t3',this)">⚙️ Propulsion</button>
+    <button class="tab-btn" onclick="showTab('t4',this)">🚀 Launch Vehicles</button>
+    <button class="tab-btn" onclick="showTab('t5',this)">🛰️ Satellites</button>
+    <button class="tab-btn" onclick="showTab('t6',this)">🌙 Missions</button>
+    <button class="tab-btn" onclick="showTab('t7',this)">🧭 NavIC & GPS</button>
+    <button class="tab-btn" onclick="showTab('t8',this)">🌍 ISS & BAS</button>
+    <button class="tab-btn" onclick="showTab('t9',this)">🤝 Collaborations</button>
+    <button class="tab-btn" onclick="showTab('t10',this)">🔭 Observatories</button>
+    <button class="tab-btn" onclick="showTab('t11',this)">🤖 AI & Robotics</button>
+    <button class="tab-btn" onclick="showTab('t12',this)">📋 Quick Summary</button>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 1: ISRO BASICS -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t1" class="tab-content active">
+
+  <div class="card">
+    <div class="card-title">🏛️ Indian Space Research Organisation (ISRO)</div>
+    <ul class="notes">
+      <li><span class="kw">Established:</span> <span class="hl-yellow">1969</span></li>
+      <li><span class="kw">Under:</span> Department of Space (DoS)</li>
+      <li class="sub">DoS came into existence: <span class="hl-yellow">1972</span></li>
+      <li class="sub">DoS & Dept. of Atomic Energy → both under <span class="kw">PMO</span></li>
+      <li><span class="kw">Founding Father:</span> <span class="hl-blue">Dr. Vikram Sarabhai</span> 🧑‍🔬</li>
+      <li><span class="kw">HQ:</span> <span class="hl-green">Bengaluru</span>, Karnataka</li>
+    </ul>
+    <div class="year-trick">
+      <strong>💡 Memory Trick – Year</strong>
+      1969 → same year as Apollo 11 Moon landing → "India also looked to the stars in 1969"
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚖️ Space Commission (under DoS)</div>
+    <div class="callout info"><strong>Role:</strong> Policy & decision-making body for Indian space activities</div>
+    <ul class="notes">
+      <li><span class="kw">Chairman:</span> Head of ISRO (ex-officio)</li>
+      <li><span class="kw">Members:</span></li>
+      <li class="sub">Principal Secretary</li>
+      <li class="sub">Cabinet Secretary</li>
+      <li class="sub">Finance Secretary</li>
+      <li class="sub">Expenditure Secretary</li>
+      <li class="sub">Foreign Secretary</li>
+      <li class="sub"><span class="hl-yellow">NSA</span> (National Security Adviser)</li>
+    </ul>
+    <div class="mnemonic">
+      <div class="m-title">🧠 Mnemonic – Members (PCF-EFN)</div>
+      <strong>P</strong>rincipal · <strong>C</strong>abinet · <strong>F</strong>inance · <strong>E</strong>xpenditure · <strong>F</strong>oreign · <strong>N</strong>SA
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">💼 Two Commercial Arms of ISRO</div>
+    <div class="two-col">
+      <div class="mini-card">
+        <div class="mc-title">1️⃣ Antrix Corporation</div>
+        Handles ISRO's <span class="kw">commercial deals</span> for satellites & launch vehicles with <span class="kw">foreign customers</span>
+      </div>
+      <div class="mini-card">
+        <div class="mc-title">2️⃣ NSIL (New Space India Ltd.)</div>
+        Capacity building of <span class="kw">local industry</span> for space manufacturing; <span class="kw">tech transfer</span> to private companies
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏢 ISRO Centres — Quick Reference</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Centre / Abbr.</th><th>Location</th><th>Function</th></tr>
+        <tr><td><span class="kw">ISRO HQ</span></td><td>Bengaluru, KA</td><td>Overall admin & planning</td></tr>
+        <tr><td><span class="kw">VSSC</span></td><td>Thiruvananthapuram, KL</td><td>Rocket R&D (PSLV, GSLV, RLV, SSLV, NGLV)</td></tr>
+        <tr><td><span class="kw">LPSC</span></td><td>TVM / BLR / Mahendragiri</td><td>Liquid, cryogenic & semi-cryogenic propulsion</td></tr>
+        <tr><td><span class="kw">IPRC</span></td><td>Mahendragiri, TN</td><td>Engine & stage testing</td></tr>
+        <tr><td><span class="kw">SDSC-SHAR</span></td><td>Sriharikota, AP</td><td>Launch site, vehicle assembly, mission control</td></tr>
+        <tr><td><span class="kw">URSC</span></td><td>Bengaluru</td><td>Satellite design & integration</td></tr>
+        <tr><td><span class="kw">SAC</span></td><td>Ahmedabad, GJ</td><td>Payloads for communication, remote sensing, meteo</td></tr>
+        <tr><td><span class="kw">NRSC</span></td><td>Hyderabad, TS</td><td>Remote sensing & GIS applications</td></tr>
+        <tr><td><span class="kw">ISTRAC</span></td><td>Bengaluru</td><td>Tracking, telemetry & control</td></tr>
+        <tr><td><span class="kw">IISU</span></td><td>Thiruvananthapuram</td><td>Inertial navigation systems</td></tr>
+        <tr><td><span class="kw">SCL</span></td><td>Chandigarh</td><td>Semiconductor devices for satellites</td></tr>
+        <tr><td><span class="kw">IIST</span></td><td>Thiruvananthapuram</td><td>Space science education & astronaut training</td></tr>
+        <tr><td><span class="kw">PRL</span></td><td>Ahmedabad</td><td>Space & planetary research</td></tr>
+        <tr><td><span class="kw">NSIL & Antrix</span></td><td>Bengaluru</td><td>Commercial arms of ISRO</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 2: ORBITS -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t2" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🌐 What is an Orbit?</div>
+    <div class="callout info"><strong>Definition:</strong> An imaginary path taken by a celestial body, spacecraft or satellite.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔵 Classification 1: Shape (Elliptical / Circular)</div>
+    <ul class="notes">
+      <li>Most objects follow an <span class="kw">elliptical</span> path; circle = special case</li>
+      <li><span class="kw">Perigee</span> = <span class="hl-yellow">Nearest</span> point to Earth → speed <span class="badge badge-green">Higher ↑</span></li>
+      <li><span class="kw">Apogee</span> = <span class="hl-yellow">Farthest</span> point from Earth → speed <span class="badge badge-red">Lower ↓</span></li>
+      <li>In <span class="kw">circular orbit</span> → distance & speed remain <span class="hl-green">constant</span></li>
+    </ul>
+    <div class="mnemonic">
+      <div class="m-title">🧠 Memory Trick</div>
+      <strong>P</strong>erigee = <strong>P</strong>ull (gravity pulls harder, so faster) | <strong>A</strong>pogee = <strong>A</strong>far (farther, slower)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌍 Classification 2: Movement Around Earth</div>
+    <ul class="notes">
+      <li><span class="kw">Geosynchronous Orbit:</span> Syncs with Earth's rotation; distance can vary</li>
+      <li><span class="kw">Sun-Synchronous Orbit (SSO):</span> Near-polar orbit; crosses same part of Earth at same local solar time → used for <span class="hl-blue">remote sensing & Earth observation</span></li>
+      <li><span class="kw">Geostationary Orbit:</span> Special case of geosynchronous</li>
+      <li class="sub">Altitude: <span class="hl-yellow">35,784 km</span> above equator</li>
+      <li class="sub">Satellite appears <span class="kw">fixed</span> at one point on Earth</li>
+      <li class="sub">Period: <span class="hl-yellow">24 hours</span></li>
+      <li class="sub">Uses: <span class="kw">Communication & weather</span></li>
+      <li class="sub">Also called <span class="hl-blue">Clarke Orbit</span> 🌟</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📏 Classification 3: Distance from Earth</div>
+    <div class="orbit-grid">
+      <div class="orbit-card" style="border-color:#3B82F6;">
+        <div class="oc-title">🔵 LEO</div>
+        <div style="font-weight:700;color:#1E40AF;font-size:0.85rem;">Up to 2,000 km</div>
+        <ul>
+          <li>Earth observation</li>
+          <li>Remote sensing (SSO)</li>
+          <li>Metrology</li>
+          <li>Space stations</li>
+          <li>Hubble, Astrosat</li>
+        </ul>
+      </div>
+      <div class="orbit-card" style="border-color:#10B981;">
+        <div class="oc-title">🟢 MEO</div>
+        <div style="font-weight:700;color:#065F46;font-size:0.85rem;">2,000–36,000 km</div>
+        <ul>
+          <li>Navigation satellites</li>
+          <li>GPS constellations</li>
+          <li>NavIC / IRNSS</li>
+        </ul>
+      </div>
+      <div class="orbit-card" style="border-color:#F59E0B;">
+        <div class="oc-title">🟡 GEO</div>
+        <div style="font-weight:700;color:#92400E;font-size:0.85rem;">~36,000 km</div>
+        <ul>
+          <li>Communication sats</li>
+          <li>Fixed over one longitude</li>
+          <li>GSAT, INSAT series</li>
+        </ul>
+      </div>
+      <div class="orbit-card" style="border-color:#EF4444;">
+        <div class="oc-title">🔴 HEO</div>
+        <div style="font-weight:700;color:#991B1B;font-size:0.85rem;">Beyond 36,000 km</div>
+        <ul>
+          <li>High Earth Orbit</li>
+          <li>Specialised missions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mnemonic">
+      <div class="m-title">🧠 Mnemonic – Orbit Distance Order</div>
+      <strong>"Little Monkeys Go High"</strong> → LEO → MEO → GEO → HEO
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🛸 Space Stations in LEO</div>
+    <ul class="notes">
+      <li><span class="kw">ISS</span> – largest man-made satellite; built by <span class="hl-blue">Roscosmos, NASA, JAXA, ESA, CSA</span></li>
+      <li><span class="kw">Tiangong</span> – China's space station (under construction)</li>
+      <li>India planning its own space station → <span class="kw">BAS (Bharatiya Antariksh Station)</span></li>
+    </ul>
+    <div class="section-label">Uses of Space Stations</div>
+    <ul class="notes">
+      <li>Microgravity experimentation 🧪</li>
+      <li>Space exploration – study of deep universe 🔭</li>
+      <li>Repair & maintenance workstation 🔧</li>
+      <li>Space voyage terminal 🚀</li>
+      <li>Re-fuelling station ⛽</li>
+      <li>Space tourism 🌟</li>
+      <li>Earth observation (remote sensing) 🌍</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 3: PROPULSION -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t3" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">⚙️ Propulsion Systems — Overview</div>
+    <div class="two-col">
+      <div class="mini-card">
+        <div class="mc-title">🔴 Non-Air Breathing</div>
+        Uses <span class="kw">oxidizer</span> to burn propellant<br>
+        Example: Most <span class="kw">chemical rockets</span>
+      </div>
+      <div class="mini-card">
+        <div class="mc-title">🟢 Air-Breathing</div>
+        Uses <span class="kw">atmospheric oxygen</span> (no oxidizer carried)<br>
+        Types: <span class="kw">Ramjet & Scramjet</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">✈️ Ramjet Technology</div>
+    <ul class="notes">
+      <li>Has a <span class="kw">rotor blade + combustion chamber</span></li>
+      <li>Works at <span class="hl-yellow">supersonic speeds (Mach 2–3)</span></li>
+      <li>⚠️ Limited to speeds <span class="kw">below hypersonic</span> range</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🚀 Scramjet Technology</div>
+    <div class="callout info"><strong>Full form:</strong> Super Combustion Ramjet</div>
+    <ul class="notes">
+      <li>Supersonic airflow <span class="kw">compressed naturally</span> by aircraft's forward speed</li>
+      <li>Operates at <span class="hl-yellow">hypersonic speed (&gt; Mach 5)</span></li>
+      <li><span class="kw">1 Mach = 332 m/s</span></li>
+      <li>✅ <span class="hl-yellow">2016</span>: ISRO successfully tested Scramjet engine</li>
+      <li>🔹 2024 Current Affairs: India–Japan collaborating on <span class="kw">hypersonic vehicle research</span>; DRDO + ISRO working on <span class="kw">dual-mode ramjet-scramjet</span> systems</li>
+    </ul>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Feature</th><th>Ramjet</th><th>Scramjet</th></tr>
+        <tr><td>Airflow in combustor</td><td>Subsonic</td><td>Supersonic</td></tr>
+        <tr><td>Speed range</td><td>Mach 2–3</td><td>&gt; Mach 5 (hypersonic)</td></tr>
+        <tr><td>Oxidizer</td><td>Atmospheric O₂</td><td>Atmospheric O₂</td></tr>
+        <tr><td>Rotor blade</td><td>✅ Yes</td><td>❌ No (ram compression)</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">❄️ Cryogenic Engine</div>
+    <ul class="notes">
+      <li>Used in <span class="kw">GSLV</span></li>
+      <li>"Cryo" = extremely low temperature (~<span class="hl-yellow">–273°C</span>)</li>
+      <li>Propellants: <span class="kw">Liquid Hydrogen (20 K)</span> + <span class="kw">Liquid Oxygen (90 K)</span></li>
+      <li>✅ Generates <span class="kw">high thrust</span> + clean tech (by-product: <span class="hl-green">water</span>)</li>
+      <li>⚠️ Expensive but highly <span class="kw">efficient</span></li>
+      <li>🔹 2024–25: ISRO mastered cryo tech indigenously; <span class="kw">CE-20 engine</span> (used in LVM3) tested for 650 seconds</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⛽ Propellants (Fuel) Comparison</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Type</th><th>Example</th><th>✅ Merits</th><th>⚠️ Demerits</th></tr>
+        <tr>
+          <td><span class="kw">Solid</span></td>
+          <td>HTPB (Hydroxyl-terminated polybutadiene)</td>
+          <td>Easy to store & transport; stable</td>
+          <td>Bulky; non-uniform / slow burning</td>
+        </tr>
+        <tr>
+          <td><span class="kw">Liquid</span></td>
+          <td>UDMH (Unsymmetrical Dimethylhydrazine)</td>
+          <td>Lightweight; uniform & fast burning</td>
+          <td>Highly inflammable & corrosive; special handling needed</td>
+        </tr>
+      </table>
+    </div>
+    <div class="mnemonic">
+      <div class="m-title">🧠 Remember</div>
+      <strong>HTPB</strong> = Solid | <strong>UDMH</strong> = Liquid<br>
+      "Humble Solid, Unstable Liquid" → solid is stable, liquid is volatile
+    </div>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 4: LAUNCH VEHICLES -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t4" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🚀 ISRO Launch Vehicles — Overview</div>
+    <ul class="notes">
+      <li><span class="kw">Launch Vehicles</span> = Rockets that carry payloads into space</li>
+      <li>ISRO's LV programme began with:
+        <ul style="list-style:none;padding-left:16px;margin-top:4px;">
+          <li>→ <span class="kw">SLV</span> (Satellite Launch Vehicle, <span class="hl-yellow">1980</span>) — India's first indigenous rocket</li>
+          <li>→ <span class="kw">ASLV</span> (Augmented SLV, <span class="hl-yellow">1987</span>) — improved payload capacity</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="two-col">
+      <div class="mini-card">
+        <div class="mc-title">ELV – Expendable Launch Vehicle</div>
+        Used <span class="kw">once</span> then discarded<br>
+        ✅ Simpler, reliable<br>
+        ❌ Expensive (non-reusable)<br>
+        Examples: SLV, ASLV, PSLV, GSLV
+      </div>
+      <div class="mini-card">
+        <div class="mc-title">RLV – Reusable Launch Vehicle</div>
+        Designed to <span class="kw">re-enter & be reused</span><br>
+        ✅ Up to 10× cheaper<br>
+        ✅ Sustainable & eco-friendly<br>
+        Similar to NASA's Space Shuttle
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📋 All Major ISRO Launch Vehicles</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Vehicle</th><th>Type / Stages</th><th>Payload</th><th>Key Missions / Notes</th></tr>
+        <tr>
+          <td><span class="kw">SLV</span> (1980)</td><td>4-stage solid</td><td>40 kg LEO</td>
+          <td>India's 1st indigenous rocket 🇮🇳</td>
+        </tr>
+        <tr>
+          <td><span class="kw">ASLV</span> (1987)</td><td>Augmented SLV</td><td>150 kg LEO</td>
+          <td>Improved SLV</td>
+        </tr>
+        <tr>
+          <td><span class="kw">PSLV</span> ⭐</td><td>4-stage (solid+liquid alternate)</td><td>~1.7t GTO, ~3t LEO</td>
+          <td>Chandrayaan-1, Mangalyaan, 104 sats (2017)</td>
+        </tr>
+        <tr>
+          <td><span class="kw">GSLV Mk-II</span></td><td>3-stage (cryo upper)</td><td>~2.5t GTO</td>
+          <td>GSAT/INSAT class; CE-7.5 cryo engine</td>
+        </tr>
+        <tr>
+          <td><span class="kw">LVM3 / GSLV Mk-III</span> ⭐</td><td>3-stage (2 solid boosters + liquid core + cryo)</td><td>~4t GTO, ~10t LEO</td>
+          <td>Chandrayaan-2 & 3, OneWeb, Gaganyaan</td>
+        </tr>
+        <tr>
+          <td><span class="kw">SSLV</span></td><td>Small sat launcher</td><td>&lt;500 kg</td>
+          <td>Low-cost, quick turnaround; operational 2023–24</td>
+        </tr>
+        <tr>
+          <td><span class="kw">RLV (Pushpak)</span></td><td>Winged spaceplane</td><td>—</td>
+          <td>2016 hypersonic test; 2023 landing test ✅</td>
+        </tr>
+        <tr>
+          <td><span class="kw">NGLV</span></td><td>Modular, semi-cryo</td><td>~10t GTO, ~20t LEO</td>
+          <td>Future backbone; first flight early 2030s</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔵 PSLV — "The Workhorse" 🐎</div>
+    <ul class="notes">
+      <li><span class="kw">4-stage rocket</span> alternating solid + liquid</li>
+      <li>Payload: ~<span class="hl-yellow">1.7t to GTO</span>, ~<span class="hl-yellow">3t to LEO</span></li>
+      <li>✅ Reliable, economical, versatile</li>
+    </ul>
+    <div class="section-label">Famous Missions</div>
+    <ul class="notes">
+      <li><span class="kw">Chandrayaan-1</span> (2008) – India's 1st Moon mission</li>
+      <li><span class="kw">Mangalyaan</span> (2013) – Mars Orbiter Mission</li>
+      <li><span class="kw">PSLV-C37</span> (2017) – Record <span class="hl-yellow">104 satellites</span> in one launch 🏆</li>
+    </ul>
+    <div class="callout info"><strong>2024 Update:</strong> Remains India's commercial backbone under NSIL; used for Cartosat & NavIC series</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🟡 GSLV Mk-III / LVM3 — "Bahubali Rocket" 💪</div>
+    <ul class="notes">
+      <li><span class="kw">3-stage:</span> 2 solid boosters + liquid core + cryogenic upper stage</li>
+      <li>Payload: ~<span class="hl-yellow">4t to GTO</span>, ~<span class="hl-yellow">10t to LEO</span></li>
+      <li>✅ Places India among elite <span class="kw">heavy-lift space nations</span></li>
+    </ul>
+    <div class="section-label">Key Missions</div>
+    <ul class="notes">
+      <li>Chandrayaan-2 (2019)</li>
+      <li><span class="kw">Chandrayaan-3 (2023)</span> → successful Moon soft landing 🌙</li>
+      <li>OneWeb commercial satellite launches</li>
+      <li>Future: <span class="kw">Gaganyaan</span> human spaceflight</li>
+    </ul>
+    <div class="callout info"><strong>2024–25:</strong> Human-rated version under testing → uncrewed Gaganyaan in 2025, crewed in 2026</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔮 RLV (Pushpak) — Future of ISRO</div>
+    <ul class="notes">
+      <li>Concept similar to <span class="kw">NASA's Space Shuttle</span></li>
+      <li>✅ Reduces launch cost up to <span class="hl-yellow">10× cheaper</span></li>
+    </ul>
+    <div class="section-label">RLV-TD Tests</div>
+    <ul class="notes">
+      <li><span class="hl-yellow">2016</span> – Hypersonic flight experiment</li>
+      <li><span class="hl-yellow">2023</span> – Autonomous runway landing test ✅</li>
+    </ul>
+    <div class="callout info"><strong>2024–25:</strong> ISRO developing Pushpak RLV; first orbital re-entry trials planned for 2026–27</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔮 NGLV — Next Generation Launch Vehicle (Future Backbone)</div>
+    <ul class="notes">
+      <li>Proposed: <span class="hl-yellow">2022–23</span> as successor to PSLV/GSLV</li>
+      <li>Features: <span class="kw">Modular, partially reusable</span>, cost-efficient</li>
+      <li>Payload: ~<span class="hl-yellow">10t to GTO</span>, ~<span class="hl-yellow">20t to LEO</span></li>
+      <li>Propulsion: <span class="kw">Semi-cryogenic Kerolox engines</span> (LOX + refined kerosene)</li>
+      <li>Reusability: Boosters like <span class="kw">SpaceX Falcon 9</span></li>
+      <li>Cost: ~<span class="hl-yellow">$1900/kg to GTO</span></li>
+      <li>Strategic Role: Supports <span class="kw">Bharatiya Antariksh Station</span>, deep-space, constellations</li>
+      <li>🔹 SCE-200 semi-cryogenic engine under testing at IPRC Mahendragiri</li>
+      <li>First test flight: <span class="hl-yellow">early 2030s</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 5: SATELLITES -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t5" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🛰️ Satellites — Basics</div>
+    <ul class="notes">
+      <li>Also called <span class="kw">spacecraft</span></li>
+      <li>Components: <span class="hl-blue">Transporter, Solar panels, Antenna, Telemetry, Payload</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📂 Types — A) Based on Application</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>#</th><th>Type</th><th>Use</th><th>Example</th></tr>
+        <tr><td>1</td><td><span class="kw">Communication</span></td><td>Telecom, broadcasting</td><td>GSAT series</td></tr>
+        <tr><td>2</td><td><span class="kw">Remote Sensing</span></td><td>Earth observation, agriculture, mapping</td><td>Cartosat, Resourcesat</td></tr>
+        <tr><td>3</td><td><span class="kw">Navigation</span></td><td>GPS / navigation</td><td>IRNSS / NavIC</td></tr>
+        <tr><td>4</td><td><span class="kw">Meteorological</span></td><td>Weather forecasting</td><td>INSAT series</td></tr>
+        <tr><td>5</td><td><span class="kw">Military</span></td><td>Reconnaissance, surveillance</td><td>GSAT-7A, EMISAT</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚖️ Types — B) Based on Size / Weight</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Category</th><th>Weight</th></tr>
+        <tr><td><span class="kw">Big satellites</span></td><td>&gt; 100 kg</td></tr>
+        <tr><td><span class="kw">Small satellites</span></td><td>&lt; 100 kg</td></tr>
+        <tr><td>&nbsp;&nbsp;↳ Mini satellites</td><td>30–40 kg</td></tr>
+        <tr><td>&nbsp;&nbsp;↳ Microsatellites</td><td>10–30 kg</td></tr>
+        <tr><td>&nbsp;&nbsp;↳ Nanosatellites</td><td>&lt; 5 kg</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📡 Communication Satellites</div>
+    <ul class="notes">
+      <li>Orbit: <span class="kw">GEO</span> (~36,000 km, equatorial)</li>
+      <li>Functions: Long-distance communication via <span class="kw">transponders</span></li>
+    </ul>
+    <div class="section-label">Applications</div>
+    <ul class="notes">
+      <li>Telecommunication 📱</li>
+      <li>TV / Radio broadcasting 📺</li>
+      <li>Tele-education & Telemedicine 🏥</li>
+      <li>Meteorology 🌦️</li>
+      <li>Disaster management 🆘</li>
+    </ul>
+    <div class="callout info"><strong>2024–25:</strong> GSAT-20 launched → high-throughput broadband satellite | NavIC expansion: L1 band added; mandatory in smartphones by 2025</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌍 Remote Sensing Satellites</div>
+    <ul class="notes">
+      <li>Equipped with <span class="kw">high-resolution cameras & sensors</span></li>
+    </ul>
+    <div class="two-col">
+      <div class="mini-card">
+        <div class="mc-title">Passive Remote Sensing</div>
+        Uses <span class="kw">sunlight</span> for imaging
+      </div>
+      <div class="mini-card">
+        <div class="mc-title">Active Remote Sensing</div>
+        Sends signals — <span class="kw">radar, LiDAR</span>
+      </div>
+    </div>
+    <div class="section-label">Applications</div>
+    <ul class="notes">
+      <li>Resource survey & management</li>
+      <li>Cartography & mapping 🗺️</li>
+      <li>Environment monitoring 🌿</li>
+      <li>Oceanography 🌊</li>
+      <li>Weather forecasting 🌦️</li>
+      <li>Disaster management 🆘</li>
+    </ul>
+    <div class="callout info"><strong>2024–25:</strong> EOS-06 (Oceansat-3) monitoring fisheries, climate | India–France Trishna mission for thermal imaging satellites</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📅 Major ISRO Satellite Series (1975–2025)</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Satellite / Series</th><th>Year</th><th>Purpose / Significance</th></tr>
+        <tr><td><span class="kw">Aryabhata</span></td><td>1975</td><td>India's 1st satellite (Soviet assistance); entry into space age</td></tr>
+        <tr><td><span class="kw">Rohini Series</span></td><td>1980</td><td>1st sat in orbit using India's own rocket (SLV-3)</td></tr>
+        <tr><td><span class="kw">INSAT Series</span></td><td>1982+</td><td>Telecom, TV broadcasting, weather; Doordarshan backbone</td></tr>
+        <tr><td><span class="kw">IRS Series</span></td><td>1988+</td><td>Remote sensing; cartography, agriculture, forestry</td></tr>
+        <tr><td><span class="kw">GSAT Series</span></td><td>2001+</td><td>High-throughput communication</td></tr>
+        <tr><td><span class="kw">Cartosat Series</span></td><td>—</td><td>High-res mapping; urban planning, defense</td></tr>
+        <tr><td><span class="kw">Resourcesat</span></td><td>—</td><td>Agriculture, soil, water monitoring</td></tr>
+        <tr><td><span class="kw">Oceansat Series</span></td><td>—</td><td>Oceanography, fisheries, climate</td></tr>
+        <tr><td><span class="kw">NavIC</span></td><td>2016+</td><td>India's regional GPS system</td></tr>
+      </table>
+    </div>
+    <div class="mnemonic">
+      <div class="m-title">🧠 One-liner Memory Aid</div>
+      <strong>Aryabhata</strong> → Entry | <strong>Rohini</strong> → Self-launch | <strong>INSAT/GSAT</strong> → Talk & TV |
+      <strong>IRS/Cartosat/Resourcesat</strong> → Eyes & Maps | <strong>NavIC</strong> → India's GPS
+    </div>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 6: MISSIONS -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t6" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🌙 Lunar Missions — Chandrayaan Series</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Mission</th><th>Year</th><th>Configuration</th><th>Key Outcome</th></tr>
+        <tr>
+          <td><span class="kw">Chandrayaan-1</span></td><td>2008</td><td>Orbiter only</td>
+          <td>Discovered <span class="hl-yellow">water molecules</span> on Moon's surface 💧</td>
+        </tr>
+        <tr>
+          <td><span class="kw">Chandrayaan-2</span></td><td>2019</td><td>Orbiter + Lander (Vikram) + Rover (Pragyan)</td>
+          <td>Orbiter ✅ | Lander crashed ❌; studied lunar topography & minerals</td>
+        </tr>
+        <tr>
+          <td><span class="kw">Chandrayaan-3</span></td><td>2023</td><td>Lander (Vikram) + Rover (Pragyan)</td>
+          <td>✅ <span class="hl-green">1st country to land near lunar south pole</span>; confirmed sulphur</td>
+        </tr>
+        <tr>
+          <td><span class="kw">Chandrayaan-4</span></td><td>2027–28</td><td>Sample-return mission</td>
+          <td>Bring back ~3 kg lunar soil (south pole region)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="callout tip"><strong>✅ Chandrayaan-3 Achievement:</strong> India became 4th nation to achieve soft landing (after USA, USSR, China) and 1st to land near lunar south pole!</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🛸 Chandrayaan-4 — Key Details</div>
+    <ul class="notes">
+      <li>Type: India's <span class="kw">1st lunar sample-return mission</span></li>
+      <li>Launch: <span class="hl-yellow">2027–28</span> | Budget: ~<span class="hl-yellow">₹2,104 crore</span></li>
+      <li>Weight: ~<span class="hl-yellow">9,200 kg</span> (heaviest ISRO lunar mission)</li>
+      <li>Launcher: <span class="kw">Human-rated LVM3</span></li>
+      <li>Objective: Bring back ~<span class="hl-yellow">3 kg</span> of lunar soil (south pole)</li>
+      <li>Multi-module → <span class="kw">2 launches</span>, in-orbit docking</li>
+      <li>New Tech: Lunar ascent, docking, re-entry capsule</li>
+      <li>Cabinet approved: <span class="hl-yellow">Sept 2024</span></li>
+      <li>Linked with <span class="kw">LUPEX (Japan)</span> for lunar water ice drilling</li>
+    </ul>
+    <div class="callout info"><strong>Significance:</strong> Puts India in elite club (USA, USSR, China) | Builds base for human lunar missions (2040 target)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">☀️ Aditya-L1 — Solar Mission</div>
+    <div class="callout info"><strong>India's 1st dedicated solar observatory</strong> | Launched <span class="hl-yellow">2023</span></div>
+    <ul class="notes">
+      <li>Placed at <span class="kw">Lagrange Point-1 (L1)</span> — ~<span class="hl-yellow">1.5 million km</span> from Earth → stable vantage point</li>
+    </ul>
+    <div class="section-label">Objectives</div>
+    <ul class="notes">
+      <li>☀️ <span class="kw">Solar Corona:</span> Study heating & dynamics of outermost solar layer</li>
+      <li>💨 <span class="kw">Solar Winds & CMEs:</span> Understanding origin & impact</li>
+      <li>🧲 <span class="kw">Magnetic Field Studies:</span> How solar activity influences Earth's space weather</li>
+      <li>📡 <span class="kw">Space Weather Forecasting:</span> Protect satellites, GPS, power grids, communication</li>
+    </ul>
+    <div class="section-label">7 Payloads / Instruments</div>
+    <ul class="notes">
+      <li><span class="kw">4 remote-sensing payloads</span> → imaging solar corona, UV & X-rays</li>
+      <li><span class="kw">3 in-situ payloads</span> → measuring solar wind, plasma, magnetic fields</li>
+    </ul>
+    <div class="callout tip"><strong>✅ Status:</strong> Operating successfully at L1 | Real-time solar flare & CME data shared with NASA, ESA, Artemis program</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">👨‍🚀 Gaganyaan — Human Spaceflight Mission</div>
+    <ul class="notes">
+      <li>India's <span class="kw">first human space mission</span> 🇮🇳</li>
+      <li>Timeline: Uncrewed test flights <span class="hl-yellow">2025</span>, crewed launch <span class="hl-yellow">2026</span></li>
+      <li>Rocket: <span class="kw">Human-rated LVM3</span> (GSLV Mk-III)</li>
+      <li>Crew: <span class="hl-yellow">2–3 astronauts</span></li>
+      <li>Mission Duration: ~<span class="hl-yellow">3 days</span> in Low Earth Orbit (~400 km)</li>
+    </ul>
+    <div class="section-label">Key Features</div>
+    <ul class="notes">
+      <li><span class="kw">Crew Module:</span> Life-support & safety systems</li>
+      <li><span class="kw">Service Module:</span> Power, propulsion & environmental control</li>
+      <li><span class="kw">Crew Escape System:</span> Tested successfully in 2018, 2023, 2024 ✅</li>
+      <li><span class="kw">Vyommitra:</span> Semi-humanoid robot for uncrewed tests 🤖</li>
+      <li>Test Vehicle Abort Mission-1 & 2 (2023–24) — completed ✅</li>
+      <li>Russia training Indian astronauts (survival & zero-G)</li>
+      <li>France supporting medical monitoring & space suits</li>
+    </ul>
+    <div class="callout tip"><strong>✅ Significance:</strong> Will make India the 4th nation with human spaceflight capability (after USA, Russia, China)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🛸 SPADEX Mission — Space Docking Experiment</div>
+    <ul class="notes">
+      <li>A <span class="kw">technology demonstrator mission</span> by ISRO</li>
+      <li>Purpose: Test <span class="kw">satellite docking & formation flying</span> in orbit</li>
+      <li>Two small satellites (~<span class="hl-yellow">200 kg</span> each):</li>
+      <li class="sub">1️⃣ <span class="kw">Chaser spacecraft</span> (active) – performs docking maneuvers</li>
+      <li class="sub">2️⃣ <span class="kw">Target spacecraft</span> (passive) – receives docking</li>
+    </ul>
+    <div class="section-label">Key Objectives</div>
+    <ul class="notes">
+      <li>Demonstrate <span class="kw">autonomous docking</span> → crucial for space station modules</li>
+      <li>Enable <span class="kw">on-orbit servicing</span> (refueling, repair, upgrades)</li>
+      <li>Develop <span class="kw">formation flying capability</span></li>
+      <li>Support future <span class="kw">Gaganyaan & BAS</span></li>
+    </ul>
+    <div class="callout info"><strong>Significance:</strong> Critical step towards Indian space station by 2035 | Reduces foreign tech dependency | Docking tech will be used for Chandrayaan-4 & LUPEX</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌟 Astrosat (2015) & XPoSat (2024)</div>
+    <div class="two-col">
+      <div class="mini-card">
+        <div class="mc-title">🔭 Astrosat (2015)</div>
+        India's <span class="kw">1st multi-wavelength space observatory</span><br>
+        Studies: Stars, galaxies, black holes, X-ray binaries<br>
+        Payloads: UV, optical, X-ray ranges<br>
+        2024: Still contributing; data shared globally ✅
+      </div>
+      <div class="mini-card">
+        <div class="mc-title">⚡ XPoSat (2024)</div>
+        <span class="kw">X-ray Polarimeter Satellite</span> (Jan 2024)<br>
+        Mission life: ~5 years<br>
+        Studies: Black holes, pulsars, neutron stars<br>
+        Instruments: POLIX + XSPECT<br>
+        India → <span class="hl-yellow">2nd country after NASA</span> for X-ray polarimetry ✅
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌍 Axiom Mission 4 (Ax-4) — 2025</div>
+    <ul class="notes">
+      <li>Launch: <span class="hl-yellow">25 June 2025</span> | Return: 15 July 2025</li>
+      <li>Duration: ~21 days (docked for 18 days)</li>
+      <li>Launch Site: Kennedy Space Center, USA</li>
+      <li>Launch Vehicle: <span class="kw">Falcon 9 Block 5</span></li>
+      <li>Spacecraft: SpaceX Crew Dragon (capsule C213)</li>
+      <li>Docking: Zenith Port of Harmony Module</li>
+      <li>Landing: Pacific Ocean near California</li>
+      <li>Objective: Scientific experiments in <span class="kw">microgravity</span>, outreach, international collaboration</li>
+    </ul>
+    <div class="section-label">Crew (4 Members)</div>
+    <ul class="notes">
+      <li>Peggy Whitson (Commander, USA)</li>
+      <li>🇮🇳 <span class="kw">Shubhanshu Shukla</span> (India, IAF Group Captain, Pilot – <span class="hl-yellow">2nd Indian in space, 1st at ISS</span>)</li>
+      <li>Sławosz Uznański (Poland, ESA/POLSA, Mission Specialist)</li>
+      <li>Tibor Kapu (Hungary, Mission Specialist)</li>
+    </ul>
+    <div class="callout tip"><strong>India's Space Heritage:</strong> Rakesh Sharma (1984) = 1st Indian in space (Soviet Soyuz) | Shubhanshu Shukla (2025) = 2nd Indian in space, 1st Indian at ISS ✅</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🚀 Other Key Global Missions</div>
+    <div class="section-label">Moon & Planetary</div>
+    <ul class="notes">
+      <li><span class="kw">Luna 25 (Russia)</span> – Failed attempt near lunar south pole (2023)</li>
+      <li><span class="kw">SLIM (Japan)</span> – Smart Lander for precise Moon landings</li>
+    </ul>
+    <div class="section-label">Asteroids & Beyond</div>
+    <ul class="notes">
+      <li><span class="kw">MAVEN (USA)</span> – Studies Martian atmosphere evolution</li>
+      <li><span class="kw">JUICE (EU)</span> – Jupiter Icy Moons Explorer</li>
+      <li><span class="kw">Magellan (USA)</span> – Mapped Venus surface; active volcano evidence</li>
+      <li><span class="kw">OSIRIS-REx (USA)</span> – Collected asteroid Bennu samples</li>
+      <li><span class="kw">Lucy (USA)</span> – 12-year mission; visits 10 Trojan asteroids of Jupiter</li>
+      <li><span class="kw">Psyche (USA)</span> – Studies metallic asteroid 16 Psyche</li>
+      <li><span class="kw">ESCAPADE (USA)</span> – Dual spacecraft; study Mars' magnetosphere</li>
+    </ul>
+    <div class="section-label">Earth & Space Science</div>
+    <ul class="notes">
+      <li><span class="kw">Geotail (NASA + JAXA)</span> – Studied Earth's magnetosphere for 30 years</li>
+      <li><span class="kw">Soyuz (Russia)</span> – Supplies ISS; crew transport</li>
+      <li><span class="kw">Shenzhou-16 (China)</span> – Carried China's 1st civilian astronaut into space</li>
+    </ul>
+    <div class="section-label">India's Future Missions</div>
+    <ul class="notes">
+      <li><span class="kw">Venus Orbiter (Shukrayaan)</span> – Study Venus' atmosphere; launch expected <span class="hl-yellow">2031</span></li>
+      <li><span class="kw">Mars Orbiter Mission 2 (MOM-2)</span> – Launch expected <span class="hl-yellow">2026</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 7: NAVIC & GPS -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t7" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🧭 NavIC / IRNSS — India's Navigation System</div>
+    <div class="callout info"><strong>Full form:</strong> Navigation with Indian Constellation | Regional Navigation Satellite System by ISRO</div>
+    <ul class="notes">
+      <li>Group of <span class="hl-yellow">7 satellites</span> initially:</li>
+      <li class="sub">4 in <span class="kw">Geosynchronous Orbit</span></li>
+      <li class="sub">3 in <span class="kw">Geostationary Orbit</span></li>
+      <li><span class="kw">Coverage:</span> Indian landmass + <span class="hl-yellow">1,500 km</span> beyond borders</li>
+      <li><span class="kw">Technology:</span> Each satellite carries <span class="hl-yellow">3 atomic clocks (Rubidium)</span></li>
+      <li><span class="kw">Accuracy:</span> ~<span class="hl-yellow">5–10 m</span> (better than GPS ~20 m)</li>
+      <li><span class="kw">Applications:</span> Civilian navigation + restricted defence applications</li>
+      <li>NVS-02 (2025): Latest satellite launched with rubidium atomic clocks</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⭐ Significance of NavIC</div>
+    <ul class="notes">
+      <li>🛡️ <span class="kw">Strategic Independence:</span> Reduces reliance on GPS, ensures secure navigation</li>
+      <li>🎯 <span class="kw">Military Role:</span> Missiles, drones, defense navigation</li>
+      <li>🚗 <span class="kw">Civilian Uses:</span> Transport, aviation, disaster management, agriculture</li>
+      <li>💰 <span class="kw">Economic Role:</span> Logistics, e-commerce, autonomous vehicles</li>
+      <li>📱 <span class="kw">Digital Economy:</span> Enhances precise positioning services</li>
+      <li>🌏 <span class="kw">Global Recognition:</span> Adopted in Sri Lanka, Nepal, Bhutan</li>
+      <li>🔗 <span class="kw">Expansion:</span> Integration with GPS & Galileo for interoperability</li>
+      <li>📱 <span class="kw">Future:</span> Global coverage planned; mandatory in smartphones from 2025</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌐 Global Navigation Systems Comparison</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>System</th><th>Country</th><th>Operator</th><th>Coverage</th><th>Satellites</th><th>Accuracy</th></tr>
+        <tr><td><span class="kw">GPS</span></td><td>USA 🇺🇸</td><td>U.S. Space Force</td><td>Global</td><td>~31 (MEO)</td><td>~5–10m (civil), &lt;1m (military)</td></tr>
+        <tr><td><span class="kw">GLONASS</span></td><td>Russia 🇷🇺</td><td>Roscosmos</td><td>Global</td><td>~24</td><td>Comparable to GPS</td></tr>
+        <tr><td><span class="kw">Galileo</span></td><td>EU 🇪🇺</td><td>EUSPA</td><td>Global</td><td>~28</td><td>~1m (civil)</td></tr>
+        <tr><td><span class="kw">BeiDou</span></td><td>China 🇨🇳</td><td>CNSA</td><td>Global</td><td>35</td><td>~2.5–5m (civil), &lt;0.1m (military)</td></tr>
+        <tr><td><span class="kw">NavIC</span></td><td>India 🇮🇳</td><td>ISRO</td><td>Regional</td><td>7</td><td>&lt;20m (civil), 5–10m enhanced</td></tr>
+        <tr><td><span class="kw">QZSS</span></td><td>Japan 🇯🇵</td><td>JAXA</td><td>Japan + Asia-Pacific</td><td>4 (planned 7)</td><td>~1m; interoperable with GPS</td></tr>
+      </table>
+    </div>
+    <div class="mnemonic">
+      <div class="m-title">🧠 Mnemonic — GNSS Countries</div>
+      <strong>UGECIJ</strong> → <strong>U</strong>SA (GPS), <strong>G</strong>lory to Russia (GLONASS), <strong>E</strong>U (Galileo), <strong>C</strong>hina (BeiDou), <strong>I</strong>ndia (NavIC), <strong>J</strong>apan (QZSS)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📡 GPS Services — Two Types</div>
+    <div class="two-col">
+      <div class="mini-card">
+        <div class="mc-title">SPS – Standard Positioning System</div>
+        For <span class="kw">civilian use</span><br>
+        Railways, roads, general navigation
+      </div>
+      <div class="mini-card">
+        <div class="mc-title">PPS – Precision Positioning System</div>
+        For <span class="kw">military / restricted use</span><br>
+        Exact location, continuous correction
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚠️ GPS Spoofing</div>
+    <div class="callout warn"><strong>Definition:</strong> Cyber-attack using fake GPS signals to mislead receivers (aircraft, ships, vehicles) | Example: Reported use by Israel vs Iran (2024)</div>
+    <div class="section-label">Implications</div>
+    <ul class="notes">
+      <li>🧭 <span class="kw">Course Deviation:</span> Aircraft/ships diverted from original path</li>
+      <li>❌ <span class="kw">Navigation Errors:</span> False data in flight systems</li>
+      <li>⚠️ <span class="kw">Safety Risks:</span> Misjudgment of altitude, speed → accidents</li>
+      <li>🔒 <span class="kw">Security Threats:</span> Disruption of airports, military ops</li>
+      <li>💸 <span class="kw">Financial Losses:</span> Flight delays, diversions, cancellations</li>
+      <li>📉 <span class="kw">Reputation Damage:</span> Loss of trust in aviation safety</li>
+    </ul>
+    <div class="section-label">Way Forward</div>
+    <ul class="notes">
+      <li>🔐 <span class="kw">Signal Authentication:</span> Tech to verify & detect spoofed signals</li>
+      <li>🔒 <span class="kw">Encryption:</span> Stronger GPS/NavIC encryption</li>
+      <li>📡 <span class="kw">Multi-Sensor Fusion:</span> Radar + inertial navigation + ground aids</li>
+      <li>📊 <span class="kw">Real-time Monitoring:</span> Track anomalies, issue alerts</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 8: ISS & BAS -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t8" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🌍 International Space Station (ISS) — Facts</div>
+    <ul class="notes">
+      <li>Launched: <span class="hl-yellow">20 November 1998</span></li>
+      <li>Permanently inhabited: Since <span class="hl-yellow">2000</span></li>
+      <li>Agencies: <span class="kw">NASA (USA), Roscosmos (Russia), ESA (Europe), JAXA (Japan), CSA (Canada)</span></li>
+      <li>Role: Largest man-made structure in space</li>
+      <li>Size: Football-field scale; supports <span class="hl-yellow">6–7 astronauts</span></li>
+      <li>Orbit: <span class="hl-yellow">408 km</span> altitude</li>
+      <li>Speed: <span class="hl-yellow">7.66 km/s</span> | 1 orbit = 90–93 min (~16 orbits/day)</li>
+      <li>Cost: ~<span class="hl-yellow">$15,000 crore USD</span> (&gt;$150 billion total)</li>
+      <li>Operational till: <span class="hl-yellow">2031</span> (planned deorbit in Pacific)</li>
+    </ul>
+    <div class="year-trick">
+      <strong>💡 Year Trick</strong>
+      ISS launched 1998 → "ISS = 1 + 9 + 9 + 8 = old century ending, new era beginning"
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">✅ Significance of ISS</div>
+    <ul class="notes">
+      <li>🧪 Global <span class="kw">science lab in microgravity</span> → biology, physics, medicine, materials</li>
+      <li>🌐 Symbol of <span class="kw">international cooperation</span> post-Cold War</li>
+      <li>🤖 Technology demo for <span class="kw">life-support, robotics, docking</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚠️ Challenges of ISS</div>
+    <ul class="notes">
+      <li>Very costly (&gt;$150 bn), aging structure, frequent resupply 💸</li>
+      <li>US–Russia tensions since 2022 🌐</li>
+      <li>Retirement planned by 2030 → deorbit in Pacific</li>
+    </ul>
+    <div class="callout info"><strong>Successors:</strong> NASA Lunar Gateway | China's Tiangong | India's BAS | Private stations (Axiom, Orbital Reef)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🇮🇳 Bharatiya Antariksh Station (BAS)</div>
+    <div class="callout info"><strong>India's 1st indigenous modular space station</strong> in LEO (400–450 km), part of Gaganyaan expansion</div>
+    <ul class="notes">
+      <li>Timeline:</li>
+      <li class="sub"><span class="hl-yellow">2028</span> → Base module launch</li>
+      <li class="sub"><span class="hl-yellow">2035</span> → Full operations</li>
+      <li class="sub"><span class="hl-yellow">2040</span> → Crewed lunar mission</li>
+      <li>Structure: <span class="kw">5 modular segments</span>, launched in phases</li>
+    </ul>
+    <div class="flow">
+      <div class="flow-box">2028 Base Module</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">2035 Full Ops</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">2040 Crewed Lunar</div>
+    </div>
+
+    <div class="section-label">Significance</div>
+    <ul class="notes">
+      <li>Supports <span class="kw">long-duration astronaut missions & microgravity research</span></li>
+      <li>Aids <span class="kw">disaster management, innovation, employment</span></li>
+      <li>Boosts India's share in global space economy: <span class="hl-yellow">2% → 10%</span></li>
+      <li>Enhances <span class="kw">diplomatic leverage</span> via collaborations</li>
+    </ul>
+
+    <div class="section-label">Challenges</div>
+    <ul class="notes">
+      <li>Low funding (<span class="hl-yellow">0.7% GDP</span>), complex tech (life-support, shielding)</li>
+      <li>Geopolitical rivalry with US, China, Russia</li>
+      <li>Space risks → radiation, debris, isolation</li>
+    </ul>
+
+    <div class="section-label">Way Forward</div>
+    <ul class="notes">
+      <li>Increase <span class="kw">funding & PPPs</span></li>
+      <li>Develop safety & maintenance tech</li>
+      <li>Ensure regular resupply & upgrades</li>
+      <li>Learn from <span class="kw">ISS (till 2030) & Tiangong (China)</span></li>
+    </ul>
+    <div class="callout tip"><strong>✅ Status:</strong> Govt approved first module by 2028 | Crewed lunar mission by 2040 announced | Seen as India's successor to ISS post-2030</div>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 9: COLLABORATIONS -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t9" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🤝 ISRO International Collaborations</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Agency</th><th>Country</th><th>Key Joint Mission / Activity</th></tr>
+        <tr>
+          <td><span class="kw">NASA</span></td><td>🇺🇸 USA</td>
+          <td>NISAR (2025), Chandrayaan-1 (M3), Artemis program (DSN)</td>
+        </tr>
+        <tr>
+          <td><span class="kw">CNES</span></td><td>🇫🇷 France</td>
+          <td>Megha-Tropiques, SARAL, Trishna (2026), Gaganyaan support</td>
+        </tr>
+        <tr>
+          <td><span class="kw">JAXA</span></td><td>🇯🇵 Japan</td>
+          <td>LUPEX (late 2020s), NavIC+QZSS interoperability</td>
+        </tr>
+        <tr>
+          <td><span class="kw">Roscosmos</span></td><td>🇷🇺 Russia</td>
+          <td>Astronaut training (Gaganyaan), GLONASS, Aryabhata (1975)</td>
+        </tr>
+        <tr>
+          <td><span class="kw">ESA</span></td><td>🇪🇺 Europe</td>
+          <td>Ground stations for deep-space; space situational awareness</td>
+        </tr>
+        <tr>
+          <td><span class="kw">ISA</span></td><td>🇮🇱 Israel</td>
+          <td>Small satellite technology sharing</td>
+        </tr>
+        <tr>
+          <td><span class="kw">MBRSC</span></td><td>🇦🇪 UAE</td>
+          <td>Data sharing; PSLV used for UAE satellites</td>
+        </tr>
+        <tr>
+          <td>Singapore & South Korea</td><td>—</td>
+          <td>Commercial satellite launches via PSLV</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🛰️ NISAR — Biggest ISRO–NASA Collaboration</div>
+    <div class="callout info"><strong>Full form:</strong> NASA–ISRO Synthetic Aperture Radar</div>
+    <ul class="notes">
+      <li>Joint <span class="kw">Earth-observation satellite</span></li>
+      <li>Equipped with <span class="kw">L-band (NASA)</span> & <span class="kw">S-band (ISRO)</span> radars</li>
+      <li>Launch: <span class="hl-yellow">2025</span> on LVM3 from Sriharikota</li>
+      <li>Studies: Earth ecosystems, biomass, earthquakes, glaciers, hazards 🌍</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌙 LUPEX — ISRO–JAXA Moon Mission</div>
+    <ul class="notes">
+      <li>Full form: <span class="kw">Lunar Polar Exploration Mission</span></li>
+      <li>Planned: <span class="hl-yellow">Late 2020s</span></li>
+      <li>Aim: Explore Moon's south pole for <span class="kw">water ice</span> using India's lander & Japan's rover</li>
+      <li>Collaboration on NavIC + QZSS interoperability</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌡️ Trishna — ISRO–CNES Thermal Imaging</div>
+    <ul class="notes">
+      <li>Joint mission for <span class="kw">thermal infrared imaging</span></li>
+      <li>Monitors <span class="kw">land surface temperatures</span></li>
+      <li>Planned: <span class="hl-yellow">2026</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📋 Key Updates Summary (2024–25)</div>
+    <ul class="notes">
+      <li>✅ NISAR launch in 2025 → biggest ISRO–NASA collaboration yet</li>
+      <li>✅ Trishna (ISRO–CNES) approved → thermal imaging mission by 2026</li>
+      <li>✅ LUPEX (ISRO–JAXA) in late 2020s → water-ice exploration at lunar south pole</li>
+      <li>✅ Gaganyaan international support → Russia (training), France (medical & ground stations), ESA (tracking)</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 10: OBSERVATORIES -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t10" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🔭 Space-based Observatories (ISRO)</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Observatory</th><th>Year</th><th>Key Feature</th></tr>
+        <tr><td><span class="kw">Astrosat</span></td><td>2015</td><td>India's 1st multi-wavelength space observatory (UV, optical, X-ray)</td></tr>
+        <tr><td><span class="kw">Aditya-L1</span></td><td>2023</td><td>Solar observatory at L1 — studies corona, solar winds</td></tr>
+        <tr><td><span class="kw">XPoSat</span></td><td>2024</td><td>X-ray Polarimetry — studies black holes, pulsars; 2nd country after NASA</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏔️ Ground-based Observatories in India</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Observatory</th><th>Location</th><th>Key Feature</th></tr>
+        <tr>
+          <td><span class="kw">IAO (Indian Astronomical Observatory)</span></td>
+          <td>Hanle, Ladakh</td>
+          <td>One of world's highest observatories (<span class="hl-yellow">4,500 m</span>); hosts Himalayan Chandra Telescope (2m optical-infrared)</td>
+        </tr>
+        <tr>
+          <td><span class="kw">ARIES</span></td>
+          <td>Nainital, Uttarakhand</td>
+          <td>Aryabhatta Research Institute of Observational Sciences; optical & atmospheric studies</td>
+        </tr>
+        <tr>
+          <td><span class="kw">Vainu Bappu Observatory (VBO)</span></td>
+          <td>Kavalur, Tamil Nadu</td>
+          <td>2.3m Vainu Bappu Telescope; optical astronomy</td>
+        </tr>
+        <tr>
+          <td><span class="kw">GMRT</span></td>
+          <td>Pune, Maharashtra</td>
+          <td><span class="hl-yellow">World's largest radio telescope array</span> at meter wavelengths</td>
+        </tr>
+        <tr>
+          <td><span class="kw">PRL Observatories</span></td>
+          <td>Mount Abu & Udaipur, Rajasthan</td>
+          <td>Solar physics, planetary science</td>
+        </tr>
+      </table>
+    </div>
+    <div class="callout tip"><strong>💡 Remember GMRT:</strong> Giant Metrewave Radio Telescope — Pune — World's largest at meter wavelengths 🌟</div>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 11: AI & ROBOTICS -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t11" class="tab-content">
+
+  <div class="card">
+    <div class="card-title">🤖 AI & Robotics — Current Affairs (2024–25)</div>
+    <div class="section-label">🌍 Global</div>
+    <ul class="notes">
+      <li><span class="kw">Pibot</span> – World's first humanoid pilot (by <span class="hl-blue">KAIST, South Korea</span>) ✈️</li>
+      <li><span class="kw">USA</span> – launched <span class="kw">X-37B</span> robot spaceplane 🛸</li>
+      <li><span class="kw">China</span> – launched <span class="kw">"Shenlong"</span> robot spaceplane 🛸</li>
+      <li><span class="kw">Google DeepMind</span> – launched <span class="kw">Genie</span> (generative AI model)</li>
+      <li><span class="kw">OpenAI</span> – launched <span class="kw">Sora</span> (text-to-video AI model)</li>
+      <li><span class="kw">Google</span> – launched <span class="kw">Lumiere</span> (AI video model)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🇮🇳 India — Robotics & AI Innovations</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Innovation</th><th>Significance</th><th>By</th></tr>
+        <tr><td><span class="kw">Indrajaal</span></td><td>India's 1st AI-driven <span class="hl-yellow">anti-drone system</span></td><td>Grene Robotics</td></tr>
+        <tr><td><span class="kw">Bot-Verse</span></td><td>India's largest <span class="hl-yellow">robotic manufacturing unit</span></td><td>Greater Noida</td></tr>
+        <tr><td><span class="kw">HomoSep Atom</span></td><td>India's 1st <span class="hl-yellow">septic tank/manhole cleaning robot</span></td><td>IIT Madras startup Solinas</td></tr>
+        <tr><td><span class="kw">Krutrim AI</span></td><td>India's 1st AI startup to achieve <span class="hl-yellow">unicorn status</span></td><td>—</td></tr>
+        <tr><td><span class="kw">Pratham</span></td><td>World's 1st <span class="hl-yellow">no-code computer vision platform</span></td><td>Assert AI</td></tr>
+        <tr><td><span class="kw">Kairali AI Chip</span></td><td>India's 1st <span class="hl-yellow">silicon-proven AI chip</span></td><td>Digital University Kerala</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏢 Institutions & Programs (India)</div>
+    <ul class="notes">
+      <li><span class="kw">C-DOT:</span> Won Innovation in AI Award (Aegis Graham Bell Awards 2024) for ASTR project</li>
+      <li><span class="kw">iRASTE (MoRTH):</span> Won 9th GovTech Award (Dubai) – AI-powered road safety</li>
+      <li><span class="kw">iOncology.ai:</span> AI platform launched by AIIMS Delhi + CDAC Pune (cancer diagnostics)</li>
+      <li><span class="kw">IMPEL-AI Program:</span> Launched in India by iCreate + Microsoft</li>
+      <li><span class="kw">ADVANTA(i)GE INDIA (Microsoft):</span> Train 2 million Indians in AI skills by 2025</li>
+      <li><span class="kw">AI Centre of Excellence:</span> Set up by Google at IIIT Nagpur</li>
+      <li><span class="kw">Aarogya-Doctors on Wheels:</span> AI-supported telemedicine mobile clinic launched in J&K</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 12: QUICK SUMMARY -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div id="t12" class="tab-content">
+
+  <div class="summary">
+    <h3>⚡ ISRO Basics — Quick Recall</h3>
+    <ul>
+      <li>ISRO est. 1969 | Under DoS (1972) | Under PMO</li>
+      <li>Founder: Dr. Vikram Sarabhai | HQ: Bengaluru</li>
+      <li>Commercial arms: Antrix (foreign deals) | NSIL (local industry)</li>
+    </ul>
+  </div>
+
+  <div class="summary" style="background:linear-gradient(135deg,#065F46,#047857);margin-top:12px;">
+    <h3>🌐 Orbits — Quick Recall</h3>
+    <ul>
+      <li>Perigee = Nearest (faster) | Apogee = Farthest (slower)</li>
+      <li>LEO (&lt;2000km) | MEO (2000–36000km) | GEO (~36000km) | HEO (&gt;36000km)</li>
+      <li>Geostationary = 35,784 km | 24-hr period | Also called Clarke Orbit</li>
+      <li>Mnemonic: "Little Monkeys Go High" → LEO MEO GEO HEO</li>
+    </ul>
+  </div>
+
+  <div class="summary" style="background:linear-gradient(135deg,#7C3AED,#6D28D9);margin-top:12px;">
+    <h3>⚙️ Propulsion — Quick Recall</h3>
+    <ul>
+      <li>Non-air breathing: uses oxidizer | Air-breathing: uses atmospheric O₂</li>
+      <li>Ramjet: Mach 2–3 | Scramjet: &gt;Mach 5 (hypersonic) | ISRO tested scramjet 2016</li>
+      <li>Cryogenic: LH₂ + LOX | Used in GSLV | Clean (water by-product)</li>
+      <li>Solid propellant: HTPB | Liquid propellant: UDMH</li>
+    </ul>
+  </div>
+
+  <div class="summary" style="background:linear-gradient(135deg,#B45309,#D97706);margin-top:12px;">
+    <h3>🚀 Launch Vehicles — Quick Recall</h3>
+    <ul>
+      <li>SLV (1980) → ASLV (1987) → PSLV → GSLV → LVM3 → SSLV → RLV → NGLV</li>
+      <li>PSLV: workhorse; 4-stage; Chandrayaan-1, Mangalyaan, 104 sats</li>
+      <li>LVM3 (Bahubali): 3-stage; Chandrayaan-2 & 3, Gaganyaan</li>
+      <li>RLV (Pushpak): 10× cheaper; landing test 2023 ✅</li>
+      <li>NGLV: future; semi-cryo; first flight early 2030s</li>
+    </ul>
+  </div>
+
+  <div class="summary" style="background:linear-gradient(135deg,#0369A1,#0284C7);margin-top:12px;">
+    <h3>🌙 Key Missions — Quick Recall</h3>
+    <ul>
+      <li>Chandrayaan-1 (2008): water on Moon | C-2 (2019): lander crash | C-3 (2023): south pole success ✅</li>
+      <li>Chandrayaan-4 (2027–28): sample return; 9200 kg; 2 launches</li>
+      <li>Aditya-L1 (2023): solar mission at L1; 7 payloads</li>
+      <li>Gaganyaan: uncrewed 2025, crewed 2026; India → 4th nation</li>
+      <li>SPADEX: docking experiment; supports BAS & Chandrayaan-4</li>
+      <li>Ax-4: Shubhanshu Shukla = 2nd Indian in space, 1st at ISS (June 2025)</li>
+    </ul>
+  </div>
+
+  <div class="summary" style="background:linear-gradient(135deg,#15803D,#16A34A);margin-top:12px;">
+    <h3>🧭 NavIC & GPS — Quick Recall</h3>
+    <ul>
+      <li>NavIC: 7 sats (3 GEO + 4 GSO); coverage India + 1500 km; accuracy 5–10m</li>
+      <li>Rubidium atomic clocks; mandatory in smartphones from 2025</li>
+      <li>GPS systems: USA(GPS), Russia(GLONASS), EU(Galileo), China(BeiDou), India(NavIC), Japan(QZSS)</li>
+      <li>GPS Spoofing: fake signals to mislead receivers; counter: multi-sensor fusion</li>
+    </ul>
+  </div>
+
+  <div class="summary" style="background:linear-gradient(135deg,#991B1B,#B91C1C);margin-top:12px;">
+    <h3>🌍 ISS & BAS — Quick Recall</h3>
+    <ul>
+      <li>ISS: launched 1998; LEO 408 km; 6–7 astronauts; retiring 2031</li>
+      <li>BAS: 2028 base module; 2035 full ops; 2040 crewed lunar; 5 modules</li>
+      <li>India's space economy target: 2% → 10%</li>
+    </ul>
+  </div>
+
+  <div class="summary" style="background:linear-gradient(135deg,#374151,#4B5563);margin-top:12px;">
+    <h3>🤖 AI & Robotics — Quick Recall</h3>
+    <ul>
+      <li>Pibot: world's 1st humanoid pilot (KAIST, South Korea)</li>
+      <li>India: Indrajaal (anti-drone), Krutrim AI (unicorn), Kairali AI Chip, HomoSep Atom</li>
+      <li>ADVANTA(i)GE INDIA: Microsoft trains 2M in AI by 2025</li>
+    </ul>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <div class="card-title">🧠 Master Mnemonic — ISRO Satellite Timeline</div>
+    <div class="mnemonic">
+      <div class="m-title">One-liner Memory Aid</div>
+      <strong>Aryabhata</strong> → Entry into space | <strong>Rohini</strong> → Self-launch | <strong>INSAT/GSAT</strong> → Talk & TV |
+      <strong>IRS/Cartosat/Resourcesat</strong> → Eyes & Maps | <strong>NavIC</strong> → India's GPS
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📅 Key Years to Remember</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Year</th><th>Event</th></tr>
+        <tr><td><span class="hl-yellow">1969</span></td><td>ISRO established</td></tr>
+        <tr><td><span class="hl-yellow">1972</span></td><td>Department of Space (DoS) created</td></tr>
+        <tr><td><span class="hl-yellow">1975</span></td><td>Aryabhata — India's 1st satellite</td></tr>
+        <tr><td><span class="hl-yellow">1980</span></td><td>Rohini — India's 1st indigenous rocket launch (SLV-3)</td></tr>
+        <tr><td><span class="hl-yellow">1984</span></td><td>Rakesh Sharma — 1st Indian in space</td></tr>
+        <tr><td><span class="hl-yellow">2008</span></td><td>Chandrayaan-1 — water on Moon</td></tr>
+        <tr><td><span class="hl-yellow">2013</span></td><td>Mangalyaan (Mars Orbiter Mission)</td></tr>
+        <tr><td><span class="hl-yellow">2016</span></td><td>NavIC operational; Scramjet engine test; RLV hypersonic test</td></tr>
+        <tr><td><span class="hl-yellow">2017</span></td><td>PSLV-C37 — record 104 satellites in one launch</td></tr>
+        <tr><td><span class="hl-yellow">2019</span></td><td>Chandrayaan-2</td></tr>
+        <tr><td><span class="hl-yellow">2023</span></td><td>Chandrayaan-3 (south pole ✅); Aditya-L1; RLV landing test</td></tr>
+        <tr><td><span class="hl-yellow">2024</span></td><td>XPoSat; GSAT-20</td></tr>
+        <tr><td><span class="hl-yellow">2025</span></td><td>NISAR launch; Ax-4 (Shubhanshu Shukla); uncrewed Gaganyaan</td></tr>
+        <tr><td><span class="hl-yellow">2026</span></td><td>Crewed Gaganyaan; MOM-2; Trishna mission</td></tr>
+        <tr><td><span class="hl-yellow">2027–28</span></td><td>Chandrayaan-4; BAS base module</td></tr>
+        <tr><td><span class="hl-yellow">2031</span></td><td>Shukrayaan; ISS deorbit</td></tr>
+        <tr><td><span class="hl-yellow">2035</span></td><td>BAS full operations</td></tr>
+        <tr><td><span class="hl-yellow">2040</span></td><td>Crewed lunar mission</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+<!-- END ALL TABS -->
+</div>
+
+<!-- SCROLL TO TOP -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollTop');
+    if (window.scrollY > 300) btn.classList.add('show');
+    else btn.classList.remove('show');
+  });
+</script>
+
+</body>
+</html>
