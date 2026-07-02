@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mughal Empire – SSC 2026 Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F8F6F0;
+    --card: #FFFFFF;
+    --border: #E5DDD0;
+    --text: #1A1A1A;
+    --muted: #6B7280;
+    --acc: #6B2D0A;
+    --acc-light: #FDF3E7;
+    --acc-mid: #B45309;
+    --green: #166534;
+    --green-light: #F0FDF4;
+    --blue: #1E3A8A;
+    --blue-light: #EFF6FF;
+    --purple: #4C1D95;
+    --purple-light: #F5F3FF;
+    --orange: #92400E;
+    --orange-light: #FFFBEB;
+    --red: #991B1B;
+    --red-light: #FEF2F2;
+    --shadow: 0 1px 4px rgba(0,0,0,0.07);
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  .header { background: linear-gradient(135deg, #1A0800 0%, #7C3A0A 50%, #1A3A1A 100%); color: #fff; padding: 22px 20px 16px; text-align: center; }
+  .header h1 { font-family: 'Merriweather', serif; font-size: 1.5rem; margin-bottom: 4px; }
+  .header p { font-size: 0.82rem; opacity: 0.82; }
+
+  .tab-bar-wrap { background: var(--card); border-bottom: 2px solid var(--border); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .tab-bar-wrap::-webkit-scrollbar { display: none; }
+  .tab-bar { display: flex; gap: 4px; padding: 8px 12px; white-space: nowrap; min-width: max-content; }
+  .tab-btn { background: var(--acc-light); color: var(--acc); border: none; border-radius: 20px; padding: 7px 15px; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.18s; flex-shrink: 0; }
+  .tab-btn.active { background: var(--acc); color: #fff; box-shadow: 0 2px 8px rgba(107,45,10,0.3); }
+  .tab-btn:hover:not(.active) { background: #F0D8C0; }
+
+  .panel { display: none; padding: 18px 15px 90px; max-width: 840px; margin: 0 auto; }
+  .panel.active { display: block; }
+
+  .card { background: var(--card); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: 16px 17px 13px; margin-bottom: 15px; }
+  .card-title { font-family: 'Merriweather', serif; font-size: 0.97rem; font-weight: 700; color: var(--acc); margin-bottom: 11px; padding-bottom: 8px; border-bottom: 2px solid var(--acc-light); display: flex; align-items: center; gap: 8px; }
+
+  ul.notes { list-style: none; padding: 0; }
+  ul.notes li { padding: 4px 0 4px 18px; position: relative; border-bottom: 1px dashed var(--border); font-size: 0.87rem; }
+  ul.notes li:last-child { border-bottom: none; }
+  ul.notes li::before { content: '▸'; position: absolute; left: 0; color: var(--acc-mid); font-size: 0.72rem; top: 7px; }
+
+  .kw { font-weight: 700; color: #111; }
+  .ac { color: var(--acc); font-weight: 600; }
+  .gr { color: var(--green); font-weight: 600; }
+  .rd { color: var(--red); font-weight: 600; }
+  .bl { color: var(--blue); font-weight: 600; }
+  .or { color: var(--orange); font-weight: 600; }
+  .pu { color: var(--purple); font-weight: 600; }
+
+  .sh { font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--acc-mid); margin: 12px 0 5px; }
+
+  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 8px; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.81rem; }
+  thead tr { background: var(--acc); color: #fff; }
+  thead th { padding: 8px 10px; text-align: left; font-weight: 600; }
+  tbody tr:nth-child(odd) { background: #FAF7F2; }
+  tbody tr:nth-child(even) { background: #fff; }
+  tbody td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.81rem; }
+  tbody tr:hover { background: var(--acc-light); }
+
+  .mnemo-box { background: var(--purple-light); border-left: 4px solid var(--purple); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .mnemo-box .lbl { font-weight: 700; color: var(--purple); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .tip-box { background: var(--green-light); border-left: 4px solid var(--green); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .tip-box .lbl { font-weight: 700; color: var(--green); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .warn-box { background: var(--orange-light); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .warn-box .lbl { font-weight: 700; color: var(--orange); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .imp-box { background: var(--blue-light); border-left: 4px solid var(--blue); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .imp-box .lbl { font-weight: 700; color: var(--blue); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+
+  .yr { display: inline-block; background: #F0E0C8; color: var(--acc); border-radius: 4px; font-size: 0.72rem; font-weight: 700; padding: 1px 7px; margin-left: 4px; }
+  .badge { display: inline-block; border-radius: 4px; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; margin-right: 4px; vertical-align: middle; }
+  .b-gold { background: #FEF3C7; color: #92400E; }
+  .b-red { background: #FEE2E2; color: #991B1B; }
+  .b-green { background: #D1FAE5; color: #065F46; }
+  .b-blue { background: #DBEAFE; color: #1E3A8A; }
+
+  .flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 10px 0; }
+  .fi { background: var(--acc-light); border: 1.5px solid #D4A870; border-radius: 6px; padding: 4px 11px; font-size: 0.79rem; font-weight: 600; color: var(--acc); }
+  .fa { color: var(--muted); font-weight: 700; }
+
+  .fact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  @media (max-width: 420px) { .fact-grid { grid-template-columns: 1fr; } }
+  .fact-item { background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; font-size: 0.8rem; }
+  .fact-item .fl { font-weight: 700; color: var(--muted); font-size: 0.68rem; text-transform: uppercase; margin-bottom: 2px; }
+
+  .summary-box { background: linear-gradient(135deg, #FDF3E7 0%, #F5F3FF 100%); border: 1.5px solid #D4B896; border-radius: var(--radius); padding: 15px; margin-top: 8px; font-size: 0.85rem; }
+  .sum-title { font-family: 'Merriweather', serif; font-size: 0.95rem; color: var(--acc); font-weight: 700; margin-bottom: 10px; }
+
+  #scroll-top { position: fixed; bottom: 22px; right: 18px; background: var(--acc); color: #fff; border: none; border-radius: 50%; width: 44px; height: 44px; font-size: 1.3rem; cursor: pointer; box-shadow: 0 4px 16px rgba(107,45,10,0.4); z-index: 999; display: none; align-items: center; justify-content: center; }
+  #scroll-top.visible { display: flex; }
+  #scroll-top:hover { background: #92400E; }
+
+  @media (max-width: 520px) { .header h1 { font-size: 1.15rem; } .panel { padding: 13px 10px 80px; } .card { padding: 13px 11px; } }
+
+  .arch-elem { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  @media (max-width: 480px) { .arch-elem { grid-template-columns: 1fr; } }
+  .ae-item { background: #FAF7F2; border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; font-size: 0.8rem; }
+  .ae-title { font-weight: 700; color: var(--acc); font-size: 0.8rem; margin-bottom: 3px; }
+
+  .emp-badge { display: inline-block; background: var(--acc); color: #fff; border-radius: 4px; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>👑 Mughal Empire – SSC 2026</h1>
+  <p>Siddhi Prep GS ASTRA · Complete Visual Notes · Emperors · Administration · Architecture</p>
+</div>
+
+<div class="tab-bar-wrap">
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="showTab('t1',this)">🏹 Babur & Humayun</button>
+    <button class="tab-btn" onclick="showTab('t2',this)">⚔️ Akbar</button>
+    <button class="tab-btn" onclick="showTab('t3',this)">🎨 Jahangir & Shah Jahan</button>
+    <button class="tab-btn" onclick="showTab('t4',this)">🕌 Aurangzeb</button>
+    <button class="tab-btn" onclick="showTab('t5',this)">🏛️ Architecture</button>
+    <button class="tab-btn" onclick="showTab('t6',this)">⚙️ Administration</button>
+    <button class="tab-btn" onclick="showTab('t7',this)">📝 Quick Revision</button>
+  </div>
+</div>
+
+<!-- ===== TAB 1: BABUR & HUMAYUN ===== -->
+<div id="t1" class="panel active">
+
+  <div class="card">
+    <div class="card-title">📌 Mughal Empire – Overview</div>
+    <ul class="notes">
+      <li><span class="kw">300-year spectacle</span> of wealth, warfare & breathtaking art</li>
+      <li>Founded by a <span class="kw">fugitive prince from Central Asia</span></li>
+      <li>Blended <span class="kw">Persian, Islamic & Indian traditions</span> → unique <span class="kw">"Indo-Islamic" civilization</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏹 BABUR <span class="yr">1526–1530</span></div>
+    <span class="emp-badge">1st Mughal Emperor</span>
+    <div class="sh">Early Struggles (1494–1504)</div>
+    <ul class="notes">
+      <li>At age <span class="kw">12</span>, inherited principality of <span class="kw">Farghana</span> (modern-day Uzbekistan) after father Umar Sheikh Mirza died</li>
+      <li>Descendant of <span class="kw">Timur (father's side)</span> & <span class="kw">Genghis Khan (mother's side)</span></li>
+      <li>Obsessed with capturing <span class="kw">Samarkand</span> – ancestral seat of Timur</li>
+      <li>Captured Samarkand <span class="kw">3 times</span> but could never hold it → lost both Samarkand & Farghana → became a "homeless prince"</li>
+      <li><span class="kw">Kabul (1504):</span> Moved south, captured Kabul → became base for India</li>
+    </ul>
+    <div class="sh">Entry into India – Invited By</div>
+    <ul class="notes">
+      <li>1. <span class="kw">Daulat Khan Lodi</span> – Governor of Punjab</li>
+      <li>2. <span class="kw">Alam Khan</span> – Uncle of Ibrahim Lodi</li>
+      <li>3. <span class="kw">Rana Sanga</span> – King of Mewar (per Babur's memoirs)</li>
+      <li>⚠️ They believed Babur would raid & leave like Timur — underestimated his intention to <span class="kw">stay</span></li>
+    </ul>
+    <div class="sh">4 Key Battles of Babur</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Year</th><th>Battle</th><th>Opponent</th><th>Significance</th></tr></thead>
+        <tbody>
+          <tr><td><span class="kw">1526</span></td><td>1st Battle of Panipat</td><td>Ibrahim Lodi</td><td>Used <span class="kw">Tulughma</span> (flanking) & <span class="kw">Araba</span> (artillery). Ended Delhi Sultanate.</td></tr>
+          <tr><td><span class="kw">1527</span></td><td>Battle of Khanwa</td><td>Rana Sanga</td><td>Proclaimed <span class="kw">Jihad</span>; took title <span class="kw">Ghazi</span>. Defeated Rajput confederacy.</td></tr>
+          <tr><td><span class="kw">1528</span></td><td>Battle of Chanderi</td><td>Medini Rai</td><td>Secured Mughal control over <span class="kw">Malwa & Central India</span>.</td></tr>
+          <tr><td><span class="kw">1529</span></td><td>Battle of Ghagra</td><td>Afghan Chiefs</td><td>Defeated joint Afghan forces from <span class="kw">Bihar & Bengal</span>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sh">Military Techniques of Babur</div>
+    <ul class="notes">
+      <li><span class="kw">Tulughma System</span> – encirclement/flanking tactic</li>
+      <li><span class="kw">Araba (Wagon-Fort) Method</span> – cannons hidden behind wagons; Ottoman influence</li>
+      <li><span class="kw">Mobility & Horse Archers</span> – Parthian shot, kiting, rapid attack (Turco-Mongol style)</li>
+      <li><span class="kw">Gunpowder & Field Artillery</span> – light & movable; matchlockmen; cannon fire-inducing sounds</li>
+      <li><span class="kw">Discipline & Terrain Use</span> – disciplined formations vs terrain anchorage, fortified ditches</li>
+    </ul>
+    <div class="sh">Literature</div>
+    <ul class="notes">
+      <li><span class="kw">Tuzuk-i-Baburi (Baburnama)</span> – written in <span class="kw">Chagatai Turkic</span>; candid autobiography</li>
+      <li>Translated into Persian by <span class="kw">Abdur Rahim Khan-i-Khana</span> in <span class="kw">1589</span> during Akbar's reign</li>
+    </ul>
+    <div class="mnemo-box">
+      <div class="lbl">🧠 Babur's 4 Battles in Order</div>
+      <strong>"Panipat's Khan Charged Gallantly"</strong> → <span class="pu">P</span>anipat · <span class="pu">Kh</span>anwa · <span class="pu">Ch</span>anderi · <span class="pu">G</span>hagra
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">😔 HUMAYUN <span class="yr">1530–1540</span> & <span class="yr">1555–1556</span></div>
+    <span class="emp-badge">2nd Mughal Emperor</span>
+    <div class="imp-box">
+      <div class="lbl">📜 Famous Quote</div>
+      "Humayun tumbled through life, and he tumbled out of it." – Historian Stanley Lane-Poole
+    </div>
+    <div class="sh">Early Challenges – 3 Main Enemies</div>
+    <ul class="notes">
+      <li>1. <span class="kw">Afghans</span> – led by brilliant <span class="kw">Sher Shah Suri</span> in East (Bihar/Bengal)</li>
+      <li>2. <span class="kw">Bahadur Shah of Gujarat</span> – powerful regional ruler from West</li>
+      <li>3. <span class="kw">His Own Brothers</span> – Kamran, Hindal & Askari frequently revolted</li>
+      <li><span class="kw">Siege of Chunar (1532):</span> First encounter with Sher Shah; Humayun accepted tactical submission → gave Sher Shah time to consolidate</li>
+    </ul>
+    <div class="sh">Conflict with Sher Shah Suri</div>
+    <ul class="notes">
+      <li><span class="kw">Battle of Chausa (1539):</span> Sher Shah surprise attack; Humayun escaped by jumping into Ganges, saved by water-carrier <span class="kw">Nizam</span></li>
+      <li><span class="kw">Battle of Kannauj/Bilgram (1540):</span> Decisive defeat; Humayun lost throne & fled</li>
+    </ul>
+    <div class="sh">Period of Exile (1540–1555) – 15 Years</div>
+    <ul class="notes">
+      <li>Wandered through Rajasthan, Sindh, eventually Persia</li>
+      <li><span class="kw">Birth of Akbar (1542)</span> – born in exile at <span class="kw">Amarkot (Umarkot)</span> in palace of Rana Prasad</li>
+      <li><span class="kw">Safavid Help:</span> Took refuge with <span class="kw">Shah Tahmasp</span> of Persia; agreed to convert to Shia Islam (nominally) & cede <span class="kw">Kandahar</span> to Persians in exchange for military aid</li>
+    </ul>
+    <div class="sh">Restoration & Death (1555–1556)</div>
+    <ul class="notes">
+      <li>After Sher Shah's death & decline of Sur Dynasty → opportunity arose</li>
+      <li>With loyal general <span class="kw">Bairam Khan</span> → defeated Afghans at <span class="kw">Battle of Machhiwara & Sirhind (1555)</span></li>
+      <li>Re-occupied Delhi in <span class="kw">July 1555</span></li>
+      <li><span class="kw">Tragic End (1556):</span> Died falling from stairs of his library, <span class="kw">Sher Mandal</span>, at Purana Qila</li>
+    </ul>
+    <div class="sh">Art & Literature</div>
+    <ul class="notes">
+      <li>During exile recruited Persian painters <span class="kw">Mir Sayyid Ali & Abdus Samad</span> → laid foundation for <span class="kw">Mughal School of Painting</span></li>
+      <li>Sister <span class="kw">Gulbadan Begum</span> wrote <span class="kw">Humayun-Nama</span> – rare intimate look into Mughal royal household</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔶 Sher Shah Suri (1486–1545) – The Interregnum</div>
+    <span class="badge b-red">Not a Mughal – Sur Empire</span>
+    <div class="sh">Rise to Power</div>
+    <ul class="notes">
+      <li>Born as <span class="kw">Farid Khan</span> in Sasaram, Bihar; served in Bihar Sultan's army</li>
+      <li>Captured Sasaram; established <span class="kw">Sur Empire</span> as ruler of North India</li>
+    </ul>
+    <div class="sh">Key Achievements</div>
+    <ul class="notes">
+      <li>Introduced <span class="kw">uniform land revenue measurement</span>; land measured in <span class="kw">Bigha</span> & classified on soil basis</li>
+      <li>Average produce calculated; <span class="kw">1/3rd</span> was state's share</li>
+      <li>Revenue collected in <span class="kw">cash, not in kind</span></li>
+      <li>Peasants given receipts (<span class="kw">Patta</span>); state had records (<span class="kw">Qabuliyat</span>)</li>
+      <li>Reduced role of middlemen; fair treatment of peasants</li>
+    </ul>
+    <div class="sh">Administrative Reforms</div>
+    <ul class="notes">
+      <li>Centralized administration with well-organized bureaucracy</li>
+      <li>Divided empire into Provinces (<span class="kw">Sarkar</span>), Districts (<span class="kw">Pargana</span>) & Villages</li>
+      <li>Officials appointed on <span class="kw">merit basis</span>; efficient espionage system; comprehensive revenue system</li>
+    </ul>
+    <div class="sh">Economic Reforms</div>
+    <ul class="notes">
+      <li>Uniform system of <span class="kw">weights & measures</span>; encouraged trade & commerce</li>
+      <li>Issued <span class="kw">silver coins (Rupee)</span> of high purity → became the standard</li>
+      <li>Promoted agriculture & irrigation</li>
+    </ul>
+    <div class="sh">Public Welfare</div>
+    <ul class="notes">
+      <li>Built <span class="kw">Grand Trunk Road</span> (Bengal to Punjab) – most famous road</li>
+      <li>Planted trees on both sides; built rest houses (<span class="kw">Sarai</span>) for travelers</li>
+      <li>Constructed wells, bridges; ensured facilities for people</li>
+    </ul>
+    <div class="sh">Military & Other</div>
+    <ul class="notes">
+      <li>Strong disciplined army; used artillery effectively</li>
+      <li>Built many forts, mosques & Sarai</li>
+      <li>His <span class="kw">tomb in Sasaram</span> – fine example of <span class="kw">Indo-Islamic architecture</span></li>
+      <li>Known for justice, discipline & concern for subjects</li>
+    </ul>
+    <div class="tip-box">
+      <div class="lbl">💡 Key Line</div>
+      "Sher Shah Suri's reforms laid a strong foundation for good governance, which was later followed by the Mughals."
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: AKBAR ===== -->
+<div id="t2" class="panel">
+
+  <div class="card">
+    <div class="card-title">⚔️ AKBAR <span class="yr">1556–1605</span></div>
+    <span class="emp-badge">3rd Mughal Emperor – "Empire Builder"</span>
+    <div class="sh">Early Phase: Regency & Consolidation</div>
+    <ul class="notes">
+      <li><span class="kw">Accession (1556):</span> Crowned at age <span class="kw">13</span> at <span class="kw">Kalanaur (Punjab)</span>; tutor <span class="kw">Bairam Khan</span> appointed Regent (<span class="kw">Wakil</span>)</li>
+      <li><span class="kw">Second Battle of Panipat (1556):</span> Bairam Khan defeated <span class="kw">Hemu</span> (general of Sur dynasty) → "real" start of Mughal Empire</li>
+      <li><span class="kw">End of Regency (1560–62):</span> Dismissed Bairam Khan; survived <span class="kw">"Petticoat Government"</span> (1560–62) where foster mother <span class="kw">Maham Anga</span> held significant influence</li>
+    </ul>
+    <div class="sh">Rajput Policy – A Masterstroke</div>
+    <ul class="notes">
+      <li>Realized to rule India → needed support of <span class="kw">Rajputs</span>, most powerful local warriors</li>
+      <li><span class="kw">Matrimonial Alliances (1562):</span> Married daughter of <span class="kw">Raja Bharmal of Amber</span> (Harka Bai / Jodha Bai) → Amber house became most loyal allies</li>
+      <li><span class="kw">Watan Jagir:</span> Allowed Rajput kings to keep ancestral lands (Watan) as long as they accepted <span class="kw">Mughal suzerainty</span></li>
+      <li><span class="kw">Battle of Haldighati (1576):</span> Maharana Pratap of Mewar resisted; Akbar's army led by <span class="kw">Raja Man Singh</span> (a Rajput!) defeated him; Mewar never fully absorbed</li>
+    </ul>
+    <div class="sh">Major Military Campaigns of Akbar</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Year</th><th>Campaign</th><th>Opponent</th><th>Significance</th></tr></thead>
+        <tbody>
+          <tr><td>1556</td><td>2nd Battle of Panipat</td><td>Hemu</td><td>Re-established Mughal rule; ended Afghan challenge</td></tr>
+          <tr><td>1561</td><td>Conquest of Malwa</td><td>Baz Bahadur</td><td>First independent conquest; expanded to Central India</td></tr>
+          <tr><td>1568</td><td>Siege of Chittor</td><td>Udai Singh II (Mewar)</td><td>Major psychological victory vs Rajputs</td></tr>
+          <tr><td>1572–73</td><td>Gujarat Campaign</td><td>Muzaffar Shah III</td><td>Access to sea trade; Buland Darwaza built</td></tr>
+          <tr><td>1576</td><td>Battle of Haldighati</td><td>Maharana Pratap</td><td>Pratap continued guerrilla warfare; Man Singh led Mughals</td></tr>
+          <tr><td>1576</td><td>Conquest of Bengal</td><td>Dawood Khan Karrani</td><td>Ended last Afghan kingdom; integrated Bengal</td></tr>
+          <tr><td>1581</td><td>Kabul Campaign</td><td>Mirza Hakim (half-brother)</td><td>Secured NW frontier; first Mughal to cross Indus since Humayun</td></tr>
+          <tr><td>1586</td><td>Conquest of Kashmir</td><td>Yusuf Shah Chak</td><td>Strategically important for northern security</td></tr>
+          <tr><td>1601</td><td>Siege of Asirgarh</td><td>Mir Bahadur (Khandesh)</td><td>Akbar's last major conquest; "Gateway to Deccan"</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚙️ Akbar's Administrative Reforms</div>
+    <div class="sh">A. Mansabdari System</div>
+    <ul class="notes">
+      <li>Unique <span class="kw">grading system</span> for all civil & military officers</li>
+      <li><span class="kw">Zat:</span> Personal rank & salary</li>
+      <li><span class="kw">Sawar:</span> Number of cavalrymen the officer had to maintain</li>
+      <li><span class="kw">Dagh:</span> Branding of horses (to prevent fraud)</li>
+      <li><span class="kw">Chehra:</span> Descriptive rolls of soldiers</li>
+      <li>Ranks ranged from <span class="kw">10 to 10,000</span></li>
+    </ul>
+    <div class="sh">B. Land Revenue – Zabt / Dahshala System</div>
+    <ul class="notes">
+      <li>Created by <span class="kw">Raja Todar Mal</span> (Navaratna)</li>
+      <li><span class="kw">Dahshala:</span> Average produce & prices of last <span class="kw">10 years</span>; state's share = <span class="kw">1/3rd</span></li>
+      <li>Land Classification: <span class="kw">Polaj</span> (best, always cultivated) → <span class="kw">Parauti</span> → <span class="kw">Chachar</span> → <span class="kw">Banjar</span> (worst)</li>
+    </ul>
+    <div class="mnemo-box">
+      <div class="lbl">🧠 Land Classification (Best → Worst)</div>
+      <strong>"Poor Peasants Can't Bear"</strong> → <span class="pu">Po</span>laj · <span class="pu">Pa</span>rauti · <span class="pu">C</span>hachar · <span class="pu">B</span>anjar
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🕌 Akbar's Religious Policy – Sulh-i-Kul</div>
+    <p style="font-size:0.83rem;color:var(--muted);margin-bottom:8px;">Shifted from orthodox Islam to <span class="kw">"Universal Peace"</span></p>
+    <div class="sh">Timeline of Religious Reforms</div>
+    <ul class="notes">
+      <li><span class="kw">1563:</span> Abolished <span class="kw">Pilgrim Tax</span></li>
+      <li><span class="kw">1564:</span> Abolished <span class="kw">Jizya</span> (poll tax on non-Muslims)</li>
+      <li><span class="kw">1575:</span> Built <span class="kw">Ibadat Khana</span> (House of Worship) at Fatehpur Sikri</li>
+      <li><span class="kw">1579:</span> Issued <span class="kw">Mazhar-i-Nama</span> (Infallibility Decree) – made him supreme judge in religious matters</li>
+      <li><span class="kw">1582:</span> Introduced <span class="kw">Din-i-Ilahi</span> (Tawhid-i-Ilahi) – NOT a religion; a code of conduct; <span class="kw">Birbal</span> was the only prominent noble to accept it</li>
+    </ul>
+    <div class="tip-box">
+      <div class="lbl">💡 Year Trick for Akbar's Reforms</div>
+      63-64-75-79-82: "63 is pilgrim year, 64 Jizya's fear, 75 built worship's peer, 79 Mazhar's decree was clear, 82 Din-i-Ilahi appeared"
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">✨ Akbar's Navaratnas (Nine Gems)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Field</th><th>Key Fact</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="kw">Abul Fazl</span></td><td>Historian</td><td>Author of Akbarnama; also wrote Ain-i-Akbari</td></tr>
+          <tr><td>2</td><td><span class="kw">Faizi</span></td><td>Poet</td><td>Great Persian poet & scholar; brother of Abul Fazl</td></tr>
+          <tr><td>3</td><td><span class="kw">Tansen</span></td><td>Musician</td><td>Legendary musician & vocalist; melodies celebrated in Indian classical music</td></tr>
+          <tr><td>4</td><td><span class="kw">Todar Mal</span></td><td>Finance Minister</td><td>Reformer of revenue system; introduced Zabt/Dahshala system</td></tr>
+          <tr><td>5</td><td><span class="kw">Man Singh</span></td><td>Rajput Commander</td><td>Trusted general; led Mughal forces at Haldighati</td></tr>
+          <tr><td>6</td><td><span class="kw">Birbal</span></td><td>Courtier</td><td>Known for wit & wisdom; only noble to accept Din-i-Ilahi</td></tr>
+          <tr><td>7</td><td><span class="kw">Abdul Rahim Khan-i-Khana</span></td><td>Scholar & Poet</td><td>Wrote couplets (dohas) in Hindi & Persian</td></tr>
+          <tr><td>8</td><td><span class="kw">Hamim Human</span></td><td>Courtier & Translator</td><td>Well-versed in Sanskrit & Persian; translated many works</td></tr>
+          <tr><td>9</td><td><span class="kw">Mulla Do-Piyaza</span></td><td>Jester & Wit</td><td>Famous for clever jokes and humorous stories</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mnemo-box">
+      <div class="lbl">🧠 Remember 9 Navaratnas</div>
+      <strong>"After Faizi, Tansen's Tune Made Birbal & Abdul Happy Mulla"</strong><br>
+      <span class="pu">A</span>bul Fazl · <span class="pu">F</span>aizi · <span class="pu">T</span>ansen · <span class="pu">T</span>odar Mal · <span class="pu">M</span>an Singh · <span class="pu">B</span>irbal · <span class="pu">A</span>bdul Rahim · <span class="pu">H</span>amim Human · <span class="pu">M</span>ulla Do-Piyaza
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: JAHANGIR & SHAH JAHAN ===== -->
+<div id="t3" class="panel">
+
+  <div class="card">
+    <div class="card-title">🎨 JAHANGIR <span class="yr">1605–1627</span></div>
+    <span class="emp-badge">4th Mughal Emperor – "Empire Preserver"</span>
+    <ul class="notes">
+      <li>Born as <span class="kw">Prince Salim</span>; remembered as "Empire Preserver" & great patron of arts</li>
+      <li>Title: <span class="kw">Nur-ud-din Muhammad Jahangir</span> (Conqueror of the World) – taken 1605</li>
+    </ul>
+    <div class="sh">Early Challenges</div>
+    <ul class="notes">
+      <li><span class="kw">Rebellion of Prince Khusrau:</span> Immediately after accession; his eldest son Khusrau rebelled with help of <span class="kw">5th Sikh Guru, Guru Arjan Dev</span></li>
+      <li>Consequence: <span class="kw">Jahangir executed Guru Arjan Dev</span> → beginning of long-standing conflict between <span class="kw">Mughals & Sikhs</span></li>
+    </ul>
+    <div class="sh">Major Military Conquests</div>
+    <ul class="notes">
+      <li><span class="kw">Mewar (1615):</span> Settlement with <span class="kw">Amar Singh</span> (son of Maharana Pratap); Ranas accepted Mughal suzerainty but exempted from attending court personally</li>
+      <li><span class="kw">Deccan (Ahmednagar):</span> Sent <span class="kw">Prince Khurram</span> (later Shah Jahan); success earned Khurram title "Shah Jahan"; but <span class="kw">Malik Ambar</span> (PM of Ahmednagar) prevented total takeover using <span class="kw">guerrilla warfare</span></li>
+      <li><span class="kw">Kangra (1620):</span> Successfully captured strategic Kangra Fort in Himalayan foothills</li>
+    </ul>
+    <div class="sh">The Era of Nur Jahan</div>
+    <ul class="notes">
+      <li>1611: Married <span class="kw">Mehr-un-Nissa</span>, titled <span class="kw">Nur Jahan</span> (Light of the World)</li>
+      <li>Only Mughal Empress to have <span class="kw">coins minted in her name</span> & issue royal <span class="kw">farmans (decrees)</span></li>
+      <li><span class="kw">Nur Jahan Junta:</span> Formed powerful group with her father (<span class="kw">Itimad-ud-Daula</span>), brother (<span class="kw">Asaf Khan</span>) & Prince Khurram → dominated court for nearly a decade</li>
+      <li>Later rift between Nur Jahan & Shah Jahan → Shah Jahan's rebellion → weakened empire in final years</li>
+    </ul>
+    <div class="sh">Administration & Justice</div>
+    <ul class="notes">
+      <li><span class="kw">Zanjir-i-Adal (Chain of Justice):</span> Golden chain with <span class="kw">60 bells</span> at Agra Fort; any subject could pull for direct audience with Emperor</li>
+      <li><span class="kw">12 Edicts (Dastur-ul-Amal):</span> Upon accession; banned cutting noses/ears as punishment; prohibited forced sale of land</li>
+    </ul>
+    <div class="sh">Europeans in Jahangir's Court</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Visitor</th><th>Year</th><th>Key Fact</th></tr></thead>
+        <tbody>
+          <tr><td><span class="kw">William Hawkins</span></td><td>1608</td><td>Arrived with letter from King James I; given title <span class="kw">"English Khan"</span>; no trade concessions due to Portuguese pressure</td></tr>
+          <tr><td><span class="kw">Sir Thomas Roe</span></td><td>1615</td><td>Official ambassador of British East India Company; successfully secured permission to trade & establish factories at <span class="kw">Surat</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sh">Art, Culture & Literature</div>
+    <ul class="notes">
+      <li>Jahangir's reign = <span class="kw">Golden Age of Mughal Painting</span></li>
+      <li>Shifted from manuscript illustrations to <span class="kw">individual portraits</span> & detailed <span class="kw">nature studies</span> (birds, animals, flowers)</li>
+      <li>Famous painters: <span class="kw">Ustad Mansur</span> (flora & fauna) & <span class="kw">Abul Hasan</span></li>
+      <li>Literature: <span class="kw">Tuzuk-i-Jahangiri</span> – autobiography in Persian; noted for frankness & scientific observations of nature</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏗️ SHAH JAHAN <span class="yr">1628–1658</span></div>
+    <span class="emp-badge">5th Mughal Emperor – "Engineer King"</span>
+    <ul class="notes">
+      <li>Born as <span class="kw">Prince Khurram</span>; known as "Engineer King"</li>
+      <li>Reign = <span class="kw">"Golden Age" of Mughal architecture</span> but also start of financial strain</li>
+    </ul>
+    <div class="sh">Accession & Early Challenges</div>
+    <ul class="notes">
+      <li>Ascended throne in <span class="kw">1628</span> with support of father-in-law <span class="kw">Asaf Khan</span></li>
+      <li>Title: <span class="kw">Shah Jahan</span> (King of the World)</li>
+      <li><span class="kw">Bundela Rebellion:</span> Led by Jujhar Singh – first major challenge</li>
+      <li><span class="kw">Khan-i-Jahan Lodi:</span> Afghan noble who rebelled; defeated & killed in <span class="kw">1631</span></li>
+    </ul>
+    <div class="sh">Military Conquests & Deccan Policy</div>
+    <ul class="notes">
+      <li><span class="kw">Annexation of Ahmadnagar (1633):</span> Ended independence of Nizam Shahi dynasty</li>
+      <li><span class="kw">Treaties with Bijapur & Golconda (1636):</span> Forced to accept Mughal suzerainty & pay tribute; not fully annexed</li>
+      <li><span class="kw">Central Asian Campaign:</span> Attempted to reclaim Balkh & Badakhshan → <span class="rd">major failure</span>; massive loss of men & money</li>
+      <li><span class="kw">Loss of Kandahar (1649):</span> Persians permanently seized Kandahar → blow to prestige & strategic defense</li>
+    </ul>
+    <div class="sh">Administration & Revenue</div>
+    <ul class="notes">
+      <li><span class="kw">Month-Scale System:</span> "Monthly Ratio" in Mansabdari; if Jagir didn't yield expected revenue → adjusted to <span class="kw">10-month, 8-month, or 6-month scale</span></li>
+      <li>State demand raised to <span class="kw">50% of produce</span> in some regions to fund buildings → increased peasant burden</li>
+    </ul>
+    <div class="sh">Literature & Culture</div>
+    <ul class="notes">
+      <li><span class="kw">Dara Shikoh's Work:</span> Translated Upanishads into Persian as <span class="kw">Sirr-i-Akbar (The Great Secret)</span>; wrote <span class="kw">Majma-ul-Bahrayn (The Mingling of Two Oceans)</span> – exploring commonalities between Islam & Hinduism</li>
+      <li>Other Dara Shikoh works: Safain-ul-Auliya, Hasanat-ul-Arifeen, Risala-i-Haqqnuma, Tarjuma-i-Yogvashishtha</li>
+      <li>Court Historian: <span class="kw">Abdul Hamid Lahori</span> wrote <span class="kw">Padshahnama</span> – official history of Shah Jahan's reign</li>
+    </ul>
+    <div class="sh">War of Succession (1657–1658)</div>
+    <ul class="notes">
+      <li>When Shah Jahan fell ill → brutal civil war between 4 sons:</li>
+      <li>1. <span class="kw">Dara Shikoh</span> – eldest; scholar of Upanishads; Emperor's favorite</li>
+      <li>2. <span class="kw">Shuja</span> – Governor of Bengal</li>
+      <li>3. <span class="kw">Aurangzeb</span> – Governor of Deccan; seasoned military general</li>
+      <li>4. <span class="kw">Murad</span> – Governor of Gujarat</li>
+      <li><span class="kw">Aurangzeb won</span> → defeated Dara Shikoh at <span class="kw">Battle of Samugarh (1658)</span></li>
+      <li>Imprisoned Shah Jahan in <span class="kw">Agra Fort</span> for remaining <span class="kw">8 years</span> of his life</li>
+    </ul>
+    <div class="tip-box">
+      <div class="lbl">💡 Dara Shikoh's Famous Quote</div>
+      "The different religions are but different paths leading to the same God."
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 4: AURANGZEB ===== -->
+<div id="t4" class="panel">
+
+  <div class="card">
+    <div class="card-title">🕌 AURANGZEB <span class="yr">1658–1707</span></div>
+    <span class="emp-badge">6th Mughal Emperor – Last "Great Mughal"</span>
+    <ul class="notes">
+      <li>Title: <span class="kw">Alamgir</span> ("Conqueror of the World")</li>
+      <li>Last of the "Great Mughals"; reigned for <span class="kw">49 years</span></li>
+      <li>Empire reached <span class="kw">maximum territorial extent</span> but also sowed seeds of decline</li>
+    </ul>
+    <div class="sh">Character & Personal Life</div>
+    <ul class="notes">
+      <li>Lived a very <span class="kw">simple, austere life</span> unlike predecessors</li>
+      <li>Called <span class="kw">Zinda Pir</span> (Living Saint) for disciplined habits & avoidance of royal luxuries</li>
+      <li>Secured throne after bloody civil war, defeating brothers Shuja, Murad & crown prince Dara Shikoh</li>
+    </ul>
+    <div class="sh">Two Phases of Reign</div>
+    <div class="fact-grid">
+      <div class="fact-item"><div class="fl">Phase 1 (1658–1681)</div>Focused on <span class="kw">Northern India</span> – dealing with Jats, Satnamis & Sikhs</div>
+      <div class="fact-item"><div class="fl">Phase 2 (1681–1707)</div>Focused entirely on <span class="kw">Deccan</span>; never returned to Delhi</div>
+    </div>
+    <div class="sh">Territorial Extent</div>
+    <ul class="notes">
+      <li>Empire stretched from <span class="kw">Kabul to Chittagong</span> and from <span class="kw">Kashmir to Kaveri River</span></li>
+    </ul>
+    <div class="sh">Major Military Campaigns</div>
+    <ul class="notes">
+      <li><span class="kw">North-East:</span> General Mir Jumla annexed <span class="kw">Assam (Ahom kingdom) in 1662</span>; Mughals struggled to maintain control due to geography</li>
+      <li><span class="kw">Annexed Bijapur (1686)</span> & <span class="kw">Golconda (1687)</span></li>
+      <li>Removing these kingdoms eliminated the "buffer" between Mughals & Marathas → direct exhausting conflict</li>
+      <li><span class="kw">Conflict with Marathas:</span> Rise of <span class="kw">Shivaji Maharaj</span> = biggest challenge</li>
+      <li>Despite <span class="kw">Treaty of Purandar (1665)</span>, Shivaji escaped Mughal custody in Agra & established sovereign Maratha kingdom</li>
+      <li>Aurangzeb spent <span class="kw">last 25 years in Deccan</span> trying to crush Marathas but <span class="rd">failed</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚠️ Religious & Social Policies of Aurangzeb</div>
+    <p style="font-size:0.83rem;color:var(--muted);margin-bottom:8px;">Moved away from Akbar's <span class="kw">Sulh-i-Kul</span> toward more orthodox Islamic state</p>
+    <ul class="notes">
+      <li><span class="kw">Jizya (1679):</span> Re-introduced Jizya tax on non-Muslims (abolished by Akbar 115 years earlier)</li>
+      <li><span class="kw">Muhtasibs:</span> Appointed censors of public morals to ensure people lived per Sharia law</li>
+      <li>Banned <span class="kw">music, gambling & alcohol</span> in court</li>
+      <li><span class="kw">Temple Policy:</span> Issued some grants to temples but also ordered destruction of prominent ones (Vishwanath in Kashi, Keshavdeva in Mathura) – primarily for political reasons/punishing rebellions</li>
+      <li><span class="kw">Sikh Conflict:</span> Executed <span class="kw">9th Sikh Guru, Guru Tegh Bahadur (1675)</span> after he refused to convert → led to permanent militarization of Sikhs under <span class="kw">Guru Gobind Singh (The Khalsa)</span></li>
+    </ul>
+    <div class="warn-box">
+      <div class="lbl">⚠️ Exam Note – Sikh Gurus Conflict</div>
+      <span class="kw">Guru Arjan Dev</span> (5th) → executed by <span class="kw">Jahangir</span><br>
+      <span class="kw">Guru Tegh Bahadur</span> (9th) → executed by <span class="kw">Aurangzeb (1675)</span> → led to formation of <span class="kw">Khalsa</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📉 Administration & Decline</div>
+    <div class="sh">Jagirdari Crisis</div>
+    <ul class="notes">
+      <li>Empire so large → not enough good land (Jagirs) for increasing Mansabdars</li>
+      <li>Led to <span class="kw">internal corruption & competition</span></li>
+    </ul>
+    <div class="sh">The Deccan Ulcer</div>
+    <ul class="notes">
+      <li>"The <span class="kw">Deccan ulcer ruined Aurangzeb</span>" – historians' verdict</li>
+      <li><span class="kw">26-year-long campaign</span> drained royal treasury, exhausted army</li>
+      <li>Administrative collapse in <span class="kw">Northern India</span> due to Emperor's long absence</li>
+    </ul>
+    <div class="sh">Literature</div>
+    <ul class="notes">
+      <li><span class="kw">Fatawa-e-Alamgiri</span> – massive compilation of Islamic law; created under his patronage; served as legal code for the empire</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏙️ Mughal Capitals Over Time</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Period</th><th>Capital</th><th>Emperor(s)</th><th>Reason</th></tr></thead>
+        <tbody>
+          <tr><td>1526–1540</td><td><span class="kw">Agra</span></td><td>Babur, Humayun</td><td>Initial conquest; strategic base in North India</td></tr>
+          <tr><td>1556–1571</td><td><span class="kw">Agra</span></td><td>Akbar</td><td>Consolidation of power after reclaiming empire</td></tr>
+          <tr><td>1571–1585</td><td><span class="kw">Fatehpur Sikri</span></td><td>Akbar</td><td>Built to honor Sufi saint Salim Chishti; symbolic new start</td></tr>
+          <tr><td>1585–1598</td><td><span class="kw">Lahore</span></td><td>Akbar</td><td>Military focus on NW frontier & Uzbek threats</td></tr>
+          <tr><td>1598–1648</td><td><span class="kw">Agra</span></td><td>Akbar, Jahangir, Shah Jahan</td><td>Return to traditional heartland; peak of marble architecture</td></tr>
+          <tr><td>1648–1681</td><td><span class="kw">Delhi (Shahjahanabad)</span></td><td>Shah Jahan, Aurangzeb</td><td>Creation of grander planned imperial city (Red Fort)</td></tr>
+          <tr><td>1681–1707</td><td><span class="kw">Deccan (Aurangabad)</span></td><td>Aurangzeb</td><td>Continuous military campaigns against Marathas & Deccan Sultanates</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mnemo-box">
+      <div class="lbl">🧠 Capital Shifts of Akbar</div>
+      <strong>"Agra → Fatehpur → Lahore → Agra"</strong> → A · F · L · A (Agra keeps coming back!)
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 5: ARCHITECTURE ===== -->
+<div id="t5" class="panel">
+
+  <div class="card">
+    <div class="card-title">🏛️ Mughal Architecture – Overview (1526–1707)</div>
+    <ul class="notes">
+      <li>Represents the <span class="kw">peak of Indo-Islamic architecture</span> in India</li>
+      <li>Fusion of <span class="kw">Persian, Timurid (Central Asian), Islamic & indigenous Indian styles</span></li>
+      <li>Known for <span class="kw">symmetry, monumentality, gardens, domes, arches & decorative elegance</span></li>
+      <li>Evolved continuously from <span class="kw">Babur to Aurangzeb</span></li>
+    </ul>
+    <div class="sh">Important Mughal Buildings – Master Table</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Ruler</th><th>Building</th><th>Distinguishing Feature</th></tr></thead>
+        <tbody>
+          <tr><td>Babur</td><td><span class="kw">Aram Bagh</span></td><td>First Mughal garden in India</td></tr>
+          <tr><td>Humayun</td><td><span class="kw">Humayun's Tomb</span></td><td>First double dome; Charbagh layout; prototype of Taj Mahal</td></tr>
+          <tr><td>Sher Shah</td><td><span class="kw">Sasaram Tomb</span></td><td>Transitional Indo-Afghan style</td></tr>
+          <tr><td>Akbar</td><td><span class="kw">Fatehpur Sikri</span></td><td>Fusion architecture; planned city</td></tr>
+          <tr><td>Akbar</td><td><span class="kw">Buland Darwaza</span></td><td>Largest gateway in India (55m high)</td></tr>
+          <tr><td>Jahangir</td><td><span class="kw">Itmad-ud-Daulah</span></td><td>First marble tomb; first extensive pietra dura</td></tr>
+          <tr><td>Shah Jahan</td><td><span class="kw">Taj Mahal</span></td><td>Peak of Mughal architecture; built 1632–1653</td></tr>
+          <tr><td>Shah Jahan</td><td><span class="kw">Red Fort</span></td><td>Diwan-i-Khas; new imperial capital Shahjahanabad</td></tr>
+          <tr><td>Shah Jahan</td><td><span class="kw">Jama Masjid</span></td><td>Grand mosque; largest in India</td></tr>
+          <tr><td>Aurangzeb</td><td><span class="kw">Bibi Ka Maqbara</span></td><td>"Taj of Deccan"; decline phase</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏗️ 19 Elements & Features of Mughal Architecture</div>
+    <div class="arch-elem">
+      <div class="ae-item"><div class="ae-title">1. Arches</div>Curved structural openings above doors/windows; Mughals used pointed & cusped arches with voussoirs & keystone</div>
+      <div class="ae-item"><div class="ae-title">2. Domes</div>Hemispherical structures covering large spaces; Mughal domes are usually bulbous & set on a drum</div>
+      <div class="ae-item"><div class="ae-title">3. Double Dome</div>Two domes – inner for interior proportion, outer for external height & magnificence</div>
+      <div class="ae-item"><div class="ae-title">4. Minarets</div>Tall slender towers at corners of platform; add vertical emphasis; used for call to prayer</div>
+      <div class="ae-item"><div class="ae-title">5. Charbagh</div>Persian-style four-part garden divided by water channels; symbolizing paradise as in Quran</div>
+      <div class="ae-item"><div class="ae-title">6. Pietra Dura (Parchin Kari)</div>Art of inlaying semi-precious stones into marble to create floral & geometric patterns</div>
+      <div class="ae-item"><div class="ae-title">7. Jali Work</div>Perforated stone lattice screens with intricate geometric/floral patterns; let light & air while maintaining privacy</div>
+      <div class="ae-item"><div class="ae-title">8. Calligraphy</div>Quranic verses inscribed using calligraphic scripts like Thuluth & Naskh</div>
+      <div class="ae-item"><div class="ae-title">9. Chhatris</div>Small elevated dome-shaped kiosks; adopted from Rajput architecture</div>
+      <div class="ae-item"><div class="ae-title">10. Jharokhas</div>Overhanging enclosed balconies projecting from walls; derived from Rajput architecture</div>
+      <div class="ae-item"><div class="ae-title">11. Materials</div>Red sandstone (Akbar era) → White marble (Shah Jahan era)</div>
+      <div class="ae-item"><div class="ae-title">12. Symmetry</div>Buildings planned with perfect symmetry along central axis; reflecting balance, order & imperial authority</div>
+      <div class="ae-item"><div class="ae-title">13. Iwan</div>Vaulted hall/space open on one side; typical Persian architectural element adopted by Mughals</div>
+      <div class="ae-item"><div class="ae-title">14. Pishtaq</div>Tall rectangular framed archway used as grand entrance; creates monumental impression</div>
+      <div class="ae-item"><div class="ae-title">15. Arabesque</div>Intricate floral, geometric & vegetal patterns used as decoration</div>
+      <div class="ae-item"><div class="ae-title">16. Muqarnas</div>Honeycomb-like decorative vaulting used in arches, domes & ceilings</div>
+      <div class="ae-item"><div class="ae-title">17. Finial</div>Ornamental element at top of domes or minarets</div>
+      <div class="ae-item"><div class="ae-title">18. Hasht Bihisht</div>Persian planning concept – central chamber surrounded by eight rooms ("Eight Paradise Plan")</div>
+      <div class="ae-item"><div class="ae-title">19. Water Channels & Fountains</div>Used in gardens for beauty, cooling & symbolic representation of paradise</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏡 Babur's Architecture <span class="yr">1526–1530</span></div>
+    <ul class="notes">
+      <li>Style: <span class="kw">Persian-Central Asian Garden Style</span>; simple but deeply influenced by Persian & Central Asian traditions</li>
+      <li>Introduced concept of <span class="kw">Charbagh (four-part garden)</span> divided by water channels in India</li>
+      <li>Flowing water, tanks & fountains used for beauty, cooling & paradise symbolism</li>
+    </ul>
+    <div class="sh">Major Buildings</div>
+    <ul class="notes">
+      <li><span class="kw">Aram Bagh, Agra</span> – first Mughal garden in India; Charbagh style; had pavilions, fruit trees, flower beds</li>
+      <li><span class="kw">Kabuli Bagh Mosque, Panipat</span> – built after First Battle of Panipat (1526); one of earliest Mughal mosques; Persian arched openings; brick & stone</li>
+      <li><span class="kw">Jama Masjid, Sambhal</span> – one of earliest mosques; reflects early Persian influence; built for local Muslim community</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏯 Humayun's Architecture <span class="yr">1530–1556</span></div>
+    <ul class="notes">
+      <li>Style: <span class="kw">Strong Persianized Mughal Style</span>; moved away from Afghan simplicity</li>
+      <li>Key features: Iwans & Pishtaqs, Charbagh gardens, <span class="kw">Double Dome System</span>, Symmetry & Axial Planning, Chhatris & Jaalis</li>
+    </ul>
+    <div class="sh">Major Buildings</div>
+    <ul class="notes">
+      <li><span class="kw">Dinpanah (Delhi)</span> – new city built by Humayun in 1533; named "Abode of Faith"; later captured by Sher Shah; renamed <span class="kw">Purana Qila</span>; contains Qila-i-Kuhna Mosque (1541) & Sher Mandal</li>
+      <li><span class="kw">Humayun's Tomb (1570)</span> – built by his widow <span class="kw">Begha Begum</span>; architect <span class="kw">Mirak Mirza Ghiyas</span>; first grand Mughal tomb in India & <span class="kw">UNESCO World Heritage Site</span>; first major use of double dome; Charbagh layout; red sandstone + white marble; prototype for Taj Mahal; <span class="kw">Hasht Bihisht</span> plan</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔶 Sher Shah Suri's Architecture <span class="yr">1540–1545</span></div>
+    <ul class="notes">
+      <li>Style: <span class="kw">Transitional Indo-Afghan</span>; bridge between Lodi simplicity & Mughal grandeur</li>
+      <li>Massive, strong & functional structures; use of <span class="kw">red sandstone & rubble masonry</span></li>
+      <li>Minimal ornamentation; focus on durability; octagonal tomb style</li>
+    </ul>
+    <div class="sh">Major Buildings</div>
+    <ul class="notes">
+      <li><span class="kw">Sher Shah's Tomb, Sasaram</span> – on an artificial lake; octagonal plan on raised platform; red sandstone with white marble inlay; chhatris on corners; blend of strength, beauty & serenity</li>
+      <li><span class="kw">Purana Qila (Delhi)</span> – expanded Humayun's Dinpanah; includes Qila-i-Kuhna Mosque & Sher Mandal (library)</li>
+      <li><span class="kw">Rohtas Fort (Punjab, Pakistan)</span> – massive hill fort; thick walls, gateways & watchtowers; designed to withstand long sieges</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔴 Akbar's Architecture <span class="yr">1556–1605</span></div>
+    <ul class="notes">
+      <li>Style: <span class="kw">"The Great Synthesizer"</span> – fusion of Persian, Central Asian, Hindu, Jain & Buddhist traditions</li>
+      <li>Key features: <span class="kw">Red sandstone construction</span>, Trabeate style (pillars & beams), Chhatris, Jharokhas, Brackets & Corbels, Jali work, Lotus motifs</li>
+      <li>Massive & bold structures; incorporated Indian elements extensively</li>
+    </ul>
+    <div class="sh">Major Buildings</div>
+    <ul class="notes">
+      <li><span class="kw">Agra Fort (c. 1565)</span> – first major architectural venture; red sandstone; semi-circular plan; strong fortifications; palaces, audience halls, mosques</li>
+      <li><span class="kw">Fatehpur Sikri (1571–1585)</span> – imperial capital built to honor Sheikh Salim Chishti; planned city; architectural fusion:
+        <br>• <span class="kw">Buland Darwaza</span> (1601) – after Gujarat victory; <span class="gr">largest gateway in India</span> (55m high)
+        <br>• <span class="kw">Panch Mahal</span> – 5-storey palace inspired by Buddhist vihara
+        <br>• <span class="kw">Diwan-i-Khas</span> – famous for central pillar with radiating platforms
+        <br>• <span class="kw">Ibadat Khana</span> – hall for interfaith discussions
+        <br>• <span class="kw">Tomb of Salim Chishti</span> – originally red sandstone, later rebuilt in marble; exquisite jali work
+        <br>• <span class="kw">Jodha Bai Palace</span> – strong Rajput influence with chhatris, brackets & carved pillars
+      </li>
+      <li><span class="kw">Akbar's Tomb, Sikandra</span> (completed by Jahangir) – blend of Islamic & Hindu elements; no central dome; pyramidal look; red sandstone & marble</li>
+      <li>Other: Lahore Fort (early), Allahabad Fort, Ajmer Fort & Mosque, Sarai & Caravanserais</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🤍 Jahangir's Architecture <span class="yr">1605–1627</span></div>
+    <ul class="notes">
+      <li>Style: <span class="kw">"Patron of Refined Beauty & Nature"</span>; shift from massive red sandstone → <span class="kw">white marble</span></li>
+      <li>Key features: Use of white marble, <span class="kw">Pietra Dura work</span>, Gardens & Charbagh, Delicate ornamentation, Harmony with nature</li>
+    </ul>
+    <div class="sh">Major Buildings</div>
+    <ul class="notes">
+      <li><span class="kw">Itmad-ud-Daulah Tomb, Agra</span> – built by Nur Jahan for her father; called <span class="kw">"Baby Taj"</span>; <span class="gr">first Mughal structure entirely of white marble</span>; first extensive use of pietra dura; prototype for later marble architecture including Taj Mahal</li>
+      <li><span class="kw">Shalimar Bagh, Srinagar (Kashmir)</span> – magnificent Charbagh garden along Dal Lake; terraced layout, Chinar trees, water channels, fountains, pavilions</li>
+      <li><span class="kw">Akbar's Tomb, Sikandra</span> – completed during Jahangir's reign</li>
+      <li><span class="kw">Jahangir's Palaces at Lahore Fort</span> – Khwabgah (Dream Palace), Diwan-i-Khas, Sheesh Mahal; fine frescoes, painted ceilings, mirror work</li>
+      <li>Other: Sarai Nurmahal (caravanserai), Nishat Bagh/Chashme Shahi (Kashmir)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⭐ Shah Jahan's Architecture <span class="yr">1628–1658</span></div>
+    <ul class="notes">
+      <li>Style: <span class="kw">"Zenith of Mughal Architecture"</span>; dominant use of <span class="kw">white marble with red sandstone accents</span></li>
+      <li>Key features: White marble, Pietra Dura inlay, Perfect symmetry, <span class="kw">Bulbous domes & slender minarets</span>, Calligraphy, Charbagh gardens</li>
+    </ul>
+    <div class="sh">Major Buildings</div>
+    <ul class="notes">
+      <li><span class="kw">Taj Mahal, Agra (1632–1653)</span> – built in memory of wife <span class="kw">Mumtaz Mahal</span>; pinnacle of Mughal architecture; pure white marble; perfect symmetry; pietra dura inlay; Charbagh on raised platform; double dome & 4 minarets</li>
+      <li><span class="kw">Red Fort (Lal Qila), Delhi (1639–1648)</span> – new imperial capital Shahjahanabad; red sandstone with marble accents; Diwan-i-Am, Diwan-i-Khas, Rang Mahal, Khas Mahal, Sheesh Mahal; beautiful marble pavilions & gardens</li>
+      <li><span class="kw">Jama Masjid, Delhi (1650–1656)</span> – one of largest & most magnificent mosques; huge courtyard; 3 large marble domes & 2 tall minarets; red sandstone & marble</li>
+      <li><span class="kw">Musamman Burj, Agra Fort (1631)</span> – octagonal marble tower where Shah Jahan was imprisoned by Aurangzeb; overlooks Taj Mahal</li>
+      <li><span class="kw">Moti Masjid, Agra Fort (1648–1654)</span> – entirely white marble; 3 domes & delicate arches; "Pearl Mosque"</li>
+      <li>Other: Shalimar Bagh (Lahore), Khas Mahal (Agra Fort), Jahanaras Sarai (Delhi), <span class="kw">Takht-i-Taus (Peacock Throne)</span> – legendary throne symbolizing imperial grandeur</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📉 Aurangzeb's Architecture <span class="yr">1658–1707</span></div>
+    <ul class="notes">
+      <li>Style: <span class="kw">Declining & Simplified</span>; shift toward simplicity, functionality & piety</li>
+      <li>Reduced ornamentation; less white marble; austere & economical structures</li>
+      <li>Greater emphasis on <span class="kw">mosques, religious buildings, forts & practical constructions</span></li>
+    </ul>
+    <div class="sh">Major Buildings</div>
+    <ul class="notes">
+      <li><span class="kw">Bibi Ka Maqbara, Aurangabad (c. 1661–1678)</span> – built in memory of wife Dilras Banu Begum (Rabia-ud-Daurani); called <span class="kw">"Taj of Deccan"</span>; resembles Taj Mahal on smaller scale; marble with minimal pietra dura</li>
+      <li><span class="kw">Badshahi Mosque, Lahore (1671–1673)</span> – one of largest mosques in world; red sandstone with marble inlay; 3 large marble domes; 4 minarets; vast prayer hall</li>
+      <li><span class="kw">Alamgir Masjid, Delhi (c. 1669)</span> – built on raised platform near Red Fort; small & simple compared to earlier mosques</li>
+      <li><span class="kw">Makki Masjid, Delhi (c. 1660)</span> – near Jama Masjid; red sandstone; simple yet elegant</li>
+      <li><span class="kw">Daulatabad Fort</span> – strengthened & renovated; important military stronghold in Deccan</li>
+      <li>Other: Built Sarais, Bridges & Roads, Fortifications (Gwalior, Ranthambore, Jinj), Water Tanks & Wells</li>
+      <li>Religious & Educational: Built Madrasas, renovated Mazars & Dargahs, built many mosques; supported Khanqas (Sufi institutions)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== TAB 6: ADMINISTRATION ===== -->
+<div id="t6" class="panel">
+
+  <div class="card">
+    <div class="card-title">⚙️ Mansabdari System – Evolution</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Ruler</th><th>Changes</th><th>Key Features</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="kw">Akbar</span><br>1556–1605</td>
+            <td>Introduced Mansabdari as centralized administrative & military structure</td>
+            <td>• Mansab = rank/position<br>• Zat (personal rank) + Sawar (cavalry rank)<br>• Ranks: 10 to 10,000<br>• Dagh (horse branding) & Chehra (descriptive rolls)</td>
+          </tr>
+          <tr>
+            <td><span class="kw">Jahangir</span><br>1605–1627</td>
+            <td>Modified for greater rewards & flexibility</td>
+            <td>• Introduced <span class="kw">Du-Aspah, Si-Aspah</span> (extra cavalry allowance)<br>• Increased privileges for loyal nobles<br>• Mansabs became more honorary & less strictly military</td>
+          </tr>
+          <tr>
+            <td><span class="kw">Shah Jahan</span><br>1628–1658</td>
+            <td>More elaborate & expensive</td>
+            <td>• Increased mansabs for imperial grandeur<br>• Greater emphasis on court hierarchy<br>• Jagir assignments often insufficient to pay nobles<br>• Month-Scale System introduced</td>
+          </tr>
+          <tr>
+            <td><span class="kw">Aurangzeb</span><br>1658–1707</td>
+            <td>Expanded excessively; began declining</td>
+            <td>• Huge increase in mansabdars (Deccan campaigns)<br>• Severe shortage of jagirs (<span class="kw">Jagirdari Crisis</span>)<br>• Corruption & inefficiency increased<br>• Military obligations weakened</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box">
+      <div class="lbl">💡 Highest Mansab</div>
+      <span class="kw">Prince Dara Shikoh</span> (son of Shah Jahan) = highest mansab of <span class="kw">60,000 Zat & 40,000 Sawar</span><br>
+      Non-royal nobles: <span class="kw">Raja Man Singh</span> (under Akbar) & <span class="kw">Mirza Raja Jai Singh</span> (under Aurangzeb)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📊 Delhi Sultanate vs Mughal Empire – Administration</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Feature</th><th>Delhi Sultanate (1206–1526)</th><th>Mughal Empire (1526–1857)</th></tr></thead>
+        <tbody>
+          <tr><td><span class="kw">Nature of State</span></td><td>Military State; authority depended on Sultan's personal strength & Turkish nobility support</td><td>Centralized Bureaucracy; more "National" state with systematic hierarchy & cultural integration</td></tr>
+          <tr><td><span class="kw">The Ruler</span></td><td>Sultan: "First among equals" (Primus inter pares) relative to powerful nobles</td><td>Badshah/Emperor: Absolute authority with divine aura (Zill-i-Ilahi); far more powerful than nobility</td></tr>
+          <tr><td><span class="kw">Land Revenue</span></td><td>Iqta System: Land grants to officers (Iqtadars); revenue less systematically measured</td><td>Zabt/Dahshala System: Highly scientific measurement based on 10-year average produce</td></tr>
+          <tr><td><span class="kw">Rank System</span></td><td>Informal; based on size of Iqta & number of troops maintained</td><td>Mansabdari System: Unique formal grading using Zat & Sawar</td></tr>
+          <tr><td><span class="kw">Provincial Div.</span></td><td>Shiqs (Provinces) & Parganas (Districts)</td><td>Subas (Provinces), Sarkars (Districts) & Parganas</td></tr>
+          <tr><td><span class="kw">Local Presence</span></td><td>Central control weak in rural areas; depended on local Hindu intermediaries</td><td>Stronger central control reached village level through Patwari & Qanungo</td></tr>
+          <tr><td><span class="kw">Nobility</span></td><td>Dominated by Turkish, Afghan & Persian elites; often unstable & prone to rebellion</td><td>Diverse "Heterogeneous" nobility: Persians, Turks, Rajputs & Indian Muslims</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 7: QUICK REVISION ===== -->
+<div id="t7" class="panel">
+
+  <div class="summary-box">
+    <div class="sum-title">⚡ QUICK REVISION – Mughal Empire</div>
+    <ul class="notes">
+      <li>Founded: <span class="kw">1526</span> by Babur; ended: <span class="kw">1857</span></li>
+      <li>Babur: Farghana → Kabul → India; 4 battles: Panipat, Khanwa, Chanderi, Ghagra</li>
+      <li>Humayun: Lost to Sher Shah Suri; Akbar born at Amarkot (1542); died falling from Sher Mandal (1556)</li>
+      <li>Akbar: Crowned at 13 at Kalanaur; Real start = 2nd Battle of Panipat (1556); 9 Navaratnas; Din-i-Ilahi (1582)</li>
+      <li>Jahangir: Chain of Justice; Nur Jahan most powerful empress; Golden Age of Mughal Painting</li>
+      <li>Shah Jahan: "Engineer King"; Taj Mahal (1632–53); War of Succession → Aurangzeb won (1658)</li>
+      <li>Aurangzeb: "Alamgir"; 49-year reign; Deccan Ulcer; Jagirdari Crisis; re-imposed Jizya (1679)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📅 Must-Remember Dates</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Year</th><th>Event</th></tr></thead>
+        <tbody>
+          <tr><td><span class="kw">1526</span></td><td>1st Battle of Panipat; Babur defeats Ibrahim Lodi; Mughal Empire founded</td></tr>
+          <tr><td><span class="kw">1527</span></td><td>Battle of Khanwa; Babur defeats Rana Sanga</td></tr>
+          <tr><td><span class="kw">1539</span></td><td>Battle of Chausa; Sher Shah defeats Humayun</td></tr>
+          <tr><td><span class="kw">1540</span></td><td>Battle of Kannauj/Bilgram; Humayun loses throne</td></tr>
+          <tr><td><span class="kw">1542</span></td><td>Akbar born at Amarkot (Humayun in exile)</td></tr>
+          <tr><td><span class="kw">1555</span></td><td>Battles of Machhiwara & Sirhind; Humayun regains Delhi</td></tr>
+          <tr><td><span class="kw">1556</span></td><td>Humayun dies (Sher Mandal); 2nd Battle of Panipat; Akbar's accession at Kalanaur</td></tr>
+          <tr><td><span class="kw">1562</span></td><td>Akbar marries Jodha Bai (daughter of Raja Bharmal of Amber)</td></tr>
+          <tr><td><span class="kw">1563</span></td><td>Akbar abolishes Pilgrim Tax</td></tr>
+          <tr><td><span class="kw">1564</span></td><td>Akbar abolishes Jizya</td></tr>
+          <tr><td><span class="kw">1575</span></td><td>Ibadat Khana built at Fatehpur Sikri</td></tr>
+          <tr><td><span class="kw">1576</span></td><td>Battle of Haldighati; Maharana Pratap vs Raja Man Singh</td></tr>
+          <tr><td><span class="kw">1582</span></td><td>Akbar introduces Din-i-Ilahi</td></tr>
+          <tr><td><span class="kw">1605</span></td><td>Jahangir accedes; title Nur-ud-din Muhammad Jahangir</td></tr>
+          <tr><td><span class="kw">1611</span></td><td>Jahangir marries Mehr-un-Nissa (Nur Jahan)</td></tr>
+          <tr><td><span class="kw">1615</span></td><td>Sir Thomas Roe arrives; Mewar settlement with Amar Singh</td></tr>
+          <tr><td><span class="kw">1628</span></td><td>Shah Jahan accedes</td></tr>
+          <tr><td><span class="kw">1632–1653</span></td><td>Taj Mahal built</td></tr>
+          <tr><td><span class="kw">1649</span></td><td>Persians permanently seize Kandahar from Mughals</td></tr>
+          <tr><td><span class="kw">1658</span></td><td>Battle of Samugarh; Aurangzeb defeats Dara Shikoh; Shah Jahan imprisoned</td></tr>
+          <tr><td><span class="kw">1665</span></td><td>Treaty of Purandar; Shivaji agrees to terms</td></tr>
+          <tr><td><span class="kw">1675</span></td><td>Guru Tegh Bahadur (9th Sikh Guru) executed by Aurangzeb → Khalsa formation</td></tr>
+          <tr><td><span class="kw">1679</span></td><td>Aurangzeb re-imposes Jizya</td></tr>
+          <tr><td><span class="kw">1686</span></td><td>Aurangzeb annexes Bijapur</td></tr>
+          <tr><td><span class="kw">1687</span></td><td>Aurangzeb annexes Golconda</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🧠 All Mnemonics at a Glance</div>
+    <div class="mnemo-box">
+      <div class="lbl">Babur's 4 Battles</div>
+      <strong>"Panipat's Khan Charged Gallantly"</strong> → Panipat · Khanwa · Chanderi · Ghagra
+    </div>
+    <div class="mnemo-box">
+      <div class="lbl">Akbar's Land Classification (Best → Worst)</div>
+      <strong>"Poor Peasants Can't Bear"</strong> → Polaj · Parauti · Chachar · Banjar
+    </div>
+    <div class="mnemo-box">
+      <div class="lbl">Akbar's Navaratnas</div>
+      <strong>"After Faizi, Tansen's Tune Made Birbal & Abdul Happy Mulla"</strong>
+    </div>
+    <div class="mnemo-box">
+      <div class="lbl">Akbar's Capital Shifts</div>
+      <strong>Agra → Fatehpur Sikri → Lahore → Agra</strong> (A-F-L-A)
+    </div>
+    <div class="mnemo-box">
+      <div class="lbl">Architecture Firsts</div>
+      <strong>B-H-A-B:</strong> Babur (first garden) → Humayun (first double dome) → Akbar (fusion) → Bibi Ka Maqbara (decline)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 Tricky Exam Facts</div>
+    <ul class="notes">
+      <li>💡 <span class="kw">Tuzuk-i-Baburi</span> written in <span class="kw">Chagatai Turkic</span> (NOT Persian); translated by Abdul Rahim Khan-i-Khana in 1589</li>
+      <li>💡 Akbar crowned at <span class="kw">Kalanaur, Punjab</span> (NOT Delhi)</li>
+      <li>💡 <span class="kw">Second Battle of Panipat (1556)</span> = "real" start of Mughal Empire (not 1526!)</li>
+      <li>💡 <span class="kw">Akbar's army at Haldighati</span> was led by a <span class="kw">Rajput</span> (Raja Man Singh) – not Akbar himself</li>
+      <li>💡 <span class="kw">Birbal</span> = only prominent noble to accept Din-i-Ilahi</li>
+      <li>💡 <span class="kw">Itmad-ud-Daulah</span> = first marble tomb (Jahangir), NOT Taj Mahal</li>
+      <li>💡 <span class="kw">Humayun's Tomb</span> = first double dome & prototype for Taj Mahal</li>
+      <li>💡 <span class="kw">Taj Mahal</span> architect = <span class="kw">Ustad Ahmad Lahauri</span> (generally credited)</li>
+      <li>💡 <span class="kw">Nur Jahan</span> = only Mughal Empress to mint coins in her name</li>
+      <li>💡 <span class="kw">Buland Darwaza</span> (55m) = largest gateway in India; built after Gujarat victory</li>
+      <li>💡 <span class="kw">Guru Arjan Dev</span> (5th Guru) → Jahangir | <span class="kw">Guru Tegh Bahadur</span> (9th Guru) → Aurangzeb</li>
+      <li>💡 <span class="kw">Panch Mahal</span> at Fatehpur Sikri inspired by <span class="kw">Buddhist Vihara</span> style</li>
+      <li>💡 <span class="kw">Fatawa-e-Alamgiri</span> = Islamic law compilation under Aurangzeb's patronage</li>
+      <li>💡 <span class="kw">Dara Shikoh</span> = highest mansab ever: 60,000 Zat & 40,000 Sawar</li>
+      <li>💡 <span class="kw">Bibi Ka Maqbara</span> = "Taj of Deccan"; Aurangzeb built for his wife; reflects decline phase</li>
+      <li>💡 <span class="kw">Sher Shah Suri's Rupee</span> = became the standard silver coin (even followed by Mughals)</li>
+      <li>💡 <span class="kw">Grand Trunk Road</span> = Sher Shah Suri's contribution; Bengal to Punjab</li>
+      <li>💡 <span class="kw">Mughal School of Painting</span> foundation = Persian painters Mir Sayyid Ali & Abdus Samad (recruited by Humayun in exile)</li>
+    </ul>
+  </div>
+</div>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Scroll to top">↑</button>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  window.addEventListener('scroll', function() {
+    const btn = document.getElementById('scroll-top');
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+</script>
+</body>
+</html>
