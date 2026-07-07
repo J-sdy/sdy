@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geography Notes — Complete Revision Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf8f4;
+  --card:#ffffff;
+  --ink:#232323;
+  --ink-soft:#55524d;
+  --rule:#e4ddd0;
+  --accent:#0f6b5c;      /* deep teal - geography/earth tone */
+  --accent-soft:#e4f2ee;
+  --gold:#a9762c;        /* warm ochre accent for tips/mnemonics */
+  --gold-soft:#faf1e2;
+  --red:#a63d3d;         /* caution */
+  --red-soft:#fbeceb;
+  --blue:#2b5a8c;        /* example */
+  --blue-soft:#eaf1f8;
+  --tab-bg:#f1ede4;
+  --shadow: 0 1px 3px rgba(30,25,15,0.08);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Source Serif 4', Georgia, serif; color:#16352f; margin:0 0 .4em 0;}
+.masthead{
+  padding:22px 20px 16px;
+  border-bottom:1px solid var(--rule);
+  background:linear-gradient(180deg,#fffefb,#faf8f4);
+}
+.masthead h1{font-size:1.5rem; font-weight:700; letter-spacing:.2px;}
+.masthead p{margin:4px 0 0; color:var(--ink-soft); font-size:.88rem;}
+
+/* Unit selector - big top-level tabs */
+.unit-row{
+  display:flex;
+  gap:8px;
+  padding:12px 16px 0;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+}
+.unit-btn{
+  flex:0 0 auto;
+  padding:9px 16px;
+  border-radius:8px 8px 0 0;
+  background:var(--tab-bg);
+  border:1px solid var(--rule);
+  border-bottom:none;
+  font-family:'Inter';
+  font-weight:700;
+  font-size:.82rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  cursor:pointer;
+  white-space:nowrap;
+}
+.unit-btn.active{ background:var(--accent); color:#fff; border-color:var(--accent);}
+
+/* Chapter tab bar - horizontal scroll, NOT sticky */
+.tab-bar-wrap{
+  background:var(--tab-bg);
+  border-bottom:2px solid var(--accent);
+}
+.tab-bar{
+  display:flex;
+  gap:6px;
+  padding:10px 16px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:var(--accent) transparent;
+}
+.tab-bar::-webkit-scrollbar{height:6px;}
+.tab-bar::-webkit-scrollbar-thumb{background:#c9bfa8; border-radius:4px;}
+.tab-btn{
+  flex:0 0 auto;
+  padding:8px 14px;
+  border-radius:20px;
+  background:#fff;
+  border:1px solid var(--rule);
+  font-size:.83rem;
+  font-weight:500;
+  color:var(--ink);
+  cursor:pointer;
+  white-space:nowrap;
+  transition:background .15s, color .15s;
+}
+.tab-btn:hover{ background:var(--accent-soft); }
+.tab-btn.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+  font-weight:600;
+}
+.hint{
+  font-size:.72rem; color:var(--ink-soft); padding:2px 16px 8px; font-style:italic;
+}
+
+main{max-width:880px; margin:0 auto; padding:22px 18px 80px;}
+.panel{display:none; animation:fadein .25s ease;}
+.panel.active{display:block;}
+@keyframes fadein{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);}}
+
+.chapter-title{
+  font-size:1.5rem;
+  border-bottom:3px solid var(--accent);
+  padding-bottom:8px;
+  margin-bottom:4px;
+}
+.chapter-meta{ color:var(--ink-soft); font-size:.82rem; margin-bottom:18px;}
+.chapter-meta b{color:var(--accent);}
+
+h2.sec{
+  font-size:1.15rem;
+  margin-top:28px;
+  padding:8px 12px;
+  background:var(--accent-soft);
+  border-left:4px solid var(--accent);
+  border-radius:4px;
+}
+h3.sub{
+  font-size:1.02rem;
+  margin-top:18px;
+  color:var(--accent);
+  border-bottom:1px dashed var(--rule);
+  padding-bottom:4px;
+}
+ul{padding-left:1.3em; margin:8px 0;}
+li{margin-bottom:6px;}
+li::marker{color:var(--accent); font-weight:700;}
+strong{
+  color:#16352f;
+  background:#fdf0bd;
+  padding:0 4px;
+  border-radius:3px;
+  font-weight:600;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+th strong{ background:none; color:#fff; padding:0; }
+.flow strong{ background:none; padding:0; }
+
+.imp{background:#fff4d6; padding:1px 4px; border-radius:3px;}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0 18px;
+  font-size:.86rem;
+  background:#fff;
+  box-shadow:var(--shadow);
+  border-radius:6px;
+  overflow:hidden;
+}
+th,td{ padding:7px 10px; border-bottom:1px solid var(--rule); text-align:left; vertical-align:top;}
+th{background:var(--accent); color:#fff; font-weight:600; font-size:.78rem; text-transform:uppercase; letter-spacing:.02em;}
+tr:nth-child(even) td{background:#f9f7f2;}
+
+.box{
+  border-radius:8px;
+  padding:12px 14px;
+  margin:14px 0;
+  border:1px solid var(--rule);
+  font-size:.92rem;
+}
+.box p:first-child{margin-top:0;}
+.box p:last-child{margin-bottom:0;}
+.box-tip{ background:var(--gold-soft); border-color:#e8d2a3; }
+.box-warn{ background:var(--red-soft); border-color:#e6b9b6; }
+.box-example{ background:var(--blue-soft); border-color:#b9cfe6; }
+.box-mnemonic{ background:#f1f7ec; border-color:#c9e0b4; }
+.box-title{font-weight:700; margin-bottom:4px; display:block;}
+
+.flow{
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px;
+  margin:14px 0; font-size:.85rem; font-weight:600;
+}
+.flow .node{
+  background:#fff; border:1.5px solid var(--accent); color:var(--accent);
+  padding:6px 12px; border-radius:6px; box-shadow:var(--shadow);
+}
+.flow .arrow{color:var(--ink-soft); font-size:1.1rem;}
+
+.pill-row{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0;}
+.pill{background:var(--accent); color:#fff; border-radius:14px; padding:3px 10px; font-size:.76rem; font-weight:600;}
+
+
+#scrollTopBtn{
+  position:fixed; bottom:22px; right:22px;
+  width:46px; height:46px; border-radius:50%;
+  background:var(--accent); color:#fff; border:none;
+  font-size:1.3rem; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,.25);
+  display:none; align-items:center; justify-content:center;
+  z-index:50;
+}
+#scrollTopBtn.show{display:flex;}
+
+@media (max-width:600px){
+  .masthead h1{font-size:1.2rem;}
+  main{padding:16px 12px 70px;}
+  .chapter-title{font-size:1.25rem;}
+  table{font-size:.78rem;}
+  th,td{padding:5px 6px;}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <h1>🌍 Geography — Complete Revision Notes</h1>
+  <p>World • Indian • Human &amp; Economic Geography — 488 Qs distilled · Swipe tabs sideways to browse chapters</p>
+</div>
+
+<div class="unit-row" id="unitRow">
+  <button class="unit-btn active" data-unit="world">🌐 World Geography</button>
+  <button class="unit-btn" data-unit="india">🇮🇳 Indian Geography</button>
+  <button class="unit-btn" data-unit="human">👥 Human &amp; Economic Geography</button>
+</div>
+
+<div class="tab-bar-wrap">
+  <div class="tab-bar" id="tabBar"></div>
+  <div class="hint">← scroll for more chapters →</div>
+</div>
+
+<main id="mainContent">
+<!-- ================= WORLD GEOGRAPHY ================= -->
+
+<div class="panel" data-unit="world" data-label="Intro & Geological Time">
+<h2 class="chapter-title">1. Introduction to Geography & Geological Time Scale</h2>
+<p class="chapter-meta">Weightage: <b>0 + 2 Qs</b> · Foundational chapter — sets up concepts used everywhere else</p>
+
+<h2 class="sec">📌 What is Geography?</h2>
+<ul>
+<li><strong>Geography</strong> = study of the Earth's surface, its physical features, climate, population, and human activity, and their spatial relationships (Greek: <em>geo</em>=earth, <em>graphien</em>=to describe).</li>
+<li>Two broad branches: <strong>Physical Geography</strong> (landforms, climate, oceans) and <strong>Human Geography</strong> (population, settlements, economy).</li>
+</ul>
+
+<h2 class="sec">🕰️ Geological Time Scale</h2>
+<ul>
+<li>Earth's <span class="imp">4.6 billion years</span> of history is divided into <strong>Eons → Eras → Periods → Epochs</strong> (largest to smallest units).</li>
+<li>Eons (oldest→newest): <strong>Hadean → Archean → Proterozoic → Phanerozoic</strong>.</li>
+<li>Phanerozoic Eon (visible life) has 3 Eras: <strong>Paleozoic → Mesozoic → Cenozoic</strong> (we live in Cenozoic).</li>
+<li>Mesozoic Era = "Age of Reptiles/Dinosaurs"; Cenozoic = "Age of Mammals".</li>
+</ul>
+
+<table>
+<tr><th>Era</th><th>Approx. Period</th><th>Key Feature</th></tr>
+<tr><td>Paleozoic</td><td>541–252 mya</td><td>First fish, land plants, amphibians</td></tr>
+<tr><td>Mesozoic</td><td>252–66 mya</td><td>Dinosaurs; ends with mass extinction (66 mya, asteroid impact)</td></tr>
+<tr><td>Cenozoic</td><td>66 mya–present</td><td>Rise of mammals, humans (Quaternary Period)</td></tr>
+</table>
+
+<h2 class="sec">🌌 Earth Formation Theories</h2>
+<ul>
+<li><strong>Nebular Hypothesis</strong> (Kant-Laplace): Solar system formed from a rotating cloud of gas & dust (nebula) that collapsed under gravity.</li>
+<li><strong>Big Bang Theory</strong>: Universe originated ~13.8 billion years ago from a single, extremely dense, hot point that expanded rapidly — proposed by Georges Lemaître; universe is still expanding (evidence: redshift of galaxies, Edwin Hubble).</li>
+<li><strong>Accretion theory</strong>: Earth formed by gradual sticking together (accretion) of dust and gas particles orbiting the young Sun.</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Era order</span>
+"<strong>P</strong>lease <strong>M</strong>ake <strong>C</strong>offee" → Paleozoic → Mesozoic → Cenozoic (old to new).
+</div>
+
+</div>
+
+<!-- CH2 -->
+<div class="panel" data-unit="world" data-label="Earth & Universe">
+<h2 class="chapter-title">2. The Earth & The Universe</h2>
+<p class="chapter-meta">Weightage: <b>57 Qs</b> — Highest-weightage World Geography chapter ⭐</p>
+
+<h2 class="sec">☀️ The Solar System</h2>
+<ul>
+<li>Consists of the <strong>Sun</strong> (a star), 8 planets, dwarf planets, moons, asteroids, comets, meteoroids.</li>
+<li>Order of planets from Sun: <strong>Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune</strong>.</li>
+<li><strong>Inner/Terrestrial planets</strong> (rocky): Mercury, Venus, Earth, Mars. <strong>Outer/Jovian planets</strong> (gas/ice giants): Jupiter, Saturn, Uranus, Neptune.</li>
+<li><strong>Pluto</strong> reclassified as a <span class="imp">dwarf planet in 2006</span> by IAU — has not cleared its orbital neighbourhood. 5 recognised dwarf planets: <strong>Ceres, Pluto, Haumea, Makemake, Eris</strong>.</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Planet order</span>
+"<strong>M</strong>y <strong>V</strong>ery <strong>E</strong>ducated <strong>M</strong>other <strong>J</strong>ust <strong>S</strong>erved <strong>U</strong>s <strong>N</strong>achos" → Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.
+</div>
+
+<h3 class="sub">Planetary Superlatives (frequently asked)</h3>
+<table>
+<tr><th>Category</th><th>Answer</th></tr>
+<tr><td>Largest planet</td><td>Jupiter</td></tr>
+<tr><td>Smallest planet</td><td>Mercury</td></tr>
+<tr><td>Hottest planet</td><td>Venus (greenhouse effect)</td></tr>
+<tr><td>Red Planet</td><td>Mars (iron oxide/rust surface)</td></tr>
+<tr><td>Fastest rotation (shortest day)</td><td>Jupiter (~10 hrs)</td></tr>
+<tr><td>Slowest rotation / Longest day</td><td>Venus (243 Earth days — longer than its own year!)</td></tr>
+<tr><td>"Morning Star" / "Evening Star"</td><td>Venus</td></tr>
+<tr><td>Ringed planets</td><td>Saturn (most prominent), also Jupiter, Uranus, Neptune</td></tr>
+<tr><td>Planet with most moons</td><td>Saturn (146+, surpassed Jupiter)</td></tr>
+<tr><td>Largest asteroid</td><td>Ceres</td></tr>
+<tr><td>Mars' moons</td><td>Phobos & Deimos (small, irregular — captured asteroids)</td></tr>
+</table>
+
+<h3 class="sub">Sun, Stars & Galaxies</h3>
+<ul>
+<li>Sun composition: Hydrogen <span class="imp">~70%</span>, Helium <span class="imp">~26.5%</span>, other elements ~3.5%; diameter ~109× Earth's.</li>
+<li><strong>Sunspots</strong>: cooler (~6,500°F vs surrounding), dark patches on Sun's surface; vary in an <strong>11-year solar cycle</strong>.</li>
+<li><strong>Solar flares / CMEs</strong> (Coronal Mass Ejections) = huge bursts of radiation/particles from Sun's corona → cause <strong>geomagnetic storms</strong>, affecting GPS, power grids, submarine cables, pipelines (via geomagnetically induced currents).</li>
+<li><strong>Aurora</strong> (Northern/Southern Lights): charged solar particles trapped by Earth's magnetic field, glowing near poles.</li>
+<li><strong>Star life cycle (Sun-like star)</strong>: Nebula → Protostar → <strong>Main Sequence</strong> (most of its life; fuses H→He) → Red Giant → sheds outer layers → White Dwarf.</li>
+<li><strong>Galaxy</strong> = huge group of stars, gas & dust bound by gravity. Our galaxy = <strong>Milky Way</strong> (looks like a "milky" band of light).</li>
+<li>Galaxy types: <strong>Spiral</strong> (arms, like Milky Way), <strong>Elliptical</strong>, <strong>Irregular</strong> (no defined shape, gas/dust-rich, active star formation), <strong>Lenticular</strong>.</li>
+<li><strong>Comets</strong>: icy bodies; release gas/dust tails when nearing Sun (heat causes sublimation), e.g. C/2020 F3 (NEOWISE).</li>
+<li><strong>Asteroids/Meteoroids</strong>: rocky, mostly in Asteroid Belt (Mars–Jupiter); meteoroid burning in atmosphere = meteor ("shooting star"); one reaching ground = meteorite.</li>
+<li><strong>Exoplanet</strong>: a planet orbiting a star outside our solar system.</li>
+<li>2024 PT5: a temporary <strong>"mini-moon"</strong> that briefly orbited Earth for ~2 months in 2024.</li>
+</ul>
+
+<h3 class="sub">The Earth — Basics</h3>
+<ul>
+<li>3rd planet from Sun; only known planet with life; called <strong>"Blue Planet"</strong> (71% surface = water).</li>
+<li>Densest planet in the solar system; 5th largest overall; largest of the 4 terrestrial planets.</li>
+<li>Shape: <strong>Geoid</strong> ("earth-like shape") — an oblate spheroid, flattened at poles, bulging at equator (due to centrifugal force + rotation). Equatorial bulge ≈ 42.72 km / 26.5 miles.</li>
+<li>Average distance from Sun ≈ <span class="imp">149.6 million km (1 Astronomical Unit, AU)</span>.</li>
+<li>Age ≈ 4.5–4.6 billion years.</li>
+<li>Only 3% of Earth's water is fresh; 97% is saline.</li>
+<li>Atmosphere divided into 5–6 layers (see Atmosphere chapter).</li>
+<li>One natural satellite: the <strong>Moon</strong>.</li>
+</ul>
+
+<h3 class="sub">Motions of the Earth</h3>
+<div class="flow">
+ <div class="node">Rotation</div><div class="arrow">→</div><div class="node">Day &amp; Night</div>
+ <div class="arrow">|</div>
+ <div class="node">Revolution</div><div class="arrow">→</div><div class="node">Seasons, Year</div>
+</div>
+<ul>
+<li><strong>Rotation</strong>: spin on own axis, West→East (appears <strong>anti-clockwise</strong> viewed from above North Pole); causes day/night. Sidereal day = 23h 56m 4s; Mean solar day = 24h. Speed at equator ≈ 1,674 km/hr.</li>
+<li><strong>Axial tilt</strong>: <span class="imp">23.5°</span> — the real reason for changing seasons (NOT distance from Sun, NOT Moon's gravity).</li>
+<li><strong>Revolution</strong>: orbit around Sun, takes <strong>365.25 days</strong> (1 year); orbit is <strong>elliptical</strong>, not circular.</li>
+<li><strong>Perihelion</strong> (~Jan 3): Earth closest to Sun. <strong>Aphelion</strong> (~July 4): Earth farthest from Sun.</li>
+<li><strong>Leap Year</strong>: extra day (Feb 29) added every 4 years to correct for the 0.25 day/year surplus.</li>
+</ul>
+
+<table>
+<tr><th>Event</th><th>Date</th><th>Feature</th></tr>
+<tr><td>Vernal (Spring) Equinox</td><td>Mar 20/21</td><td>Equal day &amp; night, globally</td></tr>
+<tr><td>Summer Solstice</td><td>Jun 21</td><td>Longest day (N. Hemisphere)</td></tr>
+<tr><td>Autumnal Equinox</td><td>Sep 22/23</td><td>Equal day &amp; night, globally</td></tr>
+<tr><td>Winter Solstice</td><td>Dec 22</td><td>Shortest day (N. Hemisphere)</td></tr>
+</table>
+
+<h3 class="sub">Eclipses</h3>
+<ul>
+<li><strong>Solar Eclipse</strong>: Moon comes between Sun & Earth, casting shadow on Earth — occurs at <strong>New Moon</strong>.</li>
+<li><strong>Lunar Eclipse</strong>: Earth comes between Sun & Moon, Earth's shadow falls on Moon — occurs at <strong>Full Moon</strong> (not new moon — common trap in MCQs ⚠️).</li>
+</ul>
+
+<div class="box box-warn"><span class="box-title">⚠️ Common Confusion</span>
+Seasons are caused by <strong>axial tilt</strong>, NOT by Earth's varying distance from the Sun and NOT by the Moon. Also: Lunar eclipse happens at Full Moon, Solar eclipse at New Moon — don't swap these!
+</div>
+
+</div>
+
+<!-- CH3 -->
+<div class="panel" data-unit="world" data-label="Latitude, Longitude & Time">
+<h2 class="chapter-title">3. Latitudes, Longitudes & Standard Time</h2>
+<p class="chapter-meta">Part of "The Earth & Universe" weightage — core map-skill chapter</p>
+
+<h2 class="sec">📏 Latitudes</h2>
+<ul>
+<li>Imaginary <strong>east–west</strong> circles parallel to Equator; used to measure location north/south.</li>
+<li>Range: 0° (Equator) to 90°N / 90°S.</li>
+<li>Distance between two latitudes ≈ <span class="imp">111 km</span> (constant everywhere).</li>
+</ul>
+<table>
+<tr><th>Latitude</th><th>Position</th><th>Note</th></tr>
+<tr><td>Equator</td><td>0°</td><td>Longest latitude; divides Earth into N & S Hemispheres</td></tr>
+<tr><td>Tropic of Cancer</td><td>23.5° N</td><td>Sun directly overhead in June</td></tr>
+<tr><td>Tropic of Capricorn</td><td>23.5° S</td><td>Sun directly overhead in December</td></tr>
+<tr><td>Arctic Circle</td><td>66.5° N</td><td>Northernmost of the 5 major circles</td></tr>
+<tr><td>Antarctic Circle</td><td>66.5° S</td><td>Southernmost of the 5 major circles</td></tr>
+</table>
+<ul>
+<li><strong>Frigid Zones</strong>: Pole ↔ Polar circle — coldest, midnight sun & polar night.</li>
+<li><strong>Temperate Zones</strong>: Polar circle ↔ Tropic — mild, all 4 seasons.</li>
+<li><strong>Torrid Zone</strong> ("Tropics"): Tropic of Cancer ↔ Tropic of Capricorn — hottest, sun overhead seasonally.</li>
+</ul>
+
+<h2 class="sec">🧭 Longitudes</h2>
+<ul>
+<li>Imaginary <strong>north–south</strong> lines (semi-circles) converging at poles; measure location east/west of <strong>Prime Meridian (0°, Greenwich)</strong>.</li>
+<li>180° East + 180° West = 360° total; Prime Meridian splits Earth into <strong>Eastern</strong> &amp; <strong>Western Hemisphere</strong>.</li>
+<li>Unlike latitudes, distance between longitudes <strong>decreases towards the poles</strong>.</li>
+</ul>
+
+<h2 class="sec">🕒 Longitude & Time</h2>
+<ul>
+<li>Earth rotates <strong>360° in 24 hours</strong> → <strong>15° of longitude = 1 hour</strong> = 4 minutes per degree.</li>
+<li><strong>International Date Line (IDL)</strong>: runs along 180° longitude (curved near Bering Strait/Fiji to avoid splitting countries); crossing it changes date by exactly 1 day.</li>
+<li><strong>Indian Standard Time (IST)</strong>: based on <span class="imp">82°30′ E</span> longitude (passes near Mirzapur, UP) — <strong>5 hrs 30 min ahead of GMT</strong>.</li>
+<li>India's longitudinal extent (~30°) causes ~2 hour actual sunrise difference between Arunachal Pradesh & Gujarat, but a single IST is used for uniformity.</li>
+<li>World has <strong>24 standard time zones</strong> (each 15° wide). USA/Canada: 5 zones. Russia: 11 zones (historically; ~9 now used practically).</li>
+</ul>
+
+<div class="box box-tip"><span class="box-title">💡 Tip — Direction of date change at IDL</span>
+Travelling <strong>West→East</strong> (e.g. Asia→America) across the IDL: <strong>subtract a day (go back)</strong>.<br>
+Travelling <strong>East→West</strong> (e.g. America→Asia): <strong>add a day (go forward)</strong>.
+</div>
+
+</div>
+
+<!-- CH4 -->
+<div class="panel" data-unit="world" data-label="Earth's Magnetism">
+<h2 class="chapter-title">4. Earth's Magnetism</h2>
+<p class="chapter-meta">Weightage: <b>2 Qs</b></p>
+<ul>
+<li>Earth behaves like a giant <strong>bar magnet</strong>, generated by convection currents in the molten <strong>outer core</strong> (iron-nickel) — called the <strong>"geodynamo" effect</strong>.</li>
+<li><strong>Magnetosphere</strong>: region around Earth dominated by its magnetic field; shields Earth from solar wind & cosmic radiation.</li>
+<li>Magnetic North/South Pole ≠ Geographic North/South Pole (magnetic poles shift over time).</li>
+<li><strong>Geomagnetic storm</strong>: temporary disturbance of the magnetosphere caused by solar wind shockwaves / CMEs — can disrupt satellites, GPS, and power grids.</li>
+<li>Charged solar particles trapped by the magnetic field near the poles create the <strong>Aurora Borealis (north) / Aurora Australis (south)</strong>.</li>
+</ul>
+</div>
+
+<!-- CH5 -->
+<div class="panel" data-unit="world" data-label="Interior of the Earth">
+<h2 class="chapter-title">5. Interior of the Earth</h2>
+<p class="chapter-meta">Weightage: <b>2 Qs</b></p>
+
+<h2 class="sec">🔎 Sources of Information</h2>
+<ul>
+<li><strong>Direct sources</strong>: mining, deep drilling (deepest ~12 km, Kola Superdeep Borehole), volcanic eruptions (lava from below crust).</li>
+<li><strong>Indirect sources</strong>: <strong>seismic waves</strong> (from earthquakes), gravitation, magnetic field, meteorites, temperature/pressure gradients.</li>
+</ul>
+
+<h2 class="sec">🌊 Seismic (Earthquake) Waves</h2>
+<table>
+<tr><th>Wave</th><th>Type</th><th>Key Property</th></tr>
+<tr><td><strong>P-waves</strong> (Primary)</td><td>Body wave</td><td>Fastest; travel through solid, liquid &amp; gas; push-pull motion</td></tr>
+<tr><td><strong>S-waves</strong> (Secondary)</td><td>Body wave</td><td>Slower; travel only through solids; side-to-side motion — cannot pass through outer core (proves it's liquid)</td></tr>
+<tr><td><strong>Surface waves</strong> (L-waves)</td><td>Surface wave</td><td>Slowest but most destructive; travel along Earth's surface</td></tr>
+</table>
+
+<h2 class="sec">🌍 Layered Structure</h2>
+<div class="flow">
+ <div class="node">Crust</div><div class="arrow">→</div>
+ <div class="node">Mantle</div><div class="arrow">→</div>
+ <div class="node">Outer Core (liquid)</div><div class="arrow">→</div>
+ <div class="node">Inner Core (solid)</div>
+</div>
+<table>
+<tr><th>Layer</th><th>Depth/State</th><th>Composition</th></tr>
+<tr><td>Crust</td><td>0–35 km (avg); thinnest layer</td><td>SIAL (Silica+Aluminium) — continental; SIMA (Silica+Magnesium) — oceanic</td></tr>
+<tr><td>Mantle</td><td>up to ~2,900 km</td><td>SIMA-rich, semi-solid (asthenosphere = partly molten, source of magma)</td></tr>
+<tr><td>Outer Core</td><td>~2,900–5,150 km</td><td>Liquid iron-nickel; generates magnetic field</td></tr>
+<tr><td>Inner Core</td><td>~5,150–6,371 km (centre)</td><td>Solid iron-nickel (solid despite extreme heat, due to immense pressure)</td></tr>
+</table>
+<ul>
+<li><strong>Barysphere</strong> = the core (heaviest sphere); <strong>Lithosphere</strong> = crust + uppermost solid mantle (rigid, broken into tectonic plates).</li>
+<li>Density increases with depth: Crust ~2.7–3 g/cm³ → Core ~13 g/cm³.</li>
+</ul>
+</div>
+
+<!-- CH6 -->
+<div class="panel" data-unit="world" data-label="Earth Origin, Rocks & Rock Cycle">
+<h2 class="chapter-title">6. Origin & Evolution of Earth + Rocks &amp; Rock Cycle</h2>
+<p class="chapter-meta">Weightage: <b>1 Q</b> (Rocks) — foundational for landforms chapters</p>
+
+<h2 class="sec">🪨 Types of Rocks</h2>
+<div class="flow">
+ <div class="node">Magma cools</div><div class="arrow">→</div><div class="node">Igneous Rock</div>
+ <div class="arrow">→</div><div class="node">Weathering + deposition</div><div class="arrow">→</div><div class="node">Sedimentary Rock</div>
+ <div class="arrow">→</div><div class="node">Heat + Pressure</div><div class="arrow">→</div><div class="node">Metamorphic Rock</div>
+ <div class="arrow">→</div><div class="node">Melts again</div>
+</div>
+<table>
+<tr><th>Rock Type</th><th>Formation</th><th>Examples</th></tr>
+<tr><td><strong>Igneous</strong> ("primary rock")</td><td>Cooling &amp; solidification of magma/lava</td><td>Granite (intrusive), Basalt (extrusive)</td></tr>
+<tr><td><strong>Sedimentary</strong></td><td>Compaction &amp; cementation of sediments (layered/stratified); may contain fossils</td><td>Sandstone, Limestone, Shale, Coal</td></tr>
+<tr><td><strong>Metamorphic</strong></td><td>Igneous/sedimentary rock transformed by heat &amp; pressure</td><td>Marble (from limestone), Slate (from shale), Quartzite (from sandstone), Gneiss</td></tr>
+</table>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic</span>
+"<strong>I S</strong>ee <strong>M</strong>ud" → <strong>I</strong>gneous → <strong>S</strong>edimentary → <strong>M</strong>etamorphic (natural transformation order).
+</div>
+
+<h2 class="sec">🌋 Origin of the Earth</h2>
+<ul>
+<li>Formed via <strong>accretion</strong> ~4.6 billion years ago from the solar nebula.</li>
+<li>Early Earth was molten; heavier materials (iron, nickel) sank to form the core — process called <strong>differentiation</strong>.</li>
+<li>Atmosphere & oceans formed later through volcanic outgassing and cometary/asteroid water delivery.</li>
+</ul>
+</div>
+
+<!-- CH7 -->
+<div class="panel" data-unit="world" data-label="Plate Tectonics">
+<h2 class="chapter-title">7. Plate Tectonics & Distribution of Oceans/Continents</h2>
+<p class="chapter-meta">Weightage: <b>4 Qs</b></p>
+
+<h2 class="sec">🧩 Continental Drift → Plate Tectonics</h2>
+<ul>
+<li><strong>Continental Drift Theory</strong> (Alfred Wegener, 1912): all continents were once joined as a single supercontinent, <strong>Pangaea</strong>, surrounded by ocean <strong>Panthalassa</strong>; it broke apart and drifted to current positions.</li>
+<li>Pangaea first split into <strong>Laurasia</strong> (north) and <strong>Gondwanaland</strong> (south).</li>
+<li><strong>Plate Tectonic Theory</strong> (1960s): lithosphere is broken into rigid <strong>tectonic plates</strong> floating on the semi-molten asthenosphere, driven by <strong>mantle convection currents</strong>.</li>
+<li>Major plates: Indian, Eurasian, Pacific, North American, South American, African, Antarctic; Minor plates: Nazca, Philippine, Cocos, Caroline, Arabian, etc.</li>
+</ul>
+
+<h2 class="sec">🔀 Types of Plate Boundaries</h2>
+<table>
+<tr><th>Boundary Type</th><th>Movement</th><th>Result</th></tr>
+<tr><td><strong>Divergent</strong> (Constructive)</td><td>Plates move apart</td><td>Mid-ocean ridges, rift valleys, new crust forms (e.g. Mid-Atlantic Ridge)</td></tr>
+<tr><td><strong>Convergent</strong> (Destructive)</td><td>Plates collide</td><td>Mountains (Himalayas), ocean trenches, subduction zones, volcanoes</td></tr>
+<tr><td><strong>Transform</strong></td><td>Plates slide past each other</td><td>No new crust created/destroyed; major earthquakes (e.g. San Andreas Fault)</td></tr>
+</table>
+
+<div class="box box-example"><span class="box-title">🔹 Example</span>
+The Himalayas formed by the <strong>convergent</strong> collision of the Indian Plate (moving north) with the Eurasian Plate — the Indian Plate was once south of the equator and much larger (included present-day Australian plate) before splitting.
+</div>
+
+<ul>
+<li><strong>Nazca Plate</strong>: between South America & Pacific plate (subducts under South America — Andes formed).</li>
+<li><strong>Caroline Plate</strong>: between Philippine & Indian plates (north of New Guinea).</li>
+<li>Evidence for plate tectonics: matching coastlines, fossil correlation across continents (e.g. Mesosaurus), matching rock strata, paleoclimatic evidence, seafloor spreading &amp; magnetic striping.</li>
+</ul>
+</div>
+
+<!-- CH8 -->
+<div class="panel" data-unit="world" data-label="Earthquakes, Volcanism & Tsunamis">
+<h2 class="chapter-title">8. Earthquakes, Volcanism & Tsunamis</h2>
+<p class="chapter-meta">Weightage: <b>4 + 3 Qs</b></p>
+
+<h2 class="sec">🌐 Earthquakes</h2>
+<ul>
+<li><strong>Focus (Hypocentre)</strong>: point inside Earth where rupture originates. <strong>Epicentre</strong>: point on surface directly above the focus (experiences strongest shaking).</li>
+<li>Measured by <strong>Richter Scale</strong> (magnitude, logarithmic — each whole number = 10× amplitude) and <strong>Mercalli Scale</strong> (intensity/observed damage).</li>
+<li>Causes: plate tectonic movement, volcanic activity, faulting; man-made triggers: reservoir-induced seismicity, mining.</li>
+<li>India's seismic zones: Zone V (highest risk, e.g. Kashmir, NE states, Kachchh) to Zone II (lowest risk).</li>
+</ul>
+
+<h2 class="sec">🌋 Volcanism</h2>
+<ul>
+<li>Movement of molten <strong>magma</strong> (inside earth) / <strong>lava</strong> (after reaching surface) &amp; associated gases through weak zones in the crust.</li>
+<li>Types by activity: <strong>Active</strong> (erupting/could erupt), <strong>Dormant</strong> (inactive but may erupt again), <strong>Extinct</strong> (unlikely to erupt again).</li>
+<li>Types by shape: <strong>Shield volcano</strong> (broad, gentle slopes, basaltic lava — e.g. Hawaii), <strong>Composite/Strato volcano</strong> (steep, alternating lava/ash layers, explosive — e.g. Mt. Fuji), <strong>Caldera</strong> (large collapsed crater), <strong>Mid-ocean ridge volcanism</strong>.</li>
+<li><strong>Pacific Ring of Fire</strong>: horseshoe-shaped zone around the Pacific Ocean with ~75% of world's active/dormant volcanoes and most earthquakes — due to subduction zones.</li>
+<li>India's only active volcano: <strong>Barren Island</strong> (Andaman & Nicobar Islands).</li>
+</ul>
+
+<h2 class="sec">🌊 Tsunamis</h2>
+<ul>
+<li>Series of massive ocean waves usually triggered by undersea <strong>earthquakes</strong> (most common), volcanic eruptions, or landslides.</li>
+<li>2004 Indian Ocean Tsunami (26 Dec 2004): triggered by a massive undersea earthquake off Sumatra; devastated Andaman & Nicobar Islands and coastal India/Sri Lanka/Thailand/Indonesia.</li>
+</ul>
+</div>
+
+<!-- CH9 -->
+<div class="panel" data-unit="world" data-label="Geomorphic Processes">
+<h2 class="chapter-title">9. Endogenic & Exogenic Forces (Geomorphic Processes) + Mountains</h2>
+<p class="chapter-meta">Weightage: <b>1 Q</b> (foundation for all landform chapters)</p>
+
+<table>
+<tr><th>Force Type</th><th>Source</th><th>Effect</th><th>Examples</th></tr>
+<tr><td><strong>Endogenic</strong> (internal)</td><td>Earth's internal heat</td><td>Builds up landforms (diastrophism &amp; volcanism)</td><td>Mountain building, earthquakes, volcanism, plate tectonics</td></tr>
+<tr><td><strong>Exogenic</strong> (external)</td><td>Solar energy / gravity, acting via weathering, erosion agents</td><td>Wears down landforms (denudation)</td><td>Weathering, erosion by rivers/wind/glaciers/waves, mass wasting</td></tr>
+</table>
+<ul>
+<li>Continuous tug-of-war between endogenic (constructive) & exogenic (destructive/gradational) forces shapes Earth's surface.</li>
+<li><strong>Weathering</strong> = in-situ breakdown of rocks (no transport): Physical/Mechanical, Chemical, Biological.</li>
+<li><strong>Erosion</strong> = breakdown + transport of material by agents (water, wind, ice, waves).</li>
+<li><strong>Mass wasting</strong>: downslope movement of weathered material under gravity (landslides, soil creep).</li>
+</ul>
+
+<h2 class="sec">⛰️ Mountains</h2>
+<table>
+<tr><th>Type</th><th>Formation</th><th>Example</th></tr>
+<tr><td>Fold Mountains</td><td>Compression at convergent plate boundaries</td><td>Himalayas, Alps, Andes</td></tr>
+<tr><td>Block Mountains</td><td>Faulting — uplifted blocks between faults (horst)</td><td>Vosges, Black Forest, Satpura (India)</td></tr>
+<tr><td>Volcanic Mountains</td><td>Accumulated volcanic material</td><td>Mt. Fuji, Kilimanjaro</td></tr>
+<tr><td>Residual/Relict Mountains</td><td>Erosion of older mountains/plateaus</td><td>Aravalli (oldest fold mountain range in India)</td></tr>
+</table>
+</div>
+
+<!-- CH10 -->
+<div class="panel" data-unit="world" data-label="Landforms (Fluvial, Arid, Marine, Glacial, Karst)">
+<h2 class="chapter-title">10. Landforms and Their Evolution</h2>
+<p class="chapter-meta">Weightage: Fluvial 3 + Arid/Water-eroded 5 + Marine 1 + Glacial 3 + Karst 3 Qs</p>
+
+<h2 class="sec">🏞️ Fluvial Landforms (by Rivers)</h2>
+<table>
+<tr><th>Stage</th><th>Erosional Landforms</th><th>Depositional Landforms</th></tr>
+<tr><td>Youthful (upper course)</td><td>V-shaped valleys, gorges, waterfalls, potholes, rapids</td><td>—</td></tr>
+<tr><td>Mature (middle course)</td><td>Meanders begin</td><td>Levees, flood plains</td></tr>
+<tr><td>Old age (lower course)</td><td>—</td><td>Meanders, ox-bow lakes, braided channels, deltas, sand bars</td></tr>
+</table>
+<ul>
+<li><strong>Ox-bow lake</strong>: formed when a meander loop is cut off from the main river channel.</li>
+<li><strong>Delta</strong>: triangular depositional landform at river mouth (e.g. Sunderbans — Ganga-Brahmaputra delta, world's largest).</li>
+</ul>
+
+<h2 class="sec">🏜️ Arid & Water-Eroded Landforms (Deserts)</h2>
+<ul>
+<li>Shaped mainly by <strong>wind (aeolian)</strong> action &amp; occasional flash floods.</li>
+<li><strong>Erosional</strong>: Mushroom rocks (Zeugen), Yardangs, Inselbergs, Deflation hollows/Blowouts.</li>
+<li><strong>Depositional</strong>: Sand dunes — <strong>Barchans</strong> (crescent-shaped, transverse to wind), <strong>Seif dunes</strong> (longitudinal, parallel to wind), Loess (wind-blown fine silt deposits).</li>
+<li><strong>Playa</strong>: shallow temporary desert lake, water evaporates leaving salt deposits — key inland-drainage feature.</li>
+</ul>
+
+<h2 class="sec">🌊 Marine (Coastal) Landforms</h2>
+<ul>
+<li>Shaped by wave action, tides & currents.</li>
+<li><strong>Erosional</strong>: Sea cliffs, sea caves, sea arches, stacks, wave-cut platforms.</li>
+<li><strong>Depositional</strong>: Beaches, spits, bars, tombolos, lagoons.</li>
+</ul>
+
+<h2 class="sec">🧊 Glacial Landforms</h2>
+<ul>
+<li>Shaped by moving ice (glaciers).</li>
+<li><strong>Erosional</strong>: <strong>Cirque</strong> (armchair-shaped hollow), U-shaped (glacial trough) valleys, Arêtes (sharp ridges), Horns (pyramidal peaks — e.g. Matterhorn), Hanging valleys.</li>
+<li><strong>Depositional</strong>: Moraines (lateral, medial, terminal, ground), Eskers, Drumlins (streamlined mounds), Outwash plains.</li>
+</ul>
+
+<h2 class="sec">🕳️ Karst Topography</h2>
+<ul>
+<li>Formed by <strong>chemical weathering (solution)</strong> of soluble rocks, mainly <strong>limestone</strong>, by slightly acidic water (carbonation).</li>
+<li>Name derived from the Karst region of Slovenia.</li>
+<li>Surface features: Sinkholes (dolines), Karst windows, limestone pavements.</li>
+<li>Underground features: Caves, Stalactites (hang from cave roof), Stalagmites (rise from cave floor), Pillars (where the two join).</li>
+<li>Famous Indian karst areas: parts of Meghalaya (e.g. limestone caves near Cherrapunji/Mawsynram).</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Stalactite vs Stalagmite</span>
+Stala<strong>C</strong>tite = hangs from <strong>C</strong>eiling (tight grip, "hold on Tight"). Stala<strong>G</strong>mite = grows from <strong>G</strong>round.
+</div>
+</div>
+
+<!-- CH11 -->
+<div class="panel" data-unit="world" data-label="Atmosphere Composition & Structure">
+<h2 class="chapter-title">11. Composition & Structure of Atmosphere</h2>
+<p class="chapter-meta">Weightage: <b>4 Qs</b></p>
+
+<h2 class="sec">🌫️ Composition</h2>
+<ul>
+<li>Atmosphere = mixture of gases + water vapour + dust particles enveloping the Earth; 99% of its mass lies within <span class="imp">32 km</span> of the surface.</li>
+<li><strong>Nitrogen ~78%</strong>, <strong>Oxygen ~21%</strong>, Argon ~0.93%, Carbon dioxide ~0.04% (variable, rising due to fossil fuels), plus trace gases, water vapour &amp; dust.</li>
+<li><strong>CO₂</strong>: transparent to incoming solar (shortwave) radiation but opaque/absorbs outgoing terrestrial (longwave) radiation → main greenhouse gas.</li>
+<li><strong>Ozone (O₃)</strong>: found 10–50 km up (concentrated in stratosphere); absorbs harmful UV radiation, acting as Earth's "sunscreen".</li>
+<li>Water vapour: up to 4% of air by volume in humid tropics, &lt;1% in deserts/polar regions; decreases with altitude &amp; toward poles; found only up to ~90 km.</li>
+<li>Oxygen becomes negligible above <span class="imp">120 km</span>.</li>
+<li>Dust particles: sea salt, soil, smoke, ash, pollen, meteor debris — act as <strong>hygroscopic nuclei</strong> for cloud/condensation.</li>
+</ul>
+
+<h2 class="sec">🪜 5 Layers of the Atmosphere</h2>
+<table>
+<tr><th>Layer</th><th>Height</th><th>Key Feature</th></tr>
+<tr><td><strong>Troposphere</strong></td><td>0–13 km avg (8 km poles, 18 km equator)</td><td>All weather occurs here; temp falls 1°C/165m; most important for biological activity</td></tr>
+<tr><td><strong>Stratosphere</strong></td><td>13–50 km</td><td>Contains the <strong>ozone layer</strong>; ideal for aircraft (stable, no turbulence)</td></tr>
+<tr><td><strong>Mesosphere</strong></td><td>50–80 km</td><td>Coldest layer (down to –100°C); meteors burn up here</td></tr>
+<tr><td><strong>Thermosphere</strong> (incl. Ionosphere 80–400 km)</td><td>80–400+ km</td><td>Temperature rises with height; ionosphere reflects radio waves</td></tr>
+<tr><td><strong>Exosphere</strong></td><td>Beyond thermosphere</td><td>Merges into outer space; extremely rarefied</td></tr>
+</table>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Atmosphere layers (bottom→top)</span>
+"<strong>T</strong>iny <strong>S</strong>tars <strong>M</strong>ake <strong>T</strong>hings <strong>E</strong>asy" → <strong>T</strong>roposphere, <strong>S</strong>tratosphere, <strong>M</strong>esosphere, <strong>T</strong>hermosphere, <strong>E</strong>xosphere.
+</div>
+
+<ul>
+<li><strong>Tropopause</strong>: boundary between troposphere & stratosphere; ~ –80°C over equator, ~ –45°C over poles (nearly constant temp here).</li>
+<li><strong>Mesopause</strong>: boundary of mesosphere (upper limit).</li>
+<li>Geographers mainly focus on the first two layers (troposphere & stratosphere) since these directly affect climate/weather &amp; UV protection.</li>
+</ul>
+</div>
+
+<!-- CH12 -->
+<div class="panel" data-unit="world" data-label="Winds, Temperature & Humidity">
+<h2 class="chapter-title">12. Winds (Planetary & Local), Temperature & Humidity</h2>
+<p class="chapter-meta">Weightage: <b>1 + 1 Qs</b></p>
+
+<h2 class="sec">💨 Planetary (Permanent) Winds</h2>
+<table>
+<tr><th>Wind</th><th>Location</th><th>Direction</th></tr>
+<tr><td>Trade Winds</td><td>0°–30° N/S (towards Equator)</td><td>NE trades (N. Hemisphere), SE trades (S. Hemisphere)</td></tr>
+<tr><td>Westerlies</td><td>30°–60° N/S</td><td>Blow from subtropical high to sub-polar low; "Roaring Forties" in S. Hemisphere</td></tr>
+<tr><td>Polar Easterlies</td><td>60°–90° N/S</td><td>Cold, dry winds from poles</td></tr>
+</table>
+<ul>
+<li>Caused by pressure belts (Equatorial Low, Subtropical High, Subpolar Low, Polar High) + <strong>Coriolis force</strong> (deflects winds right in N. Hemisphere, left in S. Hemisphere — due to Earth's rotation).</li>
+</ul>
+
+<h2 class="sec">🌬️ Local Winds</h2>
+<ul>
+<li><strong>Land & Sea Breeze</strong>: daily cycle — sea breeze (day, sea→land), land breeze (night, land→sea), due to differential heating/cooling of land vs water.</li>
+<li><strong>Loo</strong>: hot, dry summer wind of North Indian plains.</li>
+<li><strong>Chinook</strong> (N. America) / <strong>Foehn</strong> (Alps): warm, dry winds descending leeward mountain slopes.</li>
+<li><strong>Mistral</strong>: cold wind in southern France.</li>
+</ul>
+
+<h2 class="sec">🌡️ Temperature & Humidity</h2>
+<ul>
+<li><strong>Insolation</strong> = incoming solar radiation; varies with latitude, angle of sun's rays, day length, transparency of atmosphere.</li>
+<li>Factors controlling temperature distribution: latitude, altitude, distance from sea, ocean currents, prevailing winds.</li>
+<li><strong>Humidity</strong> = amount of water vapour in air. <strong>Absolute humidity</strong> = actual water vapour content (g/m³). <strong>Relative humidity</strong> = ratio of actual to maximum possible water vapour at that temperature (%).</li>
+<li>Warmer air holds more moisture → relative humidity drops as temperature rises even if absolute moisture stays same.</li>
+</ul>
+</div>
+
+<!-- CH13 -->
+<div class="panel" data-unit="world" data-label="Precipitation, Clouds & Climate Classification">
+<h2 class="chapter-title">13. Precipitation, Clouds & Climate Classification (+ Indian Monsoon context)</h2>
+<p class="chapter-meta">Weightage: <b>3 + 0 + 1 Qs</b></p>
+
+<h2 class="sec">☔ Types of Precipitation (Rainfall)</h2>
+<table>
+<tr><th>Type</th><th>Mechanism</th><th>Example region</th></tr>
+<tr><td><strong>Convectional</strong></td><td>Warm air rises, cools, condenses — short, intense, afternoon showers</td><td>Equatorial regions</td></tr>
+<tr><td><strong>Orographic (Relief)</strong></td><td>Moist air forced up a mountain barrier, cools & condenses on windward side</td><td>Western Ghats, Himalayan foothills (Mawsynram/Cherrapunji)</td></tr>
+<tr><td><strong>Cyclonic (Frontal)</strong></td><td>Warm & cold air masses meet at a front</td><td>Temperate regions</td></tr>
+</table>
+<ul>
+<li><strong>Rain shadow</strong>: dry leeward side of a mountain after orographic rainfall on windward side (e.g. Deccan Plateau east of Western Ghats).</li>
+</ul>
+
+<h2 class="sec">☁️ Cloud Types</h2>
+<ul>
+<li><strong>Cirrus</strong>: thin, wispy, high-altitude, made of ice crystals.</li>
+<li><strong>Cumulus</strong>: puffy, cotton-like, fair weather (but can build to cumulonimbus = thunderstorms).</li>
+<li><strong>Stratus</strong>: flat, layered, grey, covers sky like a blanket — often brings drizzle.</li>
+<li><strong>Nimbus</strong> (prefix/suffix): rain-bearing, e.g. Nimbostratus, Cumulonimbus.</li>
+</ul>
+
+<h2 class="sec">🗺️ Climate Classification</h2>
+<ul>
+<li><strong>Köppen Classification</strong> (most widely used): based on temperature & precipitation, 5 major groups:</li>
+</ul>
+<table>
+<tr><th>Group</th><th>Type</th><th>Example</th></tr>
+<tr><td>A</td><td>Tropical (no winter)</td><td>Amazon, Congo</td></tr>
+<tr><td>B</td><td>Dry (arid/semi-arid)</td><td>Sahara, Thar</td></tr>
+<tr><td>C</td><td>Temperate (mild winter)</td><td>Mediterranean</td></tr>
+<tr><td>D</td><td>Continental (cold winter)</td><td>Siberia, N. America interior</td></tr>
+<tr><td>E</td><td>Polar</td><td>Antarctica, Greenland</td></tr>
+</table>
+</div>
+
+<!-- CH14 -->
+<div class="panel" data-unit="world" data-label="Oceanography">
+<h2 class="chapter-title">14. Oceanography</h2>
+<p class="chapter-meta">Weightage: <b>5 Qs</b></p>
+
+<h2 class="sec">🌊 Ocean Relief Features</h2>
+<table>
+<tr><th>Feature</th><th>Description</th></tr>
+<tr><td>Continental Shelf</td><td>Shallow, gently sloping submerged margin of continent; rich fishing &amp; mineral zone</td></tr>
+<tr><td>Continental Slope</td><td>Steep drop from shelf to ocean floor</td></tr>
+<tr><td>Abyssal Plain</td><td>Flat ocean floor, deep sea</td></tr>
+<tr><td>Ocean/Deep-sea Trench</td><td>Deepest parts, at subduction zones (e.g. Mariana Trench — deepest point on Earth)</td></tr>
+<tr><td>Mid-Ocean Ridge</td><td>Underwater mountain chain at divergent boundary (e.g. Mid-Atlantic Ridge)</td></tr>
+<tr><td>Guyot</td><td>Flat-topped submerged volcanic seamount</td></tr>
+</table>
+
+<h2 class="sec">🌡️ Ocean Salinity & Temperature</h2>
+<ul>
+<li>Average ocean salinity ≈ <span class="imp">35 parts per thousand (‰)</span>; highest in Red Sea/Dead Sea (high evaporation, low inflow); lowest near river mouths &amp; polar regions (dilution by fresh water/ice melt).</li>
+<li>Ocean temperature decreases with depth &amp; with increasing latitude.</li>
+</ul>
+
+<h2 class="sec">🔄 Ocean Currents & Tides</h2>
+<ul>
+<li><strong>Ocean currents</strong>: large-scale movement of seawater driven by wind, Earth's rotation (Coriolis), density/temperature differences. Warm currents flow from equator to poles (e.g. Gulf Stream); cold currents flow from poles to equator (e.g. Labrador Current).</li>
+<li><strong>Tides</strong>: periodic rise/fall of sea level caused mainly by gravitational pull of Moon (and Sun).</li>
+<li><strong>Spring tides</strong>: highest tides, during New/Full Moon (Sun-Earth-Moon aligned, gravitational pull adds up).</li>
+<li><strong>Neap tides</strong>: lowest tide range, during first/last quarter moon (Sun & Moon pull at right angles, partially cancel).</li>
+</ul>
+</div>
+<!-- ================= INDIAN GEOGRAPHY ================= -->
+
+<div class="panel" data-unit="india" data-label="Location & Extent">
+<h2 class="chapter-title">15. Location & Extent of India</h2>
+<p class="chapter-meta">Weightage: <b>9 Qs</b></p>
+
+<ul>
+<li>India's mainland extends from <strong>Kashmir (north)</strong> to <strong>Kanniyakumari (south)</strong>, and <strong>Arunachal Pradesh (east)</strong> to <strong>Gujarat (west)</strong>.</li>
+<li><strong>Latitudinal extent</strong>: 6°45′ N to 37°6′ N (~30°). <strong>Longitudinal extent</strong>: 68°7′ E to 97°25′ E (~30°).</li>
+<li>North–south distance ≈ <span class="imp">3,214 km</span>; East–west distance ≈ <span class="imp">2,933 km</span> (shorter, because longitude convergence increases towards poles — India lies in the northern/sub-tropical latitudes).</li>
+<li>Total area: <span class="imp">3.28 million sq km</span> = 2.4% of world's land area; <strong>7th largest country</strong> in the world.</li>
+<li>Territorial waters extend <strong>12 nautical miles (~21.9 km)</strong> from the coast.</li>
+<li>Coastline: <span class="imp">6,100 km (mainland)</span>, <span class="imp">7,517 km (including islands)</span>.</li>
+<li>Standard Meridian: <strong>82°30′ E</strong> (passes through Mirzapur, UP) → gives <strong>IST = GMT + 5:30</strong>.</li>
+<li>Southern part of India lies within the <strong>Tropics</strong>; northern part in the <strong>sub-tropical/warm temperate zone</strong> → responsible for huge diversity in landforms, climate, soils & vegetation.</li>
+<li>India is separated from Sri Lanka by the <strong>Gulf of Mannar &amp; Palk Strait</strong>.</li>
+<li>Neighbouring countries (land border): Pakistan, Afghanistan, China, Nepal, Bhutan, Myanmar, Bangladesh. Longest land border: <strong>Bangladesh</strong>. (Note: China shares the longest disputed/contested border, but Bangladesh has the longest official land frontier.)</li>
+<li>Island neighbours: <strong>Sri Lanka &amp; Maldives</strong>.</li>
+</ul>
+
+<div class="box box-tip"><span class="box-title">💡 Tip</span>
+India = 7th largest country. Countries larger than India: Russia, Canada, USA, China, Brazil, Australia.
+</div>
+</div>
+
+<!-- CH16 -->
+<div class="panel" data-unit="india" data-label="Physiographic Divisions">
+<h2 class="chapter-title">16. Physiographic Divisions of India</h2>
+<p class="chapter-meta">Weightage: <b>37 Qs</b> ⭐ High-weightage chapter</p>
+
+<h2 class="sec">🏔️ 3 Geological Divisions</h2>
+<ol style="padding-left:1.2em;">
+<li><strong>The Peninsular Block</strong> — ancient, rigid, stable (gneiss &amp; granite); part of Indo-Australian Plate; oldest landmass.</li>
+<li><strong>The Himalayas &amp; other Peninsular Mountains</strong> — young, weak, flexible (folded); still tectonically active.</li>
+<li><strong>Indo-Ganga-Brahmaputra Plain</strong> — a filled geo-synclinal depression; alluvium depth 1,000–2,000 m.</li>
+</ol>
+
+<h2 class="sec">🗺️ 6 Physiographic Divisions (macro relief)</h2>
+<div class="pill-row">
+<span class="pill">1. Northern & N-E Mountains</span>
+<span class="pill">2. Northern Plain</span>
+<span class="pill">3. Peninsular Plateau</span>
+<span class="pill">4. Indian Desert</span>
+<span class="pill">5. Coastal Plains</span>
+<span class="pill">6. Islands</span>
+</div>
+
+<h3 class="sub">1. Northern & North-Eastern Mountains (Himalayas)</h3>
+<ul>
+<li>Consist of a series of parallel ranges: <strong>Greater Himalaya (Himadri)</strong>, <strong>Lesser Himalaya (Himachal)</strong>, and <strong>Shiwaliks</strong> (outermost, youngest).</li>
+<li>Great Himalayan range length ≈ <span class="imp">2,500 km</span>; width 160–400 km; orientation changes region to region (NW–SE in Kashmir; E–W in Sikkim/Darjeeling; N–S in Nagaland/Manipur/Mizoram).</li>
+<li>Himalayas act as physical, climatic, drainage & cultural divide between India and Central/East Asia.</li>
+</ul>
+
+<h3 class="sub">2. The Northern Plain</h3>
+<ul>
+<li>Formed by alluvium of Indus, Ganga &amp; Brahmaputra; ~3,200 km long, 150–300 km wide; elevation 50–150 m.</li>
+<li>North to south zones: <strong>Bhabar</strong> (narrow, 8–10 km, coarse gravel belt below Shiwaliks) → <strong>Tarai</strong> (10–20 km, marshy, dense vegetation) → <strong>Alluvial Plains</strong> (Bhangar = older alluvium, upland; Khadar = newer alluvium, floodplain).</li>
+<li>Famous depositional feature: <strong>Sunderbans Delta</strong> (Ganga-Brahmaputra) — world's largest delta.</li>
+<li>Haryana & Delhi form the water divide between Indus & Ganga systems.</li>
+</ul>
+
+<h3 class="sub">3. The Peninsular Plateau</h3>
+<ul>
+<li>Rises 150 m (from river plains) to 600–900 m elevation; irregular triangle shape; one of the oldest, most stable landmasses.</li>
+<li>3 broad groups: <strong>Deccan Plateau</strong>, <strong>Central Highlands</strong>, <strong>Northeastern Plateau</strong>.</li>
+</ul>
+<table>
+<tr><th>Sub-region</th><th>Key facts</th></tr>
+<tr><td><strong>Deccan Plateau</strong></td><td>Bounded by Western Ghats (west), Eastern Ghats (east), Satpura/Maikal/Mahadeo (north). Western Ghats (avg. 1,500 m, continuous) &gt; Eastern Ghats (discontinuous, eroded) in elevation. Highest peak: <strong>Anaimudi (2,695 m)</strong>, Anaimalai hills; 2nd: Dodabetta (2,637 m), Nilgiris.</td></tr>
+<tr><td><strong>Central Highlands</strong></td><td>West of Aravalis; Satpura forms its southern boundary; slopes towards north/NE; elevation 700–1,000 m; Vindhyan &amp; Kaimur ranges feed Yamuna's tributaries; extends to Rajmahal hills &amp; Chotanagpur plateau (rich in minerals).</td></tr>
+<tr><td><strong>Northeastern Plateau</strong></td><td>Detached extension of Peninsular block (separated by a fault, later filled by river deposits). Meghalaya Plateau divided into <strong>Garo–Khasi–Jaintia Hills</strong> (named after tribes); rich in coal, iron ore, sillimanite, limestone, uranium. <strong>Cherrapunji/Mawsynram</strong> — highest rainfall areas on Earth.</td></tr>
+</table>
+<ul>
+<li>Western Ghats local names: <strong>Sahyadri</strong> (Maharashtra) → <strong>Nilgiri</strong> (Karnataka/TN) → <strong>Anaimalai &amp; Cardamom Hills</strong> (Kerala).</li>
+<li>Famous ravines: <strong>Chambal, Bhind, Morena</strong> (badland topography, NW plateau).</li>
+<li>Desert-like sand dunes/barchans extend the plateau as far west as Jaisalmer.</li>
+</ul>
+
+<h3 class="sub">4. The Indian Desert (Marusthali)</h3>
+<ul>
+<li>NW of Aravalis; low rainfall &lt;150 mm/year; arid climate, longitudinal dunes &amp; barchans.</li>
+<li>Believed to be under the sea during the Mesozoic era (evidence: wood fossils at Aakal, marine deposits near Brahmsar, Jaisalmer — ~180 million years old).</li>
+<li>Divided by orientation: northern part slopes to Sindh, southern part to Rann of Kachchh.</li>
+<li>Main river: <strong>Luni</strong> (ephemeral); many streams end in salt lakes/playas (source of salt).</li>
+</ul>
+
+<h3 class="sub">5. The Coastal Plains</h3>
+<table>
+<tr><th>Feature</th><th>Western Coastal Plain</th><th>Eastern Coastal Plain</th></tr>
+<tr><td>Nature</td><td><strong>Submerged</strong> coast (narrow)</td><td><strong>Emergent</strong> coast (broader)</td></tr>
+<tr><td>Deltas</td><td>No deltas (rivers don't form deltas here)</td><td>Well-developed deltas: Mahanadi, Godavari, Krishna, Kaveri</td></tr>
+<tr><td>Ports</td><td>Many natural ports/harbours (Kandla, JNPT, Marmagao, Mangalore, Cochin)</td><td>Fewer natural ports (continental shelf extends ~500 km)</td></tr>
+<tr><td>Sub-divisions (N→S)</td><td>Kachchh & Kathiawar (Gujarat) → Konkan (Maharashtra) → Goan → Malabar (Karnataka/Kerala)</td><td>Northern Circars & Coromandel Coast</td></tr>
+<tr><td>Special feature</td><td><strong>Kayals</strong> (backwaters) in Kerala — used for fishing, tourism, Nehru Trophy boat race (Punnamada, Kerala)</td><td>—</td></tr>
+</table>
+
+<h3 class="sub">6. The Islands</h3>
+<table>
+<tr><th></th><th>Andaman & Nicobar (Bay of Bengal)</th><th>Lakshadweep (Arabian Sea)</th></tr>
+<tr><td>Count</td><td>~572 islands/islets</td><td>~36 islands (11 inhabited)</td></tr>
+<tr><td>Origin</td><td>Elevated submarine mountains (some volcanic)</td><td>Coral origin</td></tr>
+<tr><td>Divide</td><td>Ten Degree Channel (separates Andaman-north & Nicobar-south)</td><td>Nine Degree Channel (separates Amini-north & Cannanore-south)</td></tr>
+<tr><td>Key facts</td><td>Only active volcano in India = <strong>Barren Island</strong>; highest peak: Saddle Peak (738 m); equatorial vegetation</td><td>Largest island: Minicoy (453 sq km); 220–440 km off Kerala coast</td></tr>
+</table>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — West Coast (north to south)</span>
+"<strong>K</strong>ing <strong>K</strong>ong <strong>K</strong>eeps <strong>G</strong>oing <strong>M</strong>ad" → <strong>K</strong>achchh, <strong>K</strong>athiawar, <strong>K</strong>onkan, <strong>G</strong>oan, <strong>M</strong>alabar coast.
+</div>
+</div>
+
+<!-- CH17 -->
+<div class="panel" data-unit="india" data-label="Drainage System / Rivers">
+<h2 class="chapter-title">17. Drainage System (Rivers of India)</h2>
+<p class="chapter-meta">Weightage: <b>43 Qs</b> ⭐⭐ Highest-weightage Indian Geography chapter</p>
+
+<h2 class="sec">🌊 Classification</h2>
+<ul>
+<li>By <strong>sea discharge</strong>: <strong>Bay of Bengal drainage</strong> (~77% area — Ganga, Brahmaputra, Mahanadi, Krishna, Godavari, Kaveri) vs <strong>Arabian Sea drainage</strong> (~23% — Indus, Narmada, Tapi, Mahi, Periyar).</li>
+<li>By <strong>origin</strong>: <strong>Himalayan drainage</strong> (perennial — fed by snowmelt + rain) vs <strong>Peninsular drainage</strong> (mostly seasonal/rain-fed, except a few like Narmada/Tapi in rift valleys).</li>
+<li>By <strong>basin size</strong>: Major (&gt;20,000 sq km, 14 basins e.g. Ganga, Brahmaputra, Krishna); Medium (2,000–20,000 sq km, 44 basins); Minor (&lt;2,000 sq km).</li>
+</ul>
+
+<h2 class="sec">🔀 Drainage Patterns</h2>
+<table>
+<tr><th>Pattern</th><th>Description</th><th>Example</th></tr>
+<tr><td>Dendritic</td><td>Tree-branch like</td><td>Rivers of Northern Plain</td></tr>
+<tr><td>Radial</td><td>Rivers flow outward from a central hill in all directions</td><td>Rivers from Amarkantak range</td></tr>
+<tr><td>Trellis</td><td>Primary tributaries parallel; secondary join at right angles</td><td>Old folded mountain areas</td></tr>
+<tr><td>Centripetal</td><td>Rivers converge into a lake/depression</td><td>Loktak Lake (Manipur)</td></tr>
+</table>
+
+<h2 class="sec">🏔️ Himalayan Drainage — Evolution</h2>
+<ul>
+<li>Theory: an ancient master river <strong>"Indo-Brahma" (Shiwalik river)</strong> once flowed the entire Himalayan length (Assam→Punjab→Sind) during the Miocene (5–24 mya); later dismembered by Pleistocene tectonic uplift into 3 systems: <strong>Indus</strong> (west), <strong>Ganga</strong> (central), <strong>Brahmaputra</strong> (east).</li>
+</ul>
+
+<h3 class="sub">The Indus System</h3>
+<ul>
+<li>One of the largest river basins in the world; total length 2,880 km (1,114 km in India); origin: near <strong>Bokhar Chu, Kailash range, Tibet</strong> (called "Singi Khamban"/Lion's Mouth there).</li>
+<li>Key tributaries: <strong>Jhelum, Chenab, Ravi, Beas, Satluj</strong> (together = "Panjnad", joining above Mithankot); flows through Ladakh & J&K in India, then Pakistan → Arabian Sea.</li>
+</ul>
+
+<h3 class="sub">The Ganga System</h3>
+<ul>
+<li>Rises as <strong>Bhagirathi</strong> from <strong>Gangotri glacier (Gaumukh)</strong>, Uttarkashi; meets <strong>Alaknanda</strong> at <strong>Devprayag</strong> → becomes "Ganga".</li>
+<li>Alaknanda formed by <strong>Dhauliganga + Vishnuganga</strong> (meet at Joshimath/Vishnuprayag); other tributaries: Pindar (Karnaprayag), Mandakini (Rudraprayag) — the famous <strong>Panch Prayag</strong> confluences.</li>
+<li>Enters plains at <strong>Haridwar</strong>; total length <span class="imp">2,525 km</span>; splits into Bhagirathi & Padma distributaries in the delta.</li>
+<li>Major tributaries: Yamuna, Ghaghara, Gandak, Kosi (north bank — Himalayan); Chambal, Betwa, Son (south bank — Peninsular, older than the Himalayan rivers).</li>
+<li><strong>Kosi</strong> = "Sorrow of Bihar" — notorious for frequently shifting its course due to silt deposition.</li>
+<li><strong>Namami Gange Programme</strong> (2014): flagship river conservation mission — pillars: sewage treatment, river-front development, river surface cleaning, biodiversity, afforestation.</li>
+</ul>
+
+<h3 class="sub">The Brahmaputra System</h3>
+<ul>
+<li>Rises near <strong>Mansarovar Lake</strong> (Tibet, known as "Tsangpo" there); enters India in Arunachal Pradesh as the <strong>Dihang/Siang</strong>; takes a sharp turn southward at <strong>Dhubri</strong> to enter Bangladesh.</li>
+<li>Known for riverine islands (e.g. <strong>Majuli</strong> — world's largest river island) &amp; frequent floods due to braided channels.</li>
+</ul>
+
+<h2 class="sec">⛰️ Peninsular Drainage — Major Rivers</h2>
+<table>
+<tr><th>River</th><th>Origin</th><th>Falls into</th></tr>
+<tr><td><strong>Narmada</strong></td><td>Amarkantak Plateau (MP)</td><td>Arabian Sea (rift valley, no delta)</td></tr>
+<tr><td><strong>Tapi</strong></td><td>Satpura Range</td><td>Arabian Sea (rift valley, no delta)</td></tr>
+<tr><td><strong>Mahanadi</strong></td><td>Chhattisgarh</td><td>Bay of Bengal (delta)</td></tr>
+<tr><td><strong>Godavari</strong> ("Dakshin Ganga")</td><td>Nashik, Western Ghats</td><td>Bay of Bengal (largest Peninsular river)</td></tr>
+<tr><td><strong>Krishna</strong></td><td>Mahabaleshwar, Western Ghats</td><td>Bay of Bengal</td></tr>
+<tr><td><strong>Kaveri</strong></td><td>Brahmagiri (Karnataka)</td><td>Bay of Bengal</td></tr>
+</table>
+<ul>
+<li>Chambal, Betwa, Son (tributaries of Yamuna/Ganga) are geologically <strong>older</strong> than most Himalayan rivers, yet classified under Ganga system by convention.</li>
+</ul>
+
+<h2 class="sec">🌊 North-East Rivers — Manipur / Special Notes</h2>
+<ul>
+<li><strong>Manipur River</strong>: originates Senapati dist.; tributaries Imphal & Iril; flows via Loktak Lake side.</li>
+<li><strong>Loktak Lake</strong>: largest freshwater lake in NE India; example of <strong>centripetal drainage</strong>; Ramsar site (1990); home to <strong>Keibul Lamjao National Park</strong> — world's only floating national park (habitat of endangered Sangai deer); listed in Montreux Record (1993) due to water hyacinth invasion.</li>
+<li><strong>Feni River</strong>: South Tripura → Bangladesh (water-sharing dispute).</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Panch Prayag (source to Devprayag)</span>
+"Vishnu Nanda Karna Rudra Dev" → <strong>Vishnuprayag → (Nanda/Pindar at) Karnaprayag → Rudraprayag → Devprayag</strong> (where Ganga is finally formed).
+</div>
+</div>
+
+<!-- CH18 -->
+<div class="panel" data-unit="india" data-label="Climate & Monsoon of India">
+<h2 class="chapter-title">18. Climate of India & Monsoon System</h2>
+<p class="chapter-meta">Weightage: <b>9 + 7 Qs</b></p>
+
+<h2 class="sec">🌦️ Overview</h2>
+<ul>
+<li>India's climate = <strong>"Monsoon type"</strong> — characterised by seasonal reversal of winds.</li>
+<li>4 main seasons: <strong>Cold weather (winter)</strong> Dec–Feb, <strong>Hot weather (summer)</strong> Mar–May, <strong>South-West Monsoon (rainy)</strong> Jun–Sep, <strong>Retreating/Post-monsoon</strong> Oct–Nov.</li>
+</ul>
+
+<h2 class="sec">🌬️ Mechanism of Monsoon</h2>
+<ul>
+<li><strong>South-West Monsoon</strong> (Jun–Sep): moist winds from Arabian Sea/Bay of Bengal blow onto land due to a low-pressure system over NW India (intense summer heating) — brings ~75-80% of India's annual rainfall.</li>
+<li>Splits into two branches: <strong>Arabian Sea branch</strong> (hits Western Ghats first — Kerala onset ~1 June) &amp; <strong>Bay of Bengal branch</strong> (moves up through NE India &amp; the Gangetic plain).</li>
+<li><strong>North-East (Retreating) Monsoon</strong> (Oct–Dec): reversed dry winds from land to sea; brings winter rainfall to <strong>Tamil Nadu &amp; Coromandel coast</strong> (only region getting rain in this season, due to picking up moisture over Bay of Bengal).</li>
+<li>Key theory: <strong>Jet Stream theory</strong> — withdrawal of the subtropical westerly jet stream from north of Himalayas triggers monsoon onset.</li>
+<li><strong>Mawsynram &amp; Cherrapunji</strong> (Meghalaya) — wettest places on Earth (funnel-shaped topography intensifies orographic rainfall).</li>
+</ul>
+
+<h2 class="sec">🌡️ Regional Variation</h2>
+<ul>
+<li>Rainfall decreases from east to west in the northern plains, and from coast to interior in the peninsula.</li>
+<li><strong>Rain-shadow region</strong>: Deccan plateau (east of Western Ghats) — much drier than Konkan coast.</li>
+<li>Coldest region: Kashmir/Ladakh &amp; Siachen; Hottest: Rajasthan (Thar Desert, Churu/Ganganagar).</li>
+<li><strong>Loo</strong>: hot, dry summer wind over North Indian plains (April–June).</li>
+<li><strong>Mango showers</strong>: pre-monsoon showers in Kerala/Karnataka that help mango ripening.</li>
+<li><strong>Kal Baisakhi ("Nor'westers")</strong>: violent pre-monsoon evening thunderstorms in West Bengal/Assam.</li>
+</ul>
+
+<div class="box box-tip"><span class="box-title">💡 Tip — Monsoon onset order</span>
+Kerala (~1 June) → Mumbai → Kolkata → Delhi (~ end June/July) — monsoon "arrives" in India from the south and moves northward/eastward over weeks.
+</div>
+</div>
+
+<!-- CH19 -->
+<div class="panel" data-unit="india" data-label="Soils of India">
+<h2 class="chapter-title">19. Soils of India</h2>
+<p class="chapter-meta">Weightage: <b>9 Qs</b></p>
+
+<table>
+<tr><th>Soil Type</th><th>Region</th><th>Key Feature</th><th>Suited Crop</th></tr>
+<tr><td><strong>Alluvial</strong></td><td>Northern plains, river deltas — largest soil group</td><td>Fertile; rich in potash, lime; Khadar (new) & Bhangar (old)</td><td>Wheat, rice, sugarcane</td></tr>
+<tr><td><strong>Black (Regur)</strong></td><td>Deccan Plateau (Maharashtra, MP, Gujarat)</td><td>Formed from lava (basalt); high clay, moisture-retentive, self-ploughing (cracks when dry)</td><td><strong>Cotton</strong> ("black cotton soil")</td></tr>
+<tr><td><strong>Red & Yellow</strong></td><td>Eastern &amp; southern Deccan (low rainfall areas)</td><td>Develops on crystalline rocks; red due to iron oxide diffusion; less fertile</td><td>Millets, groundnut</td></tr>
+<tr><td><strong>Laterite</strong></td><td>High rainfall plateau areas (Karnataka, Kerala, Odisha, Assam)</td><td>Formed by intense leaching in high temp & rainfall; poor in organic matter</td><td>Cashew, tea, coffee (with fertilizer)</td></tr>
+<tr><td><strong>Arid/Desert</strong></td><td>Rajasthan</td><td>Sandy, saline, low humus, high calcium</td><td>Drought-resistant crops (with irrigation)</td></tr>
+<tr><td><strong>Mountain/Forest</strong></td><td>Himalayan region</td><td>Varies with altitude/vegetation; acidic in high-rainfall areas</td><td>Tea, spices, fruits</td></tr>
+<tr><td><strong>Saline & Alkaline</strong></td><td>Dry regions, coastal areas (Reh/Usar)</td><td>Excess salts; unproductive without reclamation</td><td>—</td></tr>
+<tr><td><strong>Peaty & Marshy</strong></td><td>High rainfall/humid areas (Kerala, Odisha, Bihar)</td><td>Rich in organic/humus content</td><td>Rice</td></tr>
+</table>
+
+<div class="box box-warn"><span class="box-title">⚠️ Soil Erosion & Conservation</span>
+Major causes: deforestation, overgrazing, faulty farming practices (shifting cultivation). Conservation: contour ploughing, terracing, afforestation, shelter belts (e.g. against desertification in Rajasthan).
+</div>
+</div>
+
+<!-- CH20 -->
+<div class="panel" data-unit="india" data-label="Forest / Vegetation">
+<h2 class="chapter-title">20. Natural Vegetation / Forests in India</h2>
+<p class="chapter-meta">Weightage: <b>9 Qs</b></p>
+
+<table>
+<tr><th>Vegetation Type</th><th>Rainfall/Region</th><th>Example Trees</th></tr>
+<tr><td><strong>Tropical Evergreen (Rain) Forest</strong></td><td>&gt;200 cm rainfall — Western Ghats, NE states, A&N Islands</td><td>Rosewood, ebony, mahogany (dense canopy, broad leaved)</td></tr>
+<tr><td><strong>Tropical Deciduous (Monsoon) Forest</strong></td><td>100–200 cm rainfall — most widespread in India</td><td><strong>Teak</strong> (moist, e.g. MP, Chhattisgarh) & <strong>Sal</strong> (drier); shed leaves in dry season</td></tr>
+<tr><td><strong>Thorn & Scrub Forest</strong></td><td>&lt;70 cm rainfall — Rajasthan, Gujarat, semi-arid areas</td><td>Acacia (babul), cactus, thorny shrubs</td></tr>
+<tr><td><strong>Mangrove (Tidal/Littoral) Forest</strong></td><td>Deltas & coasts — Sunderbans (Ganga delta), Mahanadi, Godavari deltas</td><td><strong>Sundari tree</strong> (gives Sunderbans its name); saline-tolerant, aerial roots</td></tr>
+<tr><td><strong>Montane/Alpine Forest</strong></td><td>Himalayan slopes, altitude-dependent zonation</td><td>Chir pine, deodar, oak → alpine grasslands with altitude</td></tr>
+</table>
+<ul>
+<li>India's forest cover: recorded via the biennial <strong>India State of Forest Report (ISFR)</strong> by the Forest Survey of India (FSI); National Forest Policy target = 33% of geographical area under forest/tree cover.</li>
+<li><strong>Project Tiger</strong> (1973) &amp; <strong>Project Elephant</strong> (1992) are flagship wildlife conservation schemes.</li>
+</ul>
+</div>
+
+<!-- CH21 -->
+<div class="panel" data-unit="india" data-label="Mineral Resources / Industry">
+<h2 class="chapter-title">21. Mineral Resources & Industry in India</h2>
+<p class="chapter-meta">Weightage: <b>10 Qs</b></p>
+
+<table>
+<tr><th>Mineral</th><th>Leading Region/State</th></tr>
+<tr><td>Iron Ore</td><td>Odisha, Chhattisgarh, Jharkhand, Karnataka (Bellary)</td></tr>
+<tr><td>Coal</td><td>Jharkhand (Jharia), West Bengal (Raniganj), Chhattisgarh, Odisha</td></tr>
+<tr><td>Bauxite (Aluminium ore)</td><td>Odisha, Jharkhand, Gujarat, Chhattisgarh</td></tr>
+<tr><td>Manganese</td><td>Odisha, Karnataka, Madhya Pradesh</td></tr>
+<tr><td>Copper</td><td>Madhya Pradesh (Malanjkhand), Jharkhand, Rajasthan</td></tr>
+<tr><td>Mica</td><td>Jharkhand (Koderma), Andhra Pradesh, Rajasthan</td></tr>
+<tr><td>Petroleum</td><td>Mumbai High (offshore), Assam (Digboi — oldest oilfield in Asia), Gujarat</td></tr>
+<tr><td>Gold</td><td>Kolar & Hutti fields, Karnataka</td></tr>
+<tr><td>Diamond</td><td>Panna (Madhya Pradesh)</td></tr>
+</table>
+
+<h2 class="sec">🏭 Mining Towns & Industrial Belts</h2>
+<ul>
+<li>Mining towns: Raniganj, Jharia, Digboi, Ankaleshwar, Singrauli.</li>
+<li>Major industrial towns: Jamshedpur (iron & steel, first modern industrial town post-1850), Bhilai, Durgapur, Rourkela (steel plants under public sector).</li>
+<li><strong>Chotanagpur Plateau</strong> — India's mineral heartland (coal, iron ore, mica).</li>
+</ul>
+</div>
+
+<!-- CH22 -->
+<div class="panel" data-unit="india" data-label="Transportation in India">
+<h2 class="chapter-title">22. Transportation in India</h2>
+<p class="chapter-meta">Weightage: <b>8 Qs</b></p>
+
+<h2 class="sec">🛣️ Roads</h2>
+<ul>
+<li>National Highways = only <span class="imp">~2%</span> of total road length but carry <span class="imp">~40%</span> of road traffic.</li>
+<li><strong>Golden Quadrilateral (GQ)</strong>: connects <strong>Delhi–Mumbai–Chennai–Kolkata</strong>; length <span class="imp">5,846 km</span>; launched 2001 (NHDP Phase I), completed 2012; implemented by <strong>NHAI</strong>.</li>
+<li><strong>NH-44</strong>: longest highway (Srinagar–Kanyakumari). <strong>NH-27</strong>: 2nd longest (Porbandar–Silchar, major East-West corridor).</li>
+<li><strong>Bharatmala Pariyojana</strong> (2017): highway programme for economic corridors & border road connectivity — Ministry of Road Transport & Highways, implemented by NHAI.</li>
+<li><strong>Border Roads Organisation (BRO)</strong>: under Ministry of Defence; builds roads/bridges/tunnels/airfields in Himalaya/border areas; also works abroad — Bhutan (Project DANTAK), Myanmar, Afghanistan (Zaranj-Delaram), Tajikistan.</li>
+<li>Road hierarchy: National Highways → State Highways → District Roads → Other/Rural Roads (villages↔towns).</li>
+</ul>
+
+<h2 class="sec">🚂 Railways</h2>
+<ul>
+<li>Introduced in India in <span class="imp">1853</span> (first line: Mumbai–Thane) — transformed towns/trade, shifting economic centres from old road/river towns to rail junctions.</li>
+<li><strong>Konkan Railway</strong>: connects Roha (Maharashtra) to Mangalore (Karnataka) along the west coast.</li>
+</ul>
+
+<h2 class="sec">⚓ Major Ports (know the coast!)</h2>
+<table>
+<tr><th>Port</th><th>State/Coast</th><th>Specialty</th></tr>
+<tr><td><strong>JNPT (Nhava Sheva)</strong></td><td>Maharashtra, west</td><td>Largest container port in India (~60–65% containerised cargo)</td></tr>
+<tr><td><strong>Mundra Port</strong></td><td>Gujarat, west</td><td>Largest private port; owned by <strong>Adani Group</strong></td></tr>
+<tr><td><strong>Kandla (Deendayal Port)</strong></td><td>Gujarat, west</td><td>Major west coast port</td></tr>
+<tr><td><strong>Mormugao</strong></td><td>Goa, west</td><td>Largest iron-ore exporter; at entrance of Zuari estuary</td></tr>
+<tr><td><strong>Kochi (Cochin)</strong></td><td>Kerala, west</td><td>Artificial harbour on Willingdon Island; India's first int'l container transshipment terminal</td></tr>
+<tr><td><strong>Vizhinjam</strong></td><td>Kerala, west</td><td>India's first deep-water greenfield transshipment port (PPP with Adani)</td></tr>
+<tr><td><strong>Paradip</strong></td><td>Odisha, east</td><td>Top crude-oil import hub (deep-water berths)</td></tr>
+<tr><td><strong>Visakhapatnam</strong></td><td>Andhra Pradesh, east</td><td>Deepest landlocked port on east coast</td></tr>
+<tr><td><strong>Chennai</strong></td><td>Tamil Nadu, east</td><td>Major artificial harbour, east coast</td></tr>
+</table>
+
+<h2 class="sec">🌊 Sagarmala Programme (2015)</h2>
+<ul>
+<li>Ministry: Ports, Shipping & Waterways. Objective: port-led development, reduce logistics cost.</li>
+<li>4 Pillars: <strong>Port Modernisation, Port Connectivity, Port-led Industrialisation, Coastal Community Development</strong>.</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Golden Quadrilateral cities</span>
+"<strong>D</strong>on't <strong>M</strong>iss <strong>C</strong>hai <strong>K</strong>ettle" → <strong>D</strong>elhi–<strong>M</strong>umbai–<strong>C</strong>hennai–<strong>K</strong>olkata.
+</div>
+</div>
+
+<!-- CH23 -->
+<div class="panel" data-unit="india" data-label="Tribes in India">
+<h2 class="chapter-title">23. Tribes in India</h2>
+<p class="chapter-meta">Weightage: <b>3 Qs</b></p>
+
+<ul>
+<li><strong>Scheduled Tribes (ST) population</strong>: 104.3 million (8.6% of total) as per Census 2011.</li>
+<li>Highest ST population (absolute): <strong>Madhya Pradesh</strong>. Highest ST % of state population: <strong>Lakshadweep</strong> (near 100%), among states — Mizoram/Lakshadweep highest %.</li>
+<li>States/UTs with <strong>zero ST population</strong>: Punjab, Haryana, Delhi, Chandigarh, Puducherry.</li>
+<li>Major tribal groups: <strong>Gond</strong> (Central India — largest tribe), <strong>Bhil</strong> (Rajasthan/Gujarat/MP — 2nd largest), <strong>Santhal</strong> (Jharkhand/WB), <strong>Naga, Khasi, Garo, Mizo</strong> (Northeast), <strong>Toda</strong> (Nilgiris, Tamil Nadu).</li>
+<li><strong>Particularly Vulnerable Tribal Groups (PVTGs)</strong>: 75 groups identified based on pre-agricultural technology, low literacy, stagnant/declining population.</li>
+</ul>
+</div>
+
+<!-- CH24 -->
+<div class="panel" data-unit="india" data-label="India Map Pointing">
+<h2 class="chapter-title">24. India Map Pointing — Quick Facts</h2>
+<p class="chapter-meta">Weightage: <b>11 Qs</b> (India) + <b>13 Qs</b> (World) — pure map recall</p>
+
+<h2 class="sec">📍 Extreme Points & Key Locations</h2>
+<ul>
+<li><strong>Northernmost point</strong>: Indira Col (Ladakh/J&K region). <strong>Southernmost (mainland)</strong>: Kanniyakumari; <strong>Southernmost (India incl. islands)</strong>: Indira Point (Great Nicobar).</li>
+<li><strong>Easternmost</strong>: Kibithu, Arunachal Pradesh. <strong>Westernmost</strong>: Ghuar Mota/Gaurav Mota, Gujarat.</li>
+<li><strong>Highest peak in India</strong>: Kangchenjunga (Sikkim) — 3rd highest in the world (K2 is highest in India-administered but PoK/disputed).</li>
+<li><strong>Longest river (within India)</strong>: Ganga. <strong>Largest river basin</strong>: Ganga basin.</li>
+<li><strong>Largest state (area)</strong>: Rajasthan. <strong>Smallest state (area)</strong>: Goa.</li>
+<li><strong>Largest UT (area)</strong>: Ladakh. <strong>Smallest UT (area)</strong>: Lakshadweep.</li>
+</ul>
+
+<div class="box box-tip"><span class="box-title">💡 Tip</span>
+Map-pointing questions are best revised directly on a physical/political map atlas alongside these notes — practice locating rivers, mountain ranges, states & neighbouring countries visually.
+</div>
+</div>
+<!-- ================= HUMAN & ECONOMIC GEOGRAPHY ================= -->
+
+<div class="panel" data-unit="human" data-label="Human Settlements">
+<h2 class="chapter-title">25. Human Settlements (Rural & Urban)</h2>
+<p class="chapter-meta">Weightage: <b>8 Qs</b></p>
+
+<h2 class="sec">🏘️ Rural Settlements — 4 Types</h2>
+<table>
+<tr><th>Type</th><th>Feature</th><th>Region</th></tr>
+<tr><td><strong>Clustered</strong></td><td>Compact, closely built houses; distinct from surrounding farms</td><td>Northern plains, NE states</td></tr>
+<tr><td><strong>Semi-clustered</strong></td><td>Fragmented from a large village; dominant caste/community central, others on flanks</td><td>Gujarat plain, parts of Rajasthan</td></tr>
+<tr><td><strong>Hamleted</strong></td><td>Fragmented into several small units with a common name (panna, para, palli, nagla, dhani)</td><td>Middle/lower Ganga plain, Chhattisgarh</td></tr>
+<tr><td><strong>Dispersed/Isolated</strong></td><td>Isolated huts/small clusters in remote/hilly/forested terrain</td><td>Meghalaya, Uttarakhand, Himachal Pradesh, Kerala</td></tr>
+</table>
+<ul>
+<li>Determining factors: physical (terrain, altitude, water availability), cultural/ethnic (caste, religion), security (defence needs).</li>
+<li>Compact settlement for security/defence: Bundelkhand (Central India), Nagaland; for water scarcity: Rajasthan.</li>
+</ul>
+
+<h2 class="sec">🏙️ Urban Settlements</h2>
+<ul>
+<li><strong>Census 1991 definition of "urban"</strong>: municipality/corporation/cantonment board/notified town area, min. population <span class="imp">5,000</span>, ≥<span class="imp">75%</span> male workers in non-agricultural pursuits, density ≥<span class="imp">400 persons/sq km</span>.</li>
+<li>Evolution: <strong>Ancient towns</strong> (Varanasi, Prayagraj, Patna, Madurai — religious/cultural, 2000+ yrs old) → <strong>Medieval towns</strong> (Delhi, Hyderabad, Jaipur, Agra — fort/principality headquarters) → <strong>Modern towns</strong> (British era ports: Surat, Mumbai, Chennai, Kolkata; post-independence: Chandigarh, Bhubaneswar, Gandhinagar).</li>
+</ul>
+
+<h3 class="sub">Functional Classification of Towns</h3>
+<table>
+<tr><th>Function</th><th>Examples</th></tr>
+<tr><td>Administrative</td><td>New Delhi, Chandigarh, Bhopal, Gandhinagar</td></tr>
+<tr><td>Industrial</td><td>Mumbai, Jamshedpur, Bhilai, Coimbatore</td></tr>
+<tr><td>Transport (ports/inland hubs)</td><td>Kandla, Kochi, Vizag; Agra, Itarsi</td></tr>
+<tr><td>Commercial</td><td>Kolkata, Saharanpur</td></tr>
+<tr><td>Mining</td><td>Raniganj, Jharia, Digboi, Singrauli</td></tr>
+<tr><td>Garrison Cantonment</td><td>Ambala, Jalandhar, Mhow</td></tr>
+<tr><td>Educational</td><td>Roorki, Varanasi, Aligarh, Pilani</td></tr>
+<tr><td>Religious/Cultural</td><td>Varanasi, Mathura, Amritsar, Puri, Haridwar</td></tr>
+<tr><td>Tourist</td><td>Nainital, Shimla, Jaisalmer, Ooty</td></tr>
+</table>
+
+<h2 class="sec">📈 Urbanisation Trend (Table 2.1 — memorize key years)</h2>
+<table>
+<tr><th>Year</th><th>Urban Pop %</th></tr>
+<tr><td>1901</td><td>10.84%</td></tr>
+<tr><td>1951</td><td>17.29%</td></tr>
+<tr><td>1981</td><td>23.34%</td></tr>
+<tr><td>2001</td><td>27.78%</td></tr>
+<tr><td><strong>2011</strong></td><td><strong>31.16%</strong> (provisional)</td></tr>
+</table>
+<ul>
+<li>Urban population increased ~11-fold during the 20th century, but India remains predominantly rural.</li>
+<li><strong>Smart Cities Mission</strong>: promotes core infrastructure, sustainability, quality of life via replicable "lighthouse" models.</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Rural settlement types</span>
+"<strong>C</strong>ricket <strong>S</strong>tars <strong>H</strong>it <strong>D</strong>eep" → <strong>C</strong>lustered, <strong>S</strong>emi-clustered, <strong>H</strong>amleted, <strong>D</strong>ispersed.
+</div>
+</div>
+
+<!-- CH26 -->
+<div class="panel" data-unit="human" data-label="World Population">
+<h2 class="chapter-title">26. World Population — Distribution, Density & Growth</h2>
+<p class="chapter-meta">Part of Population Geography's 113 Qs — theory foundation</p>
+
+<h2 class="sec">🌍 Distribution Pattern</h2>
+<ul>
+<li>Population is highly uneven: <span class="imp">90%</span> of world population lives on just <span class="imp">~10%</span> of land area.</li>
+<li>Top 10 most populous countries hold ~60% of world population; 6 of these 10 are in <strong>Asia</strong>.</li>
+<li><strong>Density of Population</strong> = Population ÷ Area (persons per sq km).</li>
+</ul>
+
+<h2 class="sec">📊 Factors Influencing Distribution</h2>
+<table>
+<tr><th>Category</th><th>Favourable factors</th></tr>
+<tr><td>Geographical</td><td>Water availability, flat plains/gentle slopes, comfortable climate, fertile soil</td></tr>
+<tr><td>Economic</td><td>Minerals & mining, urbanisation, industrialisation (e.g. Katanga-Zambia copper belt, Kobe-Osaka Japan)</td></tr>
+<tr><td>Social/Cultural</td><td>Religious/cultural significance; conversely, unrest/political instability repels population</td></tr>
+</table>
+
+<h2 class="sec">📈 Population Growth — Key Terms</h2>
+<ul>
+<li><strong>Growth of Population</strong>: change in numbers between two points in time.</li>
+<li><strong>Natural Growth</strong> = Births − Deaths. <strong>Actual Growth</strong> = Births − Deaths + In-migration − Out-migration.</li>
+<li><strong>CBR (Crude Birth Rate)</strong> = (Live Births ÷ Population) × 1000. <strong>CDR (Crude Death Rate)</strong> = (Deaths ÷ Population) × 1000.</li>
+<li><strong>Positive growth</strong>: births &gt; deaths, or net in-migration. <strong>Negative growth</strong>: deaths &gt; births, or net out-migration.</li>
+</ul>
+
+<h2 class="sec">🔄 Demographic Transition Theory (DTT) — 3 Stages</h2>
+<div class="flow">
+ <div class="node">Stage I: High Birth + High Death<br>(slow growth)</div><div class="arrow">→</div>
+ <div class="node">Stage II: High Birth + Falling Death<br>(rapid/"explosive" growth)</div><div class="arrow">→</div>
+ <div class="node">Stage III: Low Birth + Low Death<br>(stable/slow growth)</div>
+</div>
+<table>
+<tr><th>Stage</th><th>Society type</th><th>Feature</th><th>Example (today)</th></tr>
+<tr><td>I</td><td>Rural, Agrarian</td><td>High fertility & mortality; large families; low tech/literacy</td><td>Present-day rainforest tribes</td></tr>
+<tr><td>II</td><td>Transitional</td><td>Death rate falls (health/sanitation) but birth rate stays high → population boom</td><td>Bangladesh, Kenya</td></tr>
+<tr><td>III</td><td>Urban, Industrial</td><td>Both rates decline; population stable/slow-growing; literate, high-tech</td><td>Japan, USA, Canada</td></tr>
+</table>
+<ul>
+<li><strong>Thomas Malthus (1798)</strong>: population grows faster than food supply → unchecked growth ends in famine/disease/war ("Malthusian catastrophe"); preventive checks (family planning) better than "positive checks" (famine, war).</li>
+<li>India is currently transitioning between Stage II and III — mortality has fallen sharply, fertility declining but not yet at replacement level everywhere.</li>
+</ul>
+
+<h2 class="sec">🚶 Migration</h2>
+<ul>
+<li><strong>Place of Origin</strong> (population decreases) vs <strong>Place of Destination</strong> (population increases).</li>
+<li><strong>Immigrant</strong> = moves INTO a place; <strong>Emigrant</strong> = moves OUT of a place (same person can be both, viewed from different places).</li>
+<li><strong>Push factors</strong> (repel from origin): unemployment, poor living conditions, political turmoil, natural disasters, epidemics.</li>
+<li><strong>Pull factors</strong> (attract to destination): better jobs, education, healthcare, security, pleasant climate.</li>
+<li>Migration types: Permanent / Temporary / Seasonal; Rural-Rural, Rural-Urban, Urban-Urban, Urban-Rural.</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Push vs Pull</span>
+Pu<strong>SH</strong> = <strong>SH</strong>oves you away (bad conditions at origin). P<strong>ULL</strong> = p<strong>ULL</strong>s you towards (good conditions at destination).
+</div>
+</div>
+
+<!-- CH27 -->
+<div class="panel" data-unit="human" data-label="Census of India 2011">
+<h2 class="chapter-title">27. Census of India 2011 — Complete Data Box</h2>
+<p class="chapter-meta">Weightage: bulk of Population Geography's 113 Qs — MEMORISE THIS PAGE ⭐⭐⭐</p>
+
+<h2 class="sec">📜 History of Census</h2>
+<ul>
+<li>First (non-synchronous) census: <span class="imp">1872</span> (Viceroy Lord Mayo). First complete/synchronous census: <span class="imp">1881</span> (Lord Ripon; Commissioner W.C. Plowden).</li>
+<li>First census of a city: <strong>Dacca, 1820/1830</strong>; "Father of Indian Census" = <strong>Henry Walter</strong>.</li>
+<li>Conducted every <span class="imp">10 years</span>; First census after independence: <span class="imp">1951</span>; 2011 = <strong>15th Census overall, 7th post-Independence</strong>.</li>
+<li><strong>2021 Census not held</strong> (COVID-19); conducted under Ministry of Home Affairs by the <strong>Registrar General & Census Commissioner of India</strong> (2011: C. Chandramouli; present: Mrityunjay Kumar Narayan).</li>
+<li>Census 2011 Motto: <em>"Our Census, Our Future"</em>. Coverage: 35 States/UTs, 640 districts.</li>
+</ul>
+
+<h2 class="sec">🔢 Headline Numbers (2011)</h2>
+<table>
+<tr><th>Indicator</th><th>Value</th></tr>
+<tr><td>Total Population</td><td><strong>1,210.2 million (1.21 billion)</strong> — 17.5% of world population</td></tr>
+<tr><td>Male : Female</td><td>623.7 million (51.54%) : 585.5 million (48.46%)</td></tr>
+<tr><td>Decadal Growth (2001–11)</td><td><strong>17.64%</strong> (added 181 million people)</td></tr>
+<tr><td>Highest ever decadal growth</td><td>1961–71 → 24.8%</td></tr>
+<tr><td>Lowest/negative growth decade</td><td>1911–21 → <strong>–0.31%</strong> ("Year of the Great Divide" — influenza pandemic + famine)</td></tr>
+<tr><td>Sex Ratio (2011)</td><td><strong>943</strong> females/1000 males (2001: 933; 1991: 927)</td></tr>
+<tr><td>Child Sex Ratio (0–6 yrs)</td><td>919 (2011); 927 (2001) — declining trend ⚠️</td></tr>
+<tr><td>Overall Literacy Rate</td><td><strong>74.04%</strong> (Male 82.14%, Female 65.46%) — up from 64.83% (2001)</td></tr>
+<tr><td>Population Density</td><td><strong>382/sq km</strong> (2001: 325/sq km)</td></tr>
+<tr><td>Rural : Urban split</td><td>68.8% : 31.2%</td></tr>
+<tr><td>SC Population</td><td>201 million (16.6%)</td></tr>
+<tr><td>ST Population</td><td>104.3 million (8.6%)</td></tr>
+<tr><td>Juvenile Population (0-14 yrs)</td><td>29.33%</td></tr>
+</table>
+
+<h2 class="sec">🏆 Highest / Lowest Records (very frequently asked)</h2>
+<table>
+<tr><th>Category</th><th>Highest</th><th>Lowest</th></tr>
+<tr><td>Population (State)</td><td>Uttar Pradesh (~199.8 million, 16%)</td><td>Sikkim (~6.1 lakh)</td></tr>
+<tr><td>Population (UT)</td><td>Delhi</td><td>Lakshadweep (~64,473)</td></tr>
+<tr><td>Population (District)</td><td>Thane, Maharashtra</td><td>Dibang Valley, Arunachal Pradesh</td></tr>
+<tr><td>Population (City)</td><td>Mumbai (&gt;12 million)</td><td>—</td></tr>
+<tr><td>Density (State)</td><td><strong>Bihar</strong> (1,102/sq km)</td><td><strong>Arunachal Pradesh</strong> (17/sq km)</td></tr>
+<tr><td>Density (UT)</td><td>Delhi (11,297/sq km)</td><td>Andaman & Nicobar (46/sq km)</td></tr>
+<tr><td>Sex Ratio (State)</td><td>Kerala (1,084)</td><td>Haryana (879)</td></tr>
+<tr><td>Sex Ratio (UT)</td><td>Puducherry (1,037)</td><td>Daman & Diu (618)</td></tr>
+<tr><td>Literacy (State)</td><td>Kerala (93.91%)</td><td>Bihar (61.8%)</td></tr>
+<tr><td>Literacy (UT)</td><td>Lakshadweep (91.85%)</td><td>Dadra & Nagar Haveli</td></tr>
+<tr><td>Decadal Growth Rate (State)</td><td>Meghalaya (27.8%)</td><td>Nagaland (<strong>–0.47%</strong>, only negative-growth state)</td></tr>
+<tr><td>Urbanisation % (State)</td><td>Goa (62.17%)</td><td>Himachal Pradesh (10.04%)</td></tr>
+<tr><td>Rural population %</td><td>Bihar (~88.7% rural)</td><td>—</td></tr>
+</table>
+
+<h2 class="sec">🕉️ Religion (Census 2011)</h2>
+<ul>
+<li>Hindus <span class="imp">79.8%</span> → Muslims <span class="imp">14.2%</span> (2nd largest) → Christians 2.3% → Sikhs 1.7%.</li>
+<li>Highest decadal growth: <strong>Muslims (24.6%)</strong>. Lowest: Jains. Highest literacy among communities: Jains. Least literate major community: Muslims.</li>
+</ul>
+
+<h2 class="sec">📖 Glossary — Definitions to Memorise</h2>
+<table>
+<tr><th>Term</th><th>Definition</th></tr>
+<tr><td>Crude Birth Rate (CBR)</td><td>Live births per 1,000 people/year</td></tr>
+<tr><td>Crude Death Rate (CDR)</td><td>Deaths per 1,000 people/year</td></tr>
+<tr><td>Infant Mortality Rate (IMR)</td><td>Deaths of children &lt;1 yr per 1,000 live births</td></tr>
+<tr><td>Total Fertility Rate (TFR)</td><td>Expected live births per woman over reproductive life (India ≈ 2.0, near replacement level of 2.1)</td></tr>
+<tr><td>Maternal Mortality Ratio (MMR)</td><td>Maternal deaths per 100,000 live births</td></tr>
+<tr><td>Life Expectancy</td><td>Expected years of life at birth (India ≈ 69.16 yrs, 2017)</td></tr>
+<tr><td>Sex Ratio</td><td>Females per 1,000 males</td></tr>
+<tr><td>Dependency Ratio</td><td>(Population aged 0-14 + 65+) ÷ Population aged 15-64</td></tr>
+<tr><td>Demographic Dividend</td><td>Growth potential when working-age (15-64) share &gt; non-working-age share</td></tr>
+</table>
+
+<div class="box box-warn"><span class="box-title">⚠️ Common Trap</span>
+Sex ratio 2011 = <strong>943</strong>, NOT 940 or 950 — these are frequently used as wrong options in MCQs. Also remember: Census Act is <strong>1948</strong>, not 1950 or 1954.
+</div>
+</div>
+
+<!-- CH28 -->
+<div class="panel" data-unit="human" data-label="India's Population Phases">
+<h2 class="chapter-title">28. India's Population Growth Phases (1901–2011)</h2>
+<p class="chapter-meta">Part of Population Geography — very frequently tested timeline</p>
+
+<table>
+<tr><th>Phase</th><th>Period</th><th>Characteristic</th></tr>
+<tr><td>Stationary/Stagnant</td><td>1901–1921</td><td>High birth & death rates cancel out; "Great Divide" — negative growth in 1911-21 due to influenza pandemic & famine</td></tr>
+<tr><td>Steady Growth</td><td>1921–1951</td><td>Death rate begins declining (health/sanitation improve); birth rate stays high; 1921 = "Year of Great Divide"</td></tr>
+<tr><td>Population Explosion</td><td>1951–1981</td><td>Death rate falls rapidly (medical advances); fertility remains high → sharp population rise</td></tr>
+<tr><td>High Growth, Slowing</td><td>1981–2011</td><td>Growth rate begins declining gradually, but large absolute additions continue (e.g. 182 million added in the 1990s alone)</td></tr>
+</table>
+<ul>
+<li>Growth rate trend: 2.22% (1971-81) → 2.14% (1981-91) → 1.93% (1991-2001) → 1.64% (2001-11, i.e. 17.64% decadal).</li>
+<li>Total Fertility Rate declined from 5.2 (1971) to ~2.0 (recent) — nearing replacement level (2.1).</li>
+<li>Population stabilization targeted by <strong>National Population Policy 2000</strong>, expected around 2045-2050.</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — 4 Phases</span>
+"<strong>S</strong>tay <strong>S</strong>teady, then <strong>E</strong>xplode <strong>S</strong>lowly" → <strong>S</strong>tationary → <strong>S</strong>teady growth → <strong>E</strong>xplosion → <strong>S</strong>lowing growth.
+</div>
+</div>
+
+<!-- CH29 -->
+<div class="panel" data-unit="human" data-label="Agriculture">
+<h2 class="chapter-title">29. Agriculture</h2>
+<p class="chapter-meta">Weightage: <b>43 Qs</b> ⭐ High-weightage chapter</p>
+
+<h2 class="sec">🌾 Cropping Seasons in India</h2>
+<table>
+<tr><th>Season</th><th>Sowing</th><th>Harvesting</th><th>Main Crops</th></tr>
+<tr><td><strong>Kharif</strong></td><td>Jun–Jul (with SW Monsoon)</td><td>Sep–Oct</td><td>Rice, maize, cotton, groundnut, jowar, bajra</td></tr>
+<tr><td><strong>Rabi</strong></td><td>Oct–Dec (winter)</td><td>Mar–Apr</td><td>Wheat, gram, mustard, barley, peas</td></tr>
+<tr><td><strong>Zaid</strong></td><td>Mar–Jun (summer, short season)</td><td>Before monsoon</td><td>Watermelon, cucumber, vegetables, fodder</td></tr>
+</table>
+
+<h2 class="sec">🌾 Major Crops & Leading States</h2>
+<table>
+<tr><th>Crop</th><th>Conditions</th><th>Leading States</th></tr>
+<tr><td><strong>Rice</strong></td><td>High temp, high rainfall (&gt;100 cm) / irrigation; alluvial/clayey soil</td><td>West Bengal, Punjab, UP, Andhra Pradesh</td></tr>
+<tr><td><strong>Wheat</strong></td><td>Cool growing season, moderate rainfall, irrigation; loamy soil</td><td>Uttar Pradesh, Punjab, Madhya Pradesh, Haryana</td></tr>
+<tr><td><strong>Cotton</strong></td><td>High temp, black (regur) soil, 210 frost-free days</td><td>Gujarat, Maharashtra, Telangana</td></tr>
+<tr><td><strong>Sugarcane</strong></td><td>Hot & humid, needs heavy irrigation</td><td>Uttar Pradesh, Maharashtra</td></tr>
+<tr><td><strong>Tea</strong></td><td>Hilly slopes, well-drained, acidic soil, humid</td><td>Assam (largest), West Bengal (Darjeeling)</td></tr>
+<tr><td><strong>Coffee</strong></td><td>Hilly, well-drained, tropical, shade-grown</td><td>Karnataka (largest — Kodagu/Chikmagalur)</td></tr>
+<tr><td><strong>Jute</strong></td><td>Alluvial soil, high humidity — "Golden Fibre"</td><td>West Bengal</td></tr>
+<tr><td><strong>Pulses</strong></td><td>Drought-resistant, low water need</td><td>Madhya Pradesh, Maharashtra, Rajasthan</td></tr>
+</table>
+
+<h2 class="sec">🚜 Green / Other "Revolutions" — memorise the colours!</h2>
+<table>
+<tr><th>Revolution</th><th>Relates to</th></tr>
+<tr><td><strong>Green</strong></td><td>Foodgrain production (esp. wheat/rice) — led by M.S. Swaminathan, 1960s-70s</td></tr>
+<tr><td><strong>White (Operation Flood)</strong></td><td>Milk production — Dr. Verghese Kurien, "Father of White Revolution"</td></tr>
+<tr><td><strong>Blue</strong></td><td>Fish production/aquaculture</td></tr>
+<tr><td><strong>Yellow</strong></td><td>Oilseed production</td></tr>
+<tr><td><strong>Pink</strong></td><td>Onion production / pharmaceuticals (context-dependent)</td></tr>
+<tr><td><strong>Golden</strong></td><td>Fruit/horticulture production</td></tr>
+<tr><td><strong>Silver</strong></td><td>Egg/poultry production</td></tr>
+<tr><td><strong>Round</strong></td><td>Potato production</td></tr>
+</table>
+
+<h2 class="sec">🏛️ Land Reforms & Farming Systems</h2>
+<ul>
+<li><strong>Land reforms (post-independence)</strong>: abolition of intermediaries (Zamindari abolition), tenancy reforms, land ceiling acts, consolidation of holdings.</li>
+<li><strong>Intensive Agriculture District Programme (IADP)</strong> & <strong>Intensive Agriculture Area Programme (IAAP)</strong> — early Green Revolution-era schemes.</li>
+<li><strong>Shifting cultivation</strong> ("slash and burn"): practiced in NE India — locally called <em>Jhum</em> (NE India), <em>Podu</em> (Andhra/Odisha), <em>Bewar/Dahiya</em> (MP).</li>
+<li><strong>MSP (Minimum Support Price)</strong>: government-guaranteed price for select crops, recommended by <strong>CACP</strong> (Commission for Agricultural Costs & Prices).</li>
+<li><strong>PM-KISAN, PM Fasal Bima Yojana, e-NAM</strong> — major current agriculture schemes.</li>
+</ul>
+
+<div class="box box-mnemonic"><span class="box-title">💡 Mnemonic — Cropping seasons</span>
+"<strong>K</strong>ids <strong>R</strong>un <strong>Z</strong>ig-zag" → <strong>K</strong>harif (monsoon) → <strong>R</strong>abi (winter) → <strong>Z</strong>aid (summer, short gap season).
+</div>
+</div>
+
+<!-- CH30 -->
+<div class="panel" data-unit="human" data-label="Resources & Industries (World)">
+<h2 class="chapter-title">30. Resources & Industries (World)</h2>
+<p class="chapter-meta">Weightage: <b>83 Qs</b> ⭐⭐ Largest single chapter — covers global resources, energy, industry & connectivity</p>
+
+<h2 class="sec">⚡ Energy Resources</h2>
+<table>
+<tr><th>Resource</th><th>Type</th><th>Top Producers (World)</th></tr>
+<tr><td>Coal</td><td>Non-renewable</td><td>China, India, USA, Indonesia, Australia</td></tr>
+<tr><td>Petroleum</td><td>Non-renewable</td><td>USA, Saudi Arabia, Russia</td></tr>
+<tr><td>Natural Gas</td><td>Non-renewable</td><td>USA, Russia, Iran</td></tr>
+<tr><td>Solar/Wind/Hydro</td><td>Renewable</td><td>China, USA, India (growing rapidly)</td></tr>
+</table>
+
+<h2 class="sec">🏭 Industrial Regions & Classification</h2>
+<ul>
+<li><strong>Agro-based industries</strong>: cotton, sugar, jute, food processing (raw material dependent).</li>
+<li><strong>Mineral-based industries</strong>: iron & steel, cement, aluminium.</li>
+<li><strong>Major world industrial belts</strong>: North-East USA, Western/Central Europe (Ruhr), Eastern Asia (Japan/China/South Korea).</li>
+<li><strong>Kobe-Osaka region (Japan)</strong>: classic industrial agglomeration example, cited for attracting dense population via employment.</li>
+</ul>
+
+<h2 class="sec">🌐 Global Transport & Trade Networks</h2>
+<ul>
+<li><strong>TEN-T (Trans-European Transport Network)</strong>: EU's integrated network connecting <strong>roads, railways, airports & waterways</strong> across Europe — not limited to one mode.</li>
+<li><strong>Suez Canal</strong>: connects Mediterranean Sea to Red Sea — shortens Europe-Asia sea route (avoids going around Africa).</li>
+<li><strong>Panama Canal</strong>: connects Atlantic & Pacific Oceans, cutting through Central America.</li>
+<li><strong>Strait of Malacca</strong>: key chokepoint between Indian & Pacific Oceans (Indonesia-Malaysia).</li>
+</ul>
+
+<h2 class="sec">🧭 Key Global Resource/Trade Facts</h2>
+<ul>
+<li>India accounts for a growing share of global services exports (IT/ITES) — Bengaluru, Hyderabad, Pune are major IT hubs.</li>
+<li><strong>HDI (Human Development Index)</strong>: composite measure by <strong>UNDP</strong> combining health (life expectancy), education (schooling years), and standard of living (GNI per capita) — emphasizes human capability over pure economic growth.</li>
+<li><strong>Demographic Dividend</strong> countries (like India) have a resource advantage if skilling & job creation keep pace with the working-age population bulge.</li>
+</ul>
+
+<div class="box box-tip"><span class="box-title">💡 Tip</span>
+This chapter overlaps heavily with Economy/Static GK for competitive exams — cross-revise with your Economy notes on industries, trade blocs (WTO, ASEAN) and infrastructure schemes for maximum efficiency.
+</div>
+</div>
+
+
+</main>
+
+<button id="scrollTopBtn" title="Back to top">↑</button>
+
+<script>
+let currentUnit = 'world';
+let currentPanel = null;
+
+function buildTabs(){
+  const bar = document.getElementById('tabBar');
+  bar.innerHTML = '';
+  const panels = document.querySelectorAll('.panel[data-unit="'+currentUnit+'"]');
+  panels.forEach((p,idx)=>{
+    const pid = 'panel-'+currentUnit+'-'+idx;
+    p.id = pid;
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn';
+    btn.textContent = p.getAttribute('data-label');
+    btn.onclick = ()=> showPanel(pid);
+    btn.id = 'tabbtn-'+pid;
+    bar.appendChild(btn);
+  });
+  if(panels.length){ showPanel(panels[0].id); }
+}
+
+function showPanel(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  const el = document.getElementById(id);
+  if(el){ el.classList.add('active'); }
+  const btn = document.getElementById('tabbtn-'+id);
+  if(btn){ btn.classList.add('active'); btn.scrollIntoView({inline:'center', behavior:'smooth', block:'nearest'}); }
+  currentPanel = id;
+  window.scrollTo({top:0, behavior:'auto'});
+}
+
+document.querySelectorAll('.unit-btn').forEach(b=>{
+  b.onclick = ()=>{
+    document.querySelectorAll('.unit-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    currentUnit = b.getAttribute('data-unit');
+    buildTabs();
+  };
+});
+
+window.onload = buildTabs;
+
+// Scroll to top button
+const stBtn = document.getElementById('scrollTopBtn');
+window.addEventListener('scroll', ()=>{
+  if(window.scrollY > 400){ stBtn.classList.add('show'); } else { stBtn.classList.remove('show'); }
+});
+stBtn.onclick = ()=> window.scrollTo({top:0, behavior:'smooth'});
+</script>
+</body>
+</html>

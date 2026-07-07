@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Static GK Notes – Music, Dance & Festivals | SSC 2026</title>
+<style>
+  :root {
+    --bg: #f8f7f4;
+    --card: #ffffff;
+    --border: #e2ddd6;
+    --accent1: #4a6fa5;
+    --accent2: #e07b39;
+    --accent3: #2d8a5e;
+    --accent4: #9b59b6;
+    --text: #2c2c2c;
+    --text-muted: #6b6b6b;
+    --highlight-yellow: #fff8cc;
+    --highlight-green: #e8f5e9;
+    --highlight-blue: #e3eeff;
+    --highlight-orange: #fff3e0;
+    --highlight-pink: #fce4ec;
+    --tab-active: #4a6fa5;
+    --tab-hover: #eef2f9;
+    --tag-bg: #e8f0fe;
+    --tag-text: #3d5afe;
+    --keyword: #c0392b;
+    --font-display: 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Courier New', monospace;
+    --radius: 10px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%);
+    color: #fff;
+    padding: 18px 20px 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  }
+  .site-header h1 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+  .site-header p { font-size: 0.82rem; opacity: 0.85; }
+
+  /* TAB NAV */
+  .tab-nav-wrap {
+    background: #fff;
+    border-bottom: 2px solid var(--border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    position: sticky;
+    top: 70px;
+    z-index: 99;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .tab-nav {
+    display: inline-flex;
+    padding: 0 8px;
+    gap: 2px;
+  }
+  .tab-btn {
+    padding: 10px 18px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { background: var(--tab-hover); color: var(--accent1); }
+  .tab-btn.active { color: var(--tab-active); border-bottom-color: var(--tab-active); }
+
+  /* CONTENT */
+  .tab-content { display: none; padding: 20px 16px 80px; max-width: 900px; margin: 0 auto; }
+  .tab-content.active { display: block; }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow);
+  }
+  .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent1);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--highlight-blue);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-title .icon { font-size: 1.1rem; }
+
+  h2.section-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--accent1);
+    margin: 24px 0 12px;
+    padding-left: 10px;
+    border-left: 4px solid var(--accent2);
+  }
+  h3.sub-title {
+    font-size: 0.97rem;
+    color: #333;
+    font-weight: 700;
+    margin: 14px 0 8px;
+  }
+
+  /* BULLETS */
+  ul.notes-list { list-style: none; padding: 0; }
+  ul.notes-list li {
+    padding: 4px 0 4px 20px;
+    position: relative;
+    font-size: 0.9rem;
+  }
+  ul.notes-list li::before {
+    content: '🔹';
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
+    top: 6px;
+  }
+  ul.notes-list li.imp::before { content: '✅'; }
+  ul.notes-list li.warn::before { content: '⚠️'; }
+  ul.notes-list li.tip::before { content: '💡'; }
+  ul.notes-list li.ex::before { content: '🔸'; }
+
+  /* KEYWORDS */
+  .kw { color: var(--keyword); font-weight: 700; }
+  .kw2 { color: var(--accent3); font-weight: 700; }
+  .kw3 { color: var(--accent4); font-weight: 700; }
+  .kw4 { color: var(--accent2); font-weight: 700; }
+
+  /* HIGHLIGHTS */
+  .hl-y { background: var(--highlight-yellow); padding: 1px 5px; border-radius: 3px; }
+  .hl-g { background: var(--highlight-green); padding: 1px 5px; border-radius: 3px; }
+  .hl-b { background: var(--highlight-blue); padding: 1px 5px; border-radius: 3px; }
+  .hl-o { background: var(--highlight-orange); padding: 1px 5px; border-radius: 3px; }
+  .hl-p { background: var(--highlight-pink); padding: 1px 5px; border-radius: 3px; }
+
+  /* TABLES */
+  .tbl-wrap { overflow-x: auto; margin: 10px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    min-width: 320px;
+  }
+  th {
+    background: var(--accent1);
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: #f5f7fb; }
+  tr:hover td { background: var(--highlight-blue); }
+
+  /* MNEMONIC BOX */
+  .mnemonic {
+    background: linear-gradient(90deg, #fff8cc, #fff3e0);
+    border: 1.5px dashed var(--accent2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 0.88rem;
+  }
+  .mnemonic strong { color: var(--accent2); }
+
+  /* TRICK BOX */
+  .trick {
+    background: var(--highlight-green);
+    border-left: 4px solid var(--accent3);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 0.88rem;
+  }
+  .trick strong { color: var(--accent3); }
+
+  /* SUMMARY BOX */
+  .summary {
+    background: linear-gradient(135deg, #e3eeff, #f8f7f4);
+    border: 1.5px solid var(--accent1);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-top: 24px;
+  }
+  .summary h3 { color: var(--accent1); margin-bottom: 10px; font-size: 1rem; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--accent1); opacity: 0.3; }
+  .tl-item { position: relative; margin-bottom: 14px; }
+  .tl-item::before { content: ''; position: absolute; left: -20px; top: 7px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent1); }
+  .tl-phase {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent1);
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-bottom: 4px;
+  }
+
+  /* GRID */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  /* BADGE */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+  .badge-blue { background: var(--tag-bg); color: var(--tag-text); }
+  .badge-orange { background: var(--highlight-orange); color: #e65100; }
+  .badge-green { background: var(--highlight-green); color: #1b5e20; }
+
+  /* SCROLL TO TOP */
+  #scrollTop {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    background: var(--accent1);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 999;
+    transition: background 0.2s;
+  }
+  #scrollTop:hover { background: #2d5080; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1.5px solid var(--border); margin: 16px 0; }
+
+  /* COMPACT LIST inside table */
+  .compact-list { list-style: disc; padding-left: 16px; font-size: 0.83rem; }
+  .compact-list li { padding: 1px 0; }
+
+  /* PHASE HEADER */
+  .phase-header {
+    background: linear-gradient(90deg, var(--accent1), #6a8fc0);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    margin: 16px 0 10px;
+  }
+  .phase-year {
+    font-size: 0.78rem;
+    opacity: 0.85;
+    font-weight: 400;
+  }
+
+  /* INFOBOX */
+  .infobox {
+    background: var(--highlight-blue);
+    border: 1px solid #b3c6ef;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    font-size: 0.88rem;
+  }
+  .infobox .label { font-weight: 700; color: var(--accent1); }
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="site-header">
+  <h1>📚 Static GK Notes — Music, Dance & Festivals</h1>
+  <p>SSC 2026 | Siddhi Prep GS ASTRA | Quick Revision Notes</p>
+</div>
+
+<!-- TAB NAV -->
+<div class="tab-nav-wrap">
+  <nav class="tab-nav">
+    <button class="tab-btn active" onclick="showTab('music-history')">🎵 Music History</button>
+    <button class="tab-btn" onclick="showTab('anatomy')">🎼 Anatomy (Swara/Raga/Tala)</button>
+    <button class="tab-btn" onclick="showTab('hindustani')">🎤 Hindustani Music</button>
+    <button class="tab-btn" onclick="showTab('carnatic')">🪗 Carnatic Music</button>
+    <button class="tab-btn" onclick="showTab('instruments')">🎸 Instruments & Awards</button>
+    <button class="tab-btn" onclick="showTab('classical-dance')">💃 Classical Dances</button>
+    <button class="tab-btn" onclick="showTab('folk-dance')">🎭 Folk Dances</button>
+    <button class="tab-btn" onclick="showTab('festivals')">🪔 Festivals</button>
+  </nav>
+</div>
+
+<!-- ============================= -->
+<!-- TAB 1: MUSIC HISTORY          -->
+<!-- ============================= -->
+<div id="music-history" class="tab-content active">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌍</span> Overview of Indian Classical Music</div>
+    <ul class="notes-list">
+      <li class="imp">One of the <kw class="kw">oldest & most complex</kw> musical traditions — unbroken lineage of <span class="hl-y">3,000+ years</span></li>
+      <li>Essentially a <span class="kw">melodic & rhythmic art form</span> — focuses on a <em>single melody</em>, unlike Western music (harmony/chords)</li>
+      <li>Three main pillars: <span class="kw">Raga</span>, <span class="kw">Tala</span>, <span class="kw">Swara</span></li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">📅 Five Phases of Indian Music</h2>
+
+  <div class="phase-header">Phase 1 — Vedic & Ancient Foundations <span class="phase-year">2000 BCE – 400 CE</span></div>
+  <div class="card">
+    <div class="sub-title">Focus: Origins of sound and classification</div>
+    <ul class="notes-list">
+      <li><span class="kw">Samaveda</span> — Root of Indian music; transformed Rigvedic verses into musical chants</li>
+      <li><span class="kw">Margi Sangita</span> — "Sacred Way"; ancient music rooted in Vedic rituals → leads to <em>Moksha</em></li>
+      <li class="imp"><span class="kw">Natyashastra (Bharata Muni)</span> — Most critical ancient treatise
+        <ul class="notes-list" style="margin-top:6px">
+          <li>Grouped instruments into <span class="hl-y">4 categories</span>: <span class="kw">Tata</span> (string), <span class="kw">Sushira</span> (wind), <span class="kw">Avanaddha</span> (membrane), <span class="kw">Ghana</span> (solid)</li>
+          <li><span class="kw">Jatis</span> — Melodic prototypes before modern "Ragas"</li>
+        </ul>
+      </li>
+      <li><span class="kw">Silappadikaram</span> (by Ilango Adigal) — Ancient Tamil epic; earliest evidence of Kerala & Tamil Nadu musical heritage (e.g., <em>Maddalam</em>)</li>
+    </ul>
+    <div class="mnemonic">
+      <strong>🧠 Mnemonic for 4 Instrument Categories (TSAG):</strong><br>
+      <strong>T</strong>ata (String) · <strong>S</strong>ushira (Wind) · <strong>A</strong>vanaddha (Membrane) · <strong>G</strong>hana (Solid)<br>
+      → "<strong>T</strong>each <strong>S</strong>tudents <strong>A</strong>bout <strong>G</strong>hana"
+    </div>
+  </div>
+
+  <div class="phase-header">Phase 2 — Medieval Evolution & Bifurcation <span class="phase-year">500 CE – 1500 CE</span></div>
+  <div class="card">
+    <div class="sub-title">Focus: Rise of Ragas & North/South split</div>
+    <ul class="notes-list">
+      <li><span class="kw">Brihaddesi (Matanga Muni)</span> — First text to explicitly define the term <span class="hl-y">Raga</span></li>
+      <li class="imp"><span class="kw">Sangeet Ratnakara (Sarangadeva)</span> — <span class="hl-y">13th-century</span> foundational text; written in Deccan (Maharashtra); <em>last common authority</em> for both Hindustani & Carnatic</li>
+      <li><span class="kw">Amir Khusro (13th C)</span> — Introduced Persian & Arabic elements; credited with <span class="kw">Qawwali</span>, <span class="kw">Khyal</span>; refined <span class="kw">Sitar & Tabla</span></li>
+      <li><span class="kw">Haridasa Movement (Karnataka)</span> — Promoted <span class="kw">Devara Nama</span> (devotional songs in Kannada) → groundwork for Carnatic tradition</li>
+    </ul>
+  </div>
+
+  <div class="phase-header">Phase 3 — Golden Era of Bhakti & Courts <span class="phase-year">1500 CE – 1800 CE</span></div>
+  <div class="card">
+    <div class="sub-title">Focus: Patronage, Gharanas & Carnatic Trinity</div>
+    <ul class="notes-list">
+      <li><span class="kw">Tansen (16th C)</span> — Legendary musician of <span class="kw">Akbar's court</span>; associated with <span class="kw">Raga Miya Malhar</span> & Dhrupad singing</li>
+      <li class="imp"><span class="kw">Venkatamakhi (17th C)</span> — Authored <span class="kw">Chaturdandi Prakashika</span>; formulated <span class="hl-y">72-Melakarta system</span> (backbone of Carnatic music)</li>
+      <li class="imp"><span class="kw">Carnatic Trinity (Late 18th C)</span> — <span class="kw">Tyagaraja, Muthuswami Dikshitar, Syama Sastri</span>; lived in <span class="kw">Tiruvarur</span>; elevated the <span class="kw">Kriti</span> form</li>
+      <li><span class="kw">Annamacharya (15th C)</span> — Composed over <span class="hl-y">32,000 Sankirtanas</span> in Telugu</li>
+    </ul>
+    <div class="mnemonic">
+      <strong>🧠 Mnemonic — Carnatic Trinity: "TMS"</strong><br>
+      <strong>T</strong>yagaraja · <strong>M</strong>uthuswami Dikshitar · <strong>S</strong>yama Sastri<br>
+      All born in <strong>Tiruvarur</strong> → "TMS lived in Tiru"
+    </div>
+  </div>
+
+  <div class="phase-header">Phase 4 — Modern Systematization <span class="phase-year">1800 CE – 1950 CE</span></div>
+  <div class="card">
+    <div class="sub-title">Focus: Schools of music & standardized notation</div>
+    <ul class="notes-list">
+      <li class="imp"><span class="kw">Gharana System</span>: <span class="kw">Gwalior</span> (oldest), <span class="kw">Agra</span> (Dhrupad-influenced), <span class="kw">Kirana</span>, <span class="kw">Jaipur-Atrauli</span> (complex ragas)</li>
+      <li class="imp"><span class="kw">Pt. Vishnu Narayan Bhatkhande</span> — Classified Hindustani Ragas into <span class="hl-y">10 Thaats</span>; introduced modern <span class="kw">Notation System</span> (e.g., <em>Kramik Pustak Malika</em>)</li>
+      <li><span class="kw">Pt. Vishnu Digambar Paluskar</span> — Democratization of music via public concerts; founded <span class="kw">Gandharva Mahavidyalaya</span></li>
+      <li><span class="kw">Dwaram Venkataswamy Naidu</span> — Popularized violin in South India; pioneer of Carnatic violin</li>
+    </ul>
+  </div>
+
+  <div class="phase-header">Phase 5 — Contemporary & Global Era <span class="phase-year">1950 CE – Present</span></div>
+  <div class="card">
+    <div class="sub-title">Focus: Innovation & Global recognition</div>
+    <ul class="notes-list">
+      <li><span class="kw">Pandit Ravi Shankar</span> — Pupil of Ustad Allauddin Khan (Maihar Gharana); took <span class="kw">Sitar</span> global; collaborated with Western artists</li>
+      <li><span class="kw">Pandit Shivkumar Sharma</span> — Transformed <span class="kw">Santoor</span> from Kashmiri folk to mainstream classical</li>
+      <li><span class="kw">Ustad Bismillah Khan</span> — Elevated <span class="kw">Shehnai</span> to classical status</li>
+      <li class="imp"><span class="kw">UNESCO Recognition</span> — <span class="kw">Baul tradition</span> (West Bengal) & <span class="kw">Vedic Chanting</span> → Intangible Cultural Heritage</li>
+    </ul>
+  </div>
+
+  <div class="summary">
+    <h3>⚡ Quick Revision — Music History</h3>
+    <ul class="notes-list">
+      <li>Samaveda → root of music | Natyashastra → 4 instrument categories (TSAG)</li>
+      <li>Brihaddesi → 1st defines "Raga" | Sangeet Ratnakara → last common authority</li>
+      <li>Amir Khusro → Qawwali, Khyal, Sitar, Tabla | Tansen → Akbar's court, Raga Miya Malhar</li>
+      <li>Venkatamakhi → 72-Melakarta | Carnatic Trinity → TMS in Tiruvarur</li>
+      <li>Bhatkhande → 10 Thaats | UNESCO → Baul & Vedic Chanting</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- TAB 2: ANATOMY                -->
+<!-- ============================= -->
+<div id="anatomy" class="tab-content">
+
+  <h2 class="section-title">🎵 Anatomy of Swaras</h2>
+  <div class="card">
+    <div class="card-title"><span class="icon">🎼</span> Saptak & Notes</div>
+    <ul class="notes-list">
+      <li>An octave in Indian music = <span class="kw">Saptak</span></li>
+      <li>Total notes: <span class="hl-y">12 notes</span> (7 pure + 5 altered)</li>
+      <li><span class="kw">Shruti</span> — Smallest interval (microtone); <span class="hl-y">22 Shrutis</span> in one Saptak</li>
+      <li><span class="kw">Swara</span> — "Self-shining" pitch; 7 main shrutis become Shuddha Swaras</li>
+    </ul>
+
+    <h3 class="sub-title">7 Shuddha Swaras (Pure Notes)</h3>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>#</th><th>Note</th><th>Full Name</th><th>Animal 🐾</th></tr>
+        <tr><td>1</td><td><span class="kw">Sa</span></td><td>Shadja</td><td>🦚 Peacock</td></tr>
+        <tr><td>2</td><td><span class="kw">Re</span></td><td>Rishabh</td><td>🐂 Bull/Skylark</td></tr>
+        <tr><td>3</td><td><span class="kw">Ga</span></td><td>Gandhar</td><td>🐐 Goat</td></tr>
+        <tr><td>4</td><td><span class="kw">Ma</span></td><td>Madhyam</td><td>🦢 Heron/Crane</td></tr>
+        <tr><td>5</td><td><span class="kw">Pa</span></td><td>Pancham</td><td>🐦 Cuckoo</td></tr>
+        <tr><td>6</td><td><span class="kw">Dha</span></td><td>Dhaivat</td><td>🐎 Horse/Frog</td></tr>
+        <tr><td>7</td><td><span class="kw">Ni</span></td><td>Nishad</td><td>🐘 Elephant</td></tr>
+      </table>
+    </div>
+    <div class="mnemonic">
+      <strong>🧠 Mnemonic (Animals): "Pretty Rascals Go Mad Pulling Dog's Nose"</strong><br>
+      Peacock · Bull · Goat · Heron · Cuckoo · Horse · Elephant
+    </div>
+
+    <h3 class="sub-title">Classification by Movement</h3>
+    <ul class="notes-list">
+      <li class="imp"><span class="kw">Achal Swara (Fixed)</span> — <span class="hl-y">Sa & Pa</span> — No variants; anchors of the scale</li>
+      <li><span class="kw">Vikrit Swara (Altered)</span> — Remaining 5 notes change pitch:
+        <ul class="notes-list">
+          <li><span class="kw">Komal (Flat)</span> — Re, Ga, Dha, Ni (semi-tone lower)</li>
+          <li><span class="kw">Teevra (Sharp)</span> — Only <span class="hl-y">Ma</span> becomes Teevra Madhyam (semi-tone higher)</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="trick"><strong>💡 Trick:</strong> Sa & Pa never change → <strong>S</strong>table <strong>P</strong>illars. Only Ma goes Sharp (Teevra). Re, Ga, Dha, Ni → "Really Good Dancers Naturally" go Komal (flat).</div>
+  </div>
+
+  <h2 class="section-title">🎶 Anatomy of Ragas</h2>
+  <div class="card">
+    <div class="card-title"><span class="icon">🎶</span> What is a Raga?</div>
+    <ul class="notes-list">
+      <li><span class="kw">Raga</span> = comprehensive <span class="hl-y">melodic framework</span>: scale + specific notes + emotional mood</li>
+    </ul>
+
+    <h3 class="sub-title">1. Jati — Classification by Note Count</h3>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Jati</th><th>Notes Used</th></tr>
+        <tr><td><span class="kw">Audav</span></td><td>5 notes</td></tr>
+        <tr><td><span class="kw">Shadav</span></td><td>6 notes</td></tr>
+        <tr><td><span class="kw">Sampurna</span></td><td>All 7 notes</td></tr>
+      </table>
+    </div>
+    <ul class="notes-list">
+      <li class="tip">A Raga can have different Jatis for Aaroha & Avaroha → e.g., <span class="hl-y">Audav-Sampurna</span> = 5 notes up, 7 down</li>
+    </ul>
+
+    <h3 class="sub-title">2. Vadi & Samvadi — The Hierarchy</h3>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Term</th><th>Role</th><th>Description</th></tr>
+        <tr><td><span class="kw">Vadi</span></td><td>👑 King</td><td>Most important note; played most frequently; defines character</td></tr>
+        <tr><td><span class="kw">Samvadi</span></td><td>🤝 Minister</td><td>2nd most important; usually 4 or 5 notes away from Vadi</td></tr>
+        <tr><td><span class="kw">Anuvadi</span></td><td>👥 Subjects</td><td>All other notes (not Vadi or Samvadi)</td></tr>
+        <tr><td><span class="kw">Vivadi</span></td><td>⚔️ Enemy</td><td>Strictly forbidden / used very sparingly</td></tr>
+      </table>
+    </div>
+
+    <h3 class="sub-title">3. Time Theory — Samay Chakra</h3>
+    <ul class="notes-list">
+      <li class="imp">Indian Classical Raagas are assigned to <span class="hl-y">specific times of day or seasons</span> (unlike Western music)</li>
+      <li><span class="kw">Sandhiprakash Raagas</span> — Performed at <span class="kw">twilight</span> (sunrise or sunset)</li>
+      <li><span class="kw">Seasonal Raagas</span>: <span class="kw">Raag Megha Malhar</span> (Rainy season), <span class="kw">Raag Basant</span> (Spring)</li>
+    </ul>
+
+    <h3 class="sub-title">4. Structural Components</h3>
+    <ul class="notes-list">
+      <li><span class="kw">Aaroha</span> — Ascending order of notes (Sa, Re, Ga...)</li>
+      <li><span class="kw">Avaroha</span> — Descending order (Ni, Dha, Pa...)</li>
+      <li><span class="kw">Pakad</span> — Unique catch-phrase; immediately identifies the Raga</li>
+      <li><span class="kw">Thaat</span> — "Parent scale" from which Raga is born (<span class="hl-y">10 Thaats</span> in Hindustani music)</li>
+    </ul>
+
+    <h3 class="sub-title">5. Thaat vs Raga — Key Differences</h3>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Basis</th><th>Thaat</th><th>Raga</th></tr>
+        <tr><td>Origin</td><td>Scale from 12 swaras</td><td>From a specific Thaat</td></tr>
+        <tr><td>Notes</td><td>Exactly <span class="kw">7 notes</span></td><td>At least <span class="kw">5 notes</span></td></tr>
+        <tr><td>Types</td><td>Only <span class="kw">Aaroha</span></td><td>Both Aaroha & Avaroha</td></tr>
+        <tr><td>Melody</td><td>Not melodious; <span class="kw">never sung</span></td><td>Melodious; <span class="kw">always sung</span></td></tr>
+        <tr><td>Swaras</td><td>No Vaadi/Samvaadi</td><td>Must have Vaadi & Samvaadi</td></tr>
+        <tr><td>Naming</td><td>After popular Ragas</td><td>After emotion evoked</td></tr>
+      </table>
+    </div>
+
+    <div class="card" style="background:var(--highlight-blue); border:1px solid #b3c6ef; margin-top:10px;">
+      <div class="sub-title">🎼 The 10 Thaats (Hindustani — Bhatkhande System)</div>
+      <div class="mnemonic" style="background:white; border:1px dashed #aaa;">
+        <strong>🧠 Mnemonic: "Bhairav Ki Bhairavi, Asavri Kalyan, Poorvi Todi, Marwa aur Khamaj"</strong><br>
+        <strong>B</strong>ilawal · <strong>K</strong>hamaj · <strong>K</strong>afi · <strong>A</strong>savari · <strong>B</strong>hairavi · <strong>B</strong>hairav · <strong>K</strong>alyan · <strong>M</strong>arwa · <strong>P</strong>oorvi · <strong>T</strong>odi<br>
+        → <strong>"Bye Bye Karen — Asap Boys Kill Many People Today"</strong>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">🥁 Other Components of Raga Performance</h2>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Component</th><th>Description</th></tr>
+        <tr><td><span class="kw">Alap</span></td><td>Slow, meditative intro; sung using "aa" sound (Aakaar); no lyrics/rhythm; introduces Vaadi & Samvaadi</td></tr>
+        <tr><td><span class="kw">Sthayee (Mukhda)</span></td><td>1st part of composition; lower & middle octaves; main refrain</td></tr>
+        <tr><td><span class="kw">Antara</span></td><td>2nd part; moves to higher octave; melodic contrast to Sthayee</td></tr>
+        <tr><td><span class="kw">Taan</span></td><td>Rapid melodic phrases; demonstrates technical speed & dexterity</td></tr>
+        <tr><td><span class="kw">Murki</span></td><td>Shorter taan; quick cluster of 3-4 notes; delicate ornamentation</td></tr>
+        <tr><td><span class="kw">Alankar</span></td><td>"Jewelry/Ornament"; specific melodic patterns in sequence (mathematical)</td></tr>
+      </table>
+    </div>
+    <div class="infobox">
+      <span class="label">🔸 Example of Alankar:</span> 'sa re ga' → 're ga ma' → 'ga ma pa' (shifting mathematical pattern)
+    </div>
+  </div>
+
+  <h2 class="section-title">⏱️ Anatomy of Tala</h2>
+  <div class="card">
+    <div class="card-title"><span class="icon">⏱️</span> What is Tala?</div>
+    <ul class="notes-list">
+      <li><span class="kw">Tala</span> = rhythmic cycle that measures time; provides temporal structure</li>
+    </ul>
+
+    <h3 class="sub-title">Components of Hindustani Tala</h3>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Component</th><th>Meaning</th><th>Key Point</th></tr>
+        <tr><td><span class="kw">Matra</span></td><td>Beat</td><td>Smallest time unit; Teental=16, Dadra=6</td></tr>
+        <tr><td><span class="kw">Vibhag</span></td><td>Measure/Section</td><td>Tala divided into sections (e.g., Teental = 4 Vibhags of 4 each)</td></tr>
+        <tr><td><span class="kw">Sam</span></td><td>Focal Point</td><td>1st beat; most important; denoted by <span class="hl-y">X</span></td></tr>
+        <tr><td><span class="kw">Khali</span></td><td>Empty Beat</td><td>No heavy accent; hand wave; denoted by <span class="hl-y">0</span></td></tr>
+        <tr><td><span class="kw">Taali</span></td><td>Clap</td><td>Accented beats; marks beginning of Vibhag; numbered 2, 3...</td></tr>
+        <tr><td><span class="kw">Laya</span></td><td>Tempo</td><td>Vilambit (slow), Madhya (medium), Drut (fast)</td></tr>
+        <tr><td><span class="kw">Avartan</span></td><td>Cycle</td><td>One complete execution of Tala (Sam to last beat)</td></tr>
+      </table>
+    </div>
+    <div class="infobox">
+      <span class="label">🔸 Teental Structure:</span> 16 matras → 4 Vibhags × 4 beats = Sam(X) on 1st, Taali on 5th & 13th, Khali(0) on 9th
+    </div>
+
+    <h3 class="sub-title">Hindustani vs Carnatic Tala — Comparison</h3>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Feature</th><th>Hindustani</th><th>Carnatic</th></tr>
+        <tr><td>Primary Unit</td><td><span class="kw">Matra</span> (Beat)</td><td><span class="kw">Akshara</span> (Letter/Unit)</td></tr>
+        <tr><td>Sections</td><td><span class="kw">Vibhag</span></td><td><span class="kw">Anga</span></td></tr>
+        <tr><td>Silent Marker</td><td><span class="kw">Khali</span> (Hand wave)</td><td><span class="kw">Visaritam</span></td></tr>
+        <tr><td>Main Accent</td><td><span class="kw">Sam</span> (1st beat)</td><td><span class="kw">Eduppu</span></td></tr>
+        <tr><td>Classification</td><td>Fixed popular patterns (Teental, Ektaal)</td><td>7 Suladi Talas & variations</td></tr>
+      </table>
+    </div>
+
+    <h3 class="sub-title">Carnatic Tala — 3 Angas</h3>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Anga</th><th>Symbol</th><th>Duration</th><th>Action</th></tr>
+        <tr><td><span class="kw">Anudrutam</span></td><td>U</td><td>1 unit</td><td>Single clap</td></tr>
+        <tr><td><span class="kw">Drutam</span></td><td>O</td><td>2 units</td><td>Clap + wave of palm</td></tr>
+        <tr><td><span class="kw">Laghu</span></td><td>I</td><td>Variable (3/4/5/7/9)</td><td>Clap + finger counting (Jati)</td></tr>
+      </table>
+    </div>
+    <div class="mnemonic">
+      <strong>🧠 Jati Types (5 Jatis of Laghu):</strong><br>
+      <strong>T</strong>isra(3) · <strong>C</strong>haturasra(4) · <strong>K</strong>handa(5) · <strong>M</strong>isra(7) · <strong>S</strong>ankeerna(9)<br>
+      → "<strong>T</strong>he <strong>C</strong>at <strong>K</strong>ept <strong>M</strong>eowing <strong>S</strong>oftly"
+    </div>
+  </div>
+
+  <div class="summary">
+    <h3>⚡ Quick Revision — Anatomy</h3>
+    <ul class="notes-list">
+      <li>12 total notes | 7 Shuddha | Sa & Pa = Achal (fixed) | Only Ma = Teevra</li>
+      <li>Raga: Jati (5/6/7 notes) | Vadi=King | Samvadi=Minister | Vivadi=Enemy</li>
+      <li>Thaat: 10 in Hindustani | 7 notes only | Never sung</li>
+      <li>Sam=X (1st beat) | Khali=0 | Avartan=1 complete cycle</li>
+      <li>Carnatic 3 Angas: Anudrutam(1) · Drutam(2) · Laghu(variable)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- TAB 3: HINDUSTANI MUSIC       -->
+<!-- ============================= -->
+<div id="hindustani" class="tab-content">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🎤</span> Hindustani Classical Music — Overview</div>
+    <ul class="notes-list">
+      <li>Practiced in <span class="kw">Northern India</span></li>
+      <li>Emphasizes <span class="kw">musical structure & improvisation</span></li>
+      <li><span class="kw">Gharana system</span> — links musicians by lineage or style</li>
+      <li>Diverged from Carnatic around <span class="hl-y">14th century</span></li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">🎵 Major Singing Styles</h2>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Style</th><th>Key Features</th><th>Founders/Proponents</th></tr>
+        <tr><td><span class="kw">Dhrupad</span></td><td>Oldest form; poetic structure; Alap without words</td><td>Swami Haridas, Mian Tansen, Baiju Bawra</td></tr>
+        <tr><td><span class="kw">Khyal (Khayal)</span></td><td>"Idea/Imagination"; significant improvisation; frequent taans</td><td>Amir Khusrau (origin); Pt. Bhimsen Joshi (modern)</td></tr>
+        <tr><td><span class="kw">Tarana</span></td><td>Fast-paced; rhythmic manipulation; melody repetition</td><td>Invented by Amir Khusrau</td></tr>
+        <tr><td><span class="kw">Thumri</span></td><td>Semi-classical; sensual; revolves around Krishna</td><td>—</td></tr>
+        <tr><td><span class="kw">Tappa</span></td><td>Fast, knotty; originated from camel riders</td><td>—</td></tr>
+        <tr><td><span class="kw">Ghazal</span></td><td>Rhyming couplets dealing with love</td><td>—</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h2 class="section-title">🏫 Gharana System — Detailed</h2>
+
+  <h3 class="sub-title">Khyal Gharanas</h3>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Gharana</th><th>Founder/Key Proponents</th><th>Key Characteristics</th></tr>
+        <tr><td><span class="kw">Gwalior</span></td><td>Natthu Khan & Vishnu Digambar Palushkar</td><td>Oldest & most elaborate; equal weight on melody & rhythm</td></tr>
+        <tr><td><span class="kw">Kirana</span></td><td>Founded: Nayak Gopal; Popularized: Abdul Karim Khan & Abdul Wahid Khan</td><td>Precise tuning; expression of individual swaras; slow tempo ragas</td></tr>
+        <tr><td><span class="kw">Agra (Rangila)</span></td><td>Khudabuksh / Haji Sujan Khan; revived by Faiyyaz Khan</td><td>Blend of Khyal & Dhrupad-dhamar; emphasis on Bandish</td></tr>
+        <tr><td><span class="kw">Patiala</span></td><td>Bade Fateh Ali Khan & Ali Baksh Jarnail Khan</td><td>Rhythm, intricate taans, emotional ornamentation (alankars)</td></tr>
+        <tr><td><span class="kw">Bhendibazaar</span></td><td>Chhajju Khan, Nazir Khan, Khadim Hussain Khan</td><td>Long-breath vocal control; use of Carnatic ragas</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Dhrupad Gharanas</h3>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Gharana</th><th>Proponents</th><th>Key Characteristics</th></tr>
+        <tr><td><span class="kw">Dagari</span></td><td>The Dagar Family</td><td>Significant emphasis on alap; typically performs in pairs</td></tr>
+        <tr><td><span class="kw">Darbhanga</span></td><td>The Mallick Family</td><td>Equal balance between alap & bandish</td></tr>
+        <tr><td><span class="kw">Bettiah</span></td><td>The Mishra Family</td><td>Bandish as core of performance (largest part)</td></tr>
+        <tr><td><span class="kw">Talwandi</span></td><td>Based in Pakistan</td><td>Khandhar vani style</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--highlight-green);">
+    <div class="card-title"><span class="icon">⭐</span> Bhimsen Joshi — Kirana Gharana</div>
+    <ul class="notes-list">
+      <li>"Living superstar" of <span class="kw">Kirana Gharana</span></li>
+      <li>New ragas created: <span class="kw">Kalashree, Lalitbhatiyar</span></li>
+      <li>Other ragas: <span class="kw">Miyan ki Todi, Shuddha Kalyan, Puriya Dhanashri</span></li>
+      <li>Received <span class="kw">Bharat Ratna (2009)</span></li>
+    </ul>
+  </div>
+
+  <div class="summary">
+    <h3>⚡ Quick Revision — Hindustani</h3>
+    <ul class="notes-list">
+      <li>Dhrupad (oldest) | Khyal (improvisation) | Tarana (fast) → all linked to Amir Khusrau</li>
+      <li>Gwalior = oldest Gharana | Kirana = precise tuning | Patiala = intricate taans</li>
+      <li>Dhrupad Gharanas: Dagari(alap) · Darbhanga(balanced) · Bettiah(bandish-focused)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- TAB 4: CARNATIC MUSIC         -->
+<!-- ============================= -->
+<div id="carnatic" class="tab-content">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🪗</span> Carnatic Music — Overview</div>
+    <ul class="notes-list">
+      <li>Classical tradition of <span class="kw">South India</span></li>
+      <li><span class="kw">Vocal-centric</span> — compositions written to be sung</li>
+      <li><span class="kw">Kriti-based</span> — Kriti = highly evolved song set to specific raga & fixed tala</li>
+      <li>Great importance on <span class="kw">Sahitya</span> (quality & meaning of lyrics)</li>
+      <li>Languages: <span class="kw">Telugu, Kannada, Tamil, Sanskrit</span></li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">🎶 Components of Carnatic Composition</h2>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Part</th><th>Description</th></tr>
+        <tr><td><span class="kw">Pallavi</span></td><td>First/second thematic lines; repeated in each stanza; main platform for improvisation</td></tr>
+        <tr><td><span class="kw">Anu Pallavi</span></td><td>Two lines after Pallavi; sung at beginning & end; not strictly repeated every stanza</td></tr>
+        <tr><td><span class="kw">Charana</span></td><td>Final and longest verse; concludes the piece</td></tr>
+      </table>
+    </div>
+    <div class="infobox">
+      <span class="label">🔸 Carnatic Improvisation:</span>
+      <ul class="notes-list">
+        <li><span class="kw">Ragam</span> — Melodic improvisation <em>without</em> mridangam</li>
+        <li><span class="kw">Tanam</span> — Melodic improvisation <em>with</em> mridangam in free rhythm</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section-title">🎼 Melakarta System</h2>
+  <div class="card">
+    <ul class="notes-list">
+      <li class="imp"><span class="kw">Melakarta Ragas</span> — <span class="hl-y">72 "parent" ragas</span> (formulated by Venkatamakhi)</li>
+      <li><span class="kw">Janya Ragas</span> — "Child" ragas derived from Melakarta ragas</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">🏆 Trinity of Carnatic Music</h2>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Composer</th><th>Period</th><th>Language</th><th>Key Contributions</th></tr>
+        <tr><td><span class="kw">Tyagaraja</span></td><td>1767–1847</td><td>Telugu</td><td>Pancharatna Kritis; created new ragas</td></tr>
+        <tr><td><span class="kw">Muthuswami Dikshitar</span></td><td>1775–1835</td><td>Sanskrit</td><td>Gamaka (ornamentation); was a Veena player</td></tr>
+        <tr><td><span class="kw">Syama Sastri</span></td><td>1762–1827</td><td>Telugu</td><td>Oldest of three; praise of Goddess Kamakshi; Svarajati genre</td></tr>
+      </table>
+    </div>
+    <div class="trick"><strong>💡 All three born in <span class="kw">Tiruvarur</span></strong> — Elevated <span class="kw">Kriti</span> form to highest level</div>
+    <div class="mnemonic">
+      <strong>🧠 Age Order (oldest→youngest): S-T-M</strong><br>
+      <strong>S</strong>yama Sastri (1762) → <strong>T</strong>yagaraja (1767) → <strong>M</strong>uthuswami (1775)
+    </div>
+  </div>
+
+  <h2 class="section-title">🎹 Pillars of Carnatic Music History</h2>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Name</th><th>Period</th><th>Title/Contribution</th></tr>
+        <tr><td><span class="kw">Purandara Dasa</span></td><td>1484–1564</td><td>Pitamaha (father/grandfather) of Carnatic music</td></tr>
+        <tr><td><span class="kw">Annamacharya</span></td><td>1408–1503</td><td>First known composer of Carnatic music; "Grandfather of Telugu Song-writing"</td></tr>
+        <tr><td><span class="kw">Bhadrachala Ramadasu</span></td><td>1620–1680</td><td>Famous Vaggeyakara (composes both lyrics & music); known for praise of Lord Rama</td></tr>
+        <tr><td><span class="kw">Venkatamakhin</span></td><td>17th C</td><td>Chaturdandiprakashika; introduced Melakarta system</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h2 class="section-title">🎺 Performance & Instrumentation</h2>
+  <div class="card">
+    <ul class="notes-list">
+      <li class="imp"><span class="kw">Mridangam</span> (double-headed drum) = Primary rhythmic accompaniment</li>
+      <li>Common: <span class="kw">Veena</span>, <span class="kw">Mandolin</span></li>
+      <li>Shared with Hindustani: <span class="kw">Flute & Violin</span></li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">⚖️ Hindustani vs Carnatic — Comparison</h2>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Feature</th><th>Hindustani (North)</th><th>Carnatic (South)</th></tr>
+        <tr><td>Influence</td><td>Arab, Persian, Afghan</td><td>Indigenous</td></tr>
+        <tr><td>Improvisation</td><td>High scope</td><td>Less scope; prescribed style</td></tr>
+        <tr><td>Emphasis</td><td>Equal focus instruments/vocals</td><td>More focus on vocal music</td></tr>
+        <tr><td>Ragas</td><td>6 major ragas (Bhairav, Yaman, etc.)</td><td>72 Melakarta (parent) ragas</td></tr>
+        <tr><td>Instruments</td><td>Tabla, sitar, sarangi, santoor</td><td>Veena, mridangam, mandolin</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="summary">
+    <h3>⚡ Quick Revision — Carnatic</h3>
+    <ul class="notes-list">
+      <li>Carnatic = vocal-centric | Kriti-based | Telugu/Kannada/Tamil/Sanskrit</li>
+      <li>Composition: Pallavi → Anu Pallavi → Charana</li>
+      <li>72 Melakarta ragas (Venkatamakhi) | Janya = child ragas</li>
+      <li>Trinity (TMS) all born in Tiruvarur | Age: Syama→Tyagaraja→Muthuswami</li>
+      <li>Purandara Dasa = Pitamaha | Annamacharya = first known composer</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- TAB 5: INSTRUMENTS & AWARDS   -->
+<!-- ============================= -->
+<div id="instruments" class="tab-content">
+
+  <h2 class="section-title">🎸 Major Instruments & Key Personalities</h2>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title"><span class="icon">🎸</span> Sitar <span class="badge badge-blue">String</span></div>
+      <ul class="notes-list">
+        <li>Structure: Wood & metal wire; <span class="hl-y">7–10 strings</span></li>
+        <li class="imp"><span class="kw">Pt. Ravi Shankar</span> — Bharat Ratna <span class="hl-y">1999</span>; "Godfather of World Music"; MP Rajya Sabha (1986–92); Autobiography: <em>My Life, My Music</em>; Grammy for living room sessions</li>
+        <li>Father of Sitar: <span class="kw">Amir Khusro</span></li>
+        <li>Others: Ustad Vilayat Khan, Anoushka Shankar, Nikhil Banerjee, Buddhaditya Mukherjee, Shahid Parveen Khan</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🎺</span> Shehnai <span class="badge badge-orange">Reed/Wind</span></div>
+      <ul class="notes-list">
+        <li>Structure: Made of <span class="kw">wood</span></li>
+        <li class="imp"><span class="kw">Ustad Bismillah Khan</span> — Bharat Ratna <span class="hl-y">2001</span>; elevated Shehnai from wedding instrument to classical status</li>
+        <li>Others: Pt. Anant Lal, Pt. Daya Shankar</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🥁</span> Tabla <span class="badge badge-green">Percussion</span></div>
+      <ul class="notes-list">
+        <li>Two drums: <span class="kw">Dayaan</span> (Right) & <span class="kw">Baayan</span> (Left)</li>
+        <li class="imp"><span class="kw">Ustad Zakir Hussain</span> — Padma Bhushan 2009, Padma Vibhushan <span class="hl-y">2023</span>; <span class="hl-y">4 Grammy awards</span> (Pashto, As we speak, This moment)</li>
+        <li>Others: Ustad Alla Rakha ("Abbaji"), Ustad Latif Khan, Kishan Maharaj, Gudai Maharaj, Faiyaz Khan, Anokhelal Mishee</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🎻</span> Sarod <span class="badge badge-blue">String</span></div>
+      <ul class="notes-list">
+        <li class="imp"><span class="kw">Ustad Amjad Ali Khan</span> — Padma Vibhushan <span class="hl-y">2001</span>; called "Sarod Samrat"</li>
+        <li>Others: Alaudin Khan (Padma Vibhushan 1971), Ali Akbar Khan, Brijnarayan, Chandan Rai</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🎹</span> Santoor <span class="badge badge-orange">Shattantri Veena</span></div>
+      <ul class="notes-list">
+        <li>Features <span class="hl-y">100 strings</span></li>
+        <li class="imp"><span class="kw">Pt. Shivkumar Sharma</span> — Padma Vibhushan <span class="hl-y">2001</span></li>
+        <li>Others: Rahul Sharma, Bhajan Sopori</li>
+        <li>Transformed from Kashmiri folk to mainstream classical</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🎵</span> Flute <span class="badge badge-green">Sushir Vadya</span></div>
+      <ul class="notes-list">
+        <li><span class="kw">No reeds</span> (unlike Shehnai); sound via air vibration in hollow tube</li>
+        <li><span class="hl-y">6 to 8 finger holes</span></li>
+        <li>Bansuri = widely used in Indian classical</li>
+        <li>Category: <span class="kw">Sushir Vadya</span> (Natyashastra)</li>
+        <li>Exponents: <span class="kw">Pt. Hariprasad Chaurasia</span>, Pannalal Ghosh, Sikkil Mala Chandrasekhar, Raghunath Seth</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🎻</span> Sarangi <span class="badge badge-blue">String</span></div>
+      <ul class="notes-list">
+        <li><span class="hl-y">29 strings</span>; deep sound</li>
+        <li>Key players: <span class="kw">Shakoor Khan</span>, Pt. Ram Narayan, Pt. Raj Narayan</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🥁</span> Other Instruments</div>
+      <ul class="notes-list">
+        <li><span class="kw">Mridangam</span>: Paladhar Raghu, Palghat Mani Iyer, K.V. Prasad</li>
+        <li><span class="kw">Ghatam</span>: TH Vinayakan</li>
+        <li><span class="kw">Pakhawaj</span>: Purushottam das, Ayodhya Prasad, Raja Chhatrapati Singh</li>
+        <li><span class="kw">Rudraveena</span>: Originated from Veena; Exponents: Asad Ali Khan, Zia Moinudin Dagar</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section-title">🏅 Awards — Bharat Ratna & Padma Vibhushan</h2>
+  <div class="card">
+    <div class="sub-title">Bharat Ratna Awardees in Music</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Musician</th><th>Field</th><th>Padma Vibhushan</th><th>Bharat Ratna</th></tr>
+        <tr><td><span class="kw">M.S. Subbulakshmi</span></td><td>Carnatic Vocal</td><td>1975</td><td><span class="hl-y">1998</span></td></tr>
+        <tr><td><span class="kw">Pandit Ravi Shankar</span></td><td>Sitar</td><td>1981</td><td><span class="hl-y">1999</span></td></tr>
+        <tr><td><span class="kw">Ustad Bismillah Khan</span></td><td>Shehnai</td><td>1980</td><td><span class="hl-y">2001</span></td></tr>
+        <tr><td><span class="kw">Pandit Bhimsen Joshi</span></td><td>Hindustani Vocal</td><td>1999</td><td><span class="hl-y">2009</span></td></tr>
+      </table>
+    </div>
+    <div class="mnemonic">
+      <strong>🧠 Bharat Ratna Year Trick:</strong> "MS Ravi Bismillah Bhimsen" → <strong>1998 · 1999 · 2001 · 2009</strong><br>
+      MS(98), Ravi(99) → 1 year gap | Bismillah(01) → 2 year gap | Bhimsen(09) → 8 year gap
+    </div>
+
+    <div class="sub-title" style="margin-top:16px">Other Padma Vibhushan Awardees (Music)</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Artist</th><th>Field</th><th>Gharana/Style</th><th>Year</th></tr>
+        <tr><td>Alauddin Khan</td><td>Sarod</td><td>—</td><td>1971</td></tr>
+        <tr><td>Pandit Jasraj</td><td>Vocal</td><td>Mewati</td><td>2000</td></tr>
+        <tr><td>Ustad Amjad Ali Khan</td><td>Sarod</td><td>—</td><td>2001</td></tr>
+        <tr><td>Pt. Shivkumar Sharma</td><td>Santoor</td><td>—</td><td>2001</td></tr>
+        <tr><td>Gangubai Hangal</td><td>Vocal</td><td>Kirana</td><td>2002</td></tr>
+        <tr><td>Kishori Amonkar</td><td>Vocal</td><td>Jaipur-Atrauli</td><td>2002</td></tr>
+        <tr><td><span class="kw">Ustad Zakir Hussain</span></td><td>Tabla</td><td>—</td><td><span class="hl-y">2023</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="summary">
+    <h3>⚡ Quick Revision — Instruments</h3>
+    <ul class="notes-list">
+      <li>Sitar → Ravi Shankar (BR 1999) | Shehnai → Bismillah Khan (BR 2001)</li>
+      <li>Tabla → Zakir Hussain (PV 2023, 4 Grammys) | Sarod → Amjad Ali (PV 2001)</li>
+      <li>Santoor → Shivkumar Sharma (100 strings, PV 2001)</li>
+      <li>Flute = Sushir Vadya | No reeds | Hariprasad Chaurasia</li>
+      <li>Sarangi = 29 strings | Shakoor Khan</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- TAB 6: CLASSICAL DANCES       -->
+<!-- ============================= -->
+<div id="classical-dance" class="tab-content">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">💃</span> What Makes a Dance "Classical"?</div>
+    <ul class="notes-list">
+      <li>Must adhere to <span class="kw">Natya Sastra</span> principles</li>
+      <li>Considered a form of <span class="kw">Yajna</span> (sacrifice) / moving meditation</li>
+      <li class="imp">Three components: <span class="kw">Nritta</span> (Pure Dance), <span class="kw">Nritya</span> (Expressive Dance), <span class="kw">Natya</span> (Dramatic Element)</li>
+    </ul>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Component</th><th>Meaning</th><th>Focus</th></tr>
+        <tr><td><span class="kw">Nritta</span></td><td>Pure Dance</td><td>Rhythmic movements; no emotion; posture, footwork, speed</td></tr>
+        <tr><td><span class="kw">Nritya</span></td><td>Expressive Dance</td><td>Abhinaya (expressions) + Mudras (hand gestures)</td></tr>
+        <tr><td><span class="kw">Natya</span></td><td>Dramatic Element</td><td>Theatrical aspect; characters & narrative</td></tr>
+      </table>
+    </div>
+    <div class="mnemonic">
+      <strong>🧠 4 types of Abhinaya (Expression): "A Asks Sameer Vachana"</strong><br>
+      <strong>A</strong>ngika (body) · <strong>A</strong>aharya (costume) · <strong>S</strong>atvika (emotional) · <strong>V</strong>achika (speech/song)
+    </div>
+  </div>
+
+  <h2 class="section-title">📜 Historical Timeline of Classical Dance</h2>
+  <div class="card">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-phase">Ancient Period (2nd C BCE – 10th C CE)</div>
+        <ul class="notes-list">
+          <li>Dance = "Fifth Veda"; spiritual medium for all</li>
+          <li><span class="kw">Nātya Śāstra</span> (Sage Bharata) — first "grammar" of dance; Rasas, Mudras</li>
+          <li><span class="kw">Devadasi tradition</span> — Women educated in Sanskrit, music, dance; performed Kumbha Arati</li>
+          <li><span class="kw">Gupta "Golden Age"</span> — Dance as essential education for royalty (Kalidasa's Malavikagnimitram)</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-phase">Medieval Period (11th – 18th C)</div>
+        <ul class="notes-list">
+          <li><span class="kw">Bhakti Movement</span> — biggest influence; devotion to Krishna/Rama made dance narrative</li>
+          <li><span class="kw">Kathak</span> — temple storytelling → courtly art under Delhi Sultanate & Mughals</li>
+          <li><span class="kw">Sattriya</span> — Sankaradeva (Assam) developed in monasteries to spread Vaishnavism</li>
+          <li><span class="kw">Chola & Vijayanagara</span> — 108 Karanas carved in temple walls (e.g., Brihadeshwara Temple, Thanjavur)</li>
+          <li><span class="kw">Abhinaya Darpana</span> & <span class="kw">Gita Govinda</span> — shifted focus to Sringara Rasa</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-phase">Period of Decline (British Era)</div>
+        <ul class="notes-list">
+          <li>Colonial administrators viewed dances as "erotic/backward"</li>
+          <li><span class="kw">Anti-Nautch Movement</span> — Victorian era; sought to ban temple dances; traditions survived in rural households</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-phase">Classical Renaissance (Mid-20th C)</div>
+        <ul class="notes-list">
+          <li>Pioneers: <span class="kw">E. Krishna Iyer, Rukmini Devi Arundale, Vallathol Narayana Menon</span></li>
+          <li><span class="kw">Kalakshetra</span> (Bharatanatyam) — Rukmini Devi Arundale</li>
+          <li><span class="kw">Kerala Kalamandalam</span> (Kathakali) — standardized curriculum</li>
+          <li><span class="kw">Sangeet Natak Akademi</span> — officially recognized 8 classical dances</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">💃 The 8 Classical Dances — Detailed</h2>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌟</span> Bharatanatyam <span class="badge badge-orange">Tamil Nadu</span></div>
+    <ul class="notes-list">
+      <li>Based on <span class="kw">Natyashastra</span> & <span class="kw">Abhinaya Darpana</span></li>
+      <li>Precursor: <span class="kw">Sadirattam</span>; banned by British in <span class="hl-y">1910</span></li>
+      <li>Known as <span class="kw">Agninritya</span> (Fire Dance)</li>
+      <li>Traditionally performed by families in Tanjore; descendants = <span class="kw">Nattuvans</span></li>
+      <li><span class="kw">Ekharya</span> — Solo dancer performing multiple roles</li>
+      <li><span class="kw">Sequence</span>: Pushpanjali → Alarippu → Jatiswaram → Shabdam → Varnam → Padam → Tillana</li>
+      <li><span class="kw">Schools</span>: Melattur, Pandanallur, Vazhuvoor, Kalakshetra</li>
+      <li>Key Artists: Alarmel Valli, Yamini Krishnamurthy, Padma Subrahmanyam, T. Balasaraswati, Leela Samson, Sonal Mansingh</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌟</span> Kathak <span class="badge badge-blue">Uttar Pradesh</span></div>
+    <ul class="notes-list">
+      <li>Founded by <span class="kw">Ishwari Prasad</span></li>
+      <li>Weight equally divided on horizontal & vertical axes</li>
+      <li>Strong influence of <span class="kw">Persian costumes</span></li>
+      <li><span class="kw">Jugalbandi</span> — competitive play between dancer & tabla</li>
+      <li>Revival: <span class="kw">Leela Sokhey</span></li>
+    </ul>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Gharana</th><th>Founder</th><th>Association</th></tr>
+        <tr><td>Jaipur</td><td>Ustad Alladiya Khan</td><td>—</td></tr>
+        <tr><td>Lucknow</td><td>Ishwari Prasad</td><td>Bindadin Maharaj</td></tr>
+        <tr><td>Banaras</td><td>Janaki Prasad</td><td>—</td></tr>
+        <tr><td>Raigarh</td><td>—</td><td>Raja Chakradhar Singh</td></tr>
+      </table>
+    </div>
+    <ul class="notes-list">
+      <li>Key Artists: <span class="kw">Birju Maharaj</span>, Lachchu Maharaj, Sitara Devi, Shobhana Narayan</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌟</span> Kuchipudi <span class="badge badge-green">Andhra Pradesh</span></div>
+    <ul class="notes-list">
+      <li>Originated from <span class="kw">Kuchelapuram</span> village; revived by <span class="kw">Siddhendra Yogi</span></li>
+      <li>Themes: Bhagavata Purana; Shringar Rasa; Carnatic music</li>
+      <li><span class="kw">Unique Elements</span>:
+        <ul class="notes-list">
+          <li><span class="kw">Manduka Shabdam</span> — Frog story</li>
+          <li><span class="kw">Tarangam</span> — Dancing on edges of brass plate</li>
+          <li><span class="kw">Jal Chitra Nritya</span> — Drawing pictures with toes while dancing</li>
+        </ul>
+      </li>
+      <li>Key Artists: Yamini Krishnamurthy, Radha Reddy, Raja Reddy, Indrani Rehman, Guru Vempati Chinna Satyam</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌟</span> Odissi <span class="badge badge-orange">Odisha</span></div>
+    <ul class="notes-list">
+      <li>Originated from temple dances of <span class="kw">Devadasis</span>; supported by King Kharavela</li>
+      <li>Historical Sites: <span class="kw">Udayagiri & Khandagiri caves</span></li>
+      <li>Musical Accompaniment: <span class="kw">Pakhawaj</span></li>
+      <li class="imp"><span class="kw">Kelucharan Mohapatra</span> — First Odissi dancer to receive Padma Vibhushan (<span class="hl-y">2000</span>)</li>
+      <li>Key Artists: Sonal Mansingh, Sanjukta Panigrahi, Indrani Rehman</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌟</span> Kathakali <span class="badge badge-green">Kerala</span></div>
+    <ul class="notes-list">
+      <li>Mixed form of dance, music & acting; prevalent in Malabar, Cochin, Travancore</li>
+      <li>Also known as <span class="kw">'ballad of the east'</span></li>
+      <li>Literary Connection: <span class="kw">Nalacharitham</span> play</li>
+      <li>Uses <span class="kw">facial colors</span> to symbolize characters</li>
+      <li>Music: <span class="kw">Sopana Sangeetham</span> (Kerala's indigenous music)</li>
+      <li>Instruments: <span class="kw">Chenda, Madhalam, Chengila, Ilathalam</span> (sometimes Idakka)</li>
+      <li><span class="hl-y">8 Parts of Kathakali Performance</span>: Keli → Arangu Keli → Thodayam → Vandana Slokam → Purappadu → Melappadam → Kadhabhinayam → Dhanarasi</li>
+      <li>Key Artists: Guru Gopinath, Mrinalini Sarabhai, Vallathol Narayana Menon</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌟</span> Mohiniyattam <span class="badge badge-blue">Kerala</span></div>
+    <ul class="notes-list">
+      <li>Theme: Dedicated to Vishnu (<span class="kw">Mohini avatar</span>)</li>
+      <li>Language: <span class="kw">Manipravalam</span> (Sanskrit + Malayalam mix)</li>
+      <li>Textual Reference: Ancient text <span class="kw">Vyavahara Mala</span></li>
+      <li>"Mother of Mohiniyattam": <span class="kw">Kalyanikutty Amma</span></li>
+      <li>Main Percussion: <span class="kw">Edakka</span></li>
+      <li>Key Artists: Hema Malini, Sridevi, Kanak Rele, Sunanda Nair</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌟</span> Manipuri <span class="badge badge-orange">Manipur</span></div>
+    <ul class="notes-list">
+      <li>Themes: Lord Krishna; introverted & graceful</li>
+      <li>Main Components: <span class="kw">Jagoi & Cholom</span></li>
+      <li>Forms: <span class="kw">Raas, Sankirtana, Thang-Ta</span></li>
+      <li>Instruments: <span class="kw">Pung & Dhol</span></li>
+      <li>Key Artists: Jhaveri Sisters (Naina, Suwarna, Ranjana, Darshana), Guru Bipin Singh</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🌟</span> Sattriya <span class="badge badge-green">Assam</span></div>
+    <ul class="notes-list">
+      <li>Introduced by saint <span class="kw">Srimanta Sankardev</span>; recognized as classical dance in <span class="hl-y">2000</span></li>
+      <li>Themes: Mythological stories of Lord Vishnu</li>
+      <li>Musical Composition: <span class="kw">Borgeet</span></li>
+      <li>Technical Element: <span class="kw">Mati-Akhora</span> (basic exercises)</li>
+      <li>Key forms: <span class="kw">Chali</span> (graceful), <span class="kw">Jhumura</span> (vigorous/masculine), <span class="kw">Nadu Bhangi</span></li>
+      <li>Also includes: Gayan-Bhayanar Nach & Kharmanar Nach</li>
+    </ul>
+  </div>
+
+  <div class="summary">
+    <h3>⚡ Quick Revision — Classical Dances</h3>
+    <ul class="notes-list">
+      <li>Bharatanatyam (TN): Agninritya | Banned 1910 | Sadirattam precursor</li>
+      <li>Kathak (UP): Jugalbandi | Leela Sokhey revival | 4 Gharanas</li>
+      <li>Kuchipudi (AP): Tarangam (brass plate) | Jal Chitra Nritya | Siddhendra Yogi</li>
+      <li>Odissi (Odisha): Pakhawaj | Kelucharan Mohapatra (first PV 2000)</li>
+      <li>Kathakali (Kerala): Ballad of East | Sopana Sangeetham | 8 parts | Nalacharitham</li>
+      <li>Mohiniyattam: Manipravalam | Vyavahara Mala | Edakka | Kalyanikutty Amma</li>
+      <li>Manipuri: Jagoi & Cholom | Thang-Ta | Jhaveri Sisters</li>
+      <li>Sattriya: Sankardev | Recognized 2000 | Borgeet | Chali/Jhumura</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- TAB 7: FOLK DANCES            -->
+<!-- ============================= -->
+<div id="folk-dance" class="tab-content">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🗺️</span> State-wise Folk Dances — Quick Reference</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>State/Region</th><th>Dance</th><th>Community</th><th>Purpose/Unique Feature</th></tr>
+        <tr><td><span class="kw">Arunachal Pradesh</span></td><td>Tapu Dance</td><td>Adi tribe</td><td>War dance during Solung festival; men only; swords (Daos) & shields</td></tr>
+        <tr><td><span class="kw">Arunachal Pradesh</span></td><td>Buiya Dance</td><td>Digaru Mishmi tribe</td><td>Tamladu festival; men & women; name from Sanskrit for "land"</td></tr>
+        <tr><td><span class="kw">Arunachal Pradesh</span></td><td>Ponung</td><td>Adi tribe</td><td>Solung festival; women only in circle; led by Miri with Yoksa</td></tr>
+        <tr><td><span class="kw">Arunachal Pradesh</span></td><td>Snow Lion Dance (Singhi Chhamm)</td><td>Monpa tribe, Tawang</td><td>Religious festivals; lion costumes; Tibet's spiritual identity</td></tr>
+        <tr><td><span class="kw">Bihar / Jharkhand</span></td><td>Domkach</td><td>Rural communities</td><td>Marriage celebration; women; witty teasing songs during wedding</td></tr>
+        <tr><td><span class="kw">Central India</span></td><td>Karma Dance</td><td>Gond, Oraon, Baiga</td><td>Harvest/fertility; circular around Karma tree; Mandar drums</td></tr>
+        <tr><td><span class="kw">Chhattisgarh</span></td><td>Bison Horn Maria</td><td>Maria tribe</td><td>Hunting/bravery; distinctive bison-horn headgear</td></tr>
+        <tr><td><span class="kw">Chhattisgarh</span></td><td>Pandavani</td><td>Folk storytellers</td><td>Mahabharata narration; solo; Tambura; famously by <span class="kw">Teejan Bai</span></td></tr>
+        <tr><td><span class="kw">Chhattisgarh</span></td><td>Panthi Dance</td><td>Satnami community</td><td>Honors Guru Ghasidas; fast footwork; equality & spirituality</td></tr>
+        <tr><td><span class="kw">Goa</span></td><td>Dekhni</td><td>Goan folk</td><td>Social entertainment; blend of Indian & Portuguese influences</td></tr>
+        <tr><td><span class="kw">Gujarat</span></td><td>Dandiya Raas</td><td>Gujarati communities</td><td>Navratri; Goddess Durga; decorated dandiya sticks; circular</td></tr>
+        <tr><td><span class="kw">Gujarat</span></td><td>Dangi</td><td>Dangi tribe</td><td>Agricultural festivals; energetic circular movements</td></tr>
+        <tr><td><span class="kw">Gujarat</span></td><td>Padhar Dance</td><td>Padhar fishing community</td><td>Coastal life; movements mimic rowing/sea activities</td></tr>
+        <tr><td><span class="kw">Gujarat</span></td><td>Tippani Dance</td><td>Women laborers, Saurashtra</td><td>Collective labor; long wooden sticks called Tippani</td></tr>
+        <tr><td><span class="kw">Gujarat</span></td><td>Shikaar Nritya</td><td>Tribal, South Gujarat</td><td>Hunting skills; Pavri (gourd wind instrument); mimetic movements</td></tr>
+        <tr><td><span class="kw">Gujarat</span></td><td>Majira Nritya</td><td>Devotional folk groups</td><td>Religious; Majira cymbals form the dance base</td></tr>
+        <tr><td><span class="kw">Haryana</span></td><td>Loor</td><td>Young girls</td><td>Spring & Holi; celebrates feminine energy & springtime</td></tr>
+        <tr><td><span class="kw">Haryana / Punjab</span></td><td>Jhumar</td><td>Farming communities</td><td>Harvest; graceful swaying; relaxed rhythmic elegance</td></tr>
+        <tr><td><span class="kw">Haryana / UP</span></td><td>Swang</td><td>Folk theatre performers</td><td>Entertainment/storytelling; folk theatre-dance blend</td></tr>
+        <tr><td><span class="kw">Himachal Pradesh</span></td><td>Thoda</td><td>Martial communities</td><td>Festival; bows & arrows; martial archery incorporated</td></tr>
+        <tr><td><span class="kw">Himachal Pradesh</span></td><td>Shand Shabu</td><td>Buddhist tribes, Lahaul-Spiti</td><td>Monasteries; Buddhist devotion; Surna & Daman instruments</td></tr>
+        <tr><td><span class="kw">J&K</span></td><td>Dumhal</td><td>Wattal tribe</td><td>Ritual; men only; long robes & tall conical caps; banners</td></tr>
+        <tr><td><span class="kw">J&K</span></td><td>Rouf (Rauf)</td><td>Kashmiri women</td><td>Eid & spring; women only; elegant without instruments</td></tr>
+        <tr><td><span class="kw">Karnataka</span></td><td>Dollu Kunitha</td><td>Kuruba community</td><td>Religious/festive; large Dollu drums; synchronized drumming</td></tr>
+        <tr><td><span class="kw">Karnataka</span></td><td>Yakshagana</td><td>Coastal Karnataka</td><td>Religious storytelling; elaborate costumes; Ramayana/Mahabharata</td></tr>
+        <tr><td><span class="kw">Karnataka</span></td><td>Veeragase</td><td>Shaivite devotees</td><td>Temple processions; devoted to Lord Shiva; Veerabhadra mythology</td></tr>
+        <tr><td><span class="kw">Kerala</span></td><td>Kakkarissi Natakam</td><td>Folk theatre, Kerala</td><td>Temple festivals; blend of tribal & temple traditions</td></tr>
+        <tr><td><span class="kw">Kerala</span></td><td>Oppana</td><td>Mappila Muslim community</td><td>Weddings; women; performed around the bride; Mappila songs</td></tr>
+        <tr><td><span class="kw">Kerala</span></td><td>Theyyam</td><td>North Kerala ritual performers</td><td>Sacred dance worship; elaborate face painting; performers = living deities</td></tr>
+        <tr><td><span class="kw">Lakshadweep</span></td><td>Parichakali (Shield Dance)</td><td>Island communities</td><td>Kol=stick, Paricha=shield; mock fight; circular formations; starts slow → fast</td></tr>
+        <tr><td><span class="kw">Lakshadweep</span></td><td>Lava Dance</td><td>Minicoy island</td><td>Eid & village festivals; maritime lifestyle; mimics sea waves</td></tr>
+        <tr><td><span class="kw">Ladakh</span></td><td>Spao Dance</td><td>Ladakhi community</td><td>"Dance of Warriors"; Daman & Surna; slow/majestic; royalty performances</td></tr>
+        <tr><td><span class="kw">MP / Bundelkhand</span></td><td>Rai Dance</td><td>Bundelkhand communities</td><td>Festive; women; fast spinning; swift circular movements</td></tr>
+        <tr><td><span class="kw">MP / Bundelkhand</span></td><td>Badha Dance</td><td>Rural folk</td><td>Births/marriages/milestones; invokes Goddess Sheetla</td></tr>
+        <tr><td><span class="kw">Maharashtra</span></td><td>Dindi</td><td>Varkari sect</td><td>Devotion to Lord Vitthal; Pandharpur pilgrimage</td></tr>
+        <tr><td><span class="kw">Maharashtra</span></td><td>Koli Dance</td><td>Koli fishing community</td><td>Sea life; movements mimic rowing/fishing</td></tr>
+        <tr><td><span class="kw">Maharashtra</span></td><td>Lavani</td><td>Folk performers</td><td>Entertainment/satire; Nauvari saree; <span class="kw">Dholki</span> is main instrument</td></tr>
+        <tr><td><span class="kw">Maharashtra</span></td><td>Lezim</td><td>Rural groups/students</td><td>Festive/drill; Lezim instrument with cymbals; exercise + folk dance</td></tr>
+        <tr><td><span class="kw">Maharashtra</span></td><td>Tamasha</td><td>Folk theatre</td><td>Entertainment; Dholki + harmonium; romance/satire/politics</td></tr>
+        <tr><td><span class="kw">Manipur</span></td><td>Thang Ta</td><td>Manipuri martial artists</td><td>Sword & spear combat; ancient martial tradition</td></tr>
+        <tr><td><span class="kw">Meghalaya</span></td><td>Chad Laho</td><td>Jaintia tribe</td><td>Cultural festival; trio formation (1 woman between 2 men); communal solidarity</td></tr>
+        <tr><td><span class="kw">Meghalaya</span></td><td>Ka Shad Suk Mynsiem</td><td>Khasi tribe</td><td>Thanksgiving; men protect women dancers; drums & flutes</td></tr>
+        <tr><td><span class="kw">Mizoram</span></td><td>Cheraw</td><td>Mizo community</td><td><span class="kw">Famous bamboo dance</span>; women dance between moving bamboo poles</td></tr>
+        <tr><td><span class="kw">Mizoram</span></td><td>Tlanglam</td><td>Mizo communities</td><td>Festivals; coordinated community dancing; strong communal participation</td></tr>
+        <tr><td><span class="kw">Odisha</span></td><td>Ghumura</td><td>Folk & warrior communities</td><td>Martial/festive; drum worn around neck while dancing</td></tr>
+        <tr><td><span class="kw">Odisha</span></td><td>Gotipua Nacha</td><td>Young boy performers</td><td>Boys dress as girls; acrobatic; precursor of Odissi dance</td></tr>
+        <tr><td><span class="kw">Odisha</span></td><td>Paika Nritya</td><td>Paika warrior community</td><td>Martial; shields & swords; Odisha's warrior history</td></tr>
+        <tr><td><span class="kw">Odisha</span></td><td>Ranapa</td><td>Folk performers</td><td>Dance on bamboo stilts; acrobatics on long stilts</td></tr>
+        <tr><td><span class="kw">Odisha/Jharkhand/WB</span></td><td>Chhau</td><td>Martial folk communities</td><td>Famous <span class="kw">masked martial dance</span>; 3 types: Seraikella(JH), Purlia(WB), Mayurbhanj(OD)</td></tr>
+        <tr><td><span class="kw">Punjab</span></td><td>Jaago</td><td>Punjabi rural</td><td>Pre-wedding; women; decorated pots with lamps on head</td></tr>
+        <tr><td><span class="kw">Punjab</span></td><td>Luddi</td><td>Farming communities</td><td>Victory/happiness; men; distinct bent-arm shoulder movement</td></tr>
+        <tr><td><span class="kw">Rajasthan</span></td><td>Ghoomar</td><td>Rajput women</td><td>Weddings/Teej/Gangaur; swirling skirts; colorful ghagras</td></tr>
+        <tr><td><span class="kw">Rajasthan</span></td><td>Kalbelia</td><td>Snake-charmer community</td><td><span class="kw">UNESCO Intangible Cultural Heritage</span>; snake-like movements; Been instrument</td></tr>
+        <tr><td><span class="kw">Rajasthan</span></td><td>Terah Taali</td><td>Kamad community</td><td>Seated; <span class="kw">13 cymbals tied to different body parts</span></td></tr>
+        <tr><td><span class="kw">Sikkim</span></td><td>Maruni</td><td>Nepali communities</td><td>Festivals; male dancers portray female characters; Madal drum</td></tr>
+        <tr><td><span class="kw">Sikkim/Bhutan</span></td><td>Yak Chaam</td><td>Buddhist monks</td><td>Monastery festivals; yak costumes; sacred yak symbolism in Buddhism</td></tr>
+        <tr><td><span class="kw">Sikkim</span></td><td>Sikmari</td><td>Lepcha community</td><td>Nature/harvest; Bakhu & Dumvum costumes; Pangthong Palit (bamboo flute)</td></tr>
+        <tr><td><span class="kw">Tamil Nadu</span></td><td>Karakattam</td><td>Rural Tamil folk</td><td>Worship of rain goddess Mariamman; balancing pots; Nadaswaram & Thavil</td></tr>
+        <tr><td><span class="kw">Tamil Nadu</span></td><td>Kummi</td><td>Tamil women</td><td>One of oldest folk dances of TN; circular; clapping only (no instruments)</td></tr>
+        <tr><td><span class="kw">Tamil Nadu</span></td><td>Poikkal Kuthirai Attam</td><td>Tamil folk</td><td>Temple festivals; dummy horse costume; horse-riding imitation</td></tr>
+        <tr><td><span class="kw">Telangana</span></td><td>Perini Shivatandavam</td><td>Ancient warrior tradition</td><td>"Dance of Warriors"; performed before battle for Lord Shiva; vigorous tandava</td></tr>
+        <tr><td><span class="kw">Tripura</span></td><td>Hai-Hak Dance</td><td>Malsum community (Halam tribe)</td><td>Post-harvest thanksgiving to Goddess Lakshmi</td></tr>
+        <tr><td><span class="kw">Tripura</span></td><td>Mamita Dance</td><td>Kaloi community</td><td>Harvest festival; linked with farming culture</td></tr>
+        <tr><td><span class="kw">Tripura</span></td><td>Hojagiri</td><td>Reang tribe</td><td>Harvest; women balance pitchers & bottles while dancing</td></tr>
+        <tr><td><span class="kw">Andhra Pradesh</span></td><td>Vilasini Natyam</td><td>Telugu Devadasis</td><td>Classical; temple + court dances; first male dancer: Sri Sanjay Kumar Joshi; Lasya style; revived by Swapnasundari</td></tr>
+        <tr><td><span class="kw">Uttarakhand</span></td><td>Jhoda/Jhora</td><td>Kumaoni communities</td><td>Festivals; circular hand-holding; harmony among communities</td></tr>
+        <tr><td><span class="kw">Uttar Pradesh</span></td><td>Charkula</td><td>Braj region women</td><td>Radha-Krishna; multi-tiered lamps balanced on head</td></tr>
+        <tr><td><span class="kw">Uttar Pradesh</span></td><td>Nautanki</td><td>Folk theatre, North India</td><td>Popular traveling folk theatre tradition</td></tr>
+        <tr><td><span class="kw">West Bengal</span></td><td>Baul Dance</td><td>Baul singers/mystics</td><td>Spiritual; Ektara, Dotara, Khamak; divine love & mysticism</td></tr>
+        <tr><td><span class="kw">West Bengal</span></td><td>Gambhira</td><td>Gajan festival performers</td><td>Humor & satire on public issues; masks</td></tr>
+        <tr><td><span class="kw">Himalayan Buddhist</span></td><td>Cham Dance</td><td>Buddhist monks</td><td>Sacred masked ritual; victory of good over evil; Himalayan monasteries</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--highlight-orange);">
+    <div class="card-title"><span class="icon">⭐</span> Important Highlights — Folk Dances</div>
+    <ul class="notes-list">
+      <li class="imp"><span class="kw">Kalbelia</span> (Rajasthan) → UNESCO Intangible Cultural Heritage</li>
+      <li class="imp"><span class="kw">Cheraw</span> (Mizoram) → Famous bamboo dance of India</li>
+      <li class="imp"><span class="kw">Chhau</span> → Famous masked dance; 3 types across OD/JH/WB</li>
+      <li class="imp"><span class="kw">Pandavani</span> → Famous performer: Teejan Bai</li>
+      <li class="imp"><span class="kw">Terah Taali</span> → 13 cymbals on body</li>
+      <li class="imp"><span class="kw">Perini Shivatandavam</span> & <span class="kw">Spao Dance</span> → Both called "Dance of Warriors"</li>
+      <li><span class="kw">Gotipua Nacha</span> (Odisha) → Precursor of Odissi dance</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- TAB 8: FESTIVALS              -->
+<!-- ============================= -->
+<div id="festivals" class="tab-content">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🪔</span> State-wise Festivals — Quick Reference</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>S.No</th><th>State</th><th>Festival</th><th>Time</th><th>Key Features</th></tr>
+        <tr><td>1</td><td><span class="kw">Andhra Pradesh</span></td><td>Flamingo Festival</td><td>Nov–Jan</td><td>Eco-tourism; Pulicat Lake; migratory birds from Siberia; bird watching</td></tr>
+        <tr><td>2</td><td><span class="kw">AP / Telangana</span></td><td>Kanuma</td><td>January</td><td>3rd day of Pongal; cattle worship; farmers decorate cows & bulls</td></tr>
+        <tr><td>3</td><td><span class="kw">Arunachal Pradesh</span></td><td>Nyokum</td><td>February</td><td>Nyishi tribe; prosperity & protection from evil spirits; rice beer</td></tr>
+        <tr><td>4</td><td><span class="kw">Arunachal Pradesh</span></td><td>Solung</td><td>September</td><td>Adi tribe; harvest/livestock; Ponung folk dance; ritual sacrifices</td></tr>
+        <tr><td>5</td><td><span class="kw">Arunachal Pradesh</span></td><td>Pongtu</td><td>August</td><td>Tutsa tribe; friendship/harvest/unity; exchange of gifts</td></tr>
+        <tr><td>6</td><td><span class="kw">Arunachal Pradesh</span></td><td>Poi Sangken</td><td>April</td><td>Tai-Khamti Buddhists; Buddhist New Year; water sprinkling</td></tr>
+        <tr><td>7</td><td><span class="kw">Nagaland</span></td><td>Nazu Festival</td><td>February</td><td>Pochury tribe; pray for prosperity & agricultural success</td></tr>
+        <tr><td>9</td><td><span class="kw">Assam</span></td><td>Dol Jatra</td><td>March (Holi)</td><td>Vaishnavite; Lord Krishna; celebrated in Barpeta</td></tr>
+        <tr><td>10</td><td><span class="kw">Assam</span></td><td>Bihu</td><td>Apr/Oct/Jan</td><td>Most important cultural festival; Bihu dance, dhol; 3 Bihus: <span class="kw">Rongali(Apr), Kongali(Oct), Bhogali(Jan)</span></td></tr>
+        <tr><td>11</td><td><span class="kw">Bihar</span></td><td>Salhesh Festival</td><td>Summer</td><td>Honor folk hero Raja Salhesh; popular among Dalit communities of Mithila</td></tr>
+        <tr><td>12</td><td><span class="kw">Gujarat</span></td><td>Navratri</td><td>Sep–Oct (9 nights)</td><td>Goddess Durga; Garba & Dandiya Raas; largest celebrations in India</td></tr>
+        <tr><td>13</td><td><span class="kw">Uttarakhand</span></td><td>Bissu Mela</td><td>April</td><td>Jaunsari tribe, Chakrata; spring/harvest; archery</td></tr>
+        <tr><td>14</td><td><span class="kw">Himachal Pradesh</span></td><td>Doongri Festival</td><td>May</td><td>Goddess Hidimba; Hidimba Devi Temple, Manali</td></tr>
+        <tr><td>15</td><td><span class="kw">Himachal Pradesh</span></td><td>Manimahesh Fair</td><td>Aug–Sep</td><td>Lord Shiva; Manimahesh Lake trek; holy bathing; Kailash peak</td></tr>
+        <tr><td>16</td><td><span class="kw">J&K</span></td><td>Navreh</td><td>Mar–Apr</td><td>Kashmiri Pandit New Year; sacred thali with rice/flowers/coins/scriptures</td></tr>
+        <tr><td>17</td><td><span class="kw">J&K</span></td><td>Tulip Festival, Srinagar</td><td>Mar–Apr</td><td><span class="hl-y">Asia's largest tulip garden</span> near Dal Lake; tourism promotion</td></tr>
+        <tr><td>18</td><td><span class="kw">Jharkhand/WB</span></td><td>Tusu Festival</td><td>January (Makar Sankranti)</td><td>Harvest thanksgiving; tribal/rural; folk songs around Tusu idols</td></tr>
+        <tr><td>19</td><td><span class="kw">Jharkhand</span></td><td>Sohrai</td><td>Post-Diwali</td><td>Santhal tribe; harvest/cattle worship; famous <span class="kw">Sohrai wall paintings</span></td></tr>
+        <tr><td>20</td><td><span class="kw">Karnataka</span></td><td>Kambala</td><td>Nov–Mar</td><td>Buffalo race in muddy paddy fields; Tulu-speaking communities, coastal Karnataka</td></tr>
+        <tr><td>21</td><td><span class="kw">Karnataka</span></td><td>Karaga Festival</td><td>Mar–Apr</td><td>One of Bengaluru's oldest; dedicated to Draupadi; Tigala community; sacred Karaga pot</td></tr>
+        <tr><td>22</td><td><span class="kw">Kerala</span></td><td>Attukal Pongala</td><td>Feb–Mar</td><td><span class="hl-y">One of world's largest gatherings of women devotees</span>; Attukal Temple, Thiruvananthapuram</td></tr>
+        <tr><td>23</td><td><span class="kw">Kerala</span></td><td>Guruvayur Festival</td><td>Feb–Mar</td><td>Lord Krishna; Guruvayur Temple; elephant processions</td></tr>
+        <tr><td>24</td><td><span class="kw">Kerala</span></td><td>Onam</td><td>Aug–Sep</td><td>State festival; King Mahabali; Pookalam, Onasadya, Vallamkali, Pulikali</td></tr>
+        <tr><td>25</td><td><span class="kw">Kerala</span></td><td>Vallamkali</td><td>Onam season</td><td>Snake boat races in backwaters; teamwork; maritime traditions</td></tr>
+        <tr><td>26</td><td><span class="kw">Kerala</span></td><td>Vettukad Festival</td><td>November</td><td>Christian religious; Thiruvananthapuram; decorated boats</td></tr>
+        <tr><td>27</td><td><span class="kw">Ladakh/Tibetan</span></td><td>Losar</td><td>Feb–Mar</td><td>Tibetan Buddhist New Year; monastery rituals, masked dances</td></tr>
+        <tr><td>28</td><td><span class="kw">Maharashtra</span></td><td>Pola</td><td>Aug–Sep</td><td>Thanksgiving to bullocks; farmers decorate & worship cattle</td></tr>
+        <tr><td>29</td><td><span class="kw">Maharashtra</span></td><td>Ganesh Chaturthi</td><td>Aug–Sep (Bhadrapada)</td><td>Lord Ganesha; public pandals; popularized by <span class="kw">Bal Gangadhar Tilak</span></td></tr>
+        <tr><td>30</td><td><span class="kw">Maharashtra</span></td><td>Gudi Padwa</td><td>Mar–Apr</td><td>Marathi New Year; Gudi flag hoisting = victory & prosperity</td></tr>
+        <tr><td>31</td><td><span class="kw">Manipur</span></td><td>Gaan Ngai</td><td>Dec–Jan</td><td>Zeliangrong tribe; post-harvest & ancestor worship</td></tr>
+        <tr><td>32</td><td><span class="kw">Manipur</span></td><td>Yaoshang</td><td>March</td><td>Manipuri Holi; Thabal Chongba dance</td></tr>
+        <tr><td>33</td><td><span class="kw">Meghalaya</span></td><td>Wangala</td><td>November</td><td>Garo tribe; thanksgiving to Sun God Misi Saljong; <span class="hl-y">"100 Drums Festival"</span></td></tr>
+        <tr><td>34</td><td><span class="kw">Meghalaya</span></td><td>Shad Suk Mynsiem</td><td>April</td><td>Khasi dance festival; thanksgiving for peace/fertility/prosperity</td></tr>
+        <tr><td>35</td><td><span class="kw">Mizoram</span></td><td>Mim Kut Festival</td><td>Aug–Sep</td><td>Maize harvest; remembrance of ancestors</td></tr>
+        <tr><td>36</td><td><span class="kw">Nagaland</span></td><td><span class="kw">Hornbill Festival</span></td><td>1–10 December</td><td><span class="hl-y">"Festival of Festivals"</span>; Kisama Heritage Village, Kohima; all tribal traditions</td></tr>
+        <tr><td>37</td><td><span class="kw">Arunachal Pradesh</span></td><td>Loku Festival</td><td>Oct/Nov</td><td>Nocte tribe; post-sowing; ancestor worship</td></tr>
+        <tr><td>38</td><td><span class="kw">Nagaland</span></td><td>Angami Sekrenyi</td><td>February</td><td>Angami tribe; purification & youth festival; ritual baths; warrior traditions</td></tr>
+        <tr><td>39</td><td><span class="kw">Odisha</span></td><td>Raja Festival</td><td>June (monsoon)</td><td>Womanhood & fertility of Earth Goddess Bhudevi; swings & games</td></tr>
+        <tr><td>40</td><td><span class="kw">JH/OD/Bihar/WB/CG/MP</span></td><td>Bhadra Ekadashi</td><td>Aug–Sep</td><td>Lord Vishnu; Jagannath traditions; fasting rituals</td></tr>
+        <tr><td>41</td><td><span class="kw">Punjab</span></td><td>Hola Mohalla</td><td>March (after Holi)</td><td>Started by <span class="kw">Guru Gobind Singh</span>; Sikh martial gathering; Gatka, mock battles</td></tr>
+        <tr><td>42</td><td><span class="kw">Punjab</span></td><td>Lohri</td><td>January</td><td>Winter harvest; bonfires, bhangra, folk songs, rewri, peanuts</td></tr>
+        <tr><td>43</td><td><span class="kw">Punjab</span></td><td>Baisakhi</td><td>April</td><td>Harvest festival & <span class="kw">foundation day of Khalsa Panth</span>; bhangra, Sikh processions</td></tr>
+        <tr><td>44</td><td><span class="kw">Rajasthan</span></td><td>Gangaur</td><td>Mar–Apr</td><td>Goddess Gauri; marital happiness; unmarried girls pray for ideal husbands</td></tr>
+        <tr><td>45</td><td><span class="kw">Rajasthan</span></td><td>Urs Festival</td><td>Varies</td><td>Commemoration of Sufi saints; Qawwalis; dargah gatherings</td></tr>
+        <tr><td>46</td><td><span class="kw">Tribal Belt JH/OD/Bihar/WB</span></td><td>Erok Sim</td><td>Agricultural season</td><td>Lepcha community; prayer for good harvest</td></tr>
+        <tr><td>48</td><td><span class="kw">Tamil Nadu</span></td><td>Chithirai Festival</td><td>Apr–May</td><td>Celestial marriage of Meenakshi & Sundareshwar; Grand Madurai temple processions</td></tr>
+        <tr><td>49</td><td><span class="kw">Tamil Nadu</span></td><td>Pongal</td><td>January</td><td>Harvest thanksgiving; Sun God; Pongal dish; 4 parts: <span class="kw">Bhogi, Thai Pongal, Mattu Pongal, Kanum Pongal</span></td></tr>
+        <tr><td>50</td><td><span class="kw">Telangana</span></td><td>Bonalu</td><td>Jul–Aug</td><td>Goddess Mahakali; women carry decorated pots; trance performances</td></tr>
+        <tr><td>51</td><td><span class="kw">Tripura</span></td><td>Kharchi Festival</td><td>July</td><td>Worship of 14 deities; purification of earth; Chaturdasha Devata worship</td></tr>
+        <tr><td>52</td><td><span class="kw">Tripura</span></td><td>Garia Festival/Garia Carnival</td><td>April</td><td>Bamboo deity worship; tribal dances; agricultural prosperity</td></tr>
+        <tr><td>53</td><td><span class="kw">Tripura/Tribal Areas</span></td><td>Garai Puja</td><td>Apr–May</td><td>Protection & farming prosperity; tribal rituals</td></tr>
+        <tr><td>54</td><td><span class="kw">Uttarakhand</span></td><td>Phool Dei/Phuldei</td><td>March</td><td>Welcome spring; children decorate homes with flowers & folk songs</td></tr>
+        <tr><td>55</td><td><span class="kw">Jharkhand</span></td><td>Jawa Festival</td><td>Monsoon season</td><td>Fertility/crop prosperity; seed germination by unmarried girls</td></tr>
+        <tr><td>56</td><td><span class="kw">Muslim Communities</span></td><td>Shab-e-Barat</td><td>15th Shaban (Islamic)</td><td>Night of forgiveness; prayers for deceased; graveyard visits; charity</td></tr>
+        <tr><td>57</td><td><span class="kw">Parsi (Gujarat/Maha)</span></td><td>Navroz</td><td>March or August</td><td>Parsi New Year; Zoroastrian prayers; traditional food</td></tr>
+        <tr><td>59</td><td><span class="kw">Karnataka (Kodagu)</span></td><td>Kodava Festivals</td><td>Various</td><td>Kailpodh & Puthari festivals; weapons worship; harvest</td></tr>
+        <tr><td>60</td><td><span class="kw">Puducherry</span></td><td>Verrampattinam Festival</td><td>Annual</td><td>Religious & coastal community worship; processions</td></tr>
+        <tr><td>61</td><td><span class="kw">MP / tribal belt</span></td><td>Bhagoria Festival</td><td>Before Holi</td><td>Bhil tribes; harvest; traditional matchmaking customs</td></tr>
+        <tr><td>62</td><td><span class="kw">Tamil Nadu/South India</span></td><td>Mattu Pongal</td><td>January</td><td>Worship & thanksgiving to cattle; cattle decoration; rural festivities</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--highlight-yellow);">
+    <div class="card-title"><span class="icon">⭐</span> Must-Remember Festival Facts</div>
+    <ul class="notes-list">
+      <li class="imp"><span class="kw">Hornbill Festival</span> (Nagaland) → "Festival of Festivals" → Dec 1–10 → Kisama Heritage Village, Kohima</li>
+      <li class="imp"><span class="kw">Wangala</span> (Meghalaya/Garo tribe) → "100 Drums Festival"</li>
+      <li class="imp"><span class="kw">Attukal Pongala</span> (Kerala) → World's largest gathering of women devotees</li>
+      <li class="imp"><span class="kw">Tulip Festival</span> (Srinagar) → Asia's largest tulip garden near Dal Lake</li>
+      <li class="imp"><span class="kw">Ganesh Chaturthi</span> → Popularized by Bal Gangadhar Tilak during freedom movement</li>
+      <li class="imp"><span class="kw">Hola Mohalla</span> (Punjab) → Started by Guru Gobind Singh</li>
+      <li class="imp"><span class="kw">Baisakhi</span> → Both harvest festival & foundation day of Khalsa Panth</li>
+      <li><span class="kw">Onam</span> (Kerala) → State festival; King Mahabali; Pookalam + Vallamkali + Onasadya</li>
+      <li><span class="kw">Bihu</span> (Assam) — 3 types: Rongali(April/New Year), Kongali(October), Bhogali(January/Harvest)</li>
+      <li><span class="kw">Pongal</span> (Tamil Nadu) — 4 parts: Bhogi → Thai Pongal → Mattu Pongal → Kanum Pongal</li>
+      <li><span class="kw">Kambala</span> (Karnataka) — Buffalo race; Tulu-speaking coastal communities</li>
+      <li><span class="kw">Sohrai</span> (Jharkhand) — Famous for Sohrai wall paintings (Santhal tribe)</li>
+    </ul>
+  </div>
+
+  <div class="summary">
+    <h3>⚡ Quick Revision — Festivals</h3>
+    <ul class="notes-list">
+      <li>Hornbill = "Festival of Festivals" (Dec 1-10, Nagaland, Kisama Village)</li>
+      <li>Wangala = 100 Drums Festival (Garo tribe, Meghalaya)</li>
+      <li>Attukal Pongala = world's largest women gathering (Kerala)</li>
+      <li>Tulip Festival = Asia's largest tulip garden (Dal Lake, Srinagar)</li>
+      <li>Bihu → 3 types (Apr/Oct/Jan) | Pongal → 4 parts</li>
+      <li>Hola Mohalla → Guru Gobind Singh | Ganesh Chaturthi → Bal Gangadhar Tilak</li>
+      <li>Kambala = buffalo race (Karnataka) | Sohrai = wall paintings (Jharkhand)</li>
+      <li>Kharchi = 14 deities worship (Tripura, July)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  window.addEventListener('scroll', function() {
+    const btn = document.getElementById('scrollTop');
+    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+</script>
+
+</body>
+</html>

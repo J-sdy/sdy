@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSC CGL 2026 – Combined Notes (Medieval India, Mughal Empire)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; font-family: 'Inter', Arial, sans-serif; }
+  .topnav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #1A1109;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  }
+  .nav-btn {
+    flex: 1;
+    padding: 16px 8px;
+    background: transparent;
+    color: #EADFCE;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-btn:hover { background: #2C1A0E; }
+  .nav-btn.active {
+    background: #5C4033;
+    color: #fff;
+    border-bottom: 3px solid #EADFCE;
+  }
+  .frame-wrap {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 56px);
+  }
+  .section-frame {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none;
+  }
+  .section-frame.active { display: block; }
+</style>
+</head>
+<body>
+<div class="topnav">
+    <button class="nav-btn active" onclick="switchSection(0, this)">🏰 Medieval India</button>
+    <button class="nav-btn" onclick="switchSection(1, this)">👑 Mughal Empire</button>
+</div>
+<div class="frame-wrap">
+    <iframe id="frame0" class="section-frame active" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Medieval India – SSC 2026 Notes&lt;/title&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+  :root {
+    --bg: #F8F7F4;
+    --card: #FFFFFF;
+    --border: #E4DDD5;
+    --text: #1A1A1A;
+    --muted: #6B7280;
+    --ds-accent: #4A2C0A;
+    --ds-light: #FDF3E7;
+    --ds-mid: #C8860A;
+    --vj-accent: #1A4731;
+    --vj-light: #EBF6EE;
+    --vj-mid: #2E7D52;
+    --green: #1B5E20;
+    --green-light: #F0FAF2;
+    --orange: #BF6900;
+    --orange-light: #FFF8EE;
+    --red: #B71C1C;
+    --red-light: #FFF0F0;
+    --blue: #0D47A1;
+    --blue-light: #EEF4FF;
+    --purple: #4A148C;
+    --purple-light: #F5F0FF;
+    --shadow: 0 1px 4px rgba(0,0,0,0.07);
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: &#x27;Inter&#x27;, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* Header */
+  .header { background: linear-gradient(135deg, #1A0A00 0%, #7C4A1A 60%, #1A4731 100%); color: #fff; padding: 22px 20px 16px; text-align: center; }
+  .header h1 { font-family: &#x27;Merriweather&#x27;, serif; font-size: 1.5rem; margin-bottom: 4px; }
+  .header p { font-size: 0.82rem; opacity: 0.82; }
+
+  /* Tab Bar */
+  .tab-bar-wrap { background: var(--card); border-bottom: 2px solid var(--border); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .tab-bar-wrap::-webkit-scrollbar { display: none; }
+  .tab-bar { display: flex; gap: 4px; padding: 8px 12px; white-space: nowrap; min-width: max-content; }
+  .tab-btn { background: #F0EBE4; color: #5C3810; border: none; border-radius: 20px; padding: 7px 15px; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: &#x27;Inter&#x27;, sans-serif; transition: all 0.18s; flex-shrink: 0; }
+  .tab-btn.active-ds { background: var(--ds-accent); color: #fff; box-shadow: 0 2px 8px rgba(74,44,10,0.3); }
+  .tab-btn.active-vj { background: var(--vj-accent); color: #fff; box-shadow: 0 2px 8px rgba(26,71,49,0.3); }
+  .tab-btn:hover:not(.active-ds):not(.active-vj) { background: #E8DDD0; }
+
+  /* Panels */
+  .panel { display: none; padding: 18px 15px 90px; max-width: 840px; margin: 0 auto; }
+  .panel.active { display: block; }
+
+  /* Section label */
+  .section-label { display: inline-block; border-radius: 5px; font-size: 0.72rem; font-weight: 700; padding: 2px 10px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .sl-ds { background: var(--ds-accent); color: #fff; }
+  .sl-vj { background: var(--vj-accent); color: #fff; }
+
+  /* Cards */
+  .card { background: var(--card); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: 16px 17px 13px; margin-bottom: 15px; }
+  .card-title { font-family: &#x27;Merriweather&#x27;, serif; font-size: 0.97rem; font-weight: 700; margin-bottom: 11px; padding-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .card-title.ds { color: var(--ds-accent); border-bottom: 2px solid var(--ds-light); }
+  .card-title.vj { color: var(--vj-accent); border-bottom: 2px solid var(--vj-light); }
+
+  /* Lists */
+  ul.notes { list-style: none; padding: 0; }
+  ul.notes li { padding: 4px 0 4px 18px; position: relative; border-bottom: 1px dashed var(--border); font-size: 0.87rem; }
+  ul.notes li:last-child { border-bottom: none; }
+  ul.notes li::before { content: &#x27;▸&#x27;; position: absolute; left: 0; font-size: 0.72rem; top: 7px; }
+  ul.notes.ds li::before { color: var(--ds-mid); }
+  ul.notes.vj li::before { color: var(--vj-mid); }
+
+  /* Inline */
+  .kw { font-weight: 700; color: #1A1A1A; }
+  .ds-c { color: var(--ds-accent); font-weight: 600; }
+  .vj-c { color: var(--vj-accent); font-weight: 600; }
+  .gr { color: var(--green); font-weight: 600; }
+  .rd { color: var(--red); font-weight: 600; }
+  .bl { color: var(--blue); font-weight: 600; }
+  .or { color: var(--orange); font-weight: 600; }
+  .pu { color: var(--purple); font-weight: 600; }
+
+  /* Sub-heading */
+  .sh { font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.5px; margin: 13px 0 5px; }
+  .sh.ds { color: var(--ds-mid); }
+  .sh.vj { color: var(--vj-mid); }
+
+  /* Tables */
+  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 8px; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.81rem; }
+  thead tr.ds-h { background: var(--ds-accent); color: #fff; }
+  thead tr.vj-h { background: var(--vj-accent); color: #fff; }
+  thead th { padding: 8px 10px; text-align: left; font-weight: 600; }
+  tbody tr:nth-child(odd) { background: #FAF8F5; }
+  tbody tr:nth-child(even) { background: #fff; }
+  tbody td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.81rem; }
+
+  /* Info boxes */
+  .mnemo-box { background: var(--purple-light); border-left: 4px solid var(--purple); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .mnemo-box .lbl { font-weight: 700; color: var(--purple); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .tip-box { background: var(--green-light); border-left: 4px solid var(--green); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .tip-box .lbl { font-weight: 700; color: var(--green); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .warn-box { background: var(--orange-light); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .warn-box .lbl { font-weight: 700; color: var(--orange); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .imp-box { background: var(--blue-light); border-left: 4px solid var(--blue); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .imp-box .lbl { font-weight: 700; color: var(--blue); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+
+  /* Dynasty badge */
+  .dyn-badge { display: inline-block; border-radius: 4px; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; margin-right: 5px; vertical-align: middle; }
+  .db-mamluk { background: #E8D5B7; color: #5C3810; }
+  .db-khalji { background: #FDDCB5; color: #8B4513; }
+  .db-tughlaq { background: #D0C8B8; color: #3E3020; }
+  .db-sayyid { background: #E8E0D8; color: #4A4040; }
+  .db-lodi { background: #EAD5B0; color: #5C3810; }
+  .db-sangama { background: #C8E6C9; color: #1B5E20; }
+  .db-saluva { background: #A5D6A7; color: #1B5E20; }
+  .db-tuluva { background: #66BB6A; color: #fff; }
+  .db-aravidu { background: #2E7D32; color: #fff; }
+
+  /* Timeline pill */
+  .yr { display: inline-block; background: #F0E8DC; color: var(--ds-accent); border-radius: 4px; font-size: 0.72rem; font-weight: 700; padding: 1px 7px; margin-left: 4px; }
+  .yr-vj { background: #D8EEE0; color: var(--vj-accent); }
+
+  /* Summary box */
+  .summary-box { background: linear-gradient(135deg, #FDF3E7 0%, #EBF6EE 100%); border: 1.5px solid #D4B896; border-radius: var(--radius); padding: 15px; margin-top: 8px; font-size: 0.85rem; }
+  .sum-title { font-family: &#x27;Merriweather&#x27;, serif; font-size: 0.95rem; margin-bottom: 10px; }
+
+  /* Arch evolution */
+  .arch-flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 10px 0; }
+  .af-item { background: var(--ds-light); border: 1.5px solid #D4A870; border-radius: 6px; padding: 4px 11px; font-size: 0.79rem; font-weight: 600; color: var(--ds-accent); }
+  .af-arrow { color: var(--muted); font-weight: 700; }
+
+  /* Scroll top */
+  #scroll-top { position: fixed; bottom: 22px; right: 18px; background: #4A2C0A; color: #fff; border: none; border-radius: 50%; width: 44px; height: 44px; font-size: 1.3rem; cursor: pointer; box-shadow: 0 4px 16px rgba(74,44,10,0.35); z-index: 999; display: none; align-items: center; justify-content: center; }
+  #scroll-top.visible { display: flex; }
+  #scroll-top:hover { background: #7C4A1A; }
+
+  /* Fact grid */
+  .fact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  @media (max-width: 420px) { .fact-grid { grid-template-columns: 1fr; } }
+  .fact-item { background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; font-size: 0.8rem; }
+  .fact-item .fl { font-weight: 700; color: var(--muted); font-size: 0.68rem; text-transform: uppercase; margin-bottom: 2px; }
+
+  @media (max-width: 520px) { .header h1 { font-size: 1.15rem; } .panel { padding: 13px 10px 80px; } .card { padding: 13px 11px; } }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;header&quot;&gt;
+  &lt;h1&gt;🏰 Medieval India – SSC 2026&lt;/h1&gt;
+  &lt;p&gt;Delhi Sultanate (1206–1526) &amp;nbsp;|&amp;nbsp; Vijayanagara Empire (1336–1646) &amp;nbsp;|&amp;nbsp; Siddhi Prep GS ASTRA&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tab-bar-wrap&quot;&gt;
+  &lt;div class=&quot;tab-bar&quot;&gt;
+    &lt;button class=&quot;tab-btn active-ds&quot; onclick=&quot;showTab(&#x27;t1&#x27;,this,&#x27;ds&#x27;)&quot;&gt;🏯 DS: Rise &amp; Dynasties&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t2&#x27;,this,&#x27;ds&#x27;)&quot;&gt;🕌 DS: Architecture&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t3&#x27;,this,&#x27;vj&#x27;)&quot;&gt;🌿 VE: Dynasties &amp; Rulers&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t4&#x27;,this,&#x27;vj&#x27;)&quot;&gt;⚙️ VE: Administration&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t5&#x27;,this,&#x27;vj&#x27;)&quot;&gt;✈️ VE: Foreign Travellers&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t6&#x27;,this,&#x27;ds&#x27;)&quot;&gt;📝 Quick Revision&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ========== TAB 1: DS RISE &amp; DYNASTIES ========== --&gt;
+&lt;div id=&quot;t1&quot; class=&quot;panel active&quot;&gt;
+  &lt;span class=&quot;section-label sl-ds&quot;&gt;Delhi Sultanate · 1206–1526&lt;/span&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;📌 Background &amp; Rise&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;Rise = series of shifts from &lt;span class=&quot;kw&quot;&gt;fragmented Rajput kingdoms&lt;/span&gt; → centralized Islamic empire&lt;/li&gt;
+      &lt;li&gt;Began with decline of &lt;span class=&quot;kw&quot;&gt;Ghaznavids&lt;/span&gt; + expansion of &lt;span class=&quot;kw&quot;&gt;Ghurid dynasty&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Muhammad Ghori&lt;/span&gt; → unlike previous raiders, sought &lt;span class=&quot;kw&quot;&gt;territory not plunder&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;After Ghori&#x27;s death → his Turkish slave-general &lt;span class=&quot;kw&quot;&gt;Qutb-ud-din Aibak&lt;/span&gt; took over = official start of Sultanate&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;⚔️ The Turning Point&lt;/div&gt;
+      &lt;span class=&quot;kw&quot;&gt;1191&lt;/span&gt; – Muhammad Ghori &lt;span class=&quot;rd&quot;&gt;defeated&lt;/span&gt; at &lt;span class=&quot;kw&quot;&gt;First Battle of Tarain&lt;/span&gt;&lt;br&gt;
+      &lt;span class=&quot;kw&quot;&gt;1192&lt;/span&gt; – Ghori &lt;span class=&quot;gr&quot;&gt;wins&lt;/span&gt; Second Battle of Tarain → crushed &lt;span class=&quot;kw&quot;&gt;Prithviraj Chauhan&#x27;s&lt;/span&gt; Rajput confederacy
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 Remember 5 Dynasties in Order&lt;/div&gt;
+      &lt;strong&gt;&quot;Many Kings Travel Slowly Lazily&quot;&lt;/strong&gt;&lt;br&gt;
+      &lt;span class=&quot;pu&quot;&gt;M&lt;/span&gt;amluk (Slave) → &lt;span class=&quot;pu&quot;&gt;K&lt;/span&gt;halji → &lt;span class=&quot;pu&quot;&gt;T&lt;/span&gt;ughlaq → &lt;span class=&quot;pu&quot;&gt;S&lt;/span&gt;ayyid → &lt;span class=&quot;pu&quot;&gt;L&lt;/span&gt;odi
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- MAMLUK --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-mamluk&quot;&gt;1206–1290&lt;/span&gt; Mamluk (Slave) Dynasty&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:10px;&quot;&gt;Transition from military occupation → settled administrative state. Birth of &lt;span class=&quot;kw&quot;&gt;Indo-Saracenic&lt;/span&gt; architectural style.&lt;/p&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Facts&lt;/th&gt;&lt;th&gt;Military&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Qutb-ud-din Aibak&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1206–1210&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Called &lt;span class=&quot;kw&quot;&gt;Lakh Baksh&lt;/span&gt; (generous giver)&lt;br&gt;
+              • Started &lt;span class=&quot;kw&quot;&gt;Qutub Minar&lt;/span&gt;&lt;br&gt;
+              • Built &lt;span class=&quot;kw&quot;&gt;Quwat-ul-Islam Mosque&lt;/span&gt; using materials from 27 temples&lt;br&gt;
+              • Blend of Hindu craftsmanship + Islamic design
+            &lt;/td&gt;
+            &lt;td&gt;Secured Indo-Gangetic plain; established Delhi as seat of Islamic power&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Iltutmish&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1211–1236&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Real consolidator&lt;/span&gt; of Sultanate&lt;br&gt;
+              • Completed Qutub Minar; expanded Quwat-ul-Islam mosque&lt;br&gt;
+              • Introduced &lt;span class=&quot;kw&quot;&gt;Iqta system&lt;/span&gt; &amp; &lt;span class=&quot;kw&quot;&gt;Silver Tanka&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;Kept &lt;span class=&quot;kw&quot;&gt;Mongols (Genghis Khan)&lt;/span&gt; at bay; conquered Bihar &amp; Bengal&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Razia Sultan&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1236–1240&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Challenged traditional &lt;span class=&quot;kw&quot;&gt;gender roles&lt;/span&gt;&lt;br&gt;
+              • Appointed Ethiopian slave &lt;span class=&quot;kw&quot;&gt;Yakut&lt;/span&gt; to high post&lt;br&gt;
+              • Angered &lt;span class=&quot;kw&quot;&gt;Turkish &quot;Chahalgani&quot; nobles&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;Fought against rebel governor of Sirhind (&lt;span class=&quot;kw&quot;&gt;Altunia&lt;/span&gt;); eventually defeated&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Ghiyasuddin Balban&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1266–1287&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Theory of &lt;span class=&quot;kw&quot;&gt;Divine Kingship (Zil-i-Ilahi)&lt;/span&gt;&lt;br&gt;
+              • Persian customs: &lt;span class=&quot;kw&quot;&gt;Sijda&lt;/span&gt; (prostration) &amp; &lt;span class=&quot;kw&quot;&gt;Paibos&lt;/span&gt; (kissing feet)&lt;br&gt;
+              • Created &lt;span class=&quot;kw&quot;&gt;Diwan-i-Arz&lt;/span&gt; (Military Dept)
+            &lt;/td&gt;
+            &lt;td&gt;Suppressed Meos of Mewat; stabilized NW frontier against Mongols&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 Mamluk Rulers in Order&lt;/div&gt;
+      &lt;strong&gt;&quot;Aibak Injured Razia Badly&quot;&lt;/strong&gt; → &lt;span class=&quot;pu&quot;&gt;A&lt;/span&gt;ibak · &lt;span class=&quot;pu&quot;&gt;I&lt;/span&gt;ltutmish · &lt;span class=&quot;pu&quot;&gt;R&lt;/span&gt;azia · &lt;span class=&quot;pu&quot;&gt;B&lt;/span&gt;alban
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- KHALJI --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-khalji&quot;&gt;1290–1320&lt;/span&gt; Khalji Dynasty&lt;/div&gt;
+    &lt;div class=&quot;imp-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;✅ Khalji Revolution (1290)&lt;/div&gt;
+      Khaljis &lt;span class=&quot;kw&quot;&gt;NOT part of Turkish aristocracy&lt;/span&gt; → broke monopoly of Turkish nobles over Delhi throne. First non-Turkish rulers.
+    &lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:10px;&quot;&gt;First major imperialist expansion into &lt;span class=&quot;kw&quot;&gt;South India&lt;/span&gt;. Addition of &lt;span class=&quot;kw&quot;&gt;Alai Darwaza&lt;/span&gt; to Qutub complex.&lt;/p&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Facts&lt;/th&gt;&lt;th&gt;Military&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Jalaluddin Khalji&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1290–1296&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;• Founded dynasty at &lt;span class=&quot;kw&quot;&gt;age 70&lt;/span&gt;&lt;br&gt;• Known for mildness&lt;br&gt;• Allowed Mongol converts to settle in &lt;span class=&quot;kw&quot;&gt;&quot;Mughalpura&quot;&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;Nephew Alauddin led secret raid on &lt;span class=&quot;kw&quot;&gt;Devagiri&lt;/span&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Alauddin Khalji&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1296–1316&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Built &lt;span class=&quot;kw&quot;&gt;Alai Darwaza&lt;/span&gt; &amp; city of &lt;span class=&quot;kw&quot;&gt;Siri&lt;/span&gt;&lt;br&gt;
+              • Total &lt;span class=&quot;kw&quot;&gt;Price Control system&lt;/span&gt;&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Land measurement&lt;/span&gt; system
+            &lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Siege of Chittor (1303)&lt;/span&gt;; General &lt;span class=&quot;kw&quot;&gt;Malik Kafur&lt;/span&gt; extracted tribute from Hoysalas &amp; Pandyas&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- TUGHLAQ --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-tughlaq&quot;&gt;1320–1414&lt;/span&gt; Tughlaq Dynasty&lt;/div&gt;
+    &lt;div class=&quot;imp-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;⚡ Tughlaq Rise (1320)&lt;/div&gt;
+      After Alauddin&#x27;s incompetent successors → &lt;span class=&quot;kw&quot;&gt;Khusrau Khan&lt;/span&gt; (convert) seized throne as usurper. &lt;span class=&quot;kw&quot;&gt;Ghiyasuddin Tughlaq&lt;/span&gt; (Governor of Dipalpur) marched on Delhi to &quot;save Islam.&quot;
+    &lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:10px;&quot;&gt;Massive sloped-wall architecture + administrative experimentation.&lt;/p&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Facts&lt;/th&gt;&lt;th&gt;Military&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Ghiyasuddin Tughlaq&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1320–1325&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;• Built fortress city of &lt;span class=&quot;kw&quot;&gt;Tughlaqabad&lt;/span&gt;&lt;br&gt;• Restored irrigation systems&lt;br&gt;• Lightened harsh Khalji land taxes&lt;/td&gt;
+            &lt;td&gt;Annexed &lt;span class=&quot;kw&quot;&gt;Warangal&lt;/span&gt;; campaign into Bengal&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Muhammad bin Tughlaq&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1325–1351&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Brilliant polymath who &lt;span class=&quot;rd&quot;&gt;failed in practice&lt;/span&gt;&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Capital Shift to Daulatabad&lt;/span&gt; (failed)&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Token Currency&lt;/span&gt; – Copper coins (failed)&lt;br&gt;
+              • Taxation in &lt;span class=&quot;kw&quot;&gt;Doab Region&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;Khurasan &amp; Qarachil Expedition; &lt;span class=&quot;kw&quot;&gt;Vijayanagara &amp; Bahmani kingdoms broke away&lt;/span&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Firoz Shah Tughlaq&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1351–1388&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Called &lt;span class=&quot;kw&quot;&gt;&quot;Reformer King&quot;&lt;/span&gt;&lt;br&gt;
+              • Built 300+ towns; repaired Qutub Minar&lt;br&gt;
+              • Established &lt;span class=&quot;kw&quot;&gt;Diwan-i-Khairat&lt;/span&gt; (charity dept)&lt;br&gt;
+              • Transported &lt;span class=&quot;kw&quot;&gt;Ashokan Pillars&lt;/span&gt; to Delhi
+            &lt;/td&gt;
+            &lt;td&gt;Campaigns to Jajnagar (Odisha) &amp; Nagarkot; focused on public works&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;warn-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💥 Timurid Catastrophe (1398)&lt;/div&gt;
+      &lt;span class=&quot;kw&quot;&gt;Timur (Tamerlane)&lt;/span&gt; invaded in &lt;span class=&quot;kw&quot;&gt;1398&lt;/span&gt; → sacked Delhi → left it in ruins&lt;br&gt;
+      Appointed &lt;span class=&quot;kw&quot;&gt;Khizr Khan&lt;/span&gt; as deputy → eventually took control → Tughlaq line extinct&lt;br&gt;
+      💡 &lt;strong&gt;Year Trick: 1398 – &quot;Three nines minus one = Timur&#x27;s ruin&quot;&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- SAYYID --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-sayyid&quot;&gt;1414–1451&lt;/span&gt; Sayyid Dynasty&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:8px;&quot;&gt;A period of &lt;span class=&quot;kw&quot;&gt;contraction and vassalage&lt;/span&gt;.&lt;/p&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Facts&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Khizr Khan&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1414–1421&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Ruled as Timurid deputy (&lt;span class=&quot;kw&quot;&gt;Rayat-i-Ala&lt;/span&gt;); constant defense against Hindu &amp; Khokhar chiefs&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alam Shah&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1445–1451&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Last ruler; weak administrator; &lt;span class=&quot;kw&quot;&gt;voluntarily abdicated&lt;/span&gt; &amp; retired to Badaun&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;imp-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🔄 Lodi Invitation (1451)&lt;/div&gt;
+      Relatively &lt;span class=&quot;kw&quot;&gt;bloodless transition&lt;/span&gt;. Alam Shah retired → Afghan noble &lt;span class=&quot;kw&quot;&gt;Bahlul Lodi invited&lt;/span&gt; to take throne. Shift from &lt;span class=&quot;kw&quot;&gt;Turkish/Persian → Afghan rule&lt;/span&gt;.
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- LODI --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-lodi&quot;&gt;1451–1526&lt;/span&gt; Lodi Dynasty – First Afghan Empire&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Facts&lt;/th&gt;&lt;th&gt;Military&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Bahlul Lodi&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1451–1489&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;Re-established Afghan prestige; introduced &lt;span class=&quot;kw&quot;&gt;Bahloli Coin&lt;/span&gt; (used until Akbar&#x27;s time)&lt;/td&gt;
+            &lt;td&gt;Defeated &lt;span class=&quot;kw&quot;&gt;Sharqi rulers of Jaunpur&lt;/span&gt;; re-annexed it to Sultanate&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Sikandar Lodi&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1489–1517&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;Established &lt;span class=&quot;kw&quot;&gt;Agra as capital&lt;/span&gt;; patron of learning; had Sanskrit medical texts translated into Persian&lt;/td&gt;
+            &lt;td&gt;Conquered Bihar; forced Bengali rulers into non-aggression treaty&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Ibrahim Lodi&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr&quot;&gt;1517–1526&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;Final Sultan; insisted on absolute monarchical power → nobles invited foreign intervention&lt;/td&gt;
+            &lt;td&gt;Defeated by &lt;span class=&quot;kw&quot;&gt;Babur at First Battle of Panipat (1526)&lt;/span&gt; → ended 320 years of Sultanate&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;warn-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;⚔️ End of Sultanate – Battle of Panipat (1526)&lt;/div&gt;
+      • Ibrahim Lodi&#x27;s own &lt;span class=&quot;kw&quot;&gt;uncle + Governor of Punjab&lt;/span&gt; invited Babur&lt;br&gt;
+      • Babur used &lt;span class=&quot;kw&quot;&gt;Artillery &amp; Tulughma tactics&lt;/span&gt; → decimated Lodi army&lt;br&gt;
+      • Ended Delhi Sultanate → &lt;span class=&quot;kw&quot;&gt;Mughal Empire began&lt;/span&gt;&lt;br&gt;
+      💡 &lt;strong&gt;Year Trick: 1526 – &quot;Five to Twenty-Six: Sultanate&#x27;s fix was Babur&#x27;s mix&quot;&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Timeline Summary --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;⏱️ Dynasty Timeline at a Glance&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Dynasty&lt;/th&gt;&lt;th&gt;Period&lt;/th&gt;&lt;th&gt;Key Contribution&lt;/th&gt;&lt;th&gt;Ended By&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Mamluk/Slave&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1206–1290&lt;/td&gt;&lt;td&gt;Foundation; Qutub Minar; Iqta system&lt;/td&gt;&lt;td&gt;Khalji Revolution&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Khalji&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1290–1320&lt;/td&gt;&lt;td&gt;Price Control; South India expansion&lt;/td&gt;&lt;td&gt;Tughlaq takeover&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Tughlaq&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1320–1414&lt;/td&gt;&lt;td&gt;Failed experiments; Reformer King&lt;/td&gt;&lt;td&gt;Timur invasion (1398)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Sayyid&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1414–1451&lt;/td&gt;&lt;td&gt;Timurid vassalage; contraction&lt;/td&gt;&lt;td&gt;Lodi Invitation&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Lodi&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1451–1526&lt;/td&gt;&lt;td&gt;Afghan rule; Agra capital&lt;/td&gt;&lt;td&gt;Babur (Panipat 1526)&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ========== TAB 2: DS ARCHITECTURE ========== --&gt;
+&lt;div id=&quot;t2&quot; class=&quot;panel&quot;&gt;
+  &lt;span class=&quot;section-label sl-ds&quot;&gt;Delhi Sultanate · Architecture (1206–1526)&lt;/span&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;🏛️ Architecture Evolution Overview&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;Evolution from &lt;span class=&quot;kw&quot;&gt;reuse of temple materials&lt;/span&gt; → sophisticated &lt;span class=&quot;kw&quot;&gt;True Arch &amp; True Dome&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Key change: &lt;span class=&quot;kw&quot;&gt;Corbelled arches&lt;/span&gt; (Mamluk) → &lt;span class=&quot;kw&quot;&gt;True Arches/Domes&lt;/span&gt; (Khalji) → &lt;span class=&quot;kw&quot;&gt;Double Domes&lt;/span&gt; (Lodi)&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh ds&quot;&gt;Architectural Evolution Flow&lt;/div&gt;
+    &lt;div class=&quot;arch-flow&quot;&gt;
+      &lt;div class=&quot;af-item&quot;&gt;🔲 Corbelled Arch&lt;br&gt;&lt;small&gt;Mamluk&lt;/small&gt;&lt;/div&gt;
+      &lt;span class=&quot;af-arrow&quot;&gt;→&lt;/span&gt;
+      &lt;div class=&quot;af-item&quot;&gt;⛩️ True Arch &amp; Dome&lt;br&gt;&lt;small&gt;Khalji&lt;/small&gt;&lt;/div&gt;
+      &lt;span class=&quot;af-arrow&quot;&gt;→&lt;/span&gt;
+      &lt;div class=&quot;af-item&quot;&gt;🏔️ Sloped Walls (Batter)&lt;br&gt;&lt;small&gt;Tughlaq&lt;/small&gt;&lt;/div&gt;
+      &lt;span class=&quot;af-arrow&quot;&gt;→&lt;/span&gt;
+      &lt;div class=&quot;af-item&quot;&gt;🔵 Double Dome&lt;br&gt;&lt;small&gt;Lodi&lt;/small&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Material Used&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Era&lt;/th&gt;&lt;th&gt;Material&lt;/th&gt;&lt;th&gt;Wall Style&lt;/th&gt;&lt;th&gt;Focus&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;Early (Mamluk)&lt;/td&gt;&lt;td&gt;Reused temple stone&lt;/td&gt;&lt;td&gt;Vertical&lt;/td&gt;&lt;td&gt;Mosques &amp; Minars&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;High (Khalji/Tughlaq)&lt;/td&gt;&lt;td&gt;Red Sandstone / Grey Quartzite&lt;/td&gt;&lt;td&gt;Sloping (Batter)&lt;/td&gt;&lt;td&gt;Fortified Cities&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Late (Lodi)&lt;/td&gt;&lt;td&gt;Grey Stone / Marble finishing&lt;/td&gt;&lt;td&gt;Decorative facades&lt;/td&gt;&lt;td&gt;Garden Tombs&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Mamluk Architecture --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-mamluk&quot;&gt;Mamluk&lt;/span&gt; Architecture (1206–1290)&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:8px;&quot;&gt;Characterized by &lt;span class=&quot;kw&quot;&gt;re-utilization&lt;/span&gt; of existing structures. Builders used &lt;span class=&quot;kw&quot;&gt;Corbelled technique&lt;/span&gt; before mastering the arch.&lt;/p&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Qutb-ud-din Aibak&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Quwwat-ul-Islam Mosque (Delhi)&lt;/span&gt; – materials from &lt;span class=&quot;kw&quot;&gt;27 Hindu &amp; Jain temples&lt;/span&gt;; &lt;span class=&quot;gr&quot;&gt;first congregational mosque&lt;/span&gt; in Delhi&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Qutb Minar&lt;/span&gt; – initiated as victory tower; Aibak completed only &lt;span class=&quot;kw&quot;&gt;first story&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Adhai Din Ka Jhonpra (Ajmer)&lt;/span&gt; – mosque built over former Sanskrit college; built traditionally in &lt;span class=&quot;kw&quot;&gt;2.5 days&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Iltutmish&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Qutb Minar Extension&lt;/span&gt; – added &lt;span class=&quot;kw&quot;&gt;three more stories&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Sultan Ghari&lt;/span&gt; – &lt;span class=&quot;gr&quot;&gt;first Islamic mausoleum (tomb)&lt;/span&gt; built in India; for son Nasiruddin Mahmud&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Gandhak ki Baoli&lt;/span&gt; – stepwell for Sufi saint &lt;span class=&quot;kw&quot;&gt;Bakhtiyar Kaki&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Ghiyas ud-din Balban&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Tomb of Balban (Mehrauli)&lt;/span&gt; – features the &lt;span class=&quot;gr&quot;&gt;FIRST &quot;True Arch&quot;&lt;/span&gt; in India; moved away from corbelled style&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Remember&lt;/div&gt;
+      &lt;span class=&quot;kw&quot;&gt;Balban&#x27;s Tomb&lt;/span&gt; = First True Arch in India. &quot;Balban broke the Corbel barrier!&quot;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Khalji Architecture --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-khalji&quot;&gt;Khalji&lt;/span&gt; Architecture (1290–1320)&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:8px;&quot;&gt;Introduced &lt;span class=&quot;kw&quot;&gt;Red Sandstone&lt;/span&gt;. Refined &lt;span class=&quot;kw&quot;&gt;True Dome&lt;/span&gt; &amp; &lt;span class=&quot;kw&quot;&gt;Horse-shoe arches&lt;/span&gt;.&lt;/p&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Alauddin Khalji&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Alai Darwaza&lt;/span&gt; – magnificent southern gateway to Quwwat-ul-Islam mosque; celebrated for symmetry &amp; &lt;span class=&quot;gr&quot;&gt;first use of the true dome&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Siri Fort&lt;/span&gt; – second city of Delhi; built to protect from &lt;span class=&quot;kw&quot;&gt;Mongol invasions&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Hauz Khas&lt;/span&gt; – large water reservoir (tank) to supply &lt;span class=&quot;kw&quot;&gt;city of Siri&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Jama&#x27;at Khana Masjid&lt;/span&gt; – built near dargah of &lt;span class=&quot;kw&quot;&gt;Nizamuddin Auliya&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Key Firsts&lt;/div&gt;
+      &lt;span class=&quot;kw&quot;&gt;Alai Darwaza&lt;/span&gt; = First True Dome in India. &quot;Alauddin&#x27;s Arch was Awesome (first dome)!&quot;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Tughlaq Architecture --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-tughlaq&quot;&gt;Tughlaq&lt;/span&gt; Architecture (1320–1414)&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:8px;&quot;&gt;Austere &amp; functional; grey quartzite stone; hallmark = &lt;span class=&quot;kw&quot;&gt;&quot;Batter&quot; (sloping walls)&lt;/span&gt; for strength.&lt;/p&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Ghiyasuddin Tughlaq&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Tughlaqabad Fort&lt;/span&gt; – &lt;span class=&quot;bl&quot;&gt;third city of Delhi&lt;/span&gt;; massive stone bastions&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Tomb of Ghiyasuddin Tughlaq&lt;/span&gt; – pentagonal structure; sloping walls; &lt;span class=&quot;kw&quot;&gt;white marble dome&lt;/span&gt; in fortified enclosure&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Muhammad bin Tughlaq&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Jahanpanah&lt;/span&gt; – &lt;span class=&quot;bl&quot;&gt;fourth city of Delhi&lt;/span&gt;; intended to enclose previous settlements&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Adilabad Fort&lt;/span&gt; – built atop hills of Tughlaqabad&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Firoz Shah Tughlaq&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Feroz Shah Kotla&lt;/span&gt; – &lt;span class=&quot;bl&quot;&gt;fifth city of Delhi&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Hauz Khas Complex&lt;/span&gt; – expanded Khalji-era tank + added &lt;span class=&quot;kw&quot;&gt;Madrasa (college)&lt;/span&gt; &amp; his tomb&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Ashokan Pillars&lt;/span&gt; – famously transported edicts from &lt;span class=&quot;kw&quot;&gt;Topra &amp; Meerut&lt;/span&gt; to be installed in Delhi&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 5 Cities of Delhi in Order&lt;/div&gt;
+      &lt;strong&gt;&quot;Quilts Silk Jute Adorn Firozabad&quot;&lt;/strong&gt; → Qila Rai Pithora (pre-sultanate) · &lt;span class=&quot;pu&quot;&gt;S&lt;/span&gt;iri (Alauddin) · &lt;span class=&quot;pu&quot;&gt;J&lt;/span&gt;ahanpanah (MBT) / &lt;span class=&quot;pu&quot;&gt;T&lt;/span&gt;ughlaqabad (Ghiyas) · &lt;span class=&quot;pu&quot;&gt;F&lt;/span&gt;eroz Shah Kotla (Firoz)&lt;br&gt;
+      &lt;em&gt;Simpler:&lt;/em&gt; &lt;strong&gt;Tughlaqabad → Siri → Jahanpanah → Feroz Shah Kotla&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Sayyid &amp; Lodi Architecture --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;&lt;span class=&quot;dyn-badge db-sayyid&quot;&gt;Sayyid&lt;/span&gt; &amp; &lt;span class=&quot;dyn-badge db-lodi&quot;&gt;Lodi&lt;/span&gt; Architecture (1414–1526)&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:8px;&quot;&gt;Known as &lt;span class=&quot;kw&quot;&gt;&quot;Period of the Macabre&quot;&lt;/span&gt; – proliferation of tombs.&lt;/p&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Octagonal Tombs&lt;/span&gt; – reserved for royalty (e.g., Tomb of Mubarak Shah Sayyid)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Square Tombs&lt;/span&gt; – built for high-ranking nobles&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Double Domes&lt;/span&gt; – exterior height with human-scale interior ceiling&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;sh ds&quot;&gt;Sikandar Lodi&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Lodi Gardens&lt;/span&gt; – Tomb of Sikandar Lodi; prime example of &lt;span class=&quot;kw&quot;&gt;double dome&lt;/span&gt; &amp; enclosed garden setting&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Motha ki Masjid&lt;/span&gt; – built by PM; showcases transition toward &lt;span class=&quot;kw&quot;&gt;Mughal style&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Architecture Summary Table --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;📊 Architecture Features – All Eras&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Feature&lt;/th&gt;&lt;th&gt;Early (Mamluk)&lt;/th&gt;&lt;th&gt;High (Khalji/Tughlaq)&lt;/th&gt;&lt;th&gt;Late (Lodi)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Technique&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Corbelled arches&lt;/td&gt;&lt;td&gt;True Arches &amp; Domes&lt;/td&gt;&lt;td&gt;Double Domes&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Material&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Reused temple stone&lt;/td&gt;&lt;td&gt;Red Sandstone / Grey Quartzite&lt;/td&gt;&lt;td&gt;Grey Stone / Marble finishing&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Wall Style&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Vertical&lt;/td&gt;&lt;td&gt;Sloping (Batter) – Tughlaq era&lt;/td&gt;&lt;td&gt;Decorative facades&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Focus&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Mosques &amp; Minars&lt;/td&gt;&lt;td&gt;Fortified Cities&lt;/td&gt;&lt;td&gt;Garden Tombs&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Architecture Firsts – Quick Fire&lt;/div&gt;
+      🥇 First mosque in Delhi = &lt;span class=&quot;kw&quot;&gt;Quwwat-ul-Islam&lt;/span&gt;&lt;br&gt;
+      🥇 First True Arch in India = &lt;span class=&quot;kw&quot;&gt;Tomb of Balban&lt;/span&gt;&lt;br&gt;
+      🥇 First True Dome in India = &lt;span class=&quot;kw&quot;&gt;Alai Darwaza&lt;/span&gt;&lt;br&gt;
+      🥇 First Islamic mausoleum in India = &lt;span class=&quot;kw&quot;&gt;Sultan Ghari&lt;/span&gt; (Iltutmish)
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ========== TAB 3: VE DYNASTIES ========== --&gt;
+&lt;div id=&quot;t3&quot; class=&quot;panel&quot;&gt;
+  &lt;span class=&quot;section-label sl-vj&quot;&gt;Vijayanagara Empire · 1336–1646&lt;/span&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;📌 Background &amp; Foundation&lt;/div&gt;
+    &lt;ul class=&quot;notes vj&quot;&gt;
+      &lt;li&gt;Founded in &lt;span class=&quot;kw&quot;&gt;1336 CE&lt;/span&gt; by &lt;span class=&quot;kw&quot;&gt;Harihara I &amp; Bukka Raya I&lt;/span&gt; of Sangama dynasty&lt;/li&gt;
+      &lt;li&gt;Established to resist &lt;span class=&quot;kw&quot;&gt;Turko-Persian invasions&lt;/span&gt; in Deccan &amp; preserve Hindu culture&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Capital:&lt;/span&gt; Hampi (Vijayanagar)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Region:&lt;/span&gt; Karnataka, Andhra, Tamil Nadu, Kerala parts&lt;/li&gt;
+      &lt;li&gt;Lasted until &lt;span class=&quot;kw&quot;&gt;1646 CE&lt;/span&gt; – over 310 years&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;fact-grid&quot;&gt;
+      &lt;div class=&quot;fact-item&quot;&gt;&lt;div class=&quot;fl&quot;&gt;Founded&lt;/div&gt;1336 CE&lt;/div&gt;
+      &lt;div class=&quot;fact-item&quot;&gt;&lt;div class=&quot;fl&quot;&gt;Ended&lt;/div&gt;1646 CE&lt;/div&gt;
+      &lt;div class=&quot;fact-item&quot;&gt;&lt;div class=&quot;fl&quot;&gt;Capital&lt;/div&gt;Hampi (Vijayanagar)&lt;/div&gt;
+      &lt;div class=&quot;fact-item&quot;&gt;&lt;div class=&quot;fl&quot;&gt;4 Dynasties&lt;/div&gt;Sangama → Saluva → Tuluva → Aravidu&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 4 Dynasties in Order&lt;/div&gt;
+      &lt;strong&gt;&quot;Salty Sugarcane Tastes Amazing&quot;&lt;/strong&gt; → &lt;span class=&quot;pu&quot;&gt;S&lt;/span&gt;angama · &lt;span class=&quot;pu&quot;&gt;S&lt;/span&gt;aluva · &lt;span class=&quot;pu&quot;&gt;T&lt;/span&gt;uluva · &lt;span class=&quot;pu&quot;&gt;A&lt;/span&gt;ravidu
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- SANGAMA --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;&lt;span class=&quot;dyn-badge db-sangama&quot;&gt;1336–1485&lt;/span&gt; Sangama Dynasty&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;vj-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Contributions&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Harihara I&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1336–1356&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • &lt;span class=&quot;kw&quot;&gt;&quot;Founder of Karnataka Kingdom&quot;&lt;/span&gt;&lt;br&gt;
+              • Established first administrative setup&lt;br&gt;
+              • Controlled region south of &lt;span class=&quot;kw&quot;&gt;Tungabhadra River&lt;/span&gt;&lt;br&gt;
+              • Divided empire into &lt;span class=&quot;kw&quot;&gt;&#x27;Stalhas&#x27; (provinces)&lt;/span&gt; for tax collection&lt;br&gt;
+              • Title: &lt;span class=&quot;kw&quot;&gt;&#x27;Purvapaschima Samudradhishvara&#x27;&lt;/span&gt; (Master of Eastern &amp; Western Seas)
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Bukka Raya I&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1356–1377&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Southern expansion; control over &lt;span class=&quot;kw&quot;&gt;Goa &amp; Krishna-Tungabhadra Doab&lt;/span&gt;&lt;br&gt;
+              • Defeated &lt;span class=&quot;kw&quot;&gt;Sultanate of Madurai (1370)&lt;/span&gt;&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Diplomatic embassy to Ming Dynasty (China) in 1374&lt;/span&gt;&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Sayanacharya&lt;/span&gt; wrote commentaries on the Vedas&lt;br&gt;
+              • Title: &lt;span class=&quot;kw&quot;&gt;&#x27;Vedamarga Sthapanacharya&#x27;&lt;/span&gt; (Establisher of the path of Vedas)
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Harihara II&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1377–1404&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • First to take title of &lt;span class=&quot;kw&quot;&gt;Maharajadhiraja&lt;/span&gt;&lt;br&gt;
+              • Extended empire beyond Krishna River → almost entire South India&lt;br&gt;
+              • Captured &lt;span class=&quot;kw&quot;&gt;Goa, Chaul &amp; Dabhol&lt;/span&gt; from Bahmani Sultanate (secured horse trade)
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Deva Raya I&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1406–1422&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Visionary ruler; infrastructure &amp; military modernization&lt;br&gt;
+              • Built &lt;span class=&quot;kw&quot;&gt;Dam across Tungabhadra River&lt;/span&gt;&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Military Reform:&lt;/span&gt; began recruiting Turkish/Muslim archers&lt;br&gt;
+              • Foreign Visit: Italian traveler &lt;span class=&quot;kw&quot;&gt;Nicolo Conti&lt;/span&gt; visited Hampi&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Treaty of 1407&lt;/span&gt; with Firuz Shah Bahmani; paid annual tribute; gave daughter in marriage
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Deva Raya II&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1422–1446&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Also known as &lt;span class=&quot;kw&quot;&gt;Praudha Devaraya / Imadi Devaraya&lt;/span&gt;&lt;br&gt;
+              • Empire reached &lt;span class=&quot;gr&quot;&gt;cultural &amp; territorial zenith&lt;/span&gt;&lt;br&gt;
+              • Defeated Zamorin of Calicut &amp; ruler of Quilon&lt;br&gt;
+              • Launched &lt;span class=&quot;kw&quot;&gt;naval expedition to Sri Lanka&lt;/span&gt;&lt;br&gt;
+              • Literature: Authored &lt;span class=&quot;kw&quot;&gt;&#x27;Mahanataka Sudhanidhi&#x27;&lt;/span&gt; (Sanskrit) + commentary on Brahma Sutras&lt;br&gt;
+              • Architecture: Built &lt;span class=&quot;kw&quot;&gt;Virupaksha Temple at Hampi&lt;/span&gt;&lt;br&gt;
+              • Title: &lt;span class=&quot;kw&quot;&gt;&#x27;Gajabetekara&#x27;&lt;/span&gt; (The Elephant Hunter)&lt;br&gt;
+              • Foreign Visit: Persian ambassador &lt;span class=&quot;kw&quot;&gt;Abdur Razzaq&lt;/span&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;warn-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;⚠️ Sangama Decline&lt;/div&gt;
+      Post Deva Raya II → Sangama Dynasty weakened due to &lt;span class=&quot;kw&quot;&gt;internal dissent &amp; external pressures&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- SALUVA --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;&lt;span class=&quot;dyn-badge db-saluva&quot;&gt;1485–1505&lt;/span&gt; Saluva Dynasty&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;vj-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Facts&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Saluva Narasimha&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1485–1491&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Seized throne through a &lt;span class=&quot;kw&quot;&gt;coup&lt;/span&gt; due to instability&lt;br&gt;
+              • Defended empire from Bahmani Sultanate&#x27;s successor states&lt;br&gt;
+              • &lt;span class=&quot;rd&quot;&gt;Decline:&lt;/span&gt; Lacked long-term stability; lasted only two decades
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- TULUVA --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;&lt;span class=&quot;dyn-badge db-tuluva&quot;&gt;1503–1570&lt;/span&gt; Tuluva Dynasty – Golden Age&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;vj-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Contributions&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Tuluva Narasa Nayaka&lt;/strong&gt;&lt;br&gt;&lt;small&gt;(Founder)&lt;/small&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;~1503&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Suppressed major revolts; reorganized shaky administration&lt;br&gt;
+              • Laid bedrock for son &lt;span class=&quot;kw&quot;&gt;Krishna Deva Raya&lt;/span&gt; to take empire to peak
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Krishna Deva Raya&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1509–1529&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • &lt;span class=&quot;gr&quot;&gt;Greatest ruler of Vijayanagara Empire&lt;/span&gt;&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Expansion:&lt;/span&gt; Defeated Gajapatis of Odisha; captured &lt;span class=&quot;kw&quot;&gt;Raichur Doab (1520)&lt;/span&gt; from Bijapur&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Portuguese Treaty:&lt;/span&gt; Alliance to monopolize horse trade&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Titles:&lt;/span&gt; &#x27;Andhra Bhoja&#x27;, Abhinava Bhoja, Andhra Pitamaha&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Ashtadiggajas:&lt;/span&gt; 8 legendary Telugu scholars in his court incl. &lt;span class=&quot;kw&quot;&gt;Allasani Peddana&lt;/span&gt; (Author of Manucharitam) &amp; Tenali Ramakrishna&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Literature:&lt;/span&gt; Authored &#x27;Amuktamalyada&#x27; (Telugu); Sanskrit works: &#x27;Jambavati Kalyanam&#x27; &amp; &#x27;Ushaparinayam&#x27;&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Vittalaswamy Temple:&lt;/span&gt; Famous for Stone Chariot &amp; Musical Pillars&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Hazara Ramaswamy Temple:&lt;/span&gt; Extensive bas-reliefs from Ramayana&lt;br&gt;
+              • &lt;span class=&quot;kw&quot;&gt;Nagalapuram City:&lt;/span&gt; Built in memory of his mother Nagaladevi
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Aliya Rama Raya&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;–&lt;/td&gt;
+            &lt;td&gt;
+              • &lt;span class=&quot;kw rd&quot;&gt;Battle of Talikota (1565 CE)&lt;/span&gt; (aka Rakshasa-Tangadi)&lt;br&gt;
+              • Defeated by coalition of Bijapur, Ahmadnagar, Golconda &amp; Bidar&lt;br&gt;
+              • Cause: Sultanates&#x27; &lt;span class=&quot;kw&quot;&gt;superior artillery &amp; Persian cavalry&lt;/span&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;warn-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💥 Battle of Talikota (1565) – Decisive End&lt;/div&gt;
+      Coalition = &lt;span class=&quot;kw&quot;&gt;Bijapur + Ahmadnagar + Golconda + Bidar&lt;/span&gt;&lt;br&gt;
+      💡 &lt;strong&gt;Mnemonic: &quot;Big Armies Go Battling&quot;&lt;/strong&gt; → Bijapur · Ahmadnagar · Golconda · Bidar
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- ARAVIDU --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;&lt;span class=&quot;dyn-badge db-aravidu&quot;&gt;1570–1646&lt;/span&gt; Aravidu Dynasty&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;vj-h&quot;&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Reign&lt;/th&gt;&lt;th&gt;Key Facts&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Tirumala Deva Raya&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1570–1572&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Officially founded Aravidu Dynasty in &lt;span class=&quot;kw&quot;&gt;1570&lt;/span&gt;&lt;br&gt;
+              • Restored political order after Hampi&#x27;s total destruction&lt;br&gt;
+              • Shifted capital to &lt;span class=&quot;kw&quot;&gt;Penukonda&lt;/span&gt;&lt;br&gt;
+              • Divided empire into &lt;span class=&quot;kw&quot;&gt;three linguistic zones&lt;/span&gt; (Telugu, Kannada, Tamil)
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Venkata II&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;yr yr-vj&quot;&gt;1585–1614&lt;/span&gt;&lt;/td&gt;
+            &lt;td&gt;
+              • Capital shift: Penukonda → &lt;span class=&quot;kw&quot;&gt;Chandragiri&lt;/span&gt;&lt;br&gt;
+              • Defended against repeated assaults from Bijapur &amp; Golconda&lt;br&gt;
+              • Contemporary of Mughal Emperor &lt;span class=&quot;kw&quot;&gt;Akbar&lt;/span&gt;; exchanged diplomatic letters&lt;br&gt;
+              • Allowed Portuguese to build &lt;span class=&quot;kw&quot;&gt;Jesuit churches&lt;/span&gt; – religious tolerance&lt;br&gt;
+              • &lt;span class=&quot;rd&quot;&gt;Decline:&lt;/span&gt; Continued Deccan Sultanate assaults + rising Nayakas of Madurai &amp; Tanjore declaring independence
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Capital Shifts --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;🏙️ Capital Shifts of Vijayanagara&lt;/div&gt;
+    &lt;div class=&quot;arch-flow&quot; style=&quot;--af-bg: var(--vj-light); --af-border: #A5D6A7; --af-color: var(--vj-accent);&quot;&gt;
+      &lt;div class=&quot;af-item&quot; style=&quot;background:var(--vj-light); border-color:#81C784; color:var(--vj-accent);&quot;&gt;Hampi&lt;br&gt;&lt;small&gt;Original Capital&lt;/small&gt;&lt;/div&gt;
+      &lt;span class=&quot;af-arrow&quot;&gt;→&lt;/span&gt;
+      &lt;div class=&quot;af-item&quot; style=&quot;background:var(--vj-light); border-color:#81C784; color:var(--vj-accent);&quot;&gt;Penukonda&lt;br&gt;&lt;small&gt;After Talikota (1565)&lt;/small&gt;&lt;/div&gt;
+      &lt;span class=&quot;af-arrow&quot;&gt;→&lt;/span&gt;
+      &lt;div class=&quot;af-item&quot; style=&quot;background:var(--vj-light); border-color:#81C784; color:var(--vj-accent);&quot;&gt;Chandragiri&lt;br&gt;&lt;small&gt;Venkata II&lt;/small&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ========== TAB 4: VE ADMINISTRATION ========== --&gt;
+&lt;div id=&quot;t4&quot; class=&quot;panel&quot;&gt;
+  &lt;span class=&quot;section-label sl-vj&quot;&gt;Vijayanagara · Administration &amp; Economy&lt;/span&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;👑 Monarchical System&lt;/div&gt;
+    &lt;ul class=&quot;notes vj&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;King&lt;/span&gt; = supreme authority; assisted by a &lt;span class=&quot;kw&quot;&gt;council of ministers&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh vj&quot;&gt;Key Officials&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;vj-h&quot;&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Role&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Mahapradhana&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Chief Minister – &lt;span class=&quot;gr&quot;&gt;Most important post&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Karyakartha&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Chief Secretary&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Adhikari&lt;/span&gt;&lt;/td&gt;&lt;td&gt;High-ranking Imperial Officers&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Pradhanas&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Members of the Cabinet/Council&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;🏛️ Provincial System&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem; color:var(--muted); margin-bottom:8px;&quot;&gt;Divided scientifically to ensure &lt;span class=&quot;kw&quot;&gt;tax collection &amp; control&lt;/span&gt;&lt;/p&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;vj-h&quot;&gt;&lt;th&gt;Level&lt;/th&gt;&lt;th&gt;Term&lt;/th&gt;&lt;th&gt;Equivalent / Head&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;Province&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Rajyas&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Headed by &lt;span class=&quot;kw&quot;&gt;Dandanayaka&lt;/span&gt; or &lt;span class=&quot;kw&quot;&gt;Dandanatha&lt;/span&gt; (usually royal family member)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Districts/Regions&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Vishaya / Vente / Kottam&lt;/span&gt;&lt;/td&gt;&lt;td&gt;–&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Counties&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Sime / Nadu&lt;/span&gt;&lt;/td&gt;&lt;td&gt;–&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Municipalities/Village clusters&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Kampana / Sthala&lt;/span&gt;&lt;/td&gt;&lt;td&gt;–&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 Administrative Units (Top → Bottom)&lt;/div&gt;
+      &lt;strong&gt;&quot;Raja&#x27;s Very Serious Kingdom&quot;&lt;/strong&gt; → &lt;span class=&quot;pu&quot;&gt;R&lt;/span&gt;ajyas · &lt;span class=&quot;pu&quot;&gt;V&lt;/span&gt;ishaya · &lt;span class=&quot;pu&quot;&gt;S&lt;/span&gt;ime/Nadu · &lt;span class=&quot;pu&quot;&gt;K&lt;/span&gt;ampana/Sthala
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;⚔️ Nayankara System&lt;/div&gt;
+    &lt;ul class=&quot;notes vj&quot;&gt;
+      &lt;li&gt;Similar to Delhi Sultanate&#x27;s &lt;span class=&quot;kw&quot;&gt;Iqta system&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Nayakas&lt;/span&gt; = Military governors of peripheral regions with &lt;span class=&quot;kw&quot;&gt;high autonomy&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;They managed &lt;span class=&quot;kw&quot;&gt;administration &amp; military&lt;/span&gt;; paid symbolic homage to king&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Amaram&lt;/span&gt; = specific land granted to military officers &lt;span class=&quot;kw&quot;&gt;instead of cash salary&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Comparison&lt;/div&gt;
+      Nayankara (Vijayanagara) ≈ &lt;span class=&quot;kw&quot;&gt;Iqta system (Delhi Sultanate)&lt;/span&gt; – both are land grants for military service
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;💰 Revenue System&lt;/div&gt;
+    &lt;ul class=&quot;notes vj&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Primary Source:&lt;/span&gt; Land Revenue → fixed at &lt;span class=&quot;gr&quot;&gt;1/6th of total product&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Mahanayakacharya&lt;/span&gt; = vital &quot;Link Officer&quot; → liaison between village authorities &amp; central government&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Other Income:&lt;/span&gt; Port customs, tributes from vassals, professional taxes&lt;/li&gt;
+      &lt;li&gt;Even &lt;span class=&quot;kw&quot;&gt;Temple Taxes&lt;/span&gt; were levied:&lt;/li&gt;
+      &lt;li&gt;&amp;nbsp;&amp;nbsp;→ &lt;span class=&quot;kw&quot;&gt;Srotriyas&lt;/span&gt; = Tax name in Telugu regions&lt;/li&gt;
+      &lt;li&gt;&amp;nbsp;&amp;nbsp;→ &lt;span class=&quot;kw&quot;&gt;Jodi&lt;/span&gt; = Tax name in Tamil regions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;🌊 Other Administrative Features&lt;/div&gt;
+    &lt;ul class=&quot;notes vj&quot;&gt;
+      &lt;li&gt;Famous for &lt;span class=&quot;kw&quot;&gt;water management systems&lt;/span&gt; – e.g., the &lt;span class=&quot;kw&quot;&gt;Kamalapure tank&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Urban sanitation &amp; market hygiene&lt;/span&gt; given importance&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Mahanavami festival&lt;/span&gt; marked the &lt;span class=&quot;gr&quot;&gt;official start of financial year&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Exam Fact&lt;/div&gt;
+      &lt;span class=&quot;kw&quot;&gt;Mahanavami / Mahanavmi&lt;/span&gt; = Financial year start in Vijayanagara – very frequently asked!
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ========== TAB 5: VE FOREIGN TRAVELLERS ========== --&gt;
+&lt;div id=&quot;t5&quot; class=&quot;panel&quot;&gt;
+  &lt;span class=&quot;section-label sl-vj&quot;&gt;Vijayanagara · Foreign Travellers&#x27; Accounts&lt;/span&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;✈️ Foreign Travellers – Complete Table&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;vj-h&quot;&gt;&lt;th&gt;Traveller&lt;/th&gt;&lt;th&gt;Origin&lt;/th&gt;&lt;th&gt;King&#x27;s Reign&lt;/th&gt;&lt;th&gt;Key Observations&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Ibn Battuta&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Morocco&lt;/td&gt;
+            &lt;td&gt;Harihara I&lt;/td&gt;
+            &lt;td&gt;Mentioned early &lt;span class=&quot;kw&quot;&gt;coastal trade&lt;/span&gt; &amp; rise of southern kingdoms&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Nicolo de Conti&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Italy (Venice)&lt;/td&gt;
+            &lt;td&gt;Deva Raya I&lt;/td&gt;
+            &lt;td&gt;Described city as &lt;span class=&quot;kw&quot;&gt;60 miles in circumference&lt;/span&gt;; noted festivals of &lt;span class=&quot;kw&quot;&gt;Deepavali &amp; Navaratri&lt;/span&gt;; mentioned slavery &amp; polygamy&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Abdur Razzak&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Persia&lt;/td&gt;
+            &lt;td&gt;Deva Raya II&lt;/td&gt;
+            &lt;td&gt;Famous quote about the city&#x27;s unparalleled beauty; described &lt;span class=&quot;kw&quot;&gt;seven lines of fortification&lt;/span&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Afanasy Nikitin&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Russia&lt;/td&gt;
+            &lt;td&gt;15th Century&lt;/td&gt;
+            &lt;td&gt;Merchant; focused on &lt;span class=&quot;kw&quot;&gt;wealth, markets &amp; trading practices&lt;/span&gt; of Deccan &amp; South India&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Ludovico de Varthema&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Italy&lt;/td&gt;
+            &lt;td&gt;Vira Narasimha&lt;/td&gt;
+            &lt;td&gt;One of first to describe Vijayanagara as great center for &lt;span class=&quot;kw&quot;&gt;trade in precious stones&lt;/span&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Duarte Barbosa&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Portugal&lt;/td&gt;
+            &lt;td&gt;Krishna Deva Raya&lt;/td&gt;
+            &lt;td&gt;Described &lt;span class=&quot;kw&quot;&gt;religious freedom&lt;/span&gt; in the empire; praised KDR as great administrator&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Domingo Paes&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Portugal&lt;/td&gt;
+            &lt;td&gt;Krishna Deva Raya&lt;/td&gt;
+            &lt;td&gt;&lt;span class=&quot;gr&quot;&gt;Most detailed description of Hampi&lt;/span&gt;; compared city&#x27;s size to &lt;span class=&quot;kw&quot;&gt;Rome&lt;/span&gt;; detailed Mahanavami festival &amp; KDR&#x27;s personality&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Fernao Nuniz&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Portugal&lt;/td&gt;
+            &lt;td&gt;Achyuta Deva Raya&lt;/td&gt;
+            &lt;td&gt;Horse trader who wrote history of the empire; noted that &lt;span class=&quot;kw&quot;&gt;women were wrestlers, astrologers &amp; accountants&lt;/span&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;Caesar Frederick&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Italy&lt;/td&gt;
+            &lt;td&gt;Post-Battle of Talikota&lt;/td&gt;
+            &lt;td&gt;Visited after 1565; described the &lt;span class=&quot;rd&quot;&gt;ruined state of Hampi&lt;/span&gt; after it was sacked by the Sultanates&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 Remember Key Travellers&lt;/div&gt;
+      &lt;strong&gt;&quot;Ibn Never Arrived – Absolute Fantasy, Dim Daylight, Famous Certainty&quot;&lt;/strong&gt;&lt;br&gt;
+      &lt;span class=&quot;pu&quot;&gt;I&lt;/span&gt;bn Battuta · &lt;span class=&quot;pu&quot;&gt;N&lt;/span&gt;icolo Conti · &lt;span class=&quot;pu&quot;&gt;A&lt;/span&gt;bdur Razzak · &lt;span class=&quot;pu&quot;&gt;A&lt;/span&gt;fanasy Nikitin · &lt;span class=&quot;pu&quot;&gt;L&lt;/span&gt;udovico · &lt;span class=&quot;pu&quot;&gt;D&lt;/span&gt;uarte Barbosa · &lt;span class=&quot;pu&quot;&gt;D&lt;/span&gt;omingo Paes · &lt;span class=&quot;pu&quot;&gt;F&lt;/span&gt;ernao Nuniz · &lt;span class=&quot;pu&quot;&gt;C&lt;/span&gt;aesar Frederick
+    &lt;/div&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Exam Highlights&lt;/div&gt;
+      ✅ &lt;span class=&quot;kw&quot;&gt;Domingo Paes&lt;/span&gt; = most detailed description of Hampi; compared to &lt;span class=&quot;kw&quot;&gt;Rome&lt;/span&gt;&lt;br&gt;
+      ✅ &lt;span class=&quot;kw&quot;&gt;Abdur Razzak&lt;/span&gt; = famous quote about city&#x27;s unparalleled beauty; &lt;span class=&quot;kw&quot;&gt;7 fortification lines&lt;/span&gt;&lt;br&gt;
+      ✅ &lt;span class=&quot;kw&quot;&gt;Nicolo Conti&lt;/span&gt; = city 60 miles circumference; Deepavali &amp; Navaratri&lt;br&gt;
+      ✅ &lt;span class=&quot;kw&quot;&gt;Fernao Nuniz&lt;/span&gt; = women as wrestlers/astrologers/accountants&lt;br&gt;
+      ✅ &lt;span class=&quot;kw&quot;&gt;Caesar Frederick&lt;/span&gt; = described ruins AFTER Talikota (1565)
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ========== TAB 6: QUICK REVISION ========== --&gt;
+&lt;div id=&quot;t6&quot; class=&quot;panel&quot;&gt;
+
+  &lt;div class=&quot;summary-box&quot;&gt;
+    &lt;div class=&quot;sum-title&quot; style=&quot;color:var(--ds-accent);&quot;&gt;⚡ DELHI SULTANATE – Quick Revision&lt;/div&gt;
+    &lt;ul class=&quot;notes ds&quot;&gt;
+      &lt;li&gt;1191–92 → &lt;span class=&quot;kw&quot;&gt;Battles of Tarain&lt;/span&gt; → Muhammad Ghori → Sultanate founded 1206&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;5 Dynasties:&lt;/span&gt; Mamluk → Khalji → Tughlaq → Sayyid → Lodi&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Iltutmish&lt;/span&gt; = Real consolidator; Iqta system; Silver Tanka; kept Mongols at bay&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Balban&lt;/span&gt; = Divine Kingship (Zil-i-Ilahi); Sijda &amp; Paibos; Diwan-i-Arz&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Khalji Revolution (1290)&lt;/span&gt; = broke Turkish monopoly&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Alauddin Khalji&lt;/span&gt; = Price Control; Malik Kafur; Siege of Chittor (1303); Alai Darwaza&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Muhammad bin Tughlaq&lt;/span&gt; = Capital shift to Daulatabad; Token Currency (failed)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Firoz Shah Tughlaq&lt;/span&gt; = Reformer King; 300 towns; Ashokan Pillars; Diwan-i-Khairat&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Timur invasion = 1398&lt;/span&gt;; Delhi sacked; appointed Khizr Khan&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Sikandar Lodi&lt;/span&gt; = Agra as capital; Sanskrit texts translated to Persian&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;First Battle of Panipat (1526)&lt;/span&gt; = Babur defeated Ibrahim Lodi → ended Sultanate&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;summary-box&quot; style=&quot;margin-top:14px;&quot;&gt;
+    &lt;div class=&quot;sum-title&quot; style=&quot;color:var(--vj-accent);&quot;&gt;⚡ VIJAYANAGARA EMPIRE – Quick Revision&lt;/div&gt;
+    &lt;ul class=&quot;notes vj&quot;&gt;
+      &lt;li&gt;Founded &lt;span class=&quot;kw&quot;&gt;1336&lt;/span&gt; by Harihara I &amp; Bukka Raya I; Capital = &lt;span class=&quot;kw&quot;&gt;Hampi&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;4 Dynasties:&lt;/span&gt; Sangama → Saluva → Tuluva → Aravidu&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Deva Raya II&lt;/span&gt; = zenith of empire; Abdur Razzak; Sri Lanka naval expedition&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Krishna Deva Raya (1509–1529)&lt;/span&gt; = greatest ruler; Ashtadiggajas; Amuktamalyada; Vittalaswamy Temple&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Battle of Talikota (1565)&lt;/span&gt; = Aliya Rama Raya defeated by Bijapur+Ahmadnagar+Golconda+Bidar&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Nayankara system&lt;/span&gt; = land grants (Amaram) to Nayakas ≈ Iqta system&lt;/li&gt;
+      &lt;li&gt;Land Revenue = &lt;span class=&quot;kw&quot;&gt;1/6th of produce&lt;/span&gt;; Mahanayakacharya = Link Officer&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Mahanavami&lt;/span&gt; = official financial year start&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Domingo Paes&lt;/span&gt; = most detailed description of Hampi; compared to Rome&lt;/li&gt;
+      &lt;li&gt;Capital shifts: Hampi → &lt;span class=&quot;kw&quot;&gt;Penukonda&lt;/span&gt; → &lt;span class=&quot;kw&quot;&gt;Chandragiri&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot; style=&quot;margin-top:14px;&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;🧠 All Mnemonics at a Glance&lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;DS – 5 Dynasties&lt;/div&gt;
+      &lt;strong&gt;&quot;Many Kings Travel Slowly Lazily&quot;&lt;/strong&gt; → Mamluk · Khalji · Tughlaq · Sayyid · Lodi
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;DS – Mamluk Rulers&lt;/div&gt;
+      &lt;strong&gt;&quot;Aibak Injured Razia Badly&quot;&lt;/strong&gt; → Aibak · Iltutmish · Razia · Balban
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;VE – 4 Dynasties&lt;/div&gt;
+      &lt;strong&gt;&quot;Salty Sugarcane Tastes Amazing&quot;&lt;/strong&gt; → Sangama · Saluva · Tuluva · Aravidu
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;VE – Battle of Talikota Coalition&lt;/div&gt;
+      &lt;strong&gt;&quot;Big Armies Go Battling&quot;&lt;/strong&gt; → Bijapur · Ahmadnagar · Golconda · Bidar
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;VE – Administrative Units&lt;/div&gt;
+      &lt;strong&gt;&quot;Raja&#x27;s Very Serious Kingdom&quot;&lt;/strong&gt; → Rajyas · Vishaya · Sime · Kampana
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;DS – Soil Horizons (Architecture Firsts)&lt;/div&gt;
+      Balban = First True Arch | Alai Darwaza = First True Dome | Sultan Ghari = First Mausoleum
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title ds&quot;&gt;🔑 Must-Remember Dates&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr class=&quot;ds-h&quot;&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Event&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1191–1192&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battles of Tarain – Ghori defeats Prithviraj Chauhan&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1206&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Qutb-ud-din Aibak founds Delhi Sultanate&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1290&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Khalji Revolution – Jalaluddin Khalji&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1303&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Siege of Chittor by Alauddin Khalji&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1320&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Tughlaq Dynasty begins (Ghiyasuddin)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1336&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Vijayanagara Empire founded – Harihara I &amp; Bukka Raya I&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1370&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Bukka Raya I defeats Sultanate of Madurai&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1398&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Timur (Tamerlane) sacks Delhi&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1451&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Lodi Dynasty – Bahlul Lodi (Afghan rule begins)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1509–1529&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Krishna Deva Raya – Golden Age of Vijayanagara&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1520&lt;/span&gt;&lt;/td&gt;&lt;td&gt;KDR captures Raichur Doab from Bijapur&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1526&lt;/span&gt;&lt;/td&gt;&lt;td&gt;First Battle of Panipat – Babur defeats Ibrahim Lodi&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1565&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Talikota – Vijayanagara empire collapses&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1646&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Aravidu Dynasty ends – Vijayanagara Empire ends&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title vj&quot;&gt;🎯 Tricky Exam Facts&lt;/div&gt;
+    &lt;ul class=&quot;notes vj&quot;&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Razia Sultan&lt;/span&gt; = first female ruler of Delhi; appointed &lt;span class=&quot;kw&quot;&gt;Ethiopian Yakut&lt;/span&gt; (not Arab)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Iltutmish&lt;/span&gt; = real consolidator (not founder) of Sultanate&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Muhammad bin Tughlaq&lt;/span&gt; = Brilliant but failed; capital shift + token currency both reversed&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Khalji Revolution&lt;/span&gt; = broke Turkish monopoly – first non-Turkish rulers&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Alai Darwaza&lt;/span&gt; = first TRUE DOME; Balban&#x27;s Tomb = first TRUE ARCH (different!)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Sultan Ghari&lt;/span&gt; = first Islamic mausoleum in India (Iltutmish, not Aibak)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Bahloli Coin&lt;/span&gt; = lasted until Akbar&#x27;s time!&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Deva Raya I&lt;/span&gt; = Nicolo Conti visited; &lt;span class=&quot;kw&quot;&gt;Deva Raya II&lt;/span&gt; = Abdur Razzak visited&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Domingo Paes&lt;/span&gt; = most detailed; compared Hampi to &lt;span class=&quot;kw&quot;&gt;Rome&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Fernao Nuniz&lt;/span&gt; = said women were wrestlers/astrologers/accountants&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Amaram&lt;/span&gt; = land grant to Nayakas (not to nobles like Iqta)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Mahanavami&lt;/span&gt; = financial year start (not a military event!)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Sayanacharya&lt;/span&gt; wrote Veda commentaries during Bukka Raya I&#x27;s reign&lt;/li&gt;
+      &lt;li&gt;💡 KDR built &lt;span class=&quot;kw&quot;&gt;Nagalapuram city&lt;/span&gt; in memory of &lt;span class=&quot;kw&quot;&gt;his mother&lt;/span&gt; Nagaladevi&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button id=&quot;scroll-top&quot; onclick=&quot;window.scrollTo({top:0,behavior:&#x27;smooth&#x27;})&quot; title=&quot;Scroll to top&quot;&gt;↑&lt;/button&gt;
+
+&lt;script&gt;
+  function showTab(id, btn, type) {
+    document.querySelectorAll(&#x27;.panel&#x27;).forEach(p =&gt; p.classList.remove(&#x27;active&#x27;));
+    document.querySelectorAll(&#x27;.tab-btn&#x27;).forEach(b =&gt; { b.classList.remove(&#x27;active-ds&#x27;,&#x27;active-vj&#x27;); });
+    document.getElementById(id).classList.add(&#x27;active&#x27;);
+    btn.classList.add(type === &#x27;vj&#x27; ? &#x27;active-vj&#x27; : &#x27;active-ds&#x27;);
+    window.scrollTo({top:0, behavior:&#x27;smooth&#x27;});
+  }
+  window.addEventListener(&#x27;scroll&#x27;, function() {
+    const btn = document.getElementById(&#x27;scroll-top&#x27;);
+    if (window.scrollY &gt; 300) btn.classList.add(&#x27;visible&#x27;);
+    else btn.classList.remove(&#x27;visible&#x27;);
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+    <iframe id="frame1" class="section-frame" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Mughal Empire – SSC 2026 Notes&lt;/title&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+  :root {
+    --bg: #F8F6F0;
+    --card: #FFFFFF;
+    --border: #E5DDD0;
+    --text: #1A1A1A;
+    --muted: #6B7280;
+    --acc: #6B2D0A;
+    --acc-light: #FDF3E7;
+    --acc-mid: #B45309;
+    --green: #166534;
+    --green-light: #F0FDF4;
+    --blue: #1E3A8A;
+    --blue-light: #EFF6FF;
+    --purple: #4C1D95;
+    --purple-light: #F5F3FF;
+    --orange: #92400E;
+    --orange-light: #FFFBEB;
+    --red: #991B1B;
+    --red-light: #FEF2F2;
+    --shadow: 0 1px 4px rgba(0,0,0,0.07);
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: &#x27;Inter&#x27;, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  .header { background: linear-gradient(135deg, #1A0800 0%, #7C3A0A 50%, #1A3A1A 100%); color: #fff; padding: 22px 20px 16px; text-align: center; }
+  .header h1 { font-family: &#x27;Merriweather&#x27;, serif; font-size: 1.5rem; margin-bottom: 4px; }
+  .header p { font-size: 0.82rem; opacity: 0.82; }
+
+  .tab-bar-wrap { background: var(--card); border-bottom: 2px solid var(--border); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .tab-bar-wrap::-webkit-scrollbar { display: none; }
+  .tab-bar { display: flex; gap: 4px; padding: 8px 12px; white-space: nowrap; min-width: max-content; }
+  .tab-btn { background: var(--acc-light); color: var(--acc); border: none; border-radius: 20px; padding: 7px 15px; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: &#x27;Inter&#x27;, sans-serif; transition: all 0.18s; flex-shrink: 0; }
+  .tab-btn.active { background: var(--acc); color: #fff; box-shadow: 0 2px 8px rgba(107,45,10,0.3); }
+  .tab-btn:hover:not(.active) { background: #F0D8C0; }
+
+  .panel { display: none; padding: 18px 15px 90px; max-width: 840px; margin: 0 auto; }
+  .panel.active { display: block; }
+
+  .card { background: var(--card); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: 16px 17px 13px; margin-bottom: 15px; }
+  .card-title { font-family: &#x27;Merriweather&#x27;, serif; font-size: 0.97rem; font-weight: 700; color: var(--acc); margin-bottom: 11px; padding-bottom: 8px; border-bottom: 2px solid var(--acc-light); display: flex; align-items: center; gap: 8px; }
+
+  ul.notes { list-style: none; padding: 0; }
+  ul.notes li { padding: 4px 0 4px 18px; position: relative; border-bottom: 1px dashed var(--border); font-size: 0.87rem; }
+  ul.notes li:last-child { border-bottom: none; }
+  ul.notes li::before { content: &#x27;▸&#x27;; position: absolute; left: 0; color: var(--acc-mid); font-size: 0.72rem; top: 7px; }
+
+  .kw { font-weight: 700; color: #111; }
+  .ac { color: var(--acc); font-weight: 600; }
+  .gr { color: var(--green); font-weight: 600; }
+  .rd { color: var(--red); font-weight: 600; }
+  .bl { color: var(--blue); font-weight: 600; }
+  .or { color: var(--orange); font-weight: 600; }
+  .pu { color: var(--purple); font-weight: 600; }
+
+  .sh { font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--acc-mid); margin: 12px 0 5px; }
+
+  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 8px; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.81rem; }
+  thead tr { background: var(--acc); color: #fff; }
+  thead th { padding: 8px 10px; text-align: left; font-weight: 600; }
+  tbody tr:nth-child(odd) { background: #FAF7F2; }
+  tbody tr:nth-child(even) { background: #fff; }
+  tbody td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.81rem; }
+  tbody tr:hover { background: var(--acc-light); }
+
+  .mnemo-box { background: var(--purple-light); border-left: 4px solid var(--purple); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .mnemo-box .lbl { font-weight: 700; color: var(--purple); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .tip-box { background: var(--green-light); border-left: 4px solid var(--green); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .tip-box .lbl { font-weight: 700; color: var(--green); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .warn-box { background: var(--orange-light); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .warn-box .lbl { font-weight: 700; color: var(--orange); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+  .imp-box { background: var(--blue-light); border-left: 4px solid var(--blue); border-radius: 0 8px 8px 0; padding: 9px 13px; margin: 9px 0; font-size: 0.84rem; }
+  .imp-box .lbl { font-weight: 700; color: var(--blue); font-size: 0.73rem; text-transform: uppercase; margin-bottom: 2px; }
+
+  .yr { display: inline-block; background: #F0E0C8; color: var(--acc); border-radius: 4px; font-size: 0.72rem; font-weight: 700; padding: 1px 7px; margin-left: 4px; }
+  .badge { display: inline-block; border-radius: 4px; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; margin-right: 4px; vertical-align: middle; }
+  .b-gold { background: #FEF3C7; color: #92400E; }
+  .b-red { background: #FEE2E2; color: #991B1B; }
+  .b-green { background: #D1FAE5; color: #065F46; }
+  .b-blue { background: #DBEAFE; color: #1E3A8A; }
+
+  .flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 10px 0; }
+  .fi { background: var(--acc-light); border: 1.5px solid #D4A870; border-radius: 6px; padding: 4px 11px; font-size: 0.79rem; font-weight: 600; color: var(--acc); }
+  .fa { color: var(--muted); font-weight: 700; }
+
+  .fact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  @media (max-width: 420px) { .fact-grid { grid-template-columns: 1fr; } }
+  .fact-item { background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; font-size: 0.8rem; }
+  .fact-item .fl { font-weight: 700; color: var(--muted); font-size: 0.68rem; text-transform: uppercase; margin-bottom: 2px; }
+
+  .summary-box { background: linear-gradient(135deg, #FDF3E7 0%, #F5F3FF 100%); border: 1.5px solid #D4B896; border-radius: var(--radius); padding: 15px; margin-top: 8px; font-size: 0.85rem; }
+  .sum-title { font-family: &#x27;Merriweather&#x27;, serif; font-size: 0.95rem; color: var(--acc); font-weight: 700; margin-bottom: 10px; }
+
+  #scroll-top { position: fixed; bottom: 22px; right: 18px; background: var(--acc); color: #fff; border: none; border-radius: 50%; width: 44px; height: 44px; font-size: 1.3rem; cursor: pointer; box-shadow: 0 4px 16px rgba(107,45,10,0.4); z-index: 999; display: none; align-items: center; justify-content: center; }
+  #scroll-top.visible { display: flex; }
+  #scroll-top:hover { background: #92400E; }
+
+  @media (max-width: 520px) { .header h1 { font-size: 1.15rem; } .panel { padding: 13px 10px 80px; } .card { padding: 13px 11px; } }
+
+  .arch-elem { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  @media (max-width: 480px) { .arch-elem { grid-template-columns: 1fr; } }
+  .ae-item { background: #FAF7F2; border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; font-size: 0.8rem; }
+  .ae-title { font-weight: 700; color: var(--acc); font-size: 0.8rem; margin-bottom: 3px; }
+
+  .emp-badge { display: inline-block; background: var(--acc); color: #fff; border-radius: 4px; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; margin-bottom: 6px; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;header&quot;&gt;
+  &lt;h1&gt;👑 Mughal Empire – SSC 2026&lt;/h1&gt;
+  &lt;p&gt;Siddhi Prep GS ASTRA · Complete Visual Notes · Emperors · Administration · Architecture&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tab-bar-wrap&quot;&gt;
+  &lt;div class=&quot;tab-bar&quot;&gt;
+    &lt;button class=&quot;tab-btn active&quot; onclick=&quot;showTab(&#x27;t1&#x27;,this)&quot;&gt;🏹 Babur &amp; Humayun&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t2&#x27;,this)&quot;&gt;⚔️ Akbar&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t3&#x27;,this)&quot;&gt;🎨 Jahangir &amp; Shah Jahan&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t4&#x27;,this)&quot;&gt;🕌 Aurangzeb&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t5&#x27;,this)&quot;&gt;🏛️ Architecture&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t6&#x27;,this)&quot;&gt;⚙️ Administration&lt;/button&gt;
+    &lt;button class=&quot;tab-btn&quot; onclick=&quot;showTab(&#x27;t7&#x27;,this)&quot;&gt;📝 Quick Revision&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ===== TAB 1: BABUR &amp; HUMAYUN ===== --&gt;
+&lt;div id=&quot;t1&quot; class=&quot;panel active&quot;&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;📌 Mughal Empire – Overview&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;300-year spectacle&lt;/span&gt; of wealth, warfare &amp; breathtaking art&lt;/li&gt;
+      &lt;li&gt;Founded by a &lt;span class=&quot;kw&quot;&gt;fugitive prince from Central Asia&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Blended &lt;span class=&quot;kw&quot;&gt;Persian, Islamic &amp; Indian traditions&lt;/span&gt; → unique &lt;span class=&quot;kw&quot;&gt;&quot;Indo-Islamic&quot; civilization&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🏹 BABUR &lt;span class=&quot;yr&quot;&gt;1526–1530&lt;/span&gt;&lt;/div&gt;
+    &lt;span class=&quot;emp-badge&quot;&gt;1st Mughal Emperor&lt;/span&gt;
+    &lt;div class=&quot;sh&quot;&gt;Early Struggles (1494–1504)&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;At age &lt;span class=&quot;kw&quot;&gt;12&lt;/span&gt;, inherited principality of &lt;span class=&quot;kw&quot;&gt;Farghana&lt;/span&gt; (modern-day Uzbekistan) after father Umar Sheikh Mirza died&lt;/li&gt;
+      &lt;li&gt;Descendant of &lt;span class=&quot;kw&quot;&gt;Timur (father&#x27;s side)&lt;/span&gt; &amp; &lt;span class=&quot;kw&quot;&gt;Genghis Khan (mother&#x27;s side)&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Obsessed with capturing &lt;span class=&quot;kw&quot;&gt;Samarkand&lt;/span&gt; – ancestral seat of Timur&lt;/li&gt;
+      &lt;li&gt;Captured Samarkand &lt;span class=&quot;kw&quot;&gt;3 times&lt;/span&gt; but could never hold it → lost both Samarkand &amp; Farghana → became a &quot;homeless prince&quot;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Kabul (1504):&lt;/span&gt; Moved south, captured Kabul → became base for India&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Entry into India – Invited By&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;1. &lt;span class=&quot;kw&quot;&gt;Daulat Khan Lodi&lt;/span&gt; – Governor of Punjab&lt;/li&gt;
+      &lt;li&gt;2. &lt;span class=&quot;kw&quot;&gt;Alam Khan&lt;/span&gt; – Uncle of Ibrahim Lodi&lt;/li&gt;
+      &lt;li&gt;3. &lt;span class=&quot;kw&quot;&gt;Rana Sanga&lt;/span&gt; – King of Mewar (per Babur&#x27;s memoirs)&lt;/li&gt;
+      &lt;li&gt;⚠️ They believed Babur would raid &amp; leave like Timur — underestimated his intention to &lt;span class=&quot;kw&quot;&gt;stay&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;4 Key Battles of Babur&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Battle&lt;/th&gt;&lt;th&gt;Opponent&lt;/th&gt;&lt;th&gt;Significance&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1526&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1st Battle of Panipat&lt;/td&gt;&lt;td&gt;Ibrahim Lodi&lt;/td&gt;&lt;td&gt;Used &lt;span class=&quot;kw&quot;&gt;Tulughma&lt;/span&gt; (flanking) &amp; &lt;span class=&quot;kw&quot;&gt;Araba&lt;/span&gt; (artillery). Ended Delhi Sultanate.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1527&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Khanwa&lt;/td&gt;&lt;td&gt;Rana Sanga&lt;/td&gt;&lt;td&gt;Proclaimed &lt;span class=&quot;kw&quot;&gt;Jihad&lt;/span&gt;; took title &lt;span class=&quot;kw&quot;&gt;Ghazi&lt;/span&gt;. Defeated Rajput confederacy.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1528&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Chanderi&lt;/td&gt;&lt;td&gt;Medini Rai&lt;/td&gt;&lt;td&gt;Secured Mughal control over &lt;span class=&quot;kw&quot;&gt;Malwa &amp; Central India&lt;/span&gt;.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1529&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Ghagra&lt;/td&gt;&lt;td&gt;Afghan Chiefs&lt;/td&gt;&lt;td&gt;Defeated joint Afghan forces from &lt;span class=&quot;kw&quot;&gt;Bihar &amp; Bengal&lt;/span&gt;.&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sh&quot;&gt;Military Techniques of Babur&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Tulughma System&lt;/span&gt; – encirclement/flanking tactic&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Araba (Wagon-Fort) Method&lt;/span&gt; – cannons hidden behind wagons; Ottoman influence&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Mobility &amp; Horse Archers&lt;/span&gt; – Parthian shot, kiting, rapid attack (Turco-Mongol style)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Gunpowder &amp; Field Artillery&lt;/span&gt; – light &amp; movable; matchlockmen; cannon fire-inducing sounds&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Discipline &amp; Terrain Use&lt;/span&gt; – disciplined formations vs terrain anchorage, fortified ditches&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Literature&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Tuzuk-i-Baburi (Baburnama)&lt;/span&gt; – written in &lt;span class=&quot;kw&quot;&gt;Chagatai Turkic&lt;/span&gt;; candid autobiography&lt;/li&gt;
+      &lt;li&gt;Translated into Persian by &lt;span class=&quot;kw&quot;&gt;Abdur Rahim Khan-i-Khana&lt;/span&gt; in &lt;span class=&quot;kw&quot;&gt;1589&lt;/span&gt; during Akbar&#x27;s reign&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 Babur&#x27;s 4 Battles in Order&lt;/div&gt;
+      &lt;strong&gt;&quot;Panipat&#x27;s Khan Charged Gallantly&quot;&lt;/strong&gt; → &lt;span class=&quot;pu&quot;&gt;P&lt;/span&gt;anipat · &lt;span class=&quot;pu&quot;&gt;Kh&lt;/span&gt;anwa · &lt;span class=&quot;pu&quot;&gt;Ch&lt;/span&gt;anderi · &lt;span class=&quot;pu&quot;&gt;G&lt;/span&gt;hagra
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;😔 HUMAYUN &lt;span class=&quot;yr&quot;&gt;1530–1540&lt;/span&gt; &amp; &lt;span class=&quot;yr&quot;&gt;1555–1556&lt;/span&gt;&lt;/div&gt;
+    &lt;span class=&quot;emp-badge&quot;&gt;2nd Mughal Emperor&lt;/span&gt;
+    &lt;div class=&quot;imp-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;📜 Famous Quote&lt;/div&gt;
+      &quot;Humayun tumbled through life, and he tumbled out of it.&quot; – Historian Stanley Lane-Poole
+    &lt;/div&gt;
+    &lt;div class=&quot;sh&quot;&gt;Early Challenges – 3 Main Enemies&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;1. &lt;span class=&quot;kw&quot;&gt;Afghans&lt;/span&gt; – led by brilliant &lt;span class=&quot;kw&quot;&gt;Sher Shah Suri&lt;/span&gt; in East (Bihar/Bengal)&lt;/li&gt;
+      &lt;li&gt;2. &lt;span class=&quot;kw&quot;&gt;Bahadur Shah of Gujarat&lt;/span&gt; – powerful regional ruler from West&lt;/li&gt;
+      &lt;li&gt;3. &lt;span class=&quot;kw&quot;&gt;His Own Brothers&lt;/span&gt; – Kamran, Hindal &amp; Askari frequently revolted&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Siege of Chunar (1532):&lt;/span&gt; First encounter with Sher Shah; Humayun accepted tactical submission → gave Sher Shah time to consolidate&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Conflict with Sher Shah Suri&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Battle of Chausa (1539):&lt;/span&gt; Sher Shah surprise attack; Humayun escaped by jumping into Ganges, saved by water-carrier &lt;span class=&quot;kw&quot;&gt;Nizam&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Battle of Kannauj/Bilgram (1540):&lt;/span&gt; Decisive defeat; Humayun lost throne &amp; fled&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Period of Exile (1540–1555) – 15 Years&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Wandered through Rajasthan, Sindh, eventually Persia&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Birth of Akbar (1542)&lt;/span&gt; – born in exile at &lt;span class=&quot;kw&quot;&gt;Amarkot (Umarkot)&lt;/span&gt; in palace of Rana Prasad&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Safavid Help:&lt;/span&gt; Took refuge with &lt;span class=&quot;kw&quot;&gt;Shah Tahmasp&lt;/span&gt; of Persia; agreed to convert to Shia Islam (nominally) &amp; cede &lt;span class=&quot;kw&quot;&gt;Kandahar&lt;/span&gt; to Persians in exchange for military aid&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Restoration &amp; Death (1555–1556)&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;After Sher Shah&#x27;s death &amp; decline of Sur Dynasty → opportunity arose&lt;/li&gt;
+      &lt;li&gt;With loyal general &lt;span class=&quot;kw&quot;&gt;Bairam Khan&lt;/span&gt; → defeated Afghans at &lt;span class=&quot;kw&quot;&gt;Battle of Machhiwara &amp; Sirhind (1555)&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Re-occupied Delhi in &lt;span class=&quot;kw&quot;&gt;July 1555&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Tragic End (1556):&lt;/span&gt; Died falling from stairs of his library, &lt;span class=&quot;kw&quot;&gt;Sher Mandal&lt;/span&gt;, at Purana Qila&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Art &amp; Literature&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;During exile recruited Persian painters &lt;span class=&quot;kw&quot;&gt;Mir Sayyid Ali &amp; Abdus Samad&lt;/span&gt; → laid foundation for &lt;span class=&quot;kw&quot;&gt;Mughal School of Painting&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Sister &lt;span class=&quot;kw&quot;&gt;Gulbadan Begum&lt;/span&gt; wrote &lt;span class=&quot;kw&quot;&gt;Humayun-Nama&lt;/span&gt; – rare intimate look into Mughal royal household&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🔶 Sher Shah Suri (1486–1545) – The Interregnum&lt;/div&gt;
+    &lt;span class=&quot;badge b-red&quot;&gt;Not a Mughal – Sur Empire&lt;/span&gt;
+    &lt;div class=&quot;sh&quot;&gt;Rise to Power&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Born as &lt;span class=&quot;kw&quot;&gt;Farid Khan&lt;/span&gt; in Sasaram, Bihar; served in Bihar Sultan&#x27;s army&lt;/li&gt;
+      &lt;li&gt;Captured Sasaram; established &lt;span class=&quot;kw&quot;&gt;Sur Empire&lt;/span&gt; as ruler of North India&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Key Achievements&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Introduced &lt;span class=&quot;kw&quot;&gt;uniform land revenue measurement&lt;/span&gt;; land measured in &lt;span class=&quot;kw&quot;&gt;Bigha&lt;/span&gt; &amp; classified on soil basis&lt;/li&gt;
+      &lt;li&gt;Average produce calculated; &lt;span class=&quot;kw&quot;&gt;1/3rd&lt;/span&gt; was state&#x27;s share&lt;/li&gt;
+      &lt;li&gt;Revenue collected in &lt;span class=&quot;kw&quot;&gt;cash, not in kind&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Peasants given receipts (&lt;span class=&quot;kw&quot;&gt;Patta&lt;/span&gt;); state had records (&lt;span class=&quot;kw&quot;&gt;Qabuliyat&lt;/span&gt;)&lt;/li&gt;
+      &lt;li&gt;Reduced role of middlemen; fair treatment of peasants&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Administrative Reforms&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Centralized administration with well-organized bureaucracy&lt;/li&gt;
+      &lt;li&gt;Divided empire into Provinces (&lt;span class=&quot;kw&quot;&gt;Sarkar&lt;/span&gt;), Districts (&lt;span class=&quot;kw&quot;&gt;Pargana&lt;/span&gt;) &amp; Villages&lt;/li&gt;
+      &lt;li&gt;Officials appointed on &lt;span class=&quot;kw&quot;&gt;merit basis&lt;/span&gt;; efficient espionage system; comprehensive revenue system&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Economic Reforms&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Uniform system of &lt;span class=&quot;kw&quot;&gt;weights &amp; measures&lt;/span&gt;; encouraged trade &amp; commerce&lt;/li&gt;
+      &lt;li&gt;Issued &lt;span class=&quot;kw&quot;&gt;silver coins (Rupee)&lt;/span&gt; of high purity → became the standard&lt;/li&gt;
+      &lt;li&gt;Promoted agriculture &amp; irrigation&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Public Welfare&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Built &lt;span class=&quot;kw&quot;&gt;Grand Trunk Road&lt;/span&gt; (Bengal to Punjab) – most famous road&lt;/li&gt;
+      &lt;li&gt;Planted trees on both sides; built rest houses (&lt;span class=&quot;kw&quot;&gt;Sarai&lt;/span&gt;) for travelers&lt;/li&gt;
+      &lt;li&gt;Constructed wells, bridges; ensured facilities for people&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Military &amp; Other&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Strong disciplined army; used artillery effectively&lt;/li&gt;
+      &lt;li&gt;Built many forts, mosques &amp; Sarai&lt;/li&gt;
+      &lt;li&gt;His &lt;span class=&quot;kw&quot;&gt;tomb in Sasaram&lt;/span&gt; – fine example of &lt;span class=&quot;kw&quot;&gt;Indo-Islamic architecture&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Known for justice, discipline &amp; concern for subjects&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Key Line&lt;/div&gt;
+      &quot;Sher Shah Suri&#x27;s reforms laid a strong foundation for good governance, which was later followed by the Mughals.&quot;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ===== TAB 2: AKBAR ===== --&gt;
+&lt;div id=&quot;t2&quot; class=&quot;panel&quot;&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;⚔️ AKBAR &lt;span class=&quot;yr&quot;&gt;1556–1605&lt;/span&gt;&lt;/div&gt;
+    &lt;span class=&quot;emp-badge&quot;&gt;3rd Mughal Emperor – &quot;Empire Builder&quot;&lt;/span&gt;
+    &lt;div class=&quot;sh&quot;&gt;Early Phase: Regency &amp; Consolidation&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Accession (1556):&lt;/span&gt; Crowned at age &lt;span class=&quot;kw&quot;&gt;13&lt;/span&gt; at &lt;span class=&quot;kw&quot;&gt;Kalanaur (Punjab)&lt;/span&gt;; tutor &lt;span class=&quot;kw&quot;&gt;Bairam Khan&lt;/span&gt; appointed Regent (&lt;span class=&quot;kw&quot;&gt;Wakil&lt;/span&gt;)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Second Battle of Panipat (1556):&lt;/span&gt; Bairam Khan defeated &lt;span class=&quot;kw&quot;&gt;Hemu&lt;/span&gt; (general of Sur dynasty) → &quot;real&quot; start of Mughal Empire&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;End of Regency (1560–62):&lt;/span&gt; Dismissed Bairam Khan; survived &lt;span class=&quot;kw&quot;&gt;&quot;Petticoat Government&quot;&lt;/span&gt; (1560–62) where foster mother &lt;span class=&quot;kw&quot;&gt;Maham Anga&lt;/span&gt; held significant influence&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Rajput Policy – A Masterstroke&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Realized to rule India → needed support of &lt;span class=&quot;kw&quot;&gt;Rajputs&lt;/span&gt;, most powerful local warriors&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Matrimonial Alliances (1562):&lt;/span&gt; Married daughter of &lt;span class=&quot;kw&quot;&gt;Raja Bharmal of Amber&lt;/span&gt; (Harka Bai / Jodha Bai) → Amber house became most loyal allies&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Watan Jagir:&lt;/span&gt; Allowed Rajput kings to keep ancestral lands (Watan) as long as they accepted &lt;span class=&quot;kw&quot;&gt;Mughal suzerainty&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Battle of Haldighati (1576):&lt;/span&gt; Maharana Pratap of Mewar resisted; Akbar&#x27;s army led by &lt;span class=&quot;kw&quot;&gt;Raja Man Singh&lt;/span&gt; (a Rajput!) defeated him; Mewar never fully absorbed&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Military Campaigns of Akbar&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Campaign&lt;/th&gt;&lt;th&gt;Opponent&lt;/th&gt;&lt;th&gt;Significance&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;1556&lt;/td&gt;&lt;td&gt;2nd Battle of Panipat&lt;/td&gt;&lt;td&gt;Hemu&lt;/td&gt;&lt;td&gt;Re-established Mughal rule; ended Afghan challenge&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1561&lt;/td&gt;&lt;td&gt;Conquest of Malwa&lt;/td&gt;&lt;td&gt;Baz Bahadur&lt;/td&gt;&lt;td&gt;First independent conquest; expanded to Central India&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1568&lt;/td&gt;&lt;td&gt;Siege of Chittor&lt;/td&gt;&lt;td&gt;Udai Singh II (Mewar)&lt;/td&gt;&lt;td&gt;Major psychological victory vs Rajputs&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1572–73&lt;/td&gt;&lt;td&gt;Gujarat Campaign&lt;/td&gt;&lt;td&gt;Muzaffar Shah III&lt;/td&gt;&lt;td&gt;Access to sea trade; Buland Darwaza built&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1576&lt;/td&gt;&lt;td&gt;Battle of Haldighati&lt;/td&gt;&lt;td&gt;Maharana Pratap&lt;/td&gt;&lt;td&gt;Pratap continued guerrilla warfare; Man Singh led Mughals&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1576&lt;/td&gt;&lt;td&gt;Conquest of Bengal&lt;/td&gt;&lt;td&gt;Dawood Khan Karrani&lt;/td&gt;&lt;td&gt;Ended last Afghan kingdom; integrated Bengal&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1581&lt;/td&gt;&lt;td&gt;Kabul Campaign&lt;/td&gt;&lt;td&gt;Mirza Hakim (half-brother)&lt;/td&gt;&lt;td&gt;Secured NW frontier; first Mughal to cross Indus since Humayun&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1586&lt;/td&gt;&lt;td&gt;Conquest of Kashmir&lt;/td&gt;&lt;td&gt;Yusuf Shah Chak&lt;/td&gt;&lt;td&gt;Strategically important for northern security&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1601&lt;/td&gt;&lt;td&gt;Siege of Asirgarh&lt;/td&gt;&lt;td&gt;Mir Bahadur (Khandesh)&lt;/td&gt;&lt;td&gt;Akbar&#x27;s last major conquest; &quot;Gateway to Deccan&quot;&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;⚙️ Akbar&#x27;s Administrative Reforms&lt;/div&gt;
+    &lt;div class=&quot;sh&quot;&gt;A. Mansabdari System&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Unique &lt;span class=&quot;kw&quot;&gt;grading system&lt;/span&gt; for all civil &amp; military officers&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Zat:&lt;/span&gt; Personal rank &amp; salary&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Sawar:&lt;/span&gt; Number of cavalrymen the officer had to maintain&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Dagh:&lt;/span&gt; Branding of horses (to prevent fraud)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Chehra:&lt;/span&gt; Descriptive rolls of soldiers&lt;/li&gt;
+      &lt;li&gt;Ranks ranged from &lt;span class=&quot;kw&quot;&gt;10 to 10,000&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;B. Land Revenue – Zabt / Dahshala System&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Created by &lt;span class=&quot;kw&quot;&gt;Raja Todar Mal&lt;/span&gt; (Navaratna)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Dahshala:&lt;/span&gt; Average produce &amp; prices of last &lt;span class=&quot;kw&quot;&gt;10 years&lt;/span&gt;; state&#x27;s share = &lt;span class=&quot;kw&quot;&gt;1/3rd&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Land Classification: &lt;span class=&quot;kw&quot;&gt;Polaj&lt;/span&gt; (best, always cultivated) → &lt;span class=&quot;kw&quot;&gt;Parauti&lt;/span&gt; → &lt;span class=&quot;kw&quot;&gt;Chachar&lt;/span&gt; → &lt;span class=&quot;kw&quot;&gt;Banjar&lt;/span&gt; (worst)&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 Land Classification (Best → Worst)&lt;/div&gt;
+      &lt;strong&gt;&quot;Poor Peasants Can&#x27;t Bear&quot;&lt;/strong&gt; → &lt;span class=&quot;pu&quot;&gt;Po&lt;/span&gt;laj · &lt;span class=&quot;pu&quot;&gt;Pa&lt;/span&gt;rauti · &lt;span class=&quot;pu&quot;&gt;C&lt;/span&gt;hachar · &lt;span class=&quot;pu&quot;&gt;B&lt;/span&gt;anjar
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🕌 Akbar&#x27;s Religious Policy – Sulh-i-Kul&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem;color:var(--muted);margin-bottom:8px;&quot;&gt;Shifted from orthodox Islam to &lt;span class=&quot;kw&quot;&gt;&quot;Universal Peace&quot;&lt;/span&gt;&lt;/p&gt;
+    &lt;div class=&quot;sh&quot;&gt;Timeline of Religious Reforms&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;1563:&lt;/span&gt; Abolished &lt;span class=&quot;kw&quot;&gt;Pilgrim Tax&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;1564:&lt;/span&gt; Abolished &lt;span class=&quot;kw&quot;&gt;Jizya&lt;/span&gt; (poll tax on non-Muslims)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;1575:&lt;/span&gt; Built &lt;span class=&quot;kw&quot;&gt;Ibadat Khana&lt;/span&gt; (House of Worship) at Fatehpur Sikri&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;1579:&lt;/span&gt; Issued &lt;span class=&quot;kw&quot;&gt;Mazhar-i-Nama&lt;/span&gt; (Infallibility Decree) – made him supreme judge in religious matters&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;1582:&lt;/span&gt; Introduced &lt;span class=&quot;kw&quot;&gt;Din-i-Ilahi&lt;/span&gt; (Tawhid-i-Ilahi) – NOT a religion; a code of conduct; &lt;span class=&quot;kw&quot;&gt;Birbal&lt;/span&gt; was the only prominent noble to accept it&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Year Trick for Akbar&#x27;s Reforms&lt;/div&gt;
+      63-64-75-79-82: &quot;63 is pilgrim year, 64 Jizya&#x27;s fear, 75 built worship&#x27;s peer, 79 Mazhar&#x27;s decree was clear, 82 Din-i-Ilahi appeared&quot;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;✨ Akbar&#x27;s Navaratnas (Nine Gems)&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Field&lt;/th&gt;&lt;th&gt;Key Fact&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Abul Fazl&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Historian&lt;/td&gt;&lt;td&gt;Author of Akbarnama; also wrote Ain-i-Akbari&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Faizi&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Poet&lt;/td&gt;&lt;td&gt;Great Persian poet &amp; scholar; brother of Abul Fazl&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Tansen&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Musician&lt;/td&gt;&lt;td&gt;Legendary musician &amp; vocalist; melodies celebrated in Indian classical music&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Todar Mal&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Finance Minister&lt;/td&gt;&lt;td&gt;Reformer of revenue system; introduced Zabt/Dahshala system&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Man Singh&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Rajput Commander&lt;/td&gt;&lt;td&gt;Trusted general; led Mughal forces at Haldighati&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Birbal&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Courtier&lt;/td&gt;&lt;td&gt;Known for wit &amp; wisdom; only noble to accept Din-i-Ilahi&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Abdul Rahim Khan-i-Khana&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Scholar &amp; Poet&lt;/td&gt;&lt;td&gt;Wrote couplets (dohas) in Hindi &amp; Persian&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Hamim Human&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Courtier &amp; Translator&lt;/td&gt;&lt;td&gt;Well-versed in Sanskrit &amp; Persian; translated many works&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Mulla Do-Piyaza&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Jester &amp; Wit&lt;/td&gt;&lt;td&gt;Famous for clever jokes and humorous stories&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 Remember 9 Navaratnas&lt;/div&gt;
+      &lt;strong&gt;&quot;After Faizi, Tansen&#x27;s Tune Made Birbal &amp; Abdul Happy Mulla&quot;&lt;/strong&gt;&lt;br&gt;
+      &lt;span class=&quot;pu&quot;&gt;A&lt;/span&gt;bul Fazl · &lt;span class=&quot;pu&quot;&gt;F&lt;/span&gt;aizi · &lt;span class=&quot;pu&quot;&gt;T&lt;/span&gt;ansen · &lt;span class=&quot;pu&quot;&gt;T&lt;/span&gt;odar Mal · &lt;span class=&quot;pu&quot;&gt;M&lt;/span&gt;an Singh · &lt;span class=&quot;pu&quot;&gt;B&lt;/span&gt;irbal · &lt;span class=&quot;pu&quot;&gt;A&lt;/span&gt;bdul Rahim · &lt;span class=&quot;pu&quot;&gt;H&lt;/span&gt;amim Human · &lt;span class=&quot;pu&quot;&gt;M&lt;/span&gt;ulla Do-Piyaza
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ===== TAB 3: JAHANGIR &amp; SHAH JAHAN ===== --&gt;
+&lt;div id=&quot;t3&quot; class=&quot;panel&quot;&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🎨 JAHANGIR &lt;span class=&quot;yr&quot;&gt;1605–1627&lt;/span&gt;&lt;/div&gt;
+    &lt;span class=&quot;emp-badge&quot;&gt;4th Mughal Emperor – &quot;Empire Preserver&quot;&lt;/span&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Born as &lt;span class=&quot;kw&quot;&gt;Prince Salim&lt;/span&gt;; remembered as &quot;Empire Preserver&quot; &amp; great patron of arts&lt;/li&gt;
+      &lt;li&gt;Title: &lt;span class=&quot;kw&quot;&gt;Nur-ud-din Muhammad Jahangir&lt;/span&gt; (Conqueror of the World) – taken 1605&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Early Challenges&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Rebellion of Prince Khusrau:&lt;/span&gt; Immediately after accession; his eldest son Khusrau rebelled with help of &lt;span class=&quot;kw&quot;&gt;5th Sikh Guru, Guru Arjan Dev&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Consequence: &lt;span class=&quot;kw&quot;&gt;Jahangir executed Guru Arjan Dev&lt;/span&gt; → beginning of long-standing conflict between &lt;span class=&quot;kw&quot;&gt;Mughals &amp; Sikhs&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Military Conquests&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Mewar (1615):&lt;/span&gt; Settlement with &lt;span class=&quot;kw&quot;&gt;Amar Singh&lt;/span&gt; (son of Maharana Pratap); Ranas accepted Mughal suzerainty but exempted from attending court personally&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Deccan (Ahmednagar):&lt;/span&gt; Sent &lt;span class=&quot;kw&quot;&gt;Prince Khurram&lt;/span&gt; (later Shah Jahan); success earned Khurram title &quot;Shah Jahan&quot;; but &lt;span class=&quot;kw&quot;&gt;Malik Ambar&lt;/span&gt; (PM of Ahmednagar) prevented total takeover using &lt;span class=&quot;kw&quot;&gt;guerrilla warfare&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Kangra (1620):&lt;/span&gt; Successfully captured strategic Kangra Fort in Himalayan foothills&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;The Era of Nur Jahan&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;1611: Married &lt;span class=&quot;kw&quot;&gt;Mehr-un-Nissa&lt;/span&gt;, titled &lt;span class=&quot;kw&quot;&gt;Nur Jahan&lt;/span&gt; (Light of the World)&lt;/li&gt;
+      &lt;li&gt;Only Mughal Empress to have &lt;span class=&quot;kw&quot;&gt;coins minted in her name&lt;/span&gt; &amp; issue royal &lt;span class=&quot;kw&quot;&gt;farmans (decrees)&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Nur Jahan Junta:&lt;/span&gt; Formed powerful group with her father (&lt;span class=&quot;kw&quot;&gt;Itimad-ud-Daula&lt;/span&gt;), brother (&lt;span class=&quot;kw&quot;&gt;Asaf Khan&lt;/span&gt;) &amp; Prince Khurram → dominated court for nearly a decade&lt;/li&gt;
+      &lt;li&gt;Later rift between Nur Jahan &amp; Shah Jahan → Shah Jahan&#x27;s rebellion → weakened empire in final years&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Administration &amp; Justice&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Zanjir-i-Adal (Chain of Justice):&lt;/span&gt; Golden chain with &lt;span class=&quot;kw&quot;&gt;60 bells&lt;/span&gt; at Agra Fort; any subject could pull for direct audience with Emperor&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;12 Edicts (Dastur-ul-Amal):&lt;/span&gt; Upon accession; banned cutting noses/ears as punishment; prohibited forced sale of land&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Europeans in Jahangir&#x27;s Court&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Visitor&lt;/th&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Key Fact&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;William Hawkins&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1608&lt;/td&gt;&lt;td&gt;Arrived with letter from King James I; given title &lt;span class=&quot;kw&quot;&gt;&quot;English Khan&quot;&lt;/span&gt;; no trade concessions due to Portuguese pressure&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Sir Thomas Roe&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1615&lt;/td&gt;&lt;td&gt;Official ambassador of British East India Company; successfully secured permission to trade &amp; establish factories at &lt;span class=&quot;kw&quot;&gt;Surat&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sh&quot;&gt;Art, Culture &amp; Literature&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Jahangir&#x27;s reign = &lt;span class=&quot;kw&quot;&gt;Golden Age of Mughal Painting&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Shifted from manuscript illustrations to &lt;span class=&quot;kw&quot;&gt;individual portraits&lt;/span&gt; &amp; detailed &lt;span class=&quot;kw&quot;&gt;nature studies&lt;/span&gt; (birds, animals, flowers)&lt;/li&gt;
+      &lt;li&gt;Famous painters: &lt;span class=&quot;kw&quot;&gt;Ustad Mansur&lt;/span&gt; (flora &amp; fauna) &amp; &lt;span class=&quot;kw&quot;&gt;Abul Hasan&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Literature: &lt;span class=&quot;kw&quot;&gt;Tuzuk-i-Jahangiri&lt;/span&gt; – autobiography in Persian; noted for frankness &amp; scientific observations of nature&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🏗️ SHAH JAHAN &lt;span class=&quot;yr&quot;&gt;1628–1658&lt;/span&gt;&lt;/div&gt;
+    &lt;span class=&quot;emp-badge&quot;&gt;5th Mughal Emperor – &quot;Engineer King&quot;&lt;/span&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Born as &lt;span class=&quot;kw&quot;&gt;Prince Khurram&lt;/span&gt;; known as &quot;Engineer King&quot;&lt;/li&gt;
+      &lt;li&gt;Reign = &lt;span class=&quot;kw&quot;&gt;&quot;Golden Age&quot; of Mughal architecture&lt;/span&gt; but also start of financial strain&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Accession &amp; Early Challenges&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Ascended throne in &lt;span class=&quot;kw&quot;&gt;1628&lt;/span&gt; with support of father-in-law &lt;span class=&quot;kw&quot;&gt;Asaf Khan&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Title: &lt;span class=&quot;kw&quot;&gt;Shah Jahan&lt;/span&gt; (King of the World)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Bundela Rebellion:&lt;/span&gt; Led by Jujhar Singh – first major challenge&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Khan-i-Jahan Lodi:&lt;/span&gt; Afghan noble who rebelled; defeated &amp; killed in &lt;span class=&quot;kw&quot;&gt;1631&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Military Conquests &amp; Deccan Policy&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Annexation of Ahmadnagar (1633):&lt;/span&gt; Ended independence of Nizam Shahi dynasty&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Treaties with Bijapur &amp; Golconda (1636):&lt;/span&gt; Forced to accept Mughal suzerainty &amp; pay tribute; not fully annexed&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Central Asian Campaign:&lt;/span&gt; Attempted to reclaim Balkh &amp; Badakhshan → &lt;span class=&quot;rd&quot;&gt;major failure&lt;/span&gt;; massive loss of men &amp; money&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Loss of Kandahar (1649):&lt;/span&gt; Persians permanently seized Kandahar → blow to prestige &amp; strategic defense&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Administration &amp; Revenue&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Month-Scale System:&lt;/span&gt; &quot;Monthly Ratio&quot; in Mansabdari; if Jagir didn&#x27;t yield expected revenue → adjusted to &lt;span class=&quot;kw&quot;&gt;10-month, 8-month, or 6-month scale&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;State demand raised to &lt;span class=&quot;kw&quot;&gt;50% of produce&lt;/span&gt; in some regions to fund buildings → increased peasant burden&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Literature &amp; Culture&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Dara Shikoh&#x27;s Work:&lt;/span&gt; Translated Upanishads into Persian as &lt;span class=&quot;kw&quot;&gt;Sirr-i-Akbar (The Great Secret)&lt;/span&gt;; wrote &lt;span class=&quot;kw&quot;&gt;Majma-ul-Bahrayn (The Mingling of Two Oceans)&lt;/span&gt; – exploring commonalities between Islam &amp; Hinduism&lt;/li&gt;
+      &lt;li&gt;Other Dara Shikoh works: Safain-ul-Auliya, Hasanat-ul-Arifeen, Risala-i-Haqqnuma, Tarjuma-i-Yogvashishtha&lt;/li&gt;
+      &lt;li&gt;Court Historian: &lt;span class=&quot;kw&quot;&gt;Abdul Hamid Lahori&lt;/span&gt; wrote &lt;span class=&quot;kw&quot;&gt;Padshahnama&lt;/span&gt; – official history of Shah Jahan&#x27;s reign&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;War of Succession (1657–1658)&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;When Shah Jahan fell ill → brutal civil war between 4 sons:&lt;/li&gt;
+      &lt;li&gt;1. &lt;span class=&quot;kw&quot;&gt;Dara Shikoh&lt;/span&gt; – eldest; scholar of Upanishads; Emperor&#x27;s favorite&lt;/li&gt;
+      &lt;li&gt;2. &lt;span class=&quot;kw&quot;&gt;Shuja&lt;/span&gt; – Governor of Bengal&lt;/li&gt;
+      &lt;li&gt;3. &lt;span class=&quot;kw&quot;&gt;Aurangzeb&lt;/span&gt; – Governor of Deccan; seasoned military general&lt;/li&gt;
+      &lt;li&gt;4. &lt;span class=&quot;kw&quot;&gt;Murad&lt;/span&gt; – Governor of Gujarat&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Aurangzeb won&lt;/span&gt; → defeated Dara Shikoh at &lt;span class=&quot;kw&quot;&gt;Battle of Samugarh (1658)&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Imprisoned Shah Jahan in &lt;span class=&quot;kw&quot;&gt;Agra Fort&lt;/span&gt; for remaining &lt;span class=&quot;kw&quot;&gt;8 years&lt;/span&gt; of his life&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Dara Shikoh&#x27;s Famous Quote&lt;/div&gt;
+      &quot;The different religions are but different paths leading to the same God.&quot;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ===== TAB 4: AURANGZEB ===== --&gt;
+&lt;div id=&quot;t4&quot; class=&quot;panel&quot;&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🕌 AURANGZEB &lt;span class=&quot;yr&quot;&gt;1658–1707&lt;/span&gt;&lt;/div&gt;
+    &lt;span class=&quot;emp-badge&quot;&gt;6th Mughal Emperor – Last &quot;Great Mughal&quot;&lt;/span&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Title: &lt;span class=&quot;kw&quot;&gt;Alamgir&lt;/span&gt; (&quot;Conqueror of the World&quot;)&lt;/li&gt;
+      &lt;li&gt;Last of the &quot;Great Mughals&quot;; reigned for &lt;span class=&quot;kw&quot;&gt;49 years&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Empire reached &lt;span class=&quot;kw&quot;&gt;maximum territorial extent&lt;/span&gt; but also sowed seeds of decline&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Character &amp; Personal Life&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Lived a very &lt;span class=&quot;kw&quot;&gt;simple, austere life&lt;/span&gt; unlike predecessors&lt;/li&gt;
+      &lt;li&gt;Called &lt;span class=&quot;kw&quot;&gt;Zinda Pir&lt;/span&gt; (Living Saint) for disciplined habits &amp; avoidance of royal luxuries&lt;/li&gt;
+      &lt;li&gt;Secured throne after bloody civil war, defeating brothers Shuja, Murad &amp; crown prince Dara Shikoh&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Two Phases of Reign&lt;/div&gt;
+    &lt;div class=&quot;fact-grid&quot;&gt;
+      &lt;div class=&quot;fact-item&quot;&gt;&lt;div class=&quot;fl&quot;&gt;Phase 1 (1658–1681)&lt;/div&gt;Focused on &lt;span class=&quot;kw&quot;&gt;Northern India&lt;/span&gt; – dealing with Jats, Satnamis &amp; Sikhs&lt;/div&gt;
+      &lt;div class=&quot;fact-item&quot;&gt;&lt;div class=&quot;fl&quot;&gt;Phase 2 (1681–1707)&lt;/div&gt;Focused entirely on &lt;span class=&quot;kw&quot;&gt;Deccan&lt;/span&gt;; never returned to Delhi&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sh&quot;&gt;Territorial Extent&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Empire stretched from &lt;span class=&quot;kw&quot;&gt;Kabul to Chittagong&lt;/span&gt; and from &lt;span class=&quot;kw&quot;&gt;Kashmir to Kaveri River&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Military Campaigns&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;North-East:&lt;/span&gt; General Mir Jumla annexed &lt;span class=&quot;kw&quot;&gt;Assam (Ahom kingdom) in 1662&lt;/span&gt;; Mughals struggled to maintain control due to geography&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Annexed Bijapur (1686)&lt;/span&gt; &amp; &lt;span class=&quot;kw&quot;&gt;Golconda (1687)&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Removing these kingdoms eliminated the &quot;buffer&quot; between Mughals &amp; Marathas → direct exhausting conflict&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Conflict with Marathas:&lt;/span&gt; Rise of &lt;span class=&quot;kw&quot;&gt;Shivaji Maharaj&lt;/span&gt; = biggest challenge&lt;/li&gt;
+      &lt;li&gt;Despite &lt;span class=&quot;kw&quot;&gt;Treaty of Purandar (1665)&lt;/span&gt;, Shivaji escaped Mughal custody in Agra &amp; established sovereign Maratha kingdom&lt;/li&gt;
+      &lt;li&gt;Aurangzeb spent &lt;span class=&quot;kw&quot;&gt;last 25 years in Deccan&lt;/span&gt; trying to crush Marathas but &lt;span class=&quot;rd&quot;&gt;failed&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;⚠️ Religious &amp; Social Policies of Aurangzeb&lt;/div&gt;
+    &lt;p style=&quot;font-size:0.83rem;color:var(--muted);margin-bottom:8px;&quot;&gt;Moved away from Akbar&#x27;s &lt;span class=&quot;kw&quot;&gt;Sulh-i-Kul&lt;/span&gt; toward more orthodox Islamic state&lt;/p&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Jizya (1679):&lt;/span&gt; Re-introduced Jizya tax on non-Muslims (abolished by Akbar 115 years earlier)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Muhtasibs:&lt;/span&gt; Appointed censors of public morals to ensure people lived per Sharia law&lt;/li&gt;
+      &lt;li&gt;Banned &lt;span class=&quot;kw&quot;&gt;music, gambling &amp; alcohol&lt;/span&gt; in court&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Temple Policy:&lt;/span&gt; Issued some grants to temples but also ordered destruction of prominent ones (Vishwanath in Kashi, Keshavdeva in Mathura) – primarily for political reasons/punishing rebellions&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Sikh Conflict:&lt;/span&gt; Executed &lt;span class=&quot;kw&quot;&gt;9th Sikh Guru, Guru Tegh Bahadur (1675)&lt;/span&gt; after he refused to convert → led to permanent militarization of Sikhs under &lt;span class=&quot;kw&quot;&gt;Guru Gobind Singh (The Khalsa)&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;warn-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;⚠️ Exam Note – Sikh Gurus Conflict&lt;/div&gt;
+      &lt;span class=&quot;kw&quot;&gt;Guru Arjan Dev&lt;/span&gt; (5th) → executed by &lt;span class=&quot;kw&quot;&gt;Jahangir&lt;/span&gt;&lt;br&gt;
+      &lt;span class=&quot;kw&quot;&gt;Guru Tegh Bahadur&lt;/span&gt; (9th) → executed by &lt;span class=&quot;kw&quot;&gt;Aurangzeb (1675)&lt;/span&gt; → led to formation of &lt;span class=&quot;kw&quot;&gt;Khalsa&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;📉 Administration &amp; Decline&lt;/div&gt;
+    &lt;div class=&quot;sh&quot;&gt;Jagirdari Crisis&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Empire so large → not enough good land (Jagirs) for increasing Mansabdars&lt;/li&gt;
+      &lt;li&gt;Led to &lt;span class=&quot;kw&quot;&gt;internal corruption &amp; competition&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;The Deccan Ulcer&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&quot;The &lt;span class=&quot;kw&quot;&gt;Deccan ulcer ruined Aurangzeb&lt;/span&gt;&quot; – historians&#x27; verdict&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;26-year-long campaign&lt;/span&gt; drained royal treasury, exhausted army&lt;/li&gt;
+      &lt;li&gt;Administrative collapse in &lt;span class=&quot;kw&quot;&gt;Northern India&lt;/span&gt; due to Emperor&#x27;s long absence&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Literature&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Fatawa-e-Alamgiri&lt;/span&gt; – massive compilation of Islamic law; created under his patronage; served as legal code for the empire&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🏙️ Mughal Capitals Over Time&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Period&lt;/th&gt;&lt;th&gt;Capital&lt;/th&gt;&lt;th&gt;Emperor(s)&lt;/th&gt;&lt;th&gt;Reason&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;1526–1540&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Agra&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Babur, Humayun&lt;/td&gt;&lt;td&gt;Initial conquest; strategic base in North India&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1556–1571&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Agra&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar&lt;/td&gt;&lt;td&gt;Consolidation of power after reclaiming empire&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1571–1585&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Fatehpur Sikri&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar&lt;/td&gt;&lt;td&gt;Built to honor Sufi saint Salim Chishti; symbolic new start&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1585–1598&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Lahore&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar&lt;/td&gt;&lt;td&gt;Military focus on NW frontier &amp; Uzbek threats&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1598–1648&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Agra&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar, Jahangir, Shah Jahan&lt;/td&gt;&lt;td&gt;Return to traditional heartland; peak of marble architecture&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1648–1681&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Delhi (Shahjahanabad)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Shah Jahan, Aurangzeb&lt;/td&gt;&lt;td&gt;Creation of grander planned imperial city (Red Fort)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;1681–1707&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Deccan (Aurangabad)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Aurangzeb&lt;/td&gt;&lt;td&gt;Continuous military campaigns against Marathas &amp; Deccan Sultanates&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;🧠 Capital Shifts of Akbar&lt;/div&gt;
+      &lt;strong&gt;&quot;Agra → Fatehpur → Lahore → Agra&quot;&lt;/strong&gt; → A · F · L · A (Agra keeps coming back!)
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ===== TAB 5: ARCHITECTURE ===== --&gt;
+&lt;div id=&quot;t5&quot; class=&quot;panel&quot;&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🏛️ Mughal Architecture – Overview (1526–1707)&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Represents the &lt;span class=&quot;kw&quot;&gt;peak of Indo-Islamic architecture&lt;/span&gt; in India&lt;/li&gt;
+      &lt;li&gt;Fusion of &lt;span class=&quot;kw&quot;&gt;Persian, Timurid (Central Asian), Islamic &amp; indigenous Indian styles&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Known for &lt;span class=&quot;kw&quot;&gt;symmetry, monumentality, gardens, domes, arches &amp; decorative elegance&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Evolved continuously from &lt;span class=&quot;kw&quot;&gt;Babur to Aurangzeb&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Important Mughal Buildings – Master Table&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Building&lt;/th&gt;&lt;th&gt;Distinguishing Feature&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;Babur&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Aram Bagh&lt;/span&gt;&lt;/td&gt;&lt;td&gt;First Mughal garden in India&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Humayun&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Humayun&#x27;s Tomb&lt;/span&gt;&lt;/td&gt;&lt;td&gt;First double dome; Charbagh layout; prototype of Taj Mahal&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Sher Shah&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Sasaram Tomb&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Transitional Indo-Afghan style&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Akbar&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Fatehpur Sikri&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Fusion architecture; planned city&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Akbar&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Buland Darwaza&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Largest gateway in India (55m high)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Jahangir&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Itmad-ud-Daulah&lt;/span&gt;&lt;/td&gt;&lt;td&gt;First marble tomb; first extensive pietra dura&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Shah Jahan&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Taj Mahal&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Peak of Mughal architecture; built 1632–1653&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Shah Jahan&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Red Fort&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Diwan-i-Khas; new imperial capital Shahjahanabad&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Shah Jahan&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Jama Masjid&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Grand mosque; largest in India&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Aurangzeb&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Bibi Ka Maqbara&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&quot;Taj of Deccan&quot;; decline phase&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🏗️ 19 Elements &amp; Features of Mughal Architecture&lt;/div&gt;
+    &lt;div class=&quot;arch-elem&quot;&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;1. Arches&lt;/div&gt;Curved structural openings above doors/windows; Mughals used pointed &amp; cusped arches with voussoirs &amp; keystone&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;2. Domes&lt;/div&gt;Hemispherical structures covering large spaces; Mughal domes are usually bulbous &amp; set on a drum&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;3. Double Dome&lt;/div&gt;Two domes – inner for interior proportion, outer for external height &amp; magnificence&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;4. Minarets&lt;/div&gt;Tall slender towers at corners of platform; add vertical emphasis; used for call to prayer&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;5. Charbagh&lt;/div&gt;Persian-style four-part garden divided by water channels; symbolizing paradise as in Quran&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;6. Pietra Dura (Parchin Kari)&lt;/div&gt;Art of inlaying semi-precious stones into marble to create floral &amp; geometric patterns&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;7. Jali Work&lt;/div&gt;Perforated stone lattice screens with intricate geometric/floral patterns; let light &amp; air while maintaining privacy&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;8. Calligraphy&lt;/div&gt;Quranic verses inscribed using calligraphic scripts like Thuluth &amp; Naskh&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;9. Chhatris&lt;/div&gt;Small elevated dome-shaped kiosks; adopted from Rajput architecture&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;10. Jharokhas&lt;/div&gt;Overhanging enclosed balconies projecting from walls; derived from Rajput architecture&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;11. Materials&lt;/div&gt;Red sandstone (Akbar era) → White marble (Shah Jahan era)&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;12. Symmetry&lt;/div&gt;Buildings planned with perfect symmetry along central axis; reflecting balance, order &amp; imperial authority&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;13. Iwan&lt;/div&gt;Vaulted hall/space open on one side; typical Persian architectural element adopted by Mughals&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;14. Pishtaq&lt;/div&gt;Tall rectangular framed archway used as grand entrance; creates monumental impression&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;15. Arabesque&lt;/div&gt;Intricate floral, geometric &amp; vegetal patterns used as decoration&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;16. Muqarnas&lt;/div&gt;Honeycomb-like decorative vaulting used in arches, domes &amp; ceilings&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;17. Finial&lt;/div&gt;Ornamental element at top of domes or minarets&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;18. Hasht Bihisht&lt;/div&gt;Persian planning concept – central chamber surrounded by eight rooms (&quot;Eight Paradise Plan&quot;)&lt;/div&gt;
+      &lt;div class=&quot;ae-item&quot;&gt;&lt;div class=&quot;ae-title&quot;&gt;19. Water Channels &amp; Fountains&lt;/div&gt;Used in gardens for beauty, cooling &amp; symbolic representation of paradise&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🏡 Babur&#x27;s Architecture &lt;span class=&quot;yr&quot;&gt;1526–1530&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Style: &lt;span class=&quot;kw&quot;&gt;Persian-Central Asian Garden Style&lt;/span&gt;; simple but deeply influenced by Persian &amp; Central Asian traditions&lt;/li&gt;
+      &lt;li&gt;Introduced concept of &lt;span class=&quot;kw&quot;&gt;Charbagh (four-part garden)&lt;/span&gt; divided by water channels in India&lt;/li&gt;
+      &lt;li&gt;Flowing water, tanks &amp; fountains used for beauty, cooling &amp; paradise symbolism&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Buildings&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Aram Bagh, Agra&lt;/span&gt; – first Mughal garden in India; Charbagh style; had pavilions, fruit trees, flower beds&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Kabuli Bagh Mosque, Panipat&lt;/span&gt; – built after First Battle of Panipat (1526); one of earliest Mughal mosques; Persian arched openings; brick &amp; stone&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Jama Masjid, Sambhal&lt;/span&gt; – one of earliest mosques; reflects early Persian influence; built for local Muslim community&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🏯 Humayun&#x27;s Architecture &lt;span class=&quot;yr&quot;&gt;1530–1556&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Style: &lt;span class=&quot;kw&quot;&gt;Strong Persianized Mughal Style&lt;/span&gt;; moved away from Afghan simplicity&lt;/li&gt;
+      &lt;li&gt;Key features: Iwans &amp; Pishtaqs, Charbagh gardens, &lt;span class=&quot;kw&quot;&gt;Double Dome System&lt;/span&gt;, Symmetry &amp; Axial Planning, Chhatris &amp; Jaalis&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Buildings&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Dinpanah (Delhi)&lt;/span&gt; – new city built by Humayun in 1533; named &quot;Abode of Faith&quot;; later captured by Sher Shah; renamed &lt;span class=&quot;kw&quot;&gt;Purana Qila&lt;/span&gt;; contains Qila-i-Kuhna Mosque (1541) &amp; Sher Mandal&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Humayun&#x27;s Tomb (1570)&lt;/span&gt; – built by his widow &lt;span class=&quot;kw&quot;&gt;Begha Begum&lt;/span&gt;; architect &lt;span class=&quot;kw&quot;&gt;Mirak Mirza Ghiyas&lt;/span&gt;; first grand Mughal tomb in India &amp; &lt;span class=&quot;kw&quot;&gt;UNESCO World Heritage Site&lt;/span&gt;; first major use of double dome; Charbagh layout; red sandstone + white marble; prototype for Taj Mahal; &lt;span class=&quot;kw&quot;&gt;Hasht Bihisht&lt;/span&gt; plan&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🔶 Sher Shah Suri&#x27;s Architecture &lt;span class=&quot;yr&quot;&gt;1540–1545&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Style: &lt;span class=&quot;kw&quot;&gt;Transitional Indo-Afghan&lt;/span&gt;; bridge between Lodi simplicity &amp; Mughal grandeur&lt;/li&gt;
+      &lt;li&gt;Massive, strong &amp; functional structures; use of &lt;span class=&quot;kw&quot;&gt;red sandstone &amp; rubble masonry&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Minimal ornamentation; focus on durability; octagonal tomb style&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Buildings&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Sher Shah&#x27;s Tomb, Sasaram&lt;/span&gt; – on an artificial lake; octagonal plan on raised platform; red sandstone with white marble inlay; chhatris on corners; blend of strength, beauty &amp; serenity&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Purana Qila (Delhi)&lt;/span&gt; – expanded Humayun&#x27;s Dinpanah; includes Qila-i-Kuhna Mosque &amp; Sher Mandal (library)&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Rohtas Fort (Punjab, Pakistan)&lt;/span&gt; – massive hill fort; thick walls, gateways &amp; watchtowers; designed to withstand long sieges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🔴 Akbar&#x27;s Architecture &lt;span class=&quot;yr&quot;&gt;1556–1605&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Style: &lt;span class=&quot;kw&quot;&gt;&quot;The Great Synthesizer&quot;&lt;/span&gt; – fusion of Persian, Central Asian, Hindu, Jain &amp; Buddhist traditions&lt;/li&gt;
+      &lt;li&gt;Key features: &lt;span class=&quot;kw&quot;&gt;Red sandstone construction&lt;/span&gt;, Trabeate style (pillars &amp; beams), Chhatris, Jharokhas, Brackets &amp; Corbels, Jali work, Lotus motifs&lt;/li&gt;
+      &lt;li&gt;Massive &amp; bold structures; incorporated Indian elements extensively&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Buildings&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Agra Fort (c. 1565)&lt;/span&gt; – first major architectural venture; red sandstone; semi-circular plan; strong fortifications; palaces, audience halls, mosques&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Fatehpur Sikri (1571–1585)&lt;/span&gt; – imperial capital built to honor Sheikh Salim Chishti; planned city; architectural fusion:
+        &lt;br&gt;• &lt;span class=&quot;kw&quot;&gt;Buland Darwaza&lt;/span&gt; (1601) – after Gujarat victory; &lt;span class=&quot;gr&quot;&gt;largest gateway in India&lt;/span&gt; (55m high)
+        &lt;br&gt;• &lt;span class=&quot;kw&quot;&gt;Panch Mahal&lt;/span&gt; – 5-storey palace inspired by Buddhist vihara
+        &lt;br&gt;• &lt;span class=&quot;kw&quot;&gt;Diwan-i-Khas&lt;/span&gt; – famous for central pillar with radiating platforms
+        &lt;br&gt;• &lt;span class=&quot;kw&quot;&gt;Ibadat Khana&lt;/span&gt; – hall for interfaith discussions
+        &lt;br&gt;• &lt;span class=&quot;kw&quot;&gt;Tomb of Salim Chishti&lt;/span&gt; – originally red sandstone, later rebuilt in marble; exquisite jali work
+        &lt;br&gt;• &lt;span class=&quot;kw&quot;&gt;Jodha Bai Palace&lt;/span&gt; – strong Rajput influence with chhatris, brackets &amp; carved pillars
+      &lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Akbar&#x27;s Tomb, Sikandra&lt;/span&gt; (completed by Jahangir) – blend of Islamic &amp; Hindu elements; no central dome; pyramidal look; red sandstone &amp; marble&lt;/li&gt;
+      &lt;li&gt;Other: Lahore Fort (early), Allahabad Fort, Ajmer Fort &amp; Mosque, Sarai &amp; Caravanserais&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🤍 Jahangir&#x27;s Architecture &lt;span class=&quot;yr&quot;&gt;1605–1627&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Style: &lt;span class=&quot;kw&quot;&gt;&quot;Patron of Refined Beauty &amp; Nature&quot;&lt;/span&gt;; shift from massive red sandstone → &lt;span class=&quot;kw&quot;&gt;white marble&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Key features: Use of white marble, &lt;span class=&quot;kw&quot;&gt;Pietra Dura work&lt;/span&gt;, Gardens &amp; Charbagh, Delicate ornamentation, Harmony with nature&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Buildings&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Itmad-ud-Daulah Tomb, Agra&lt;/span&gt; – built by Nur Jahan for her father; called &lt;span class=&quot;kw&quot;&gt;&quot;Baby Taj&quot;&lt;/span&gt;; &lt;span class=&quot;gr&quot;&gt;first Mughal structure entirely of white marble&lt;/span&gt;; first extensive use of pietra dura; prototype for later marble architecture including Taj Mahal&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Shalimar Bagh, Srinagar (Kashmir)&lt;/span&gt; – magnificent Charbagh garden along Dal Lake; terraced layout, Chinar trees, water channels, fountains, pavilions&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Akbar&#x27;s Tomb, Sikandra&lt;/span&gt; – completed during Jahangir&#x27;s reign&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Jahangir&#x27;s Palaces at Lahore Fort&lt;/span&gt; – Khwabgah (Dream Palace), Diwan-i-Khas, Sheesh Mahal; fine frescoes, painted ceilings, mirror work&lt;/li&gt;
+      &lt;li&gt;Other: Sarai Nurmahal (caravanserai), Nishat Bagh/Chashme Shahi (Kashmir)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;⭐ Shah Jahan&#x27;s Architecture &lt;span class=&quot;yr&quot;&gt;1628–1658&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Style: &lt;span class=&quot;kw&quot;&gt;&quot;Zenith of Mughal Architecture&quot;&lt;/span&gt;; dominant use of &lt;span class=&quot;kw&quot;&gt;white marble with red sandstone accents&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Key features: White marble, Pietra Dura inlay, Perfect symmetry, &lt;span class=&quot;kw&quot;&gt;Bulbous domes &amp; slender minarets&lt;/span&gt;, Calligraphy, Charbagh gardens&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Buildings&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Taj Mahal, Agra (1632–1653)&lt;/span&gt; – built in memory of wife &lt;span class=&quot;kw&quot;&gt;Mumtaz Mahal&lt;/span&gt;; pinnacle of Mughal architecture; pure white marble; perfect symmetry; pietra dura inlay; Charbagh on raised platform; double dome &amp; 4 minarets&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Red Fort (Lal Qila), Delhi (1639–1648)&lt;/span&gt; – new imperial capital Shahjahanabad; red sandstone with marble accents; Diwan-i-Am, Diwan-i-Khas, Rang Mahal, Khas Mahal, Sheesh Mahal; beautiful marble pavilions &amp; gardens&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Jama Masjid, Delhi (1650–1656)&lt;/span&gt; – one of largest &amp; most magnificent mosques; huge courtyard; 3 large marble domes &amp; 2 tall minarets; red sandstone &amp; marble&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Musamman Burj, Agra Fort (1631)&lt;/span&gt; – octagonal marble tower where Shah Jahan was imprisoned by Aurangzeb; overlooks Taj Mahal&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Moti Masjid, Agra Fort (1648–1654)&lt;/span&gt; – entirely white marble; 3 domes &amp; delicate arches; &quot;Pearl Mosque&quot;&lt;/li&gt;
+      &lt;li&gt;Other: Shalimar Bagh (Lahore), Khas Mahal (Agra Fort), Jahanaras Sarai (Delhi), &lt;span class=&quot;kw&quot;&gt;Takht-i-Taus (Peacock Throne)&lt;/span&gt; – legendary throne symbolizing imperial grandeur&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;📉 Aurangzeb&#x27;s Architecture &lt;span class=&quot;yr&quot;&gt;1658–1707&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Style: &lt;span class=&quot;kw&quot;&gt;Declining &amp; Simplified&lt;/span&gt;; shift toward simplicity, functionality &amp; piety&lt;/li&gt;
+      &lt;li&gt;Reduced ornamentation; less white marble; austere &amp; economical structures&lt;/li&gt;
+      &lt;li&gt;Greater emphasis on &lt;span class=&quot;kw&quot;&gt;mosques, religious buildings, forts &amp; practical constructions&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;sh&quot;&gt;Major Buildings&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Bibi Ka Maqbara, Aurangabad (c. 1661–1678)&lt;/span&gt; – built in memory of wife Dilras Banu Begum (Rabia-ud-Daurani); called &lt;span class=&quot;kw&quot;&gt;&quot;Taj of Deccan&quot;&lt;/span&gt;; resembles Taj Mahal on smaller scale; marble with minimal pietra dura&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Badshahi Mosque, Lahore (1671–1673)&lt;/span&gt; – one of largest mosques in world; red sandstone with marble inlay; 3 large marble domes; 4 minarets; vast prayer hall&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Alamgir Masjid, Delhi (c. 1669)&lt;/span&gt; – built on raised platform near Red Fort; small &amp; simple compared to earlier mosques&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Makki Masjid, Delhi (c. 1660)&lt;/span&gt; – near Jama Masjid; red sandstone; simple yet elegant&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;kw&quot;&gt;Daulatabad Fort&lt;/span&gt; – strengthened &amp; renovated; important military stronghold in Deccan&lt;/li&gt;
+      &lt;li&gt;Other: Built Sarais, Bridges &amp; Roads, Fortifications (Gwalior, Ranthambore, Jinj), Water Tanks &amp; Wells&lt;/li&gt;
+      &lt;li&gt;Religious &amp; Educational: Built Madrasas, renovated Mazars &amp; Dargahs, built many mosques; supported Khanqas (Sufi institutions)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ===== TAB 6: ADMINISTRATION ===== --&gt;
+&lt;div id=&quot;t6&quot; class=&quot;panel&quot;&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;⚙️ Mansabdari System – Evolution&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Ruler&lt;/th&gt;&lt;th&gt;Changes&lt;/th&gt;&lt;th&gt;Key Features&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Akbar&lt;/span&gt;&lt;br&gt;1556–1605&lt;/td&gt;
+            &lt;td&gt;Introduced Mansabdari as centralized administrative &amp; military structure&lt;/td&gt;
+            &lt;td&gt;• Mansab = rank/position&lt;br&gt;• Zat (personal rank) + Sawar (cavalry rank)&lt;br&gt;• Ranks: 10 to 10,000&lt;br&gt;• Dagh (horse branding) &amp; Chehra (descriptive rolls)&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Jahangir&lt;/span&gt;&lt;br&gt;1605–1627&lt;/td&gt;
+            &lt;td&gt;Modified for greater rewards &amp; flexibility&lt;/td&gt;
+            &lt;td&gt;• Introduced &lt;span class=&quot;kw&quot;&gt;Du-Aspah, Si-Aspah&lt;/span&gt; (extra cavalry allowance)&lt;br&gt;• Increased privileges for loyal nobles&lt;br&gt;• Mansabs became more honorary &amp; less strictly military&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Shah Jahan&lt;/span&gt;&lt;br&gt;1628–1658&lt;/td&gt;
+            &lt;td&gt;More elaborate &amp; expensive&lt;/td&gt;
+            &lt;td&gt;• Increased mansabs for imperial grandeur&lt;br&gt;• Greater emphasis on court hierarchy&lt;br&gt;• Jagir assignments often insufficient to pay nobles&lt;br&gt;• Month-Scale System introduced&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Aurangzeb&lt;/span&gt;&lt;br&gt;1658–1707&lt;/td&gt;
+            &lt;td&gt;Expanded excessively; began declining&lt;/td&gt;
+            &lt;td&gt;• Huge increase in mansabdars (Deccan campaigns)&lt;br&gt;• Severe shortage of jagirs (&lt;span class=&quot;kw&quot;&gt;Jagirdari Crisis&lt;/span&gt;)&lt;br&gt;• Corruption &amp; inefficiency increased&lt;br&gt;• Military obligations weakened&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tip-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;💡 Highest Mansab&lt;/div&gt;
+      &lt;span class=&quot;kw&quot;&gt;Prince Dara Shikoh&lt;/span&gt; (son of Shah Jahan) = highest mansab of &lt;span class=&quot;kw&quot;&gt;60,000 Zat &amp; 40,000 Sawar&lt;/span&gt;&lt;br&gt;
+      Non-royal nobles: &lt;span class=&quot;kw&quot;&gt;Raja Man Singh&lt;/span&gt; (under Akbar) &amp; &lt;span class=&quot;kw&quot;&gt;Mirza Raja Jai Singh&lt;/span&gt; (under Aurangzeb)
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;📊 Delhi Sultanate vs Mughal Empire – Administration&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Feature&lt;/th&gt;&lt;th&gt;Delhi Sultanate (1206–1526)&lt;/th&gt;&lt;th&gt;Mughal Empire (1526–1857)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Nature of State&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Military State; authority depended on Sultan&#x27;s personal strength &amp; Turkish nobility support&lt;/td&gt;&lt;td&gt;Centralized Bureaucracy; more &quot;National&quot; state with systematic hierarchy &amp; cultural integration&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;The Ruler&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Sultan: &quot;First among equals&quot; (Primus inter pares) relative to powerful nobles&lt;/td&gt;&lt;td&gt;Badshah/Emperor: Absolute authority with divine aura (Zill-i-Ilahi); far more powerful than nobility&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Land Revenue&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Iqta System: Land grants to officers (Iqtadars); revenue less systematically measured&lt;/td&gt;&lt;td&gt;Zabt/Dahshala System: Highly scientific measurement based on 10-year average produce&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Rank System&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Informal; based on size of Iqta &amp; number of troops maintained&lt;/td&gt;&lt;td&gt;Mansabdari System: Unique formal grading using Zat &amp; Sawar&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Provincial Div.&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Shiqs (Provinces) &amp; Parganas (Districts)&lt;/td&gt;&lt;td&gt;Subas (Provinces), Sarkars (Districts) &amp; Parganas&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Local Presence&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Central control weak in rural areas; depended on local Hindu intermediaries&lt;/td&gt;&lt;td&gt;Stronger central control reached village level through Patwari &amp; Qanungo&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;Nobility&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Dominated by Turkish, Afghan &amp; Persian elites; often unstable &amp; prone to rebellion&lt;/td&gt;&lt;td&gt;Diverse &quot;Heterogeneous&quot; nobility: Persians, Turks, Rajputs &amp; Indian Muslims&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ===== TAB 7: QUICK REVISION ===== --&gt;
+&lt;div id=&quot;t7&quot; class=&quot;panel&quot;&gt;
+
+  &lt;div class=&quot;summary-box&quot;&gt;
+    &lt;div class=&quot;sum-title&quot;&gt;⚡ QUICK REVISION – Mughal Empire&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;Founded: &lt;span class=&quot;kw&quot;&gt;1526&lt;/span&gt; by Babur; ended: &lt;span class=&quot;kw&quot;&gt;1857&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Babur: Farghana → Kabul → India; 4 battles: Panipat, Khanwa, Chanderi, Ghagra&lt;/li&gt;
+      &lt;li&gt;Humayun: Lost to Sher Shah Suri; Akbar born at Amarkot (1542); died falling from Sher Mandal (1556)&lt;/li&gt;
+      &lt;li&gt;Akbar: Crowned at 13 at Kalanaur; Real start = 2nd Battle of Panipat (1556); 9 Navaratnas; Din-i-Ilahi (1582)&lt;/li&gt;
+      &lt;li&gt;Jahangir: Chain of Justice; Nur Jahan most powerful empress; Golden Age of Mughal Painting&lt;/li&gt;
+      &lt;li&gt;Shah Jahan: &quot;Engineer King&quot;; Taj Mahal (1632–53); War of Succession → Aurangzeb won (1658)&lt;/li&gt;
+      &lt;li&gt;Aurangzeb: &quot;Alamgir&quot;; 49-year reign; Deccan Ulcer; Jagirdari Crisis; re-imposed Jizya (1679)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;📅 Must-Remember Dates&lt;/div&gt;
+    &lt;div class=&quot;tbl-wrap&quot;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Event&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1526&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1st Battle of Panipat; Babur defeats Ibrahim Lodi; Mughal Empire founded&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1527&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Khanwa; Babur defeats Rana Sanga&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1539&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Chausa; Sher Shah defeats Humayun&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1540&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Kannauj/Bilgram; Humayun loses throne&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1542&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar born at Amarkot (Humayun in exile)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1555&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battles of Machhiwara &amp; Sirhind; Humayun regains Delhi&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1556&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Humayun dies (Sher Mandal); 2nd Battle of Panipat; Akbar&#x27;s accession at Kalanaur&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1562&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar marries Jodha Bai (daughter of Raja Bharmal of Amber)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1563&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar abolishes Pilgrim Tax&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1564&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar abolishes Jizya&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1575&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Ibadat Khana built at Fatehpur Sikri&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1576&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Haldighati; Maharana Pratap vs Raja Man Singh&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1582&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Akbar introduces Din-i-Ilahi&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1605&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Jahangir accedes; title Nur-ud-din Muhammad Jahangir&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1611&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Jahangir marries Mehr-un-Nissa (Nur Jahan)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1615&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Sir Thomas Roe arrives; Mewar settlement with Amar Singh&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1628&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Shah Jahan accedes&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1632–1653&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Taj Mahal built&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1649&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Persians permanently seize Kandahar from Mughals&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1658&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Battle of Samugarh; Aurangzeb defeats Dara Shikoh; Shah Jahan imprisoned&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1665&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Treaty of Purandar; Shivaji agrees to terms&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1675&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Guru Tegh Bahadur (9th Sikh Guru) executed by Aurangzeb → Khalsa formation&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1679&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Aurangzeb re-imposes Jizya&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1686&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Aurangzeb annexes Bijapur&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;span class=&quot;kw&quot;&gt;1687&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Aurangzeb annexes Golconda&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🧠 All Mnemonics at a Glance&lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;Babur&#x27;s 4 Battles&lt;/div&gt;
+      &lt;strong&gt;&quot;Panipat&#x27;s Khan Charged Gallantly&quot;&lt;/strong&gt; → Panipat · Khanwa · Chanderi · Ghagra
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;Akbar&#x27;s Land Classification (Best → Worst)&lt;/div&gt;
+      &lt;strong&gt;&quot;Poor Peasants Can&#x27;t Bear&quot;&lt;/strong&gt; → Polaj · Parauti · Chachar · Banjar
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;Akbar&#x27;s Navaratnas&lt;/div&gt;
+      &lt;strong&gt;&quot;After Faizi, Tansen&#x27;s Tune Made Birbal &amp; Abdul Happy Mulla&quot;&lt;/strong&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;Akbar&#x27;s Capital Shifts&lt;/div&gt;
+      &lt;strong&gt;Agra → Fatehpur Sikri → Lahore → Agra&lt;/strong&gt; (A-F-L-A)
+    &lt;/div&gt;
+    &lt;div class=&quot;mnemo-box&quot;&gt;
+      &lt;div class=&quot;lbl&quot;&gt;Architecture Firsts&lt;/div&gt;
+      &lt;strong&gt;B-H-A-B:&lt;/strong&gt; Babur (first garden) → Humayun (first double dome) → Akbar (fusion) → Bibi Ka Maqbara (decline)
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-title&quot;&gt;🎯 Tricky Exam Facts&lt;/div&gt;
+    &lt;ul class=&quot;notes&quot;&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Tuzuk-i-Baburi&lt;/span&gt; written in &lt;span class=&quot;kw&quot;&gt;Chagatai Turkic&lt;/span&gt; (NOT Persian); translated by Abdul Rahim Khan-i-Khana in 1589&lt;/li&gt;
+      &lt;li&gt;💡 Akbar crowned at &lt;span class=&quot;kw&quot;&gt;Kalanaur, Punjab&lt;/span&gt; (NOT Delhi)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Second Battle of Panipat (1556)&lt;/span&gt; = &quot;real&quot; start of Mughal Empire (not 1526!)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Akbar&#x27;s army at Haldighati&lt;/span&gt; was led by a &lt;span class=&quot;kw&quot;&gt;Rajput&lt;/span&gt; (Raja Man Singh) – not Akbar himself&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Birbal&lt;/span&gt; = only prominent noble to accept Din-i-Ilahi&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Itmad-ud-Daulah&lt;/span&gt; = first marble tomb (Jahangir), NOT Taj Mahal&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Humayun&#x27;s Tomb&lt;/span&gt; = first double dome &amp; prototype for Taj Mahal&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Taj Mahal&lt;/span&gt; architect = &lt;span class=&quot;kw&quot;&gt;Ustad Ahmad Lahauri&lt;/span&gt; (generally credited)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Nur Jahan&lt;/span&gt; = only Mughal Empress to mint coins in her name&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Buland Darwaza&lt;/span&gt; (55m) = largest gateway in India; built after Gujarat victory&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Guru Arjan Dev&lt;/span&gt; (5th Guru) → Jahangir | &lt;span class=&quot;kw&quot;&gt;Guru Tegh Bahadur&lt;/span&gt; (9th Guru) → Aurangzeb&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Panch Mahal&lt;/span&gt; at Fatehpur Sikri inspired by &lt;span class=&quot;kw&quot;&gt;Buddhist Vihara&lt;/span&gt; style&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Fatawa-e-Alamgiri&lt;/span&gt; = Islamic law compilation under Aurangzeb&#x27;s patronage&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Dara Shikoh&lt;/span&gt; = highest mansab ever: 60,000 Zat &amp; 40,000 Sawar&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Bibi Ka Maqbara&lt;/span&gt; = &quot;Taj of Deccan&quot;; Aurangzeb built for his wife; reflects decline phase&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Sher Shah Suri&#x27;s Rupee&lt;/span&gt; = became the standard silver coin (even followed by Mughals)&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Grand Trunk Road&lt;/span&gt; = Sher Shah Suri&#x27;s contribution; Bengal to Punjab&lt;/li&gt;
+      &lt;li&gt;💡 &lt;span class=&quot;kw&quot;&gt;Mughal School of Painting&lt;/span&gt; foundation = Persian painters Mir Sayyid Ali &amp; Abdus Samad (recruited by Humayun in exile)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button id=&quot;scroll-top&quot; onclick=&quot;window.scrollTo({top:0,behavior:&#x27;smooth&#x27;})&quot; title=&quot;Scroll to top&quot;&gt;↑&lt;/button&gt;
+
+&lt;script&gt;
+  function showTab(id, btn) {
+    document.querySelectorAll(&#x27;.panel&#x27;).forEach(p =&gt; p.classList.remove(&#x27;active&#x27;));
+    document.querySelectorAll(&#x27;.tab-btn&#x27;).forEach(b =&gt; b.classList.remove(&#x27;active&#x27;));
+    document.getElementById(id).classList.add(&#x27;active&#x27;);
+    btn.classList.add(&#x27;active&#x27;);
+    window.scrollTo({top:0, behavior:&#x27;smooth&#x27;});
+  }
+  window.addEventListener(&#x27;scroll&#x27;, function() {
+    const btn = document.getElementById(&#x27;scroll-top&#x27;);
+    if (window.scrollY &gt; 300) btn.classList.add(&#x27;visible&#x27;);
+    else btn.classList.remove(&#x27;visible&#x27;);
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</div>
+<script>
+  function switchSection(idx, btn) {
+    document.querySelectorAll('.section-frame').forEach(f => f.classList.remove('active'));
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('frame' + idx).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GS ASTRA – Economics Notes</title>
+<style>
+:root{--bg:#f5f4f0;--card:#fff;--a1:#4a6fa5;--a2:#e8734a;--a3:#3a9e7e;--a4:#9b59b6;--tx:#2c2c2c;--sub:#555;--bdr:#e0ddd6;--sh:0 2px 8px rgba(0,0,0,.08);--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--tx);font-size:15px;line-height:1.75}
+.hdr{background:linear-gradient(135deg,#1e3a5f,#4a6fa5);color:#fff;padding:20px;text-align:center}
+.hdr h1{font-size:1.45rem;letter-spacing:1px}.hdr p{font-size:.82rem;opacity:.85;margin-top:4px}
+.tbw{background:#eceae4;border-bottom:2px solid var(--bdr);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.tbw::-webkit-scrollbar{display:none}
+.tbb{display:flex;white-space:nowrap;padding:0 6px;gap:3px;min-width:max-content}
+.tb{display:inline-block;padding:10px 15px;cursor:pointer;font-size:.78rem;font-family:Georgia,serif;font-weight:600;color:var(--sub);background:transparent;border:none;border-bottom:3px solid transparent;transition:all .2s}
+.tb:hover{color:var(--a1);background:rgba(74,111,165,.07)}
+.tb.on{color:var(--a1);border-bottom-color:var(--a1);background:rgba(74,111,165,.1)}
+.tc{display:none;padding:18px 15px 80px;max-width:860px;margin:0 auto}
+.tc.on{display:block}
+.cd{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:16px 18px;margin-bottom:16px;border-left:4px solid var(--a1)}
+.cd.g{border-left-color:var(--a3)}.cd.o{border-left-color:var(--a2)}.cd.p{border-left-color:var(--a4)}.cd.r{border-left-color:#e74c3c}
+h2{font-size:1.05rem;color:var(--a1);margin-bottom:9px;font-family:Georgia,serif}
+h3{font-size:.95rem;color:#2c3e50;margin:12px 0 6px;font-family:Georgia,serif;font-weight:700}
+ul{padding-left:18px;margin:5px 0}ul li{margin-bottom:4px}
+ol{padding-left:20px;margin:5px 0}ol li{margin-bottom:4px}
+.bx{border-radius:7px;padding:9px 13px;margin:9px 0;font-size:.88rem}
+.by{background:#fff9c4;border-left:3px solid #f9a825}
+.bb{background:#e3f2fd;border-left:3px solid #1565c0}
+.bg{background:#e8f5e9;border-left:3px solid #2e7d32}
+.br{background:#fce4ec;border-left:3px solid #c62828}
+.bp{background:#f3e5f5;border-left:3px solid #6a1b9a}
+.bf{background:#fffde7;border:1.5px dashed #f9a825;text-align:center;font-weight:700;font-size:.97rem;padding:10px}
+.kw{background:#fff176;padding:0 3px;border-radius:3px;font-weight:700}
+.kb{background:#bbdefb;padding:0 3px;border-radius:3px;font-weight:700}
+.kg{background:#c8e6c9;padding:0 3px;border-radius:3px;font-weight:700}
+.kr{background:#ffcdd2;padding:0 3px;border-radius:3px;font-weight:700}
+.tw{overflow-x:auto;margin:9px 0;border-radius:7px}
+table{border-collapse:collapse;width:100%;min-width:300px;font-size:.83rem}
+thead th{background:var(--a1);color:#fff;padding:8px 11px;text-align:left;font-weight:600}
+tbody tr:nth-child(even) td{background:#f0f4fa}
+tbody td{padding:7px 11px;border-bottom:1px solid var(--bdr);vertical-align:top}
+.fl{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin:9px 0;font-size:.86rem}
+.fi{background:var(--a1);color:#fff;padding:4px 11px;border-radius:20px;font-weight:600;font-size:.78rem}
+.fa{color:var(--a2);font-weight:700;font-size:1.1rem}
+.mn{background:linear-gradient(135deg,#fff9c4,#fff3e0);border:1.5px solid #ffcc02;border-radius:7px;padding:9px 13px;margin:9px 0;font-size:.87rem}
+.mn strong{color:#e65100}
+.tg{display:inline-block;background:#e3f2fd;color:#1565c0;border-radius:4px;padding:2px 6px;font-size:.73rem;font-weight:600;margin:2px}
+.tg-g{background:#e8f5e9;color:#1b5e20}.tg-r{background:#fce4ec;color:#880e4f}
+.mcq{background:#f8f9ff;border:1px solid #d0d8f0;border-radius:7px;padding:11px 14px;margin-bottom:10px}
+.mq{font-weight:700;color:#2c3e50;margin-bottom:5px;font-size:.86rem}
+.ma{margin-top:5px;font-size:.83rem;color:#2e7d32;font-weight:700}
+.me{margin-top:3px;font-size:.81rem;color:#555;font-style:italic}
+.sm{background:linear-gradient(135deg,#e8f5e9,#f0f4fa);border-radius:9px;padding:14px 18px;margin-top:16px;border:1.5px solid #b2dfdb}
+.sm h3{color:var(--a3);margin-bottom:9px}
+#st{position:fixed;bottom:20px;right:16px;background:var(--a1);color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:1.2rem;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.2);display:none;align-items:center;justify-content:center;z-index:1000}
+hr.dv{border:none;border-top:1.5px dashed var(--bdr);margin:12px 0}
+@media(max-width:600px){.hdr h1{font-size:1.1rem}.cd{padding:12px 11px}h2{font-size:.98rem}.tb{padding:9px 11px;font-size:.73rem}}
+</style>
+</head>
+<body>
+<header class="hdr">
+<h1>📚 GS ASTRA — Complete Economics Notes</h1>
+<p>SSC CGL | CHSL | Delhi Police | Phase-13 | Visual Quick-Revision Notes</p>
+</header>
+<div class="tbw"><div class="tbb">
+<button class="tb on" onclick="st('t1',this)">🏛️ Foundations</button>
+<button class="tb" onclick="st('t2',this)">🛒 Demand</button>
+<button class="tb" onclick="st('t3',this)">🏭 Production</button>
+<button class="tb" onclick="st('t4',this)">🏦 Public &amp; Sectors</button>
+<button class="tb" onclick="st('t5',this)">📊 Nat. Income</button>
+<button class="tb" onclick="st('t6',this)">🌡️ Inflation</button>
+<button class="tb" onclick="st('t7',this)">💰 Money &amp; RBI</button>
+<button class="tb" onclick="st('t8',this)">🏦 Banking</button>
+<button class="tb" onclick="st('t9',this)">📅 Five Year Plans</button>
+<button class="tb" onclick="st('t10',this)">🏭 Ind. Policy</button>
+<button class="tb" onclick="st('t11',this)">📈 Budget &amp; Tax</button>
+<button class="tb" onclick="st('t12',this)">💱 Forex</button>
+<button class="tb" onclick="st('t13',this)">🏛️ Govt Schemes</button>
+<button class="tb" onclick="st('t14',this)">❓ PYQs</button>
+<button class="tb" onclick="st('t15',this)">⚡ Quick Revision</button>
+</div></div>
+
+<div id="t1" class="tc on">
+<div class="cd">
+<h2>📌 Ch1: Basic Economic Problem</h2>
+<div class="fl"><span class="fi">Scarcity</span><span class="fa">→</span><span class="fi">Choice</span><span class="fa">→</span><span class="fi">Trade-off</span><span class="fa">→</span><span class="fi">Opportunity Cost</span><span class="fa">→</span><span class="fi">3 Central Questions</span></div>
+<h3>1️⃣ Scarcity</h3>
+<ul><li><span class="kw">Limited resources</span> + <span class="kw">Unlimited wants</span> = Scarcity</li><li>✅ Scarcity ≠ Shortage — it is a permanent mismatch</li><li>🔹 ₹500 but want shoes, bag &amp; headphones → can't buy all</li></ul>
+<h3>2️⃣ Opportunity Cost ✅ (Most Asked)</h3>
+<div class="bx bf">Value of the <span class="kw">NEXT BEST alternative forgone</span> when a choice is made</div>
+<div class="bx br">⚠️ OC is NOT total cost | NOT money spent | NOT all alternatives — ONLY <strong>NEXT BEST</strong></div>
+<ul><li>🔹 Choose SSC over ₹20,000/month job → OC = ₹20,000</li></ul>
+<h3>3️⃣ Three Central Economic Questions</h3>
+<div class="tw"><table><thead><tr><th>Question</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kw">What</span> to produce?</td><td>Which goods &amp; how much</td><td>Cars or food grains?</td></tr>
+<tr><td><span class="kw">How</span> to produce?</td><td>Labour vs machine method</td><td>Handloom vs factory</td></tr>
+<tr><td><span class="kw">For whom</span> to produce?</td><td>Who gets the goods</td><td>Rich, poor, or all?</td></tr></tbody></table></div>
+</div>
+
+<div class="cd g">
+<h2>📌 Ch2: Definitions of Economics</h2>
+<div class="mn">🧠 <strong>Mnemonic "AMRK":</strong> <strong>A</strong>dam Smith=wea<strong>A</strong>lth | <strong>M</strong>arshall=welfare | <strong>R</strong>obbins=scaRcity | <strong>K</strong>eynes=employment</div>
+<div class="tw"><table><thead><tr><th>Economist</th><th>Type</th><th>Key Focus</th></tr></thead>
+<tbody><tr><td><span class="kw">Adam Smith</span></td><td>Wealth</td><td>Production &amp; trade; <em>Wealth of Nations (1776)</em></td></tr>
+<tr><td><span class="kw">Alfred Marshall</span></td><td>Welfare</td><td>Human well-being, living standards</td></tr>
+<tr><td><span class="kg">Lionel Robbins</span> <span class="tg-r tg">Most Asked</span></td><td>Scarcity</td><td>Unlimited wants + scarce resources with alternative uses → choice</td></tr>
+<tr><td><span class="kw">J.M. Keynes</span></td><td>Employment/Growth</td><td>Income, unemployment, government spending, recession</td></tr></tbody></table></div>
+</div>
+
+<div class="cd o">
+<h2>📌 Ch3: Central Problems of Economy</h2>
+<ul><li>Arise due to: <span class="kw">Limited resources + Unlimited wants + Alternative uses</span></li></ul>
+<div class="tw"><table><thead><tr><th>Method</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kw">Labour-intensive</span></td><td>More labour, less machines</td><td>Handloom industry</td></tr>
+<tr><td><span class="kw">Capital-intensive</span></td><td>More machines, less labour</td><td>Automated factory</td></tr></tbody></table></div>
+<div class="bx bb">💡 India → Labour-intensive preferred (abundant labour) | India follows <span class="kw">Mixed Economy</span></div>
+<h3>How Different Economies Solve Problems</h3>
+<div class="tw"><table><thead><tr><th>Economy</th><th>Decision Maker</th></tr></thead>
+<tbody><tr><td>Market Economy</td><td>Price mechanism (demand &amp; supply)</td></tr>
+<tr><td>Planned Economy</td><td>Government</td></tr>
+<tr><td><span class="kw">Mixed Economy (India)</span></td><td>Both govt + market</td></tr></tbody></table></div>
+</div>
+
+<div class="cd p">
+<h2>📌 Ch4: Production Possibility Frontier (PPF)</h2>
+<div class="bx by">PPF = Max combinations of 2 goods economy can produce with available resources &amp; technology</div>
+<div class="tw"><table><thead><tr><th>Location</th><th>Meaning</th></tr></thead>
+<tbody><tr><td><span class="kg">On curve</span></td><td>✅ Efficient</td></tr>
+<tr><td><span class="kr">Inside curve</span></td><td>⚠️ Inefficient (unemployment/waste)</td></tr>
+<tr><td>Outside curve</td><td>❌ Unattainable</td></tr></tbody></table></div>
+<ul><li>PPF is <span class="kw">concave</span> (bowed outward) — resources not equally efficient</li>
+<li>PPF shifts <span class="kg">outward</span>: Tech↑, Resources↑, Education↑, Capital investment↑</li>
+<li>PPF shifts <span class="kr">inward</span>: War, disaster, loss of resources</li></ul>
+</div>
+
+<div class="cd">
+<h2>📌 Ch5: Barter System &amp; Money</h2>
+<h3>Problems of Barter</h3>
+<div class="mn">🧠 <strong>DISCO:</strong> <strong>D</strong>ouble coincidence | <strong>I</strong>ndivisibility | <strong>S</strong>torage problem | <strong>C</strong>ommon measure lacking | <strong>O</strong>bligations (deferred payment)</div>
+<div class="tw"><table><thead><tr><th>#</th><th>Problem</th><th>Example</th></tr></thead>
+<tbody><tr><td>1</td><td><span class="kw">Double Coincidence of Wants</span> ✅</td><td>Farmer wants shoes, shoemaker may not want wheat</td></tr>
+<tr><td>2</td><td>No Common Measure of Value</td><td>How much wheat = 1 shirt?</td></tr>
+<tr><td>3</td><td>Indivisibility</td><td>Cow can't be split to match 5 bags of rice</td></tr>
+<tr><td>4</td><td>Store of Value Problem</td><td>Milk, fruits perish — can't store wealth</td></tr>
+<tr><td>5</td><td>Deferred Payments Problem</td><td>Value of goods changes over time</td></tr></tbody></table></div>
+<h3>Functions of Money</h3>
+<div class="tw"><table><thead><tr><th>Type</th><th>Function</th><th>Example</th></tr></thead>
+<tbody><tr><td rowspan="2"><strong>Primary</strong></td><td><span class="kw">Medium of Exchange</span></td><td>Pay ₹100 to buy a book</td></tr>
+<tr><td><span class="kw">Measure of Value</span></td><td>Mobile=₹10k; Shirt=₹1k</td></tr>
+<tr><td rowspan="3"><strong>Secondary</strong></td><td>Store of Value</td><td>Money saved; doesn't perish</td></tr>
+<tr><td>Standard of Deferred Payment</td><td>Loans, EMIs fixed in money</td></tr>
+<tr><td>Transfer of Value</td><td>Online bank transfer</td></tr></tbody></table></div>
+</div>
+</div>
+
+<div id="t2" class="tc">
+<div class="cd">
+<h2>📌 Factors of Production</h2>
+<div class="mn">🧠 <strong>LLCE:</strong> Land | Labour | Capital | Entrepreneurship</div>
+<div class="tw"><table><thead><tr><th>Factor</th><th>Nature</th><th>Key Points</th></tr></thead>
+<tbody><tr><td><span class="kw">Land</span></td><td>Natural resource</td><td>Fixed supply | Immobile | Gift of nature | Indestructible</td></tr>
+<tr><td><span class="kw">Labour</span></td><td>Human effort</td><td>Skilled/Unskilled; Physical/Mental</td></tr>
+<tr><td><span class="kw">Capital</span></td><td>Man-made resource</td><td>Fixed (machines) | Working (raw materials) | Human capital</td></tr>
+<tr><td><span class="kw">Entrepreneurship</span></td><td>Organiser + risk-taker</td><td>Combines other factors; earns profit</td></tr></tbody></table></div>
+<div class="bx bb">📌 <strong>Soil Health Card (2015):</strong> Ministry of Agriculture | Cards every 2 years | Prevents overuse of urea | Improves soil fertility</div>
+<div class="bx by">📌 <strong>LARR Act:</strong> Govt projects→No consent | PPP→70% consent | Private→80% consent | SIA mandatory</div>
+</div>
+
+<div class="cd g">
+<h2>📌 Economic Systems</h2>
+<h3>A. Invisible Hand (Adam Smith)</h3>
+<ul><li>Self-interest → unintentionally benefits society via market forces</li>
+<li>Book: <span class="kw">"The Wealth of Nations" (1776)</span></li>
+<li>🔹 Shopkeeper sells quality to earn profit → customers benefit automatically</li></ul>
+<h3>B. Laissez-Faire</h3>
+<ul><li>French: <span class="kw">"Let it be"</span> — minimum govt interference</li>
+<li>Govt only handles: law &amp; order, defence, property rights</li></ul>
+</div>
+
+<div class="cd o">
+<h2>📌 Law of Demand</h2>
+<div class="bx bf">Price ↑ → Qty Demanded ↓ | Price ↓ → Qty Demanded ↑ (ceteris paribus)</div>
+<div class="tw"><table><thead><tr><th>Type</th><th>Cause</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kw">Movement</span> along curve</td><td>Change in <strong>price</strong></td><td>Price of milk ↓ → buy more milk</td></tr>
+<tr><td><span class="kw">Shift</span> of curve</td><td>Change in <strong>non-price</strong> factors</td><td>Health trend → demand ↑ at same price</td></tr></tbody></table></div>
+<h3>Factors Shifting Demand</h3>
+<ul><li><span class="kw">Income</span>: ↑ income → ↑ demand (normal) | ↑ income → ↓ demand (inferior)</li>
+<li><span class="kw">Taste &amp; Preference</span>: Favorable change → demand ↑</li>
+<li><span class="kw">Population</span>: ↑ population → ↑ demand</li></ul>
+</div>
+
+<div class="cd p">
+<h2>📌 Elasticity of Demand</h2>
+<div class="bx bf">PED = % Change in Qty Demanded ÷ % Change in Price</div>
+<div class="tw"><table><thead><tr><th>Type</th><th>Value</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kg">Elastic</span></td><td>&gt; 1</td><td>Movie tickets, luxuries</td></tr>
+<tr><td><span class="kr">Inelastic</span></td><td>&lt; 1</td><td>Salt, life-saving medicines</td></tr>
+<tr><td><span class="kw">Unitary</span></td><td>= 1</td><td>TR is MAXIMUM ✅</td></tr>
+<tr><td>Perfectly Elastic</td><td>= ∞</td><td>Horizontal curve</td></tr>
+<tr><td>Perfectly Inelastic</td><td>= 0</td><td>Vertical curve</td></tr></tbody></table></div>
+<div class="bx bb">📊 TR Rule: Elastic→Price↓→TR↑ | Inelastic→Price↑→TR↑ | <span class="kw">Unit elastic→TR max</span></div>
+<h3>Determinants of Elasticity</h3>
+<ul><li>More substitutes → more elastic | Necessities → inelastic | Luxuries → elastic</li>
+<li>Longer time → more elastic | Habit-forming goods (cigarettes) → inelastic</li></ul>
+</div>
+
+<div class="cd">
+<h2>📌 Exceptions &amp; Behavioural Demand</h2>
+<div class="tw"><table><thead><tr><th>Good/Effect</th><th>Rule</th><th>Tag</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kw">Giffen Goods</span></td><td>Price↑ → Demand↑ (inferior, no substitute)</td><td>"Poor→No choice"</td><td>Poor buying wheat</td></tr>
+<tr><td><span class="kw">Veblen Goods</span></td><td>Price↑ → Demand↑ (status symbol)</td><td>"Show-off goods"</td><td>Luxury cars, watches</td></tr>
+<tr><td><span class="kw">Speculative</span></td><td>Buy more expecting future price rise</td><td>"Future thinking"</td><td>Gold during price rise</td></tr>
+<tr><td><span class="kw">Bandwagon</span></td><td>Demand↑ because others buy</td><td>"Herd mentality"</td><td>Trending mobile</td></tr>
+<tr><td><span class="kw">Snob Effect</span></td><td>Demand↓ when too many use it</td><td>"Common ho gaya"</td><td>Stop using popular brand</td></tr>
+<tr><td><span class="kw">Demonstration</span></td><td>Imitate richer people's lifestyle</td><td>"Dekha-Seekha-Kharida"</td><td>Middle class buys AC</td></tr>
+<tr><td><span class="kw">Veblen Effect</span></td><td>Demand↑ with price (prestige)</td><td>"Mehenga=Prestige"</td><td>Expensive cars</td></tr>
+<tr><td><span class="kw">Network(+)</span></td><td>Value↑ as more users join</td><td>"More=Better"</td><td>WhatsApp</td></tr>
+<tr><td><span class="kw">Network(−)</span></td><td>Value↓ when too many use</td><td>"Overcrowding"</td><td>Internet slows</td></tr></tbody></table></div>
+</div>
+
+<div class="cd g">
+<h2>📌 Consumer Theory</h2>
+<h3>Utility &amp; Marginal Utility</h3>
+<ul><li><span class="kw">Utility</span>: Satisfaction from consuming a good</li>
+<li><span class="kw">MU</span>: Additional satisfaction from ONE MORE unit</li></ul>
+<div class="bx by">Law of Diminishing MU: As consumption ↑ → MU from each unit ↓</div>
+<div class="tw"><table><thead><tr><th>Condition</th><th>Result</th></tr></thead>
+<tbody><tr><td>MU &gt; 0</td><td>TU increases</td></tr>
+<tr><td><span class="kw">MU = 0</span></td><td><span class="kg">TU is MAXIMUM ✅</span></td></tr>
+<tr><td>MU &lt; 0</td><td>TU decreases</td></tr></tbody></table></div>
+<h3>Indifference Curve</h3>
+<ul><li>Shows combos of 2 goods giving <span class="kw">same satisfaction</span></li>
+<li>Properties: Downward sloping | Convex to origin | Higher curve=higher satisfaction | Never intersect</li>
+<li>Also called: <span class="kw">Iso-utility curve</span></li></ul>
+<div class="bx bf">Consumer Equilibrium: MU_A/P_A = MU_B/P_B (equal MU per rupee)</div>
+</div>
+
+<div class="cd o">
+<h2>📌 Market Equilibrium &amp; Supply</h2>
+<div class="tw"><table><thead><tr><th>Situation</th><th>Condition</th><th>Price Pressure</th></tr></thead>
+<tbody><tr><td><span class="kg">Equilibrium</span></td><td>Qd = Qs</td><td>Stable</td></tr>
+<tr><td><span class="kr">Shortage</span></td><td>Qd &gt; Qs</td><td>Price rises ↑</td></tr>
+<tr><td><span class="kw">Surplus</span></td><td>Qs &gt; Qd</td><td>Price falls ↓</td></tr></tbody></table></div>
+<h3>Elasticity of Supply</h3>
+<div class="bx bf">Es = % Change in Qty Supplied ÷ % Change in Price</div>
+<div class="tw"><table><thead><tr><th>Factor</th><th>Elastic</th><th>Inelastic</th></tr></thead>
+<tbody><tr><td>Nature of good</td><td>Durable goods</td><td>Perishable (milk)</td></tr>
+<tr><td>Time period</td><td>Long run</td><td>Short run</td></tr>
+<tr><td>Input availability</td><td>Easily available</td><td>Scarce inputs</td></tr>
+<tr><td>Capacity</td><td>Spare capacity</td><td>Full capacity</td></tr></tbody></table></div>
+</div>
+</div>
+
+<div id="t3" class="tc">
+<div class="cd">
+<h2>📌 Production Theory</h2>
+<h3>Law of Variable Proportions</h3>
+<div class="bx by">One factor varies (others fixed) → output first ↑ rapidly, then ↑ slowly, then ↓</div>
+<div class="tw"><table><thead><tr><th>Stage</th><th>Name</th><th>MP Trend</th><th>TP Trend</th></tr></thead>
+<tbody><tr><td>Stage I</td><td>Increasing Returns</td><td>MP ↑</td><td>TP ↑ rapidly</td></tr>
+<tr><td><span class="kg">Stage II ✅</span></td><td><strong>RATIONAL STAGE</strong></td><td>MP ↓ but +ve</td><td>TP ↑ slowly → MAX</td></tr>
+<tr><td>Stage III</td><td>Negative Returns</td><td>MP &lt; 0</td><td>TP ↓</td></tr></tbody></table></div>
+<div class="bx bg">✅ Producers always operate in <span class="kw">Stage II</span> | TP max when <span class="kw">MP = 0</span></div>
+</div>
+
+<div class="cd g">
+<h2>📌 Returns to Scale (Long Run)</h2>
+<div class="tw"><table><thead><tr><th>Type</th><th>Condition</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kw">Increasing Returns</span></td><td>Output ↑ MORE than inputs</td><td>+50% input → +75% output</td></tr>
+<tr><td>Constant Returns</td><td>Output ↑ SAME as inputs</td><td>+50% → +50%</td></tr>
+<tr><td>Decreasing Returns</td><td>Output ↑ LESS than inputs</td><td>+50% → +30%</td></tr></tbody></table></div>
+<p><strong>Causes of Increasing Returns:</strong> Division of labour | Specialized machinery | Managerial efficiency</p>
+</div>
+
+<div class="cd o">
+<h2>📌 Cost Concepts</h2>
+<div class="tw"><table><thead><tr><th>Cost</th><th>Definition</th><th>Key Point</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kw">FC</span></td><td>Does NOT change with output</td><td>Incurred at zero output too</td><td>Shop rent</td></tr>
+<tr><td><span class="kw">VC</span></td><td>Changes directly with output</td><td>VC=0 at zero output</td><td>Raw materials</td></tr>
+<tr><td><span class="kw">AC</span></td><td>TC ÷ Output</td><td>U-shaped; AC=AFC+AVC</td><td>TC=₹100,Q=10→AC=₹10</td></tr>
+<tr><td><span class="kw">AVC</span></td><td>VC ÷ Output</td><td>U-shaped curve</td><td>Falls then rises</td></tr></tbody></table></div>
+<div class="bx bf">Break-Even: TR = TC → Profit = 0</div>
+<div class="bx br">⚠️ Shutdown: <span class="kw">Price &lt; AVC</span> | Continue if Price ≥ AVC</div>
+</div>
+
+<div class="cd p">
+<h2>📌 Revenue &amp; Profit</h2>
+<div class="tw"><table><thead><tr><th>Concept</th><th>Formula</th><th>Key Point</th></tr></thead>
+<tbody><tr><td><span class="kw">TR</span></td><td>Price × Quantity</td><td>Increases with sales</td></tr>
+<tr><td><span class="kw">AR</span></td><td>TR ÷ Qty = Price</td><td>AR curve = Demand curve</td></tr>
+<tr><td><span class="kw">MR</span></td><td>ΔTR ÷ ΔQ</td><td>In perfect comp: AR=MR</td></tr>
+<tr><td><span class="kw">Profit</span></td><td>TR − TC</td><td>Economic profit</td></tr></tbody></table></div>
+<div class="bx bf">Profit Maximization: MR = MC (MC must cut MR from below)</div>
+</div>
+
+<div class="cd">
+<h2>📌 Market Structures</h2>
+<div class="tw"><table><thead><tr><th>Feature</th><th>Perfect Comp.</th><th>Monopoly</th><th>Monopolistic</th><th>Oligopoly</th></tr></thead>
+<tbody><tr><td>Sellers</td><td>Many</td><td>One</td><td>Many</td><td>Few large</td></tr>
+<tr><td>Product</td><td>Homogeneous</td><td>No substitute</td><td>Differentiated</td><td>Both</td></tr>
+<tr><td>Price</td><td>Taker</td><td>Maker</td><td>Some control</td><td>Interdependent</td></tr>
+<tr><td>Entry</td><td>Free</td><td>Blocked</td><td>Free</td><td>Barriers</td></tr>
+<tr><td>LR Profit</td><td>Normal</td><td>Supernormal possible</td><td><span class="kw">Zero economic ✅</span></td><td>Varies</td></tr>
+<tr><td>Example</td><td>Veg. market</td><td>Indian Railways</td><td>Soap, toothpaste</td><td>Jio, Airtel, Vi</td></tr></tbody></table></div>
+<div class="bx bb">🔹 <strong>Monopoly Price Discrimination:</strong> Charging different prices for same product (student concessions)</div>
+<div class="bx by">🔹 <strong>Oligopoly Kinked Demand:</strong> Price rise → others don't follow (big loss) | Price cut → others follow (small gain) → <span class="kw">Price rigidity</span></div>
+</div>
+</div>
+
+<div id="t4" class="tc">
+<div class="cd">
+<h2>📌 Public Goods</h2>
+<div class="tw"><table><thead><tr><th>Characteristic</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kw">Non-Rivalry</span></td><td>One person's use ≠ reduce availability</td><td>Street lighting</td></tr>
+<tr><td><span class="kw">Non-Excludability</span></td><td>Can't prevent non-payers from using</td><td>National defense</td></tr></tbody></table></div>
+<div class="bx br">⚠️ <strong>Free Rider Problem:</strong> People enjoy benefits without paying → Private firms can't recover cost → Govt must provide</div>
+<div class="tw"><table><thead><tr><th>Basis</th><th>Public Goods</th><th>Private Goods</th></tr></thead>
+<tbody><tr><td>Rivalry</td><td>Non-rival</td><td>Rival</td></tr>
+<tr><td>Excludability</td><td>Non-excludable</td><td>Excludable</td></tr>
+<tr><td>Provider</td><td>Government</td><td>Market</td></tr>
+<tr><td>Examples</td><td>Defense, police, parks</td><td>Food, clothes, mobiles</td></tr></tbody></table></div>
+</div>
+
+<div class="cd g">
+<h2>📌 Sectors of Economy</h2>
+<div class="tw"><table><thead><tr><th>Sector</th><th>Activity</th><th>Examples</th><th>Key Fact</th></tr></thead>
+<tbody><tr><td><span class="kw">Primary</span></td><td>Extraction from nature</td><td>Agriculture, fishing, mining, forestry</td><td>Base of all sectors</td></tr>
+<tr><td><span class="kw">Secondary</span></td><td>Manufacturing/Processing</td><td>Factories, construction</td><td>Converts raw materials</td></tr>
+<tr><td><span class="kw">Tertiary</span></td><td>Services</td><td>Banking, education, transport</td><td><span class="kw">Largest GDP contributor in India</span></td></tr>
+<tr><td><span class="kw">Quaternary</span></td><td>Knowledge-based</td><td>IT, R&amp;D, data analysis</td><td>Knowledge economy</td></tr></tbody></table></div>
+<div class="bx bb">💡 Primary = Agricultural | Secondary = Industrial | Tertiary = Service Sector</div>
+</div>
+
+<div class="cd o">
+<h2>📌 Goods Classification</h2>
+<div class="tw"><table><thead><tr><th>Type</th><th>Definition</th><th>Examples</th><th>GDP?</th></tr></thead>
+<tbody><tr><td><span class="kw">Heavy Industry</span></td><td>Capital-intensive; produces capital goods</td><td>Iron &amp; steel, shipbuilding, cement</td><td>✅</td></tr>
+<tr><td><span class="kw">Consumer Goods</span></td><td>Directly used by consumers</td><td>Food, clothes, mobiles</td><td>✅</td></tr>
+<tr><td><span class="kw">Capital Goods</span></td><td>Used to produce other goods</td><td>Machines, tools, equipment</td><td>✅</td></tr>
+<tr><td><span class="kw">Intermediate Goods</span></td><td>Used as inputs in production</td><td>Flour for bread, steel for cars</td><td>❌</td></tr>
+<tr><td><span class="kw">Final Goods</span></td><td>Ready for consumption/investment</td><td>Bread bought by consumer</td><td>✅</td></tr></tbody></table></div>
+<div class="bx bg">✅ Count only <span class="kw">final goods</span> OR use <span class="kw">Value Added Method</span> → Avoids double counting</div>
+<div class="bx by">💡 Replacement investment = <span class="kw">Depreciation of capital</span> (SSC CHSL asked!)</div>
+</div>
+</div>
+
+<div id="t5" class="tc">
+<div class="cd">
+<h2>📌 Circular Flow of Income</h2>
+<div class="fl"><span class="fi">Households (earn)</span><span class="fa">→</span><span class="fi">Spend/Save/Tax/Import</span><span class="fa">→</span><span class="fi">Firms/Govt/Foreign</span><span class="fa">→</span><span class="fi">Back to Households</span></div>
+<ul><li>Savings → investment | Taxes → Govt spending | Imports ↔ Exports</li></ul>
+</div>
+
+<div class="cd g">
+<h2>📌 Key National Income Concepts</h2>
+<div class="mn">🧠 GDP→+NFIA=GNP→−Depreciation=NNP→at factor cost=<strong>National Income</strong></div>
+<div class="tw"><table><thead><tr><th>Concept</th><th>Formula</th><th>Key Point</th></tr></thead>
+<tbody><tr><td><span class="kw">GDP</span></td><td>Value of final goods within domestic territory</td><td>Territory-based; includes foreigners inside country</td></tr>
+<tr><td><span class="kw">GNP</span></td><td>GDP + NFIA</td><td>Nationality-based; Indians abroad included</td></tr>
+<tr><td><span class="kw">NDP</span></td><td>GDP − Depreciation</td><td>Net of wear &amp; tear</td></tr>
+<tr><td><span class="kw">NNP</span></td><td>GNP − Depreciation</td><td>NNP at factor cost = <span class="kg">National Income ✅</span></td></tr></tbody></table></div>
+</div>
+
+<div class="cd o">
+<h2>📌 Methods of Measuring National Income</h2>
+<div class="tw"><table><thead><tr><th>Method</th><th>Approach</th><th>Key</th></tr></thead>
+<tbody><tr><td><span class="kw">Product / Value Added</span></td><td>Sum value added at each stage</td><td>Avoids double counting</td></tr>
+<tr><td><span class="kw">Income Method</span></td><td>Wages + Rent + Interest + Profit</td><td>Factor incomes</td></tr>
+<tr><td><span class="kw">Expenditure Method</span></td><td>C + I + G + (X−M)</td><td>C=Consumption, I=Investment, G=Govt, X−M=Net exports</td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>✅ Included in NI</th><th>❌ Excluded from NI</th></tr></thead>
+<tbody><tr><td>Final goods production, services, govt services</td><td>Transfer payments, second-hand goods, illegal activities</td></tr></tbody></table></div>
+<div class="bx bb">📌 <span class="kw">Factor Cost</span> = wages+rent+interest+profit (excludes taxes &amp; subsidies)</div>
+<div class="bx bg">📌 <strong>Multiplier (Keynes):</strong> Autonomous investment↑ → NI rises by multiple (because MPS &lt; 1)</div>
+<div class="bx bp">📌 <strong>Laffer Curve:</strong> There exists an <span class="kw">optimal tax rate</span> that maximizes revenue</div>
+</div>
+</div>
+
+<div id="t6" class="tc">
+<div class="cd">
+<h2>📌 Inflation — Meaning &amp; Measurement</h2>
+<div class="bx by">Inflation = Sustained increase in general price level → reduces purchasing power of money</div>
+<div class="tw"><table><thead><tr><th>Index</th><th>Measures</th><th>Base Year</th><th>Used For</th></tr></thead>
+<tbody><tr><td><span class="kw">CPI</span></td><td>Retail level price changes</td><td>2012</td><td>RBI inflation targeting; cost of living</td></tr>
+<tr><td><span class="kw">WPI</span></td><td>Wholesale/producer prices</td><td>2011-12</td><td>Producer-level tracking; no services</td></tr>
+<tr><td><span class="kw">GDP Deflator</span></td><td>Entire domestic production</td><td>Changes with GDP</td><td>Real vs nominal GDP</td></tr></tbody></table></div>
+</div>
+
+<div class="cd g">
+<h2>📌 Types of Inflation</h2>
+<div class="tw"><table><thead><tr><th>Type</th><th>Cause</th><th>Tagline</th><th>Example</th></tr></thead>
+<tbody><tr><td><span class="kw">Demand-Pull</span></td><td>Aggregate demand &gt; supply</td><td>"Too much money chasing too few goods"</td><td>Govt increases spending</td></tr>
+<tr><td><span class="kw">Cost-Push</span></td><td>Production costs rise</td><td>"Supply shock"</td><td>Oil price rise → transport cost ↑</td></tr>
+<tr><td><span class="kw">Built-in</span></td><td>Wage-price spiral</td><td>"Self-reinforcing cycle"</td><td>Higher wages → higher prices</td></tr>
+<tr><td><span class="kw">Headline</span></td><td>All items (food+fuel+others)</td><td>"Total inflation"</td><td>Reported daily</td></tr>
+<tr><td><span class="kw">Core</span></td><td>Excludes food &amp; fuel</td><td>"Underlying trend"</td><td>Policy focus</td></tr>
+<tr><td><span class="kw">Stagflation</span></td><td>Inflation + unemployment + low growth</td><td>"Worst combo"</td><td>1970s oil crisis</td></tr>
+<tr><td><span class="kw">Deflation</span></td><td>General price fall</td><td>"Price↓→delay→demand↓"</td><td>Japan 1990s</td></tr>
+<tr><td><span class="kw">Disinflation</span></td><td>Inflation rate falls (prices still rising)</td><td>"Slowing down"</td><td>Rate 8%→5%</td></tr>
+<tr><td><span class="kw">Hyperinflation</span></td><td>Extremely high uncontrollable inflation</td><td>"Currency collapse"</td><td>Venezuela</td></tr></tbody></table></div>
+</div>
+
+<div class="cd o">
+<h2>📌 Who Gains &amp; Loses from Inflation</h2>
+<div class="tw"><table><thead><tr><th>Group</th><th>Impact</th><th>Reason</th></tr></thead>
+<tbody><tr><td><span class="kg">Borrowers</span></td><td>✅ Gain</td><td>Repay with cheaper money</td></tr>
+<tr><td><span class="kr">Lenders</span></td><td>❌ Lose</td><td>Money received has less value</td></tr>
+<tr><td><span class="kr">Fixed income earners</span></td><td>❌ Lose</td><td>Real income falls</td></tr>
+<tr><td><span class="kg">Businesses (moderate)</span></td><td>✅ Gain</td><td>Revenue rises faster than costs</td></tr></tbody></table></div>
+<div class="bx bg">📌 <strong>Inflation Target India:</strong> <span class="kw">4% ± 2%</span> (based on CPI, Base 2012) | Flexible Inflation Targeting | Decided by <span class="kw">MPC</span></div>
+</div>
+
+<div class="cd p">
+<h2>📌 Business Cycle &amp; Keynesian Economics</h2>
+<div class="fl"><span class="fi">Recovery</span><span class="fa">→</span><span class="fi">Expansion</span><span class="fa">→</span><span class="fi">Boom (Peak)</span><span class="fa">→</span><span class="fi">Recession</span><span class="fa">→</span><span class="fi">Depression</span><span class="fa">→</span><span class="fi">Recovery</span></div>
+<div class="tw"><table><thead><tr><th>Phase</th><th>Key Features</th></tr></thead>
+<tbody><tr><td><span class="kg">Boom</span></td><td>High growth, strong demand, low unemployment, near full capacity</td></tr>
+<tr><td><span class="kw">Recession</span></td><td>GDP falls 2 consecutive quarters, rising unemployment, declining investment</td></tr>
+<tr><td><span class="kr">Depression</span></td><td>Severe &amp; prolonged recession; sky-high unemployment. Ex: Great Depression 1929-33</td></tr>
+<tr><td><span class="kg">Recovery</span></td><td>Demand↑, investment↑, employment improves</td></tr></tbody></table></div>
+<h3>Keynesian Tools</h3>
+<ul><li><span class="kw">Fiscal Stimulus</span>: Govt spending↑ → Income↑ → Consumption↑ → Jobs↑</li>
+<li><span class="kw">Public Works</span>: Roads, railways, irrigation — immediate job creation</li>
+<li><span class="kw">Liquidity Preference</span>: 3 motives — Transaction | Precautionary | Speculative</li>
+<li><span class="kw">Liquidity Trap</span>: Interest rates so low → people prefer holding cash over investing</li></ul>
+<div class="tw"><table><thead><tr><th>Economic Situation</th><th>Keynesian Policy</th></tr></thead>
+<tbody><tr><td>Recession/Depression</td><td>↑ Govt spending, ↓ taxes (Expansionary)</td></tr>
+<tr><td>Boom/High Inflation</td><td>↓ Spending, ↑ taxes (Contractionary)</td></tr></tbody></table></div>
+<div class="bx bb">📌 <strong>Phillips Curve:</strong> Inverse relationship between <span class="kw">inflation and unemployment</span></div>
+</div>
+</div>
+
+<div id="t7" class="tc">
+<div class="cd">
+<h2>📌 Money Supply &amp; Monetary Aggregates</h2>
+<div class="fl"><span class="fi">Barter</span><span class="fa">→</span><span class="fi">Commodity Money</span><span class="fa">→</span><span class="fi">Metallic</span><span class="fa">→</span><span class="fi">Paper Currency</span><span class="fa">→</span><span class="fi">Bank Deposits</span></div>
+<div class="bx by">📌 Modern currency = <span class="kw">Fiat Money</span> — backed by sovereign guarantee, NOT gold</div>
+<div class="tw"><table><thead><tr><th>Aggregate</th><th>Components</th><th>Key Point</th></tr></thead>
+<tbody><tr><td><span class="kw">M0</span> (Reserve Money)</td><td>Currency in circulation + Bank reserves with RBI + Other deposits</td><td>Base/High Powered Money</td></tr>
+<tr><td><span class="kw">M1</span> (Narrow Money)</td><td>Currency with public + Demand deposits + Other deposits with RBI</td><td>Most liquid; daily transactions</td></tr>
+<tr><td>M2</td><td>M1 + Savings deposits with Post Office</td><td>Low exam importance</td></tr>
+<tr><td><span class="kw">M3</span> (Broad Money) ✅</td><td>M1 + Time deposits (FD) with banks</td><td>Policy-relevant; most widely used</td></tr></tbody></table></div>
+<div class="bx bf">Money Multiplier (m) = 1 ÷ CRR | If CRR=10%, m=10 → ₹1 reserve creates ₹10 money supply</div>
+</div>
+
+<div class="cd g">
+<h2>📌 Monetary Policy</h2>
+<div class="bx by">Monetary Policy = RBI's actions to control money supply &amp; credit → achieve macroeconomic stability</div>
+<div class="tw"><table><thead><tr><th>Basis</th><th>Monetary Policy</th><th>Fiscal Policy</th></tr></thead>
+<tbody><tr><td>Authority</td><td>RBI</td><td>Government</td></tr>
+<tr><td>Tools</td><td>Interest rates, liquidity</td><td>Taxes, expenditure</td></tr>
+<tr><td>Focus</td><td>Money &amp; credit</td><td>Budget &amp; public finance</td></tr></tbody></table></div>
+<p><strong>RBI roles:</strong> Monetary Authority | Banker's Bank | Lender of Last Resort | Controller of Liquidity</p>
+<div class="bx bb">📌 <strong>Transmission:</strong> Repo Rate↑ → Banks borrow at higher cost → Lending rates↑ → Borrowing↓ → Investment↓ → Demand↓ → Inflation↓</div>
+</div>
+
+<div class="cd o">
+<h2>📌 Monetary Policy Tools</h2>
+<div class="tw"><table><thead><tr><th>Tool</th><th>Definition</th><th>If Increased→</th><th>Key Point</th></tr></thead>
+<tbody><tr><td><span class="kw">CRR</span></td><td>% deposits kept as cash WITH RBI</td><td>Liquidity↓ | Credit↓ | Inflation↓</td><td>No interest paid by RBI</td></tr>
+<tr><td><span class="kw">SLR</span></td><td>% deposits in liquid assets (cash/gold/G-Secs) WITH BANK</td><td>Lending↓ | Liquidity↓</td><td>Earns interest (on G-Secs)</td></tr>
+<tr><td><span class="kw">Repo Rate ✅</span></td><td>Rate RBI lends to banks (against G-Secs)</td><td>Lending rates↑ | Demand↓ | Inflation↓</td><td>Policy rate; most important</td></tr>
+<tr><td><span class="kw">Reverse Repo</span></td><td>Rate RBI borrows from banks</td><td>Banks park with RBI | Liquidity↓</td><td>Absorbs excess liquidity</td></tr>
+<tr><td><span class="kw">Bank Rate</span></td><td>Rate RBI lends long-term WITHOUT collateral</td><td>Credit↓ | Inflation↓</td><td>Used less than repo</td></tr>
+<tr><td><span class="kw">OMO Buy</span></td><td>RBI buys G-Secs → pays banks</td><td>Liquidity↑ | Lending↑ | Growth↑</td><td>Injects liquidity</td></tr>
+<tr><td><span class="kw">OMO Sell</span></td><td>RBI sells G-Secs → banks pay</td><td>Liquidity↓ | Lending↓</td><td>Absorbs liquidity</td></tr></tbody></table></div>
+<div class="bx bg">✅ CRR: maintained WITH RBI | SLR: maintained WITH BANK | Repo &gt; Reverse Repo always</div>
+</div>
+
+<div class="cd p">
+<h2>📌 T-Bills vs G-Secs</h2>
+<div class="tw"><table><thead><tr><th>Basis</th><th>Treasury Bills (T-Bills)</th><th>Govt Securities (G-Secs)</th></tr></thead>
+<tbody><tr><td>Tenure</td><td>Short-term (91/182/364 days)</td><td>Long-term (5-40 years)</td></tr>
+<tr><td>Interest</td><td>Zero-coupon (issued at discount)</td><td>Regular coupon payments</td></tr>
+<tr><td>Market</td><td>Money market</td><td>Capital market</td></tr>
+<tr><td>Purpose</td><td>Short-term cash management</td><td>Long-term fiscal deficit financing</td></tr></tbody></table></div>
+</div>
+</div>
+
+<div id="t8" class="tc">
+<div class="cd">
+<h2>📌 Banking System Structure</h2>
+<div class="bx by">Scheduled Banks = Listed in 2nd Schedule of RBI Act, 1934 | Can borrow from RBI | Access to clearing house</div>
+<div class="tw"><table><thead><tr><th>Type</th><th>Description</th><th>Key Facts</th></tr></thead>
+<tbody><tr><td><span class="kw">Public Sector Banks</span></td><td>Govt holds &gt;50% ownership</td><td>12 PSBs after 2020 mergers | SBI from Imperial Bank (1955)</td></tr>
+<tr><td><span class="kw">Private Sector Banks</span></td><td>Private majority shares</td><td>Old: Federal Bank | New: HDFC, ICICI, Axis</td></tr>
+<tr><td><span class="kw">RRBs</span></td><td>Rural credit institutions</td><td>Est. 1975 | Ownership: Centre 50%+State 15%+Sponsor Bank 35%</td></tr>
+<tr><td><span class="kw">Small Finance Banks</span></td><td>Financial inclusion</td><td>AU, Ujjivan, Equitas</td></tr>
+<tr><td><span class="kw">Payments Banks</span></td><td>Digital payments</td><td>Max ₹2 lakh deposits | Cannot lend | Cannot issue credit cards</td></tr>
+<tr><td><span class="kw">Cooperative Banks</span></td><td>Member-owned</td><td>Dual control: RBI + State Registrar</td></tr></tbody></table></div>
+<div class="bx br">⚠️ ₹1 note issued by <span class="kw">Ministry of Finance</span> (signed by Finance Secretary), NOT RBI</div>
+<div class="bx bb">📌 <strong>DICGC</strong> deposit insurance: <span class="kw">Max ₹5 lakh</span> per depositor per bank</div>
+</div>
+
+<div class="cd g">
+<h2>📌 RBI &amp; Key Institutions</h2>
+<ul><li>RBI established: <span class="kw">1935</span> | Nationalized: <span class="kw">1949</span></li></ul>
+<div class="tw"><table><thead><tr><th>Institution</th><th>Function</th></tr></thead>
+<tbody><tr><td><span class="kw">NABARD</span></td><td>Agricultural finance | Est. 1982</td></tr>
+<tr><td><span class="kw">SIDBI</span></td><td>MSME finance</td></tr>
+<tr><td><span class="kw">NHB</span></td><td>Housing finance</td></tr>
+<tr><td><span class="kw">DICGC</span></td><td>Deposit insurance</td></tr></tbody></table></div>
+</div>
+
+<div class="cd o">
+<h2>📌 Digital Payment Systems</h2>
+<div class="tw"><table><thead><tr><th>System</th><th>Settlement</th><th>Limit</th><th>Key Feature</th></tr></thead>
+<tbody><tr><td><span class="kw">RTGS</span></td><td>Real-time</td><td>Min ₹2 lakh</td><td>High-value transactions; Gross settlement</td></tr>
+<tr><td><span class="kw">NEFT</span></td><td>Batch (half-hourly)</td><td>No minimum</td><td>General transfer; 24×7</td></tr>
+<tr><td><span class="kw">IMPS</span></td><td>Instant</td><td>~₹5 lakh</td><td>Mobile banking; 24×7; NPCI operated</td></tr>
+<tr><td><span class="kw">UPI</span></td><td>Instant</td><td>~₹1 lakh</td><td>Launched 2016; NPCI; Google Pay/PhonePe</td></tr>
+<tr><td><span class="kw">NACH</span></td><td>Bulk processing</td><td>No limit</td><td>Salary, pension, subsidy, EMI; NPCI</td></tr>
+<tr><td><span class="kw">AEPS</span></td><td>Aadhaar-based</td><td>-</td><td>Biometric; rural banking; NPCI</td></tr></tbody></table></div>
+</div>
+
+<div class="cd p">
+<h2>📌 Bank Nationalisation</h2>
+<ul><li><span class="kw">1969</span>: 14 banks nationalised (deposits &gt;₹50 crore) — PM Indira Gandhi</li>
+<li><span class="kw">1980</span>: 6 more banks nationalised</li>
+<li>Objectives: Rural expansion | Mobilise savings | Priority sector credit | Reduce regional imbalances</li></ul>
+<div class="bx by">📌 <strong>Priority Sector Lending (PSL):</strong> 40% ANBC for PSBs | 75% for RRBs | Agriculture 18% | Weaker sections 12%</div>
+<div class="bx bb">📌 <strong>Lead Bank Scheme (1969):</strong> Based on Gadgil Study Group | Each district assigned to one bank</div>
+</div>
+
+<div class="cd">
+<h2>📌 Banking Reforms &amp; Committees</h2>
+<div class="tw"><table><thead><tr><th>Committee</th><th>Year</th><th>Key Recommendations</th></tr></thead>
+<tbody><tr><td><span class="kw">Narasimham I</span></td><td>1991</td><td>Reduce SLR/CRR | Prudential norms | Allow private banks | PSB autonomy</td></tr>
+<tr><td><span class="kw">Narasimham II</span></td><td>1998</td><td>Strengthen capital adequacy | ARCs | Bank consolidation | Reduce govt ownership</td></tr>
+<tr><td><span class="kw">Verma Committee</span></td><td>1999</td><td>Identify weak PSBs | Recapitalisation</td></tr>
+<tr><td><span class="kw">Raghuram Rajan</span></td><td>2008</td><td>More banking competition | Financial inclusion</td></tr>
+<tr><td><span class="kw">Nachiket Mor</span></td><td>2013</td><td>Payments Banks + Small Finance Banks | Business Correspondents</td></tr>
+<tr><td><span class="kw">Urjit Patel</span></td><td>2013</td><td>Inflation targeting | Create MPC | Transparency</td></tr>
+<tr><td><span class="kw">PJ Nayak</span></td><td>2014</td><td>Reduce govt control | Bank Investment Company | Strengthen boards</td></tr></tbody></table></div>
+</div>
+
+<div class="cd g">
+<h2>📌 NPA &amp; Basel Norms</h2>
+<div class="bx by">📌 <strong>NPA</strong>: Loan where interest/principal overdue &gt;90 days | Substandard (&lt;12m) | Doubtful (&gt;12m) | Loss (unrecoverable)</div>
+<div class="bx br">⚠️ <strong>Twin Balance Sheet Problem (Eco Survey 2016-17):</strong> Corporates (high debt) + Banks (large NPAs) → investment slowdown</div>
+<div class="tw"><table><thead><tr><th>Basel Norm</th><th>Year</th><th>Key Feature</th></tr></thead>
+<tbody><tr><td><span class="kw">Basel I</span></td><td>1988</td><td>Min 8% CAR (Capital/Risk-weighted assets)</td></tr>
+<tr><td><span class="kw">Basel II</span></td><td>2004</td><td>3 Pillars: Min capital | Supervisory review | Market disclosure</td></tr>
+<tr><td><span class="kw">Basel III</span></td><td>2010</td><td>Higher capital req. | Capital conservation buffer | Leverage ratio | India from 2013</td></tr></tbody></table></div>
+<div class="bx bg">📌 <span class="kw">SARFAESI Act (2002)</span>: Banks can seize &amp; sell collateral without court | 60-day notice | ARCs buy bad loans<br>📌 <span class="kw">IBC (2016)</span>: Resolve insolvency in 180 days (+90 extension) | NCLT for companies | DRT for individuals | IBBI as regulator</div>
+<h3>IBC Waterfall (Order of Payment)</h3>
+<p>1. Resolution costs → 2. Secured creditors + workers → 3. Employees → 4. Unsecured creditors → 5. Govt dues → 6. Shareholders</p>
+</div>
+</div>
+
+<div id="t9" class="tc">
+<div class="cd">
+<h2>📌 Why India Adopted Planning</h2>
+<ul><li>Inherited weak economy, limited industrialization, low agricultural productivity</li>
+<li>Objectives: <span class="kw">Growth + Modernization + Self-reliance + Equity</span></li>
+<li>Import Substitution policy: Protect infant industries via tariffs &amp; quotas</li></ul>
+<div class="bx bb">📌 <strong>Planning Commission</strong>: Est. March 1950 | NOT constitutional/statutory — extra-constitutional advisory | PM as Chairman | Deputy Chairman = executive head</div>
+<div class="bx by">📌 <strong>NDC</strong>: Est. 1952 | PM + Cabinet Ministers + All CMs + LGs/Admins + Planning Commission members | Approves Five-Year Plans</div>
+<div class="bx bg">📌 <strong>P.C. Mahalanobis</strong> = Architect of Indian Planning | Developed Mahalanobis Model (basis of 2nd FYP) | 1st Chairman = Jawaharlal Nehru</div>
+</div>
+
+<div class="cd g">
+<h2>📌 Five Year Plans — Complete Table</h2>
+<div class="tw"><table><thead><tr><th>Plan</th><th>Years</th><th>Theme/Focus</th><th>Key Features</th></tr></thead>
+<tbody>
+<tr><td><span class="kw">1st FYP</span></td><td>1951–56</td><td>Agricultural stabilization</td><td>Harrod-Domar model | Bhakra-Nangal, Damodar Valley, Hirakud projects</td></tr>
+<tr><td><span class="kw">2nd FYP</span></td><td>1956–61</td><td>Rapid industrialization</td><td>Mahalanobis model | Socialist pattern | Bhilai(USSR), Rourkela(W.Germany), Durgapur(UK) steel plants | IPR 1956</td></tr>
+<tr><td><span class="kw">3rd FYP</span></td><td>1961–66</td><td>Self-reliance</td><td>Green Revolution begins | Disrupted by Sino-India War (1962), Indo-Pak War (1965), droughts</td></tr>
+<tr><td><span class="kr">Plan Holiday</span></td><td>1966–69</td><td>3 Annual Plans</td><td>Rupee devaluation | Economic crisis | Agricultural recovery</td></tr>
+<tr><td><span class="kw">4th FYP</span></td><td>1969–74</td><td>Growth with stability</td><td>MRTP Act (1969) | Bank nationalisation (1969)</td></tr>
+<tr><td><span class="kw">5th FYP</span></td><td>1974–79</td><td>Garibi Hatao (Indira Gandhi)</td><td>MNP | Hill Area Development | DICs | Terminated early by Janata Govt (1978)</td></tr>
+<tr><td><span class="kw">Rolling Plan</span></td><td>1978–80</td><td>Annual targets</td><td>Morarji Desai | Abandoned 1980</td></tr>
+<tr><td><span class="kw">6th FYP</span></td><td>1980–85</td><td>Poverty alleviation + modernization</td><td>IRDP | NREP | RLEGP | NABARD est. 1982</td></tr>
+<tr><td><span class="kw">7th FYP</span></td><td>1985–90</td><td>"Food, Work, Productivity"</td><td>Employment + agricultural growth + early modernization</td></tr>
+<tr><td><span class="kr">Annual Plans</span></td><td>1990–92</td><td>Transition to reforms</td><td>BOP crisis | 1991 reforms</td></tr>
+<tr><td><span class="kw">8th FYP</span></td><td>1992–97</td><td>Human resource dev.</td><td>Post-LPG reform | Private sector role | Global integration</td></tr>
+<tr><td><span class="kw">9th FYP</span></td><td>1997–02</td><td>Growth with Social Justice</td><td>Agriculture, rural dev., poverty reduction</td></tr>
+<tr><td><span class="kw">10th FYP</span></td><td>2002–07</td><td>8% GDP growth target</td><td>Poverty reduction, employment, infrastructure</td></tr>
+<tr><td><span class="kw">11th FYP</span></td><td>2007–12</td><td>Faster &amp; More Inclusive Growth</td><td>Education, health, social sectors</td></tr>
+<tr><td><span class="kw">12th FYP</span></td><td>2012–17</td><td>Faster, Sustainable, Inclusive</td><td>8% target | Infrastructure, energy, sustainability</td></tr></tbody></table></div>
+</div>
+
+<div class="cd o">
+<h2>📌 Key Concepts for PYQs</h2>
+<div class="bx by">📌 <strong>MRTP Act (1969):</strong> 4th FYP | Prevent concentration of economic power | Replaced by Competition Act, 2002</div>
+<div class="bx bg">📌 <strong>MNP (5th FYP):</strong> Elementary education | Rural health | Drinking water | Rural roads | Electrification | Housing for poor</div>
+<div class="bx bp">📌 <strong>Commanding Heights:</strong> IPR 1956 | State controls strategic sectors (steel, mining, energy, defence)</div>
+<div class="bx bb">📌 <strong>Harrod-Domar Model:</strong> Growth depends on savings + investment → 1st FYP</div>
+<div class="bx by">📌 <strong>Mahalanobis Model:</strong> Heavy &amp; capital goods industries for long-term growth → 2nd FYP | Import substitution + Public sector</div>
+<div class="mn">🧠 <strong>Steel Plants:</strong> <strong>B</strong>hilai=<strong>B</strong>ig USSR | <strong>R</strong>ourkela=<strong>R</strong>obust Germany | <strong>D</strong>urgapur=<strong>D</strong>ear Britain (BRD countries)</div>
+</div>
+</div>
+
+<div id="t10" class="tc">
+<div class="cd">
+<h2>📌 Industrial Policy Resolution (IPR) 1956</h2>
+<div class="bx by">Objectives: Socialist pattern | Rapid industrialization | Balanced regional dev. | Prevent concentration of power | Promote SSI | Mixed economy</div>
+<div class="tw"><table><thead><tr><th>Schedule</th><th>Control</th><th>Examples</th></tr></thead>
+<tbody><tr><td><span class="kw">Schedule A</span></td><td>Exclusive State Control</td><td>Arms &amp; ammo, atomic energy, railways, iron &amp; steel, heavy machinery, coal, aircraft</td></tr>
+<tr><td><span class="kw">Schedule B</span></td><td>Progressive State Participation</td><td>Chemicals, fertilizers, machine tools, road transport, aluminium</td></tr>
+<tr><td><span class="kw">Schedule C</span></td><td>Private Sector (regulated)</td><td>Consumer goods, textiles, food processing, light manufacturing</td></tr></tbody></table></div>
+</div>
+
+<div class="cd g">
+<h2>📌 PSU Categories</h2>
+<div class="tw"><table><thead><tr><th>Category</th><th>Status</th><th>Investment Power</th><th>Examples</th></tr></thead>
+<tbody><tr><td><span class="kw">Maharatna</span></td><td>Highest | Turnover &gt;₹25,000cr | Profit &gt;₹5,000cr</td><td>Up to ₹5,000 cr or 15% net worth</td><td>ONGC, NTPC, IOC, SAIL, Coal India, BPCL, HPCL, PowerGrid</td></tr>
+<tr><td><span class="kw">Navratna</span></td><td>60+/100 performance score</td><td>Up to ₹1,000 cr or 15% net worth</td><td>BEL, HAL, CONCOR, Engineers India</td></tr>
+<tr><td><span class="kw">Miniratna</span></td><td>Profit for 3+ years</td><td>Limited autonomy</td><td>AAI, Balmer Lawrie, Bharat Dynamics</td></tr></tbody></table></div>
+</div>
+
+<div class="cd o">
+<h2>📌 Industrial Licensing &amp; License Raj</h2>
+<ul><li>Industrial licensing: Govt permission needed to start/expand/change production</li>
+<li>Purpose: Guide investment | Prevent monopolies | Promote balanced regional dev.</li>
+<li><span class="kw">License Raj</span>: Complex bureaucratic system → entry barriers | delays | corruption | reduced competition</li></ul>
+<div class="bx br">⚠️ <span class="kw">"Hindu Rate of Growth"</span>: 3–3.5% annual growth due to excessive regulation</div>
+</div>
+
+<div class="cd p">
+<h2>📌 New Economic Policy 1991 — LPG Reforms</h2>
+<div class="bx br">⚠️ <strong>1991 Crisis Causes:</strong> High fiscal deficit | Rising external debt | Gulf War oil prices↑ | Remittances↓ | Forex reserves = only 2 weeks of imports | India pledged gold abroad</div>
+<div class="tw"><table><thead><tr><th>LPG Reform</th><th>Meaning</th><th>Key Steps</th></tr></thead>
+<tbody><tr><td><span class="kw">L — Liberalisation</span></td><td>Reduce govt controls</td><td>Abolish industrial licensing | Simplify taxes | Remove capacity restrictions</td></tr>
+<tr><td><span class="kw">P — Privatisation</span></td><td>Reduce public sector role</td><td>Disinvestment of PSUs | Encourage private investment | Reduce monopolies</td></tr>
+<tr><td><span class="kw">G — Globalisation</span></td><td>Integrate with world economy</td><td>Encourage FDI | Allow MNCs | Reduce trade barriers | Promote exports</td></tr></tbody></table></div>
+<div class="bx bg">✅ Rupee devalued July 1991 — ~28% against USD | To make exports competitive &amp; attract forex</div>
+<div class="tw"><table><thead><tr><th>Sector</th><th>Impact of 1991 Reforms</th></tr></thead>
+<tbody><tr><td>Agriculture (Primary)</td><td>↑ input costs, export-oriented crops, slower growth — <span class="kr">Negative impact</span></td></tr>
+<tr><td>Industry (Secondary)</td><td>Greater competition, modernisation, expansion — <span class="kg">Positive</span></td></tr>
+<tr><td>Services (Tertiary)</td><td>Fast growth — IT, software, telecom, outsourcing — <span class="kg">Most Positive</span></td></tr>
+<tr><td>Financial Sector</td><td>Private banks, competition, better capital markets</td></tr></tbody></table></div>
+</div>
+</div>
+
+<div id="t11" class="tc">
+<div class="cd">
+<h2>📌 Fiscal Policy &amp; Government Budget</h2>
+<div class="bx by">Fiscal Policy = Govt using taxes + spending to control economy | Reflected in Union Budget | Ministry of Finance</div>
+<div class="tw"><table><thead><tr><th>Type</th><th>Action</th><th>When Used</th><th>Effect</th></tr></thead>
+<tbody><tr><td><span class="kw">Expansionary</span></td><td>↑ Spending, ↓ Taxes</td><td>Slowdown/Recession</td><td>Demand↑, Jobs↑</td></tr>
+<tr><td><span class="kw">Contractionary</span></td><td>↓ Spending, ↑ Taxes</td><td>High inflation</td><td>Demand↓, Inflation↓</td></tr></tbody></table></div>
+<div class="bx bb">📌 Budget presented: <span class="kw">1st February</span> | Article 112 = Annual Financial Statement | FRBM Act 2003 requires 3 statements</div>
+</div>
+
+<div class="cd g">
+<h2>📌 Budget Structure</h2>
+<div class="tw"><table><thead><tr><th>Account</th><th>Receipts</th><th>Expenditure</th></tr></thead>
+<tbody><tr><td><span class="kw">Revenue Account</span></td><td>Taxes, fees (no asset/liability change)</td><td>Salaries, pensions, interest, subsidies (recurring)</td></tr>
+<tr><td><span class="kw">Capital Account</span></td><td>Borrowings, disinvestment (creates liability)</td><td>Infrastructure, land, loan repayment (creates assets)</td></tr></tbody></table></div>
+<h3>Types of Deficits</h3>
+<div class="tw"><table><thead><tr><th>Deficit</th><th>Formula</th><th>Meaning</th></tr></thead>
+<tbody><tr><td><span class="kw">Revenue Deficit</span></td><td>Revenue Exp − Revenue Receipts</td><td>Borrowing for daily expenses ("Survival spending on loan")</td></tr>
+<tr><td><span class="kw">Fiscal Deficit</span></td><td>Total Exp − Total Receipts (excl. borrowings)</td><td>Total borrowing requirement ("Total gap = total borrowing")</td></tr>
+<tr><td><span class="kw">Primary Deficit</span></td><td>Fiscal Deficit − Interest Payments</td><td>Deficit without past loan burden</td></tr></tbody></table></div>
+<div class="bx by">📌 <strong>FRBM Act (2003) Target:</strong> Fiscal Deficit → 3% of GDP (original) | After pandemic: adjusted to 4.3% | Revenue Deficit → Reduce/Eliminate | Govt Debt → 40% of GDP by March 2025</div>
+</div>
+
+<div class="cd o">
+<h2>📌 Taxation</h2>
+<div class="tw"><table><thead><tr><th>Type</th><th>Definition</th><th>Examples</th><th>Burden</th></tr></thead>
+<tbody><tr><td><span class="kw">Direct Tax</span></td><td>Paid directly to govt</td><td>Income Tax, Corporate Tax</td><td>Cannot be shifted</td></tr>
+<tr><td><span class="kw">Indirect Tax</span></td><td>Collected by one, paid by another</td><td>GST, Customs, Excise</td><td>Shifted to consumer</td></tr>
+<tr><td><span class="kw">Progressive Tax</span></td><td>Rate ↑ as income ↑</td><td>Income tax slabs</td><td>Rich pay more</td></tr></tbody></table></div>
+<div class="bx bb">📌 <strong>VAT:</strong> Tax only on <span class="kw">value added</span> at each stage → removes cascading (tax on tax) effect</div>
+</div>
+
+<div class="cd p">
+<h2>📌 GST — Complete Coverage</h2>
+<div class="bx bg">📌 <strong>GST = One Nation, One Tax, One Market</strong> | 101st Constitutional Amendment 2016 | Implemented <span class="kw">1 July 2017</span> | Destination-based tax</div>
+<div class="tw"><table><thead><tr><th>Type</th><th>Applies When</th><th>Collected By</th></tr></thead>
+<tbody><tr><td><span class="kw">CGST</span></td><td>Intra-state sale</td><td>Central Govt</td></tr>
+<tr><td><span class="kw">SGST</span></td><td>Intra-state sale</td><td>State Govt</td></tr>
+<tr><td><span class="kw">IGST</span></td><td>Inter-state sale</td><td>Centre (then shares with destination state)</td></tr></tbody></table></div>
+<h3>GST Slabs</h3>
+<p>0% (Exempt: fresh food) | 5% (mass consumption) | 12% (semi-essential) | 18% (main rate) | 28% (luxury+sin goods)</p>
+<div class="bx by">📌 Next Gen GST: Simplified to 5% &amp; 18% slabs | Tobacco/pan masala/aerated drinks → 40% | Household essentials to 5%/Nil</div>
+<h3>GST Council</h3>
+<ul><li>Constitutional basis: <span class="kw">Article 279A</span></li>
+<li>Chairperson: <span class="kw">Union Finance Minister</span></li>
+<li>Voting: Centre=1/3 weight | States=2/3 weight | Decision needs <span class="kw">75% majority</span></li>
+<li>Example of <span class="kw">Cooperative Federalism</span></li></ul>
+<div class="bx bb">📌 <strong>ITC (Input Tax Credit):</strong> Deduct tax paid on inputs from tax on output → Pay only on value added → Creates accountability chain</div>
+<div class="bx bg">📌 <strong>GST Compensation:</strong> Centre guaranteed states for 5 years (2017–2022) via Compensation Cess (tobacco, luxury cars, aerated drinks)</div>
+<h3>Tax Reform Committees</h3>
+<div class="tw"><table><thead><tr><th>Committee</th><th>Year</th><th>Key Recommendations</th></tr></thead>
+<tbody><tr><td><span class="kw">Raja J. Chelliah</span></td><td>1991</td><td>Reduce high tax rates | Broaden tax base | Simplify structure | Improve compliance</td></tr>
+<tr><td><span class="kw">Vijay Kelkar</span></td><td>2002-03</td><td>Reduce rates | Widen base | Use technology | Remove cascading | Move towards GST</td></tr></tbody></table></div>
+</div>
+
+<div class="cd">
+<h2>📌 16th Finance Commission</h2>
+<ul><li>Constituted under <span class="kw">Article 280</span> | Headed by <span class="kw">Dr. Arvind Panagariya</span> | Period: 2026-27 to 2030-31</li>
+<li><span class="kw">Vertical Devolution</span>: 41% states' share (same as 15th FC)</li>
+<li><span class="kw">New addition</span>: "Contribution to GDP" — rewards high-growth states</li>
+<li>Fiscal Deficit targets: Centre → 3.5% of GDP by 2030-31 | States → 3% of GSDP</li>
+<li>Discontinued: Revenue Deficit Grants | Sector-specific grants — push states toward fiscal self-reliance</li>
+<li>Local Body Grants: ~₹7.91 lakh crore | 80% basic + 20% performance-based</li></ul>
+</div>
+</div>
+
+<div id="t12" class="tc">
+<div class="cd">
+<h2>📌 Foreign Exchange (FOREX)</h2>
+<div class="bx by">Exchange Rate = Price of one currency in terms of another</div>
+<div class="tw"><table><thead><tr><th>System</th><th>Description</th><th>India?</th></tr></thead>
+<tbody><tr><td><span class="kw">Fixed (Pegged)</span></td><td>Govt fixes rate to another currency/gold</td><td>Used till 1975</td></tr>
+<tr><td><span class="kw">Floating</span></td><td>Determined purely by market forces</td><td>No</td></tr>
+<tr><td><span class="kg">Managed Float ✅</span></td><td>Market-determined but RBI intervenes to prevent extreme volatility</td><td><strong>India follows this</strong></td></tr></tbody></table></div>
+<h3>India's Exchange Rate Journey</h3>
+<div class="tw"><table><thead><tr><th>Period</th><th>System</th><th>Key Event</th></tr></thead>
+<tbody><tr><td>1947–66</td><td>Par Value (Pegged to British Pound)</td><td>-</td></tr>
+<tr><td><span class="kw">1966</span></td><td>First Major Devaluation (36.5%)</td><td>War + drought</td></tr>
+<tr><td>1975–91</td><td>Basket Peg (linked to trading partners)</td><td>-</td></tr>
+<tr><td>1991–93</td><td><span class="kw">LERMS</span> (Dual exchange rate system)</td><td>Transition period</td></tr>
+<tr><td><span class="kw">1993–Now</span></td><td>Market-Linked (Managed Float)</td><td>Current system</td></tr></tbody></table></div>
+</div>
+
+<div class="cd g">
+<h2>📌 NEER, REER &amp; Forex Reserves</h2>
+<div class="tw"><table><thead><tr><th>Index</th><th>Definition</th><th>Significance</th></tr></thead>
+<tbody><tr><td><span class="kw">NEER</span></td><td>Weighted average of bilateral exchange rates (doesn't account for inflation)</td><td>Shows nominal currency strength</td></tr>
+<tr><td><span class="kw">REER</span></td><td>NEER adjusted for inflation differentials</td><td>REER &gt; 100 = overvalued (less competitive exports) | REER &lt; 100 = undervalued</td></tr></tbody></table></div>
+<div class="bx by">📌 <strong>Forex Reserves (May 2026):</strong> ~$690.69 Billion | RBI used ~$50B+ to defend Rupee</div>
+<div class="bx bb">📌 <strong>Dumping:</strong> Exporting goods below cost of production to wipe out local competition | Triggers Anti-Dumping Duties | China accused frequently</div>
+</div>
+
+<div class="cd o">
+<h2>📌 De-dollarisation &amp; Rupee Depreciation (2026)</h2>
+<h3>India's Steps Toward De-dollarisation</h3>
+<ul><li><span class="kw">Rupee Trade Settlement</span>: 18+ countries opened Special Vostro Rupee Accounts (SVRA)</li>
+<li><span class="kw">UPI-PayNow Linkage</span>: With Singapore &amp; UAE (bypasses SWIFT)</li>
+<li><span class="kw">Oil for Rupee</span>: Deals with UAE &amp; Saudi Arabia for crude oil payment in INR</li></ul>
+<h3>BRICS Steps</h3>
+<ul><li><span class="kw">BRICS Pay</span>: Decentralized multicurrency digital payment system</li>
+<li><span class="kw">NDB</span>: Increasing local currency loans (targeting 30%)</li></ul>
+<div class="bx br">⚠️ <strong>Rupee Pressure (2026):</strong> West Asian conflict → Strait of Hormuz disrupted → Crude oil &gt;$119/barrel → India imports ~80% oil → Rupee breached ₹95.20/USD | FPI outflows to safe assets (USD, Gold)</div>
+</div>
+</div>
+
+<div id="t13" class="tc">
+<div class="cd">
+<h2>🌾 Agriculture Schemes</h2>
+<h3>Income Support &amp; Pension</h3>
+<div class="tw"><table><thead><tr><th>Scheme</th><th>Ministry</th><th>Key Points</th></tr></thead>
+<tbody><tr><td><span class="kw">PM-KISAN</span></td><td>Agriculture &amp; Farmers Welfare</td><td>₹6,000/year | 3 instalments | DBT | Landholding farmers</td></tr>
+<tr><td><span class="kw">PM-Kisan Maandhan</span></td><td>Agriculture &amp; Farmers Welfare</td><td>Pension ₹3,000/month after 60 | Small &amp; marginal farmers</td></tr></tbody></table></div>
+<h3>Crop Insurance</h3>
+<div class="tw"><table><thead><tr><th>Scheme</th><th>Key Points</th></tr></thead>
+<tbody><tr><td><span class="kw">PMFBY</span></td><td>Low premium | Covers natural calamities, pests, diseases</td></tr>
+<tr><td><span class="kw">WBCIS</span></td><td>Weather-based insurance (rainfall, temperature parameters)</td></tr></tbody></table></div>
+<h3>Irrigation, Credit, Marketing</h3>
+<div class="tw"><table><thead><tr><th>Scheme</th><th>Key Points</th></tr></thead>
+<tbody><tr><td><span class="kw">PMKSY</span></td><td>"Har Khet Ko Pani" + "Per Drop More Crop" | Drip &amp; sprinkler irrigation</td></tr>
+<tr><td><span class="kw">KCC</span> (Kisan Credit Card)</td><td>Short-term crop loans at subsidized interest</td></tr>
+<tr><td><span class="kw">AIF</span></td><td>Post-harvest infrastructure: warehouses, cold storage</td></tr>
+<tr><td><span class="kw">e-NAM</span></td><td>Online trading platform | Integrates APMC mandis | Better price discovery</td></tr>
+<tr><td><span class="kw">PM-AASHA</span></td><td>MSP procurement + Price deficiency payment</td></tr></tbody></table></div>
+<h3>Sustainable &amp; Production Schemes</h3>
+<div class="tw"><table><thead><tr><th>Scheme</th><th>Key Points</th></tr></thead>
+<tbody><tr><td><span class="kw">PKVY</span></td><td>Organic farming via cluster approach</td></tr>
+<tr><td><span class="kw">NMSA</span></td><td>Climate-resilient farming</td></tr>
+<tr><td><span class="kw">NFSM</span></td><td>Increase rice, wheat, pulses, coarse cereals, oilseeds production</td></tr>
+<tr><td><span class="kw">MIDH</span></td><td>Holistic horticulture development</td></tr>
+<tr><td><span class="kw">NMEO-OP</span></td><td>Increase domestic edible oil (Oil Palm Mission)</td></tr>
+<tr><td><span class="kw">PMMSY</span></td><td>Fish production &amp; exports | Ministry of Fisheries, AH &amp; Dairying</td></tr></tbody></table></div>
+</div>
+
+<div class="cd g">
+<h2>🏭 MSME Schemes</h2>
+<div class="tw"><table><thead><tr><th>Scheme</th><th>Ministry</th><th>Key Points</th></tr></thead>
+<tbody><tr><td><span class="kw">PMMY (Mudra)</span></td><td>Finance</td><td>Launched 2015 | Up to ₹10 lakh | Shishu(≤50k) | Kishor(50k-5L) | Tarun(5-10L)</td></tr>
+<tr><td><span class="kw">CGTMSE</span></td><td>MSME</td><td>Collateral-free loans | Govt credit guarantee</td></tr>
+<tr><td><span class="kw">Stand-Up India</span></td><td>Finance</td><td>₹10L–₹1Cr | SC/ST &amp; women | Greenfield enterprises</td></tr>
+<tr><td><span class="kw">ECLGS</span></td><td>Finance</td><td>COVID-19 relief | 100% guaranteed | Collateral-free | Up to 50% extra credit | NCGC guarantee</td></tr></tbody></table></div>
+</div>
+
+<div class="cd o">
+<h2>💡 Special Facts to Remember</h2>
+<div class="bx bg">📌 <strong>Verghese Kurien</strong> = "Father of White Revolution" | <span class="kw">Operation Flood</span> = World's largest milk producer | Amul cooperative model</div>
+<div class="bx by">📌 <strong>Outsourcing</strong>: Hiring external services previously done internally</div>
+<div class="bx bb">📌 India: 142nd (2014) → 63rd (2020) — World Bank <span class="kw">Ease of Doing Business</span></div>
+<div class="bx bp">📌 <strong>LARR Act:</strong> SIA mandatory | PPP=70% consent | Private=80% | Govt=No consent needed</div>
+</div>
+</div>
+
+<div id="t14" class="tc">
+<div class="cd">
+<h2>❓ PYQs — SSC CGL, CHSL, Delhi Police, Phase-13</h2>
+
+<div class="mcq"><div class="mq">Q1. PPF shows trade-offs and opportunity costs. / PPF is used to estimate govt revenue. [CGL 17 Sep S1]</div>
+<div class="ma">✅ A — Only Statement 1 correct</div>
+<div class="me">PPF is NOT for govt revenue estimation</div></div>
+
+<div class="mcq"><div class="mq">Q2. Price ↑10%, Qty demanded ↓20% — classify demand. [CGL 17 Sep S3]</div>
+<div class="ma">✅ A — Elastic (PED = 20/10 = 2 &gt; 1)</div></div>
+
+<div class="mcq"><div class="mq">Q3. Which is INCORRECT about Current Account? [CGL 18 Sep S1]</div>
+<div class="ma">✅ D — "Suitable for long-term savings" is INCORRECT (that's savings a/c)</div></div>
+
+<div class="mcq"><div class="mq">Q4. Best defines opportunity cost. [CGL 20 Sep S1]</div>
+<div class="ma">✅ B — Next best alternative foregone</div></div>
+
+<div class="mcq"><div class="mq">Q5. Correctly describes heavy industry. [CGL 20 Sep S2]</div>
+<div class="ma">✅ C — Uses bulky inputs to produce heavy goods</div></div>
+
+<div class="mcq"><div class="mq">Q6. Verghese Kurien statement. [CGL 22 Sep S3]</div>
+<div class="ma">✅ B — Pioneered Operation Flood to transform dairy farming</div></div>
+
+<div class="mcq"><div class="mq">Q7. Law of Demand. [CGL 25 Sep S1]</div>
+<div class="ma">✅ C — As price increases, demand decreases, ceteris paribus</div></div>
+
+<div class="mcq"><div class="mq">Q8. Demand decreases because others consume same commodity. [CGL 25 Sep S2]</div>
+<div class="ma">✅ A — Snob effect</div></div>
+
+<div class="mcq"><div class="mq">Q9. Who gave scarcity definition of economics? [CGL 26 Sep S3]</div>
+<div class="ma">✅ D — Lionel Robbins</div></div>
+
+<div class="mcq"><div class="mq">Q10. Consumer goods industry. [CGL 14 Sep S1]</div>
+<div class="ma">✅ C — Toothpaste (Iron/Aluminium/Copper = basic/key industries)</div></div>
+
+<div class="mcq"><div class="mq">Q11. Break-even point. [CGL 14 Oct S2]</div>
+<div class="ma">✅ B — Where Total Revenue = Total Cost</div></div>
+
+<div class="mcq"><div class="mq">Q12. Curve showing equal satisfaction combinations. [CGL 19 Sep S3]</div>
+<div class="ma">✅ A — Indifference curve</div></div>
+
+<div class="mcq"><div class="mq">Q13. NOT an exception to Law of Demand. [Phase 13, 26 Jul S3]</div>
+<div class="ma">✅ D — Substitute goods (they follow normal law of demand)</div></div>
+
+<div class="mcq"><div class="mq">Q14. A: Double coincidence enhances barter efficiency. R: Money eliminates double coincidence. [Phase 13, 29 Aug S3]</div>
+<div class="ma">✅ D — None (A is FALSE — double coincidence is a PROBLEM not benefit)</div></div>
+
+<div class="mcq"><div class="mq">Q15. Elastic supply definition. [Phase 13, 30 Jul S3]</div>
+<div class="ma">✅ B — Relatively elastic supply</div></div>
+
+<div class="mcq"><div class="mq">Q16. Market equilibrium statements. [Phase 13 HS, 30 Jul S2]</div>
+<div class="ma">✅ A — Only Statement I correct (excess supply = supply &gt; demand, not demand &gt; supply)</div></div>
+
+<div class="mcq"><div class="mq">Q19. Inputs ↑50%, output ↑75%. [Phase 13 HS, 29 Aug S2]</div>
+<div class="ma">✅ B — Increasing Returns to Scale</div></div>
+
+<div class="mcq"><div class="mq">Q20. Law of Diminishing Marginal Utility. [Phase 13 HS, 29 Jul S2]</div>
+<div class="ma">✅ C — MU declines with each additional unit</div></div>
+
+<div class="mcq"><div class="mq">Q22. Demand &gt; supply = ? [Matric 26 Jul S1]</div>
+<div class="ma">✅ C — Shortage</div></div>
+
+<div class="mcq"><div class="mq">Q26. U-shaped curve due to law of variable proportions. [Steno 7 Aug S2]</div>
+<div class="ma">✅ B — Average Variable Cost (AVC) curve</div></div>
+
+<div class="mcq"><div class="mq">Q27. Invisible hand. [Steno 6 Aug S3]</div>
+<div class="ma">✅ C — Market equilibrium achieved via self-interest</div></div>
+
+<div class="mcq"><div class="mq">Q40. When is TR maximized? [CPO 10 Dec S2]</div>
+<div class="ma">✅ B — When elasticity equals one (unit elastic)</div></div>
+
+<div class="mcq"><div class="mq">Q41. Formula for elasticity of supply. [CPO 10 Dec S2]</div>
+<div class="ma">✅ B — % change in qty supplied ÷ % change in price</div></div>
+
+<div class="mcq"><div class="mq">Q53. Monopolistic competition in long run. [Delhi Police]</div>
+<div class="ma">✅ C — Earns zero economic profit</div></div>
+
+<div class="mcq"><div class="mq">Q62. Laffer Curve. [Delhi Police]</div>
+<div class="ma">✅ D — Optimal tax rate that maximizes revenue</div></div>
+
+<div class="mcq"><div class="mq">Q64. Autonomous investment → multiplied rise in NI; R: MPS &lt; 1. [21 Sep S1]</div>
+<div class="ma">✅ A — Both true, R explains A</div></div>
+
+<div class="mcq"><div class="mq">Q65. Cambridge approach to quantity theory. [Graduate 31 Jul S3]</div>
+<div class="ma">✅ A — Cash balance approach</div></div>
+
+<div class="mcq"><div class="mq">Q66. Iso-utility curve = ? [Graduate 31 Jul S3]</div>
+<div class="ma">✅ D — Indifference curve</div></div>
+
+<div class="mcq"><div class="mq">Q. IPR 1956 main objective. [CGL 23 Sep S1]</div>
+<div class="ma">✅ B — Growth with equity</div></div>
+
+<div class="mcq"><div class="mq">Q. IPR 1956 Assertion-Reason (Schedule A/B/C). [CGL 16 Sep S1]</div>
+<div class="ma">✅ A — Both A and R true, R correctly explains A</div></div>
+
+<div class="mcq"><div class="mq">Q. Main rationale for import substitution (First 7 FYPs). [CGL 20 Sep S1]</div>
+<div class="ma">✅ C — Protect infant domestic industries</div></div>
+
+<div class="mcq"><div class="mq">Q. Architect of Indian Planning. [CHSL 22 Nov S2]</div>
+<div class="ma">✅ A — Prasanta Chandra Mahalanobis</div></div>
+
+<div class="mcq"><div class="mq">Q. Body set up in 1952 to approve Five-Year Plans. [Delhi Police 2025]</div>
+<div class="ma">✅ C — National Development Council (NDC)</div></div>
+</div>
+</div>
+
+<div id="t15" class="tc">
+<div class="sm">
+<h3>⚡ Module 1–2 (Micro): Quick Revision</h3>
+<ul>
+<li>✅ <span class="kw">Scarcity</span> = limited resources + unlimited wants | OC = NEXT BEST alternative forgone</li>
+<li>✅ <span class="kw">Robbins</span>=Scarcity | Smith=Wealth | Marshall=Welfare | Keynes=Employment</li>
+<li>✅ PPF: On=efficient | Inside=inefficient | Outside=unattainable | Concave shape</li>
+<li>✅ Barter problem #1 = <span class="kw">Double Coincidence of Wants</span></li>
+<li>✅ Law of Demand: inverse relationship (ceteris paribus) | Price→movement | Non-price→shift</li>
+<li>✅ Elastic &gt;1 | Inelastic &lt;1 | Unit=1 | <span class="kw">TR max at unit elastic</span></li>
+<li>✅ Giffen=inferior | Veblen=status | Snob=exclusivity | Bandwagon=herd | Demonstration=imitation</li>
+<li>✅ <span class="kw">MU=0 → TU is maximum</span> | Iso-utility curve = Indifference curve</li>
+<li>✅ Qd=Qs=Equilibrium | Qd&gt;Qs=Shortage(price↑) | Qs&gt;Qd=Surplus(price↓)</li>
+</ul>
+</div>
+
+<div class="sm">
+<h3>⚡ Module 3 (Production): Quick Revision</h3>
+<ul>
+<li>✅ Rational stage = <span class="kw">Stage II</span> (MP positive but decreasing) | TP max when <span class="kw">MP=0</span></li>
+<li>✅ Increasing RTS: output↑ more than input (e.g. +50% input → +75% output)</li>
+<li>✅ <span class="kw">AVC is U-shaped</span> | Shutdown: Price &lt; AVC | Break-even: TR=TC</li>
+<li>✅ Profit max: <span class="kw">MR=MC</span></li>
+<li>✅ Perfect comp: AR=MR=Price | Monopoly: Price maker | Monopolistic: <span class="kw">zero eco profit (LR)</span></li>
+<li>✅ Oligopoly: kinked demand → price rigidity | mutual interdependence</li>
+</ul>
+</div>
+
+<div class="sm">
+<h3>⚡ Module 4–5 (Public &amp; National Income): Quick Revision</h3>
+<ul>
+<li>✅ Public good: <span class="kw">Non-rival + Non-excludable</span> → Free rider problem</li>
+<li>✅ Primary=Agriculture | Secondary=Manufacturing | <span class="kw">Tertiary=Services (largest GDP)</span> | Quaternary=IT/R&amp;D</li>
+<li>✅ Intermediate goods NOT in GDP | Final goods IN GDP</li>
+<li>✅ <span class="kw">NNP at factor cost = National Income</span> | GDP+NFIA=GNP | GNP−Depreciation=NNP</li>
+<li>✅ Expenditure method: <span class="kw">C+I+G+(X−M)</span></li>
+<li>✅ Excluded from NI: Transfer payments, second-hand goods, illegal activities</li>
+</ul>
+</div>
+
+<div class="sm">
+<h3>⚡ Module 6–7 (Inflation &amp; Money): Quick Revision</h3>
+<ul>
+<li>✅ CPI base year: 2012 | WPI base year: 2011-12 | India inflation target: <span class="kw">4%±2%</span></li>
+<li>✅ Stagflation = Inflation + Unemployment + Low growth</li>
+<li>✅ Borrowers gain from inflation | Lenders, fixed income earners lose</li>
+<li>✅ M0=Reserve Money | M1=Narrow | <span class="kw">M3=Broad (policy relevant)</span></li>
+<li>✅ Money multiplier = 1÷CRR</li>
+<li>✅ CRR: WITH RBI, cash only, no interest | SLR: WITH BANK, cash+gold+G-Secs, earns interest</li>
+<li>✅ Fiat money = backed by sovereign guarantee, NOT gold</li>
+</ul>
+</div>
+
+<div class="sm">
+<h3>⚡ Module 8–10 (Banking &amp; Planning): Quick Revision</h3>
+<ul>
+<li>✅ 1969: 14 banks nationalised | 1980: 6 more | PM: Indira Gandhi</li>
+<li>✅ ₹1 note: <span class="kw">Ministry of Finance</span> (not RBI) | DICGC deposit insurance: ₹5 lakh</li>
+<li>✅ Narasimham I (1991): Reduce SLR/CRR | Private banks | Prudential norms</li>
+<li>✅ NPA: overdue &gt;90 days | SARFAESI: 60-day notice | IBC: 180+90 days timeline</li>
+<li>✅ 1st FYP: Harrod-Domar | 2nd FYP: Mahalanobis | Steel plants: Bhilai(USSR), Rourkela(Germany), Durgapur(UK)</li>
+<li>✅ P.C. Mahalanobis = Architect of Indian Planning | NDC est. 1952</li>
+<li>✅ Plan Holiday: 1966-69 | Rolling Plan: 1978-80</li>
+</ul>
+</div>
+
+<div class="sm">
+<h3>⚡ Module 11–12 (Budget &amp; FOREX): Quick Revision</h3>
+<ul>
+<li>✅ Budget presented <span class="kw">1 Feb</span> | Article 112 | FRBM Act 2003</li>
+<li>✅ Fiscal Deficit = Total Exp − Total Receipts (excl. borrowings)</li>
+<li>✅ GST: 101st Constitutional Amendment | 1 July 2017 | Destination-based | Article 279A (GST Council)</li>
+<li>✅ GST Council: Finance Minister as Chair | Centre=1/3 | States=2/3 | 75% majority</li>
+<li>✅ IGST for interstate | CGST+SGST for intrastate</li>
+<li>✅ 16th Finance Commission: Arvind Panagariya | 2026-31 | 41% vertical devolution</li>
+<li>✅ India: Managed Float | 1993-present | REER&gt;100=overvalued</li>
+<li>✅ LPG 1991: Liberalisation + Privatisation + Globalisation | Rupee devalued ~28%</li>
+</ul>
+</div>
+
+<div class="cd o">
+<h2>🏆 Top 25 SSC Favourite Facts</h2>
+<ol>
+<li>OC = <span class="kw">next best alternative foregone</span></li>
+<li>Robbins = <span class="kw">scarcity definition</span></li>
+<li>Invisible hand = Adam Smith | Wealth of Nations 1776</li>
+<li>PPF concave = resources not equally efficient</li>
+<li>Barter problem #1 = Double Coincidence of Wants</li>
+<li>Price → movement | Non-price → shift in demand</li>
+<li>TR max when elasticity = 1</li>
+<li>Giffen = inferior | Veblen = luxury/status</li>
+<li>MU=0 → TU maximum | Iso-utility = Indifference curve</li>
+<li>Stage II = rational production stage | TP max when MP=0</li>
+<li>Shutdown: Price &lt; AVC | Profit max: MR=MC</li>
+<li>Monopolistic competition: zero economic profit (LR)</li>
+<li>Public good: non-rival + non-excludable</li>
+<li>Tertiary = <span class="kw">largest GDP contributor in India</span></li>
+<li>Intermediate goods NOT counted in GDP</li>
+<li>NNP at factor cost = National Income</li>
+<li>CPI target: 4%±2% | Base year 2012</li>
+<li>M3 = Broad money (policy relevant)</li>
+<li>CRR: WITH RBI | SLR: WITH BANK</li>
+<li>1969: 14 banks | 1980: 6 more | PM Indira Gandhi</li>
+<li>Mahalanobis = Architect of Indian Planning | 2nd FYP</li>
+<li>LPG 1991: L=Liberalisation P=Privatisation G=Globalisation</li>
+<li>GST: 101st Amendment | 1 July 2017 | Article 279A</li>
+<li>Laffer Curve → optimal tax rate maximizes revenue</li>
+<li>India follows <span class="kw">Managed Float</span> exchange rate (1993-present)</li>
+</ol>
+</div>
+
+<div class="cd p">
+<h2>🧠 All Mnemonics</h2>
+<div class="mn"><strong>Economists:</strong> <strong>A</strong>dam Smith(wea<strong>A</strong>lth) → <strong>M</strong>arshall(welfare) → <strong>R</strong>obbins(scaRcity) → <strong>K</strong>eyes(employment) = <strong>AMRK</strong></div>
+<div class="mn"><strong>Factors of Production:</strong> <strong>L</strong>and + <strong>L</strong>abour + <strong>C</strong>apital + <strong>E</strong>ntrepreneurship = <strong>LLCE</strong></div>
+<div class="mn"><strong>Barter Problems:</strong> <strong>D</strong>ouble coincidence + <strong>I</strong>ndivisibility + <strong>S</strong>torage + <strong>C</strong>ommon measure lacking + <strong>O</strong>bligations = <strong>DISCO</strong></div>
+<div class="mn"><strong>Social Effects Order:</strong> <strong>B</strong>andwagon(follow crowd) → <strong>S</strong>nob(reject crowd) → <strong>D</strong>emonstration(copy rich) → <strong>V</strong>eblen(price=prestige)</div>
+<div class="mn"><strong>Stages of Production:</strong> <strong>IR → DR → NR</strong> = Increasing → Diminishing → Negative Returns</div>
+<div class="mn"><strong>Steel Plants:</strong> <strong>B</strong>hilai=<strong>B</strong>ig USSR | <strong>R</strong>ourkela=<strong>R</strong>obust Germany | <strong>D</strong>urgapur=<strong>D</strong>ear Britain</div>
+<div class="mn"><strong>Expenditure Method:</strong> <strong>C+I+G+(X−M)</strong> = "CIG eXported Minus"</div>
+<div class="mn"><strong>LPG 1991:</strong> <strong>L</strong>iberalisation + <strong>P</strong>rivatisation + <strong>G</strong>lobalisation = "India went to LPG kitchen"</div>
+</div>
+</div>
+
+<button id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
+<script>
+function st(id,btn){
+  document.querySelectorAll('.tc').forEach(e=>e.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(e=>e.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+window.addEventListener('scroll',function(){
+  document.getElementById('st').style.display=window.scrollY>300?'flex':'none';
+});
+</script>
+</body></html>
