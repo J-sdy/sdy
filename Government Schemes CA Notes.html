@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Government Schemes — Revision Notes</title>
+<style>
+  :root{
+    --paper:#faf9f6;
+    --card:#ffffff;
+    --ink:#242220;
+    --ink-soft:#514d47;
+    --line:#e4e0d6;
+    --navy:#1d3d5c;
+    --navy-soft:#e8eef4;
+    --gold:#9a6a1f;
+    --gold-soft:#fbf1de;
+    --green:#2f6b45;
+    --green-soft:#eaf3ec;
+    --red:#a03636;
+    --red-soft:#fbeceb;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+    padding-bottom:60px;
+    padding-top:env(safe-area-inset-top,0px);
+  }
+  h1,h2,h3,h4{
+    font-family:Georgia,"Times New Roman",serif;
+    color:var(--navy);
+    margin:0 0 10px 0;
+    line-height:1.25;
+  }
+  header.top{
+    padding:22px 18px 16px;
+    border-bottom:3px solid var(--navy);
+    background:linear-gradient(180deg,#fff,var(--paper));
+  }
+  header.top h1{
+    font-size:1.5rem;
+    margin-bottom:4px;
+  }
+  header.top p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:0.92rem;
+  }
+
+  /* Tabs - horizontal scroll, NOT sticky */
+  nav.tabs{
+    display:flex;
+    overflow-x:auto;
+    gap:8px;
+    padding:14px 18px;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  nav.tabs::-webkit-scrollbar{height:6px;}
+  nav.tabs::-webkit-scrollbar-thumb{background:#cfc9ba;border-radius:4px;}
+  nav.tabs button{
+    flex:0 0 auto;
+    padding:9px 16px;
+    border-radius:999px;
+    border:1.5px solid var(--line);
+    background:var(--card);
+    color:var(--ink-soft);
+    font-size:0.88rem;
+    font-weight:600;
+    white-space:nowrap;
+    cursor:pointer;
+    transition:background .15s,color .15s,border-color .15s;
+  }
+  nav.tabs button.active{
+    background:var(--navy);
+    border-color:var(--navy);
+    color:#fff;
+  }
+
+  main{padding:18px;max-width:900px;margin:0 auto;}
+  .panel{display:none;}
+  .panel.active{display:block;animation:fadein .2s ease-in;}
+  @keyframes fadein{from{opacity:0;}to{opacity:1;}}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    margin-bottom:14px;
+  }
+  .card h3{font-size:1.08rem;margin-bottom:8px;}
+  .card h3 .tag{
+    display:inline-block;
+    font-size:0.7rem;
+    font-weight:700;
+    color:var(--navy);
+    background:var(--navy-soft);
+    border-radius:5px;
+    padding:2px 7px;
+    margin-left:8px;
+    vertical-align:middle;
+  }
+  ul{margin:6px 0 6px 0;padding-left:20px;}
+  li{margin-bottom:5px;}
+  b,strong{color:var(--ink);}
+  .kw{background:var(--gold-soft);color:var(--gold);padding:1px 5px;border-radius:4px;font-weight:700;}
+  .note{
+    background:var(--gold-soft);
+    border-left:4px solid var(--gold);
+    border-radius:6px;
+    padding:10px 12px;
+    margin:10px 0;
+    font-size:0.92rem;
+  }
+  .tip{
+    background:var(--green-soft);
+    border-left:4px solid var(--green);
+    border-radius:6px;
+    padding:10px 12px;
+    margin:10px 0;
+    font-size:0.92rem;
+  }
+  .warn{
+    background:var(--red-soft);
+    border-left:4px solid var(--red);
+    border-radius:6px;
+    padding:10px 12px;
+    margin:10px 0;
+    font-size:0.92rem;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.87rem;
+    margin:8px 0 14px;
+  }
+  th,td{
+    border:1px solid var(--line);
+    padding:7px 8px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{background:var(--navy-soft);color:var(--navy);font-size:0.82rem;}
+  tr:nth-child(even) td{background:#fbfaf7;}
+  .tbl-wrap{overflow-x:auto;}
+  .divider{border:none;border-top:1px dashed var(--line);margin:16px 0;}
+  .intro-list li{margin-bottom:8px;}
+
+  /* MCQ Quiz styling */
+  .qnum{color:var(--navy);font-weight:700;}
+  .exp{
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    background:#f6f4ee;
+    border-radius:6px;
+    padding:10px 12px;
+    margin-top:4px;
+    border-left:4px solid var(--navy);
+  }
+  .exp b{color:var(--navy);}
+
+  .quiz-btn{
+    padding:9px 16px;border-radius:8px;border:1.5px solid var(--navy);
+    background:#fff;color:var(--navy);font-weight:700;font-size:0.88rem;cursor:pointer;
+    transition:background .15s,color .15s;
+  }
+  .quiz-btn:hover{background:var(--navy-soft);}
+  .quiz-btn.primary{background:var(--navy);color:#fff;}
+  .quiz-btn.primary:hover{background:#152e46;}
+  .quiz-btn.ghost{border-color:var(--line);color:var(--ink-soft);background:#fff;font-weight:600;}
+  .quiz-btn.ghost:hover{background:#f2f0ea;}
+  .quiz-btn.danger{border-color:var(--red);color:var(--red);background:#fff;margin-top:14px;display:block;width:100%;}
+  .quiz-btn.danger:hover{background:var(--red-soft);}
+  .quiz-btn:disabled{opacity:.45;cursor:not-allowed;}
+
+  .quiz-top{
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    flex-wrap:wrap;margin-bottom:12px;
+  }
+  .quiz-progress-wrap{flex:1;min-width:180px;}
+  .quiz-progress-bar{
+    width:100%;height:8px;border-radius:5px;background:var(--line);overflow:hidden;margin-bottom:4px;
+  }
+  #quizProgressFill{height:100%;background:var(--green);width:1%;transition:width .2s;}
+  #quizProgressText{font-size:0.8rem;color:var(--ink-soft);}
+  .quiz-score{
+    font-weight:700;color:var(--navy);font-size:0.92rem;
+    background:var(--navy-soft);padding:6px 12px;border-radius:8px;white-space:nowrap;
+  }
+
+  .quiz-qtext{font-size:1rem;margin:6px 0 14px;color:var(--ink);}
+  .quiz-options{display:flex;flex-direction:column;gap:9px;margin-bottom:6px;}
+  .quiz-opt{
+    display:flex;align-items:flex-start;gap:10px;
+    padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;
+    background:#fff;cursor:pointer;font-size:0.92rem;transition:border-color .12s,background .12s;
+  }
+  .quiz-opt:hover{border-color:var(--navy);background:var(--navy-soft);}
+  .quiz-opt .opt-letter{
+    flex:0 0 auto;width:24px;height:24px;border-radius:50%;
+    background:var(--paper);border:1.5px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:0.78rem;color:var(--ink-soft);
+  }
+  .quiz-opt.selected{border-color:var(--navy);background:var(--navy-soft);}
+  .quiz-opt.selected .opt-letter{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .quiz-opt.locked{cursor:default;}
+  .quiz-opt.correct-ans{border-color:var(--green);background:var(--green-soft);}
+  .quiz-opt.correct-ans .opt-letter{background:var(--green);color:#fff;border-color:var(--green);}
+  .quiz-opt.wrong-ans{border-color:var(--red);background:var(--red-soft);}
+  .quiz-opt.wrong-ans .opt-letter{background:var(--red);color:#fff;border-color:var(--red);}
+
+  .quiz-feedback{
+    font-weight:700;font-size:0.92rem;padding:8px 12px;border-radius:7px;margin:8px 0;
+  }
+  .quiz-feedback.correct{background:var(--green-soft);color:var(--green);}
+  .quiz-feedback.wrong{background:var(--red-soft);color:var(--red);}
+
+  .quiz-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
+  .quiz-nav{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    flex-wrap:wrap;margin:4px 0 6px;
+  }
+  .quiz-jump{display:flex;align-items:center;gap:6px;font-size:0.82rem;color:var(--ink-soft);}
+  .quiz-jump input{
+    width:60px;padding:6px 8px;border-radius:6px;border:1.5px solid var(--line);font-size:0.85rem;
+  }
+
+  .summary-box{
+    background:var(--navy-soft);
+    border:1px solid var(--navy);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    margin-top:10px;
+  }
+  .summary-box h3{margin-bottom:10px;}
+
+  /* scroll to top */
+  #toTop{
+    position:fixed;
+    right:16px;
+    bottom:calc(16px + env(safe-area-inset-bottom,0px));
+    width:46px;height:46px;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    font-size:1.2rem;
+    display:none;
+    align-items:center;justify-content:center;
+    cursor:pointer;
+    box-shadow:0 3px 10px rgba(0,0,0,.25);
+    z-index:50;
+  }
+  #toTop.show{display:flex;}
+
+  footer{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:0.8rem;
+    padding:24px 10px 6px;
+  }
+
+  @media (max-width:480px){
+    header.top h1{font-size:1.3rem;}
+    main{padding:14px;}
+    .card{padding:14px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>🇮🇳 Government Schemes — Revision Notes</h1>
+  <p>Siddhi's CA Garud Series · Consolidated notes + 95 practice MCQs with explanations</p>
+</header>
+
+<nav class="tabs" id="tabBar">
+  <button data-tab="t1" class="active">State Schemes</button>
+  <button data-tab="t2">Central 2026</button>
+  <button data-tab="t3">Central 2025</button>
+  <button data-tab="t4">Ministry-wise Table</button>
+  <button data-tab="t5">Apps & Portals</button>
+  <button data-tab="t6">MCQ Practice (95)</button>
+</nav>
+
+<main>
+
+<!-- ============ TAB 1 : STATE SCHEMES ============ -->
+<section id="t1" class="panel active">
+  <h2>🏛️ State Government Schemes — 2026</h2>
+
+  <div class="card">
+    <h3>1. Mukhyamantri Sehat Bima Yojana <span class="tag">Punjab</span></h3>
+    <ul>
+      <li>✅ Free & <span class="kw">cashless healthcare</span> to eligible families</li>
+      <li>💰 Health coverage: up to <b>₹10 lakh/family</b></li>
+      <li>🔹 Covers <b>2,200+ medical procedures</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>2. One District One Cuisine Scheme <span class="tag">Uttar Pradesh</span></h3>
+    <ul>
+      <li>Promotes the <span class="kw">unique cuisine</span> of each district</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3. Guru Dakshina <span class="tag">Uttar Pradesh</span></h3>
+    <ul>
+      <li>Also called <b>CM Cashless Medical Scheme for Teachers</b></li>
+      <li>Cashless healthcare for teachers, education staff & families</li>
+      <li>💰 Coverage: up to <b>₹5 lakh/family/year</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>4. Lakhpati Beti Yojana <span class="tag">Delhi</span></h3>
+    <ul>
+      <li>Financial support to <span class="kw">girl children</span>, birth → graduation (paid in installments)</li>
+      <li>💰 Maturity amount: <b>₹1 lakh</b></li>
+      <li>⚠️ Max <b>2 daughters/family</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>5. ANMOL Scheme <span class="tag">Delhi</span></h3>
+    <ul>
+      <li>Full form: <b>Advanced Newborn Monitoring for Optimal Lifecare</b></li>
+      <li>Free <span class="kw">genetic testing for newborns</span></li>
+      <li>Detects genetic & metabolic disorders early</li>
+    </ul>
+    <div class="note">
+      💡 <b>Common genetic disorders among babies (memorize as "D-S-T"):</b>
+      <ul style="margin-top:6px;">
+        <li><b>D</b>own Syndrome → Chromosome 21 → congenital heart disease</li>
+        <li><b>S</b>ickle Cell Disorder → Hemoglobin disorder → sickle-shaped blood cells</li>
+        <li><b>T</b>halassemia → Hemoglobin disorder → spleen, liver & blood issues</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>6. Delhi Lakshmi Yojana <span class="tag">Delhi</span></h3>
+    <ul>
+      <li>💰 <b>₹2,500/month</b> via DBT to eligible women</li>
+      <li>👤 Beneficiaries: women aged <b>21–60 years</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>7. Fare Se Fursat Scheme <span class="tag">Madhya Pradesh</span></h3>
+    <ul>
+      <li>Affordable & assured <span class="kw">air travel</span></li>
+      <li>✈️ First route: <b>Rewa–Raipur</b></li>
+      <li>Airline: <b>Alliance Air</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>8. DWEEPTI Scheme <span class="tag">Chhattisgarh</span></h3>
+    <ul>
+      <li>Promotes <span class="kw">rural women entrepreneurship</span></li>
+      <li>Focus sector: <b>Solar energy</b></li>
+      <li>Aim: create women entrepreneurs in solar sector</li>
+    </ul>
+  </div>
+
+  <div class="tip">💡 <b>Memory trick:</b> Order = Punjab → UP (×2) → Delhi (×3) → MP → Chhattisgarh. Think "<b>P-U-U-D-D-D-M-C</b>" — Punjab, UP twice, Delhi thrice, MP, Chhattisgarh.</div>
+</section>
+
+<!-- ============ TAB 2 : CENTRAL 2026 ============ -->
+<section id="t2" class="panel">
+  <h2>🏢 Central Government Schemes — 2026</h2>
+
+  <div class="card">
+    <h3>1. RELIEF Scheme</h3>
+    <ul>
+      <li>Full form: <b>Resilience & Logistics Intervention for Export Facilitation</b></li>
+      <li>Ministry: <span class="kw">Commerce & Industry</span></li>
+      <li>Helps exporters hit by <b>West Asia crisis</b></li>
+      <li>Credit insurance + freight support, esp. for <b>MSMEs</b></li>
+    </ul>
+    <div class="note">📅 Launched <b>19 March 2026</b> — targeted support for freight escalation, high insurance premia & war-related export risks in Gulf/West Asia corridor. Implemented via <b>ECGC</b> (nodal agency).</div>
+  </div>
+
+  <div class="card">
+    <h3>2. PRARAMBH 2026 Campaign</h3>
+    <ul>
+      <li>Ministry: <span class="kw">Finance / CBDT</span></li>
+      <li>Creates awareness on <b>Income Tax Act, 2025</b></li>
+      <li>Promotes taxpayer awareness</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3. Say No to Proxy Sarpanch Campaign</h3>
+    <ul>
+      <li>Ministry: <span class="kw">Panchayati Raj</span></li>
+      <li>Stops <b>proxy leadership</b> in Panchayats</li>
+      <li>⚠️ Targets "<b>Sarpanch Pati</b>" practice — male relatives exercising power on behalf of elected women representatives</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>4. BHAVYA — Bharat Audyogik Vikas Yojna</h3>
+    <ul>
+      <li>Ministry: <span class="kw">Commerce & Industry</span>, implemented via <b>DPIIT</b></li>
+      <li>Develops <b>100 world-class plug-and-play industrial parks</b></li>
+      <li>Supports industrial infra & manufacturing</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>5. PM RAHAT</h3>
+    <ul>
+      <li>Ministry: <span class="kw">Road Transport & Highways (MoRTH)</span></li>
+      <li>Cashless treatment to <b>road accident victims</b></li>
+      <li>Available up to <b>7 days</b> post-accident</li>
+      <li>💰 Up to <b>₹1.5 lakh/victim</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6. Pradhan Mantri Cha (Chai) Shramik Protsahan Yojana (PMCSPY)</h3>
+    <ul>
+      <li>Ministry: <span class="kw">Commerce & Industry / Tea Board of India</span></li>
+      <li>Supports <b>tea garden workers</b> & families</li>
+      <li>Mainly covers <b>Assam & West Bengal</b></li>
+      <li>Benefits ~<b>10 lakh</b> workers & families</li>
+      <li>Supports healthcare, education infra, rest shelters</li>
+    </ul>
+    <div class="note">📍 <b>Board HQs:</b> Tea Board → West Bengal | Coffee & Silk Board → Bangalore | Rubber Board → Kottayam</div>
+  </div>
+
+  <div class="card">
+    <h3>7. Mobile Phone Manufacturing Scheme (MPMS) → PLI Scheme</h3>
+    <ul>
+      <li>📅 Launched: <b>July 2026</b></li>
+      <li>Ministry: <span class="kw">MeitY</span> · Budget: <b>₹62,500 Cr</b> · Outlay: <b>5 years</b></li>
+      <li>Promotes domestic mobile manufacturing & value addition</li>
+      <li>Supports Indian-owned brands & R&D</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>8. Pradhan Mantri Surya Sarovar Yojana (PM-SSY)</h3>
+    <ul>
+      <li>Ministry: <span class="kw">New & Renewable Energy (MNRE)</span></li>
+      <li>Promotes <b>floating solar power projects</b> + Energy Storage Systems</li>
+      <li>Uses reservoirs, dams & inland water bodies</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>9. Samundra Manthan Scheme</h3>
+    <ul>
+      <li>Also: <b>National Offshore Exploration Scheme</b></li>
+      <li>Ministry: <span class="kw">Petroleum & Natural Gas (MoPNG)</span></li>
+      <li>Promotes deepwater & ultra-deepwater oil/gas exploration</li>
+      <li>Aim: increase offshore energy-resource exploration along coast</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TAB 3 : CENTRAL 2025 + VB-GRAMG ============ -->
+<section id="t3" class="panel">
+  <h2>🏢 Central Government Schemes — 2025</h2>
+
+  <div class="card">
+    <h3>1. PM Dhan-Dhaanya Krishi Yojana</h3>
+    <ul>
+      <li>Covers <b>100 low-productivity agri districts</b></li>
+      <li>Improves productivity, irrigation, crop diversification, post-harvest storage</li>
+      <li>Ministry: <span class="kw">Agriculture & Farmers Welfare</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>2. Mission for Aatmanirbharta in Pulses</h3>
+    <ul>
+      <li>📅 Target period: <b>2025–26 to 2030–31</b></li>
+      <li>Focus crops: <b>Tur (Arhar), Urad, Masoor</b></li>
+      <li>Aim: ↑ pulses production, ↓ import dependence</li>
+      <li>Ministry: <span class="kw">Agriculture & Farmers Welfare</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3. PM-SETU</h3>
+    <ul>
+      <li>Upgrades <b>1,000 Govt ITIs</b> into modern training institutes</li>
+      <li>Model: <b>hub-and-spoke</b> — 200 hub ITIs + 800 spoke ITIs</li>
+      <li>Ministry: <span class="kw">Skill Development & Entrepreneurship</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>4. Gyan Bharatam Mission</h3>
+    <ul>
+      <li>Preservation, conservation & digitisation of <b>Indian manuscripts</b></li>
+      <li>Ministry: <span class="kw">Culture</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>5. National Mission on High Yielding Seeds</h3>
+    <ul>
+      <li>Develops high-yielding, pest-resistant, climate-resilient seeds</li>
+      <li>Ministry: <span class="kw">Agriculture & Farmers Welfare</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6. Mission for Cotton Productivity</h3>
+    <ul>
+      <li>5-year mission — climate-resilient, pest-resistant, high-yield cotton (incl. <b>ELS Extra-Long Staple</b>)</li>
+      <li>Nodal: <span class="kw">Dept. of Agri Research & Education</span>; partner: Ministry of Textiles</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>7. National Mission on Edible Oils – Oilseeds (2024)</h3>
+    <ul>
+      <li>↑ domestic oilseed production → <b>self-reliance in edible oil</b></li>
+      <li>Ministry: <span class="kw">Agriculture & Farmers Welfare</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>8. Sintered Rare-Earth Permanent Magnet (REPM) Scheme</h3>
+    <ul>
+      <li>Domestic manufacturing of rare-earth magnets</li>
+      <li>↓ import dependence in EVs, renewable energy, electronics, defence</li>
+      <li>Ministry: <span class="kw">Heavy Industries</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>9. PM SVANidhi (Restructured, extended till 2030)</h3>
+    <ul>
+      <li>Enhanced credit support to <b>street vendors</b></li>
+      <li>Includes <b>UPI-linked RuPay credit cards</b></li>
+      <li>Ministry: <span class="kw">Housing & Urban Affairs</span></li>
+    </ul>
+    <div class="note">💡 <b>SVANidhi basics:</b> launched <b>2020</b> by MoHUA · collateral-free loans up to <b>₹50,000</b> in tranches: <b>₹10k → ₹20k → ₹50k</b> (per notes: ₹15k/₹25k/₹50k across sources — remember increasing tranche pattern).</div>
+  </div>
+
+  <div class="card">
+    <h3>10. National Manufacturing Mission (2025–26)</h3>
+    <ul>
+      <li>Covers small, medium & large industries</li>
+      <li>Strengthens manufacturing under <b>Make in India</b></li>
+      <li>Ministry: <span class="kw">Commerce & Industry (DPIIT)</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>11. Makhana Board</h3>
+    <ul>
+      <li>Set up in <b>Bihar</b> — improves makhana production, processing, value addition, marketing</li>
+      <li>Supports farmers & <b>FPOs</b></li>
+      <li>Ministry: <span class="kw">Agriculture & Farmers Welfare</span></li>
+    </ul>
+  </div>
+
+  <div class="tip">💡 <b>Mnemonic (2025 list order):</b> "Dhan-Pulse-SETU-Gyan, Seed-Cotton-Oil-REPM, SVANidhi-Manufacturing-Makhana" — read as one flowing sentence to recall sequence.</div>
+
+  <hr class="divider">
+
+  <h2>🌾 Viksit Bharat–G RAM G Act, 2025</h2>
+  <div class="card">
+    <ul>
+      <li>Full form: <b>Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin)</b></li>
+      <li>⚠️ <b>Replaces MGNREGA, 2005</b> from <b>1 July 2026</b></li>
+      <li>Guaranteed employment: <b>100 → 125 days</b>/household/year</li>
+      <li><b>60 days</b> kept as no-work period during sowing & harvesting seasons</li>
+      <li>Wages paid <b>weekly or within 15 days</b></li>
+      <li>If work not given in time → <b>unemployment allowance</b></li>
+      <li>Ministry: <span class="kw">Rural Development</span></li>
+    </ul>
+
+    <h3 style="margin-top:14px;">Four Main Areas</h3>
+    <ul>
+      <li>💧 <b>Water Security</b> — harvesting, irrigation, groundwater recharge</li>
+      <li>🛣️ <b>Rural Infrastructure</b> — roads & basic infra</li>
+      <li>💼 <b>Livelihood Infrastructure</b> — local livelihood opportunities</li>
+      <li>🌦️ <b>Climate Resilience</b> — deals with extreme weather/disasters</li>
+    </ul>
+
+    <h3 style="margin-top:14px;">Funding</h3>
+    <ul>
+      <li>Centrally Sponsored Scheme</li>
+      <li>Centre : State = <b>60 : 40</b></li>
+      <li>NE & Himalayan States = <b>90 : 10</b></li>
+      <li>UTs without legislature = <b>100% Central funding</b></li>
+    </ul>
+
+    <h3 style="margin-top:14px;">Implementation</h3>
+    <ul>
+      <li>Gram Panchayats — plan & carry out works</li>
+      <li>At least <b>50% of works (by cost)</b> at Gram Panchayat level</li>
+      <li>Gram Sabhas conduct <b>social audits</b></li>
+      <li>Biometric authentication, geo-referencing, digital monitoring used for tracking</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TAB 4 : MINISTRY-WISE TABLE ============ -->
+<section id="t4" class="panel">
+  <h2>📋 Ministry-wise Major Government Schemes</h2>
+  <p class="note">💡 Grouped exactly as per source — great for "which ministry runs X" type questions.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>Ministry</th><th>Scheme</th><th>Key Point</th></tr>
+
+    <tr><td rowspan="12"><b>Health & Family Welfare</b></td><td>Ayushman Bharat – PM-JAY</td><td>Health cover for eligible families</td></tr>
+    <tr><td>Ayushman Bharat Digital Mission (ABDM)</td><td>Digital health system; ABHA = 14-digit health ID</td></tr>
+    <tr><td>National Health Mission (NHM)</td><td>Health services via States & UTs; ↓ child mortality</td></tr>
+    <tr><td>Janani Suraksha Yojana</td><td>Institutional delivery via cash assistance</td></tr>
+    <tr><td>Universal Immunisation Programme (UIP)</td><td>Free vaccination — children & pregnant women</td></tr>
+    <tr><td>Mission Indradhanush</td><td>Improves immunisation coverage</td></tr>
+    <tr><td>eSanjeevani</td><td>Telemedicine (OPD: patient-doctor; AB-HWC: doctor-doctor)</td></tr>
+    <tr><td>LAQSHYA</td><td>Quality of labour rooms & maternity care</td></tr>
+    <tr><td>SUMAN</td><td>Free & assured healthcare — pregnant women, mothers, newborns</td></tr>
+    <tr><td>Mission Parivar Vikas</td><td>Family planning in high-fertility areas</td></tr>
+    <tr><td>PMSSY</td><td>Establish/upgrade AIIMS & govt medical colleges</td></tr>
+    <tr><td>Nikshay Poshan Yojana / Kilkari</td><td>Financial support to TB patients / mobile health msgs to mothers</td></tr>
+
+    <tr><td rowspan="2"><b>Home Affairs</b></td><td>CCTNS</td><td>Crime & criminal tracking system across police stations</td></tr>
+    <tr><td>Border Area Development Programme (BADP)</td><td>Develops areas near int'l borders</td></tr>
+
+    <tr><td rowspan="5"><b>Housing & Urban Affairs</b></td><td>Smart Cities Mission</td><td>Develops 100 smart cities</td></tr>
+    <tr><td>DAY-NULM</td><td>Skill training & self-employment for urban poor</td></tr>
+    <tr><td>PM SVANidhi</td><td>Collateral-free loans to street vendors</td></tr>
+    <tr><td>PMAY-Urban</td><td>Affordable housing for eligible urban families</td></tr>
+    <tr><td>AMRUT 2.0</td><td>Water supply & water-secure cities</td></tr>
+
+    <tr><td rowspan="4"><b>Jal Shakti</b></td><td>Atal Bhujal Yojana</td><td>Groundwater management</td></tr>
+    <tr><td>Namami Gange</td><td>Cleaning & rejuvenation of River Ganga</td></tr>
+    <tr><td>Swachh Bharat Mission-Grameen Phase II</td><td>ODF Plus villages & sanitation</td></tr>
+    <tr><td>Jal Jeevan Mission</td><td>Tap water to rural households</td></tr>
+
+    <tr><td><b>Labour & Employment</b></td><td>PM Shram Yogi Maan-Dhan</td><td>Pension scheme for unorganised workers</td></tr>
+
+    <tr><td rowspan="2"><b>MSME</b></td><td>PM Vishwakarma</td><td>Supports traditional artisans & craftspeople</td></tr>
+    <tr><td>Honey Mission</td><td>Promotes beekeeping & honey production</td></tr>
+
+    <tr><td rowspan="3"><b>Minority Affairs</b></td><td>PM Jan Vikas Karyakram (PMJVK)</td><td>Infra & basic facilities in minority-concentration areas</td></tr>
+    <tr><td>PM VIKAS</td><td>Skill & livelihood support to minorities</td></tr>
+    <tr><td>Jiyo Parsi</td><td>Addresses declining Parsi population</td></tr>
+
+    <tr><td rowspan="3"><b>New & Renewable Energy</b></td><td>National Green Hydrogen Mission</td><td>Green hydrogen production & use</td></tr>
+    <tr><td>PM-Surya Ghar: Muft Bijli Yojana</td><td>Rooftop solar; target 1 crore households</td></tr>
+    <tr><td>Suryamitra</td><td>Trains youth as solar PV technicians</td></tr>
+
+    <tr><td><b>Panchayati Raj</b></td><td>SVAMITVA</td><td>Property cards to rural owners via drone tech</td></tr>
+
+    <tr><td rowspan="2"><b>Petroleum & Natural Gas</b></td><td>PM Ujjwala Yojana</td><td>LPG connections to eligible poor households</td></tr>
+    <tr><td>SATAT</td><td>Compressed Bio-Gas (CBG) from waste</td></tr>
+
+    <tr><td rowspan="6"><b>Agriculture & Farmers Welfare</b></td><td>Kisan Credit Card (KCC)</td><td>Easy credit to farmers</td></tr>
+    <tr><td>Soil Health Card</td><td>Soil health & nutrient info</td></tr>
+    <tr><td>PM Fasal Bima Yojana</td><td>Crop insurance</td></tr>
+    <tr><td>National Bamboo Mission</td><td>Bamboo cultivation & activities</td></tr>
+    <tr><td>PM-KISAN</td><td>₹6,000/year to eligible farmers</td></tr>
+    <tr><td>PM-Kisan Maandhan Yojana</td><td>Pension for small & marginal farmers</td></tr>
+
+    <tr><td rowspan="2"><b>Ports, Shipping & Waterways</b></td><td>Sagarmala</td><td>Ports & coastal infra; logistics</td></tr>
+    <tr><td>Jal Marg Vikas Project</td><td>Navigation on National Waterway-1 (Ganga)</td></tr>
+
+    <tr><td rowspan="3"><b>Power</b></td><td>UJALA</td><td>Energy-efficient LED bulbs</td></tr>
+    <tr><td>SAUBHAGYA</td><td>Household electrification</td></tr>
+    <tr><td>MAHIR</td><td>R&D in power sector</td></tr>
+
+    <tr><td rowspan="2"><b>Road Transport & Highways</b></td><td>Bharatmala Pariyojana</td><td>Highways & economic corridors</td></tr>
+    <tr><td>Setu Bharatam</td><td>Replaces rail level crossings with ROBs/RUBs</td></tr>
+
+    <tr><td rowspan="2"><b>Rural Development</b></td><td>MGNREGA</td><td>Guarantees rural wage employment</td></tr>
+    <tr><td>PMGSY</td><td>All-weather road connectivity to rural areas</td></tr>
+
+    <tr><td rowspan="3"><b>Railways</b></td><td>Dedicated Freight Corridor</td><td>Faster freight movement</td></tr>
+    <tr><td>Kisan Rail / Bharat Gaurav Train</td><td>Perishable transport / culture-heritage themed trains</td></tr>
+    <tr><td>One Station One Product (OSOP)</td><td>Promotes local products at stations</td></tr>
+
+    <tr><td><b>Food Processing Industries</b></td><td>PM-Kisan SAMPADA Yojana</td><td>Food processing infrastructure</td></tr>
+
+    <tr><td><b>Finance</b></td><td>PM MUDRA Yojana</td><td>Loans to small & micro businesses</td></tr>
+
+    <tr><td rowspan="2"><b>Education</b></td><td>STARS Project</td><td>School education & learning outcomes</td></tr>
+    <tr><td>PM POSHAN</td><td>School meals & nutrition</td></tr>
+
+    <tr><td rowspan="3"><b>Social Justice & Empowerment</b></td><td>SMILE</td><td>Rehabilitation of transgender persons & beggars</td></tr>
+    <tr><td>SRESTHA</td><td>Residential education for SC students</td></tr>
+    <tr><td>SEED</td><td>Supports Denotified, Nomadic & Semi-Nomadic Tribes</td></tr>
+
+    <tr><td rowspan="2"><b>Earth Sciences</b></td><td>Deep Ocean Mission</td><td>Deep-sea exploration & resources</td></tr>
+    <tr><td>Samudrayaan</td><td>Manned deep-sea exploration using MATSYA-6000</td></tr>
+
+    <tr><td rowspan="3"><b>Women & Child Development</b></td><td>PM Matru Vandana Yojana</td><td>Support to pregnant & lactating women</td></tr>
+    <tr><td>Poshan Abhiyaan</td><td>Nutrition for children & mothers</td></tr>
+    <tr><td>PM CARES for Children</td><td>Children who lost parents during COVID-19</td></tr>
+
+    <tr><td rowspan="2"><b>Chemicals & Fertilizers</b></td><td>PM-PRANAM</td><td>↓ chemical fertiliser use / fertilizer diversification</td></tr>
+    <tr><td>One Nation One Fertilizer</td><td>Fertilisers marketed under "Bharat" brand</td></tr>
+
+    <tr><td><b>Defence</b></td><td>Agnipath Scheme</td><td>Recruits youth as Agniveers</td></tr>
+
+    <tr><td><b>Development of NE Region</b></td><td>PM-DevINE</td><td>Infra, social development, livelihoods in North-East</td></tr>
+  </table>
+  </div>
+
+  <div class="summary-box">
+    <h3>⚡ Quick Revision Summary</h3>
+    <ul>
+      <li><b>State schemes:</b> Punjab(health), UP(cuisine/teachers), Delhi(girl child/newborn/women), MP(air travel), Chhattisgarh(women solar)</li>
+      <li><b>Central 2026 theme:</b> exports crisis (RELIEF), tax awareness (PRARAMBH), panchayat reform (Proxy Sarpanch), industrial parks (BHAVYA), accident care (PM RAHAT), tea workers (PMCSPY), mobile mfg (MPMS/PLI), floating solar (PM-SSY), offshore oil (Samundra Manthan)</li>
+      <li><b>Central 2025 theme:</b> agri-productivity missions (Dhan-Dhaanya, Pulses, Seeds, Cotton, Oilseeds), skilling (PM-SETU), heritage (Gyan Bharatam), manufacturing (REPM, Manufacturing Mission), vendors (SVANidhi), Bihar (Makhana Board)</li>
+      <li><b>VB-G RAM G Act 2025</b> replaces MGNREGA from <b>1 Jul 2026</b>: 100→<b>125 days</b>, 60-day no-work period, Centre:State = <b>60:40</b> (NE/Himalayan 90:10)</li>
+      <li><b>Ministry pairing tip:</b> Health(NHM, PM-JAY, eSanjeevani) · Agri&FW(PM-KISAN, PMFBY, KCC, SHC) · Jal Shakti(Namami Gange, Jal Jeevan) · Housing&Urban(Smart Cities, AMRUT, PMAY-U, SVANidhi)</li>
+      <li><b>Apps vs Portals:</b> Apps = citizen-facing mobile tools (UMANG, DigiLocker, ABHA); Portals = web-based service/monitoring systems (NSWS, e-Shram, Jan Samarth)</li>
+      <li>⚠️ Common confusion: <b>SVANidhi</b> = MoHUA (urban street vendors) vs <b>DAY-NRLM</b> = Rural Dev (rural women SHGs)</li>
+      <li>⚠️ <b>PM-KISAN</b> (income support ₹6,000/yr, no age limit) ≠ <b>PM-KMY</b> (pension scheme, age 18–40, ₹3,000/month after 60)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TAB 5 : APPS & PORTALS ============ -->
+<section id="t5" class="panel">
+  <h2>📱 Important Government Mobile Apps</h2>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>App</th><th>Ministry / Body</th><th>Purpose</th></tr>
+    <tr><td>ULLAS</td><td>Education</td><td>Basic literacy & lifelong learning</td></tr>
+    <tr><td>Sanchar Saathi</td><td>Dept. of Telecom</td><td>Block/trace lost or stolen phones; report suspicious calls</td></tr>
+    <tr><td>Digi Yatra</td><td>Civil Aviation</td><td>Facial-recognition contactless airport processing</td></tr>
+    <tr><td>FloodWatch</td><td>Central Water Commission</td><td>Flood info & forecasts</td></tr>
+    <tr><td>SAMUDRA</td><td>INCOIS, Earth Sciences</td><td>Ocean info for fishermen/seafarers</td></tr>
+    <tr><td>Jaldoot</td><td>Rural Development</td><td>Monitors rural well water levels</td></tr>
+    <tr><td>ABHA App</td><td>National Health Authority</td><td>Digital health records access</td></tr>
+    <tr><td>Y-Break App</td><td>Ministry of AYUSH</td><td>Yoga & wellness at workplace</td></tr>
+    <tr><td>Digital Sansad App</td><td>Parliament of India</td><td>Parliament proceedings info</td></tr>
+    <tr><td>cVIGIL App</td><td>Election Commission</td><td>Report Model Code of Conduct violations</td></tr>
+    <tr><td>ECINET App</td><td>Election Commission</td><td>Multiple election services, one platform</td></tr>
+    <tr><td>Saksham App</td><td>Election Commission</td><td>Helps PwD voters — register, find booths</td></tr>
+    <tr><td>Garuda App</td><td>Election Commission</td><td>Polling station mapping, field election work</td></tr>
+    <tr><td>Meri Panchayat App</td><td>Panchayati Raj</td><td>Gram Panchayat activities & dev. works</td></tr>
+    <tr><td>Anuvadini App</td><td>AI language platform</td><td>Translation & education content in Indian languages</td></tr>
+    <tr><td>SwaRail Super App</td><td>Railways</td><td>All railway services on one platform</td></tr>
+    <tr><td>Khanan Prahari</td><td>Coal</td><td>Report illegal coal mining</td></tr>
+    <tr><td>Call Before You Dig (CBuD)</td><td>Dept. of Telecom</td><td>Prevents damage to underground cables while digging</td></tr>
+    <tr><td>CROPIC</td><td>Agriculture & FW</td><td>Geotagged crop photos for monitoring</td></tr>
+    <tr><td>Kapas Kisan App</td><td>Cotton Corp. of India</td><td>Cotton procurement & payment info</td></tr>
+    <tr><td>PRASHAST 2.0</td><td>NCERT, Education</td><td>Screening children for disabilities</td></tr>
+    <tr><td>PM-KISAN App</td><td>Agriculture & FW</td><td>PM-KISAN services for farmers</td></tr>
+    <tr><td>UMANG</td><td>MeitY</td><td>Access to 1,200+ govt services, one app</td></tr>
+    <tr><td>DigiLocker</td><td>MeitY</td><td>Digital storage & access to official documents</td></tr>
+  </table>
+  </div>
+
+  <hr class="divider">
+
+  <h2>🌐 Important Government Web Portals</h2>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>Portal</th><th>Body</th><th>Purpose</th></tr>
+    <tr><td>UDGAM Portal</td><td>RBI</td><td>Find & claim unclaimed deposits</td></tr>
+    <tr><td>Jan Samarth Portal</td><td>Govt of India</td><td>Access to credit-linked govt schemes</td></tr>
+    <tr><td>SWAYAM Portal</td><td>Education</td><td>Free online courses — school to higher ed</td></tr>
+    <tr><td>e-Shram Portal</td><td>Labour & Employment</td><td>Registration & welfare for unorganised workers</td></tr>
+    <tr><td>Sanchar Saathi Portal</td><td>Dept. of Telecom</td><td>Check mobile connections; block lost/stolen phones</td></tr>
+    <tr><td>Right to Repair Portal</td><td>Consumer Affairs</td><td>Helps repair products instead of replacing</td></tr>
+    <tr><td>SHe-Box Portal</td><td>Women & Child Development</td><td>Workplace sexual harassment complaints</td></tr>
+    <tr><td>e-Samadhan Portal</td><td>UGC</td><td>Grievance redressal for students</td></tr>
+    <tr><td>Vidyanjali Portal</td><td>Education</td><td>Connects schools with volunteers & community</td></tr>
+    <tr><td>PM-DAKSH Portal</td><td>Social Justice & Empowerment</td><td>Skill development & training info</td></tr>
+    <tr><td>Yuktadhara Portal</td><td>ISRO + Rural Development</td><td>Geospatial tech for rural planning</td></tr>
+    <tr><td>e-DAR Portal</td><td>Road Transport & Highways</td><td>Digital road-accident info</td></tr>
+    <tr><td>PRANA Portal</td><td>Environment, Forest & CC</td><td>Monitors National Clean Air Programme</td></tr>
+    <tr><td>NIDAAN Portal</td><td>Narcotics Control Bureau</td><td>Info on drug offenders & trafficking</td></tr>
+    <tr><td>Bharatpol Portal</td><td>CBI</td><td>Int'l law-enforcement assistance via INTERPOL</td></tr>
+    <tr><td>GatiShakti Sanchar Portal</td><td>Dept. of Telecom</td><td>Right of Way approvals</td></tr>
+    <tr><td>National Crop Insurance Portal (NCIP)</td><td>Agriculture & FW</td><td>Supports PMFBY & crop insurance</td></tr>
+    <tr><td>NATS 2.0 Portal</td><td>Education</td><td>Apprenticeship & skill development</td></tr>
+    <tr><td>RBIDATA Portal</td><td>RBI</td><td>Economic & financial data on India</td></tr>
+    <tr><td>Rashtriya Puruskar Portal</td><td>Govt of India</td><td>Info/applications for GoI awards</td></tr>
+    <tr><td>MASI Portal</td><td>NCPCR</td><td>Monitors Child Care Institutions</td></tr>
+    <tr><td>CAPF e-Awas Portal</td><td>Home Affairs</td><td>CAPF personnel accommodation info</td></tr>
+    <tr><td>Temple 360 Portal</td><td>Culture</td><td>Virtual temple visits & pilgrimage services</td></tr>
+    <tr><td>PRATIBHA Setu Portal</td><td>UPSC</td><td>Connects non-recommended candidates with employers</td></tr>
+    <tr><td>Aspirational Districts & Blocks Portal</td><td>NITI Aayog</td><td>Monitors Aspirational Districts/Blocks Programme</td></tr>
+  </table>
+  </div>
+
+  <div class="tip">💡 <b>Exam tip:</b> Questions often test "which Ministry/Body runs X app/portal" — pair each name with its 1 keyword purpose above rather than memorizing full descriptions.</div>
+</section>
+
+<!-- ============ TAB 6 : MCQ PRACTICE (QUIZ MODE) ============ -->
+<section id="t6" class="panel">
+  <h2>📝 MCQ Quiz — 95 Questions</h2>
+  <p class="note">Answer one question at a time, get <b>instant feedback</b> + explanation, then move to the next. Your score is tracked as you go.</p>
+
+  <!-- Start screen -->
+  <div id="quizStart" class="card">
+    <h3>Ready to test yourself?</h3>
+    <ul>
+      <li>🔹 95 questions — Schemes, Polity, BNS/BNSS/BSA & Static GK</li>
+      <li>🔹 Pick an option → tap <b>Check Answer</b> → read explanation → <b>Next</b></li>
+      <li>🔹 Jump to any question anytime using the number box</li>
+    </ul>
+    <button id="startQuizBtn" class="quiz-btn primary">▶ Start Quiz</button>
+  </div>
+
+  <!-- Quiz screen -->
+  <div id="quizArea" style="display:none;">
+    <div class="quiz-top">
+      <div class="quiz-progress-wrap">
+        <div class="quiz-progress-bar"><div id="quizProgressFill"></div></div>
+        <span id="quizProgressText">Question 1 / 95</span>
+      </div>
+      <div class="quiz-score">Score: <span id="quizScore">0</span> / <span id="quizAttempted">0</span></div>
+    </div>
+
+    <div class="card" id="quizCard">
+      <h3 id="quizQNum">Q1.</h3>
+      <p id="quizQText" class="quiz-qtext"></p>
+      <div id="quizOptions" class="quiz-options"></div>
+
+      <div id="quizFeedback" class="quiz-feedback" style="display:none;"></div>
+      <div id="quizExplanation" class="exp" style="display:none;"></div>
+
+      <div class="quiz-actions">
+        <button id="checkBtn" class="quiz-btn primary">Check Answer</button>
+        <button id="nextBtn" class="quiz-btn" style="display:none;">Next Question →</button>
+      </div>
+    </div>
+
+    <div class="quiz-nav">
+      <button id="prevQBtn" class="quiz-btn ghost">← Previous</button>
+      <div class="quiz-jump">
+        <label for="jumpInput">Go to Q#</label>
+        <input type="number" id="jumpInput" min="1" max="95" placeholder="1-95">
+        <button id="jumpBtn" class="quiz-btn ghost">Go</button>
+      </div>
+      <button id="skipQBtn" class="quiz-btn ghost">Skip →</button>
+    </div>
+
+    <button id="restartBtn" class="quiz-btn danger">↺ Restart Quiz</button>
+  </div>
+
+  <!-- Result screen -->
+  <div id="quizResult" class="card" style="display:none;">
+    <h3>🏁 Quiz Complete!</h3>
+    <p id="resultText" class="quiz-qtext"></p>
+    <button id="retakeBtn" class="quiz-btn primary">↺ Retake Quiz</button>
+  </div>
+</section>
+
+</main>
+
+<button id="toTop" title="Scroll to top">↑</button>
+
+<footer>Siddhi Prep — CA Garud Series · Notes compiled for quick revision</footer>
+
+<script>
+/* ---------------- TAB SWITCHING ---------------- */
+const tabButtons = document.querySelectorAll('nav.tabs button');
+const panels = document.querySelectorAll('.panel');
+tabButtons.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    tabButtons.forEach(b=>b.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+    window.scrollTo({top:0, behavior:'instant'});
+  });
+});
+
+/* ---------------- SCROLL TO TOP ---------------- */
+const toTopBtn = document.getElementById('toTop');
+window.addEventListener('scroll', ()=>{
+  if(window.scrollY > 300){ toTopBtn.classList.add('show'); }
+  else{ toTopBtn.classList.remove('show'); }
+});
+toTopBtn.addEventListener('click', ()=>{
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+/* ---------------- MCQ DATA ---------------- */
+const mcqs = [
+["Read Assertion(A) & Reason(R): A: One Nation One Ration Card (ONORC) ensures portability of food grains. R: It uses Aadhaar-enabled biometric authentication.",["Both A & R true, R correctly explains A","Both A & R true, R does not explain A","A true, R false","A false, R true"],0,"ONORC lets beneficiaries access subsidised food grains anywhere in India, enabled through Aadhaar-linked biometric authentication — R correctly explains A."],
+["Fill blank: Under the SLKIC vertical of Khelo India, ___ Kendriya Vidyalayas adopted in partnership with KVS.",["3","4","5","6"],1,"4 KVs adopted as Khelo India School Centres — Delhi Cantonment, Gwalior, Sidhi & Ghaziabad."],
+["Age range for farmers to enrol in Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)?",["18–30 years","18–40 years","21–45 years","25–50 years"],1,"PM-KMY is a voluntary, contributory pension scheme for small/marginal farmers aged 18–40; assured pension ₹3,000/month after 60."],
+["Assertion(A): UDAN Scheme improves regional air connectivity. Reason(R): It provides Viability Gap Funding (VGF) to airlines.",["Both true, R explains A","Both true, R doesn't explain A","A true, R false","A false, R true"],0,"UDAN connects unserved/underserved airports; govt gives VGF to airlines to offset losses — R correctly explains A."],
+["Which scheme supports financial services through postmen?",["NSAP","IPPB","PMJAY","PRAGATI"],1,"IPPB (India Post Payments Bank) uses postmen as banking agents for doorstep deposits, withdrawals & transfers — boosting rural financial inclusion."],
+["MISHTI Scheme statements: 1) Mangrove plantation via scientific methods 2) Announced in Budget 2023–24 3) Includes commercial leasing of mangrove forests.",["Only 1 & 2 correct","Only 2 & 3 correct","Only 1 & 3 correct","All correct"],0,"MISHTI focuses on ecological conservation & sustainable livelihoods (converges with MGNREGS/CAMPA) — NOT commercial leasing, so statement 3 is wrong."],
+["The Agriculture Infrastructure Fund (AIF) provides support for?",["Free fertilizers","Agri-logistics & cold chains","Cash transfers","MGNREGA work"],1,"AIF funds post-harvest infra — agri-logistics, cold chains, warehouses, sorting/grading units — to cut post-harvest losses."],
+["Main goal of 'Green Credit Programme' launched in 2024?",["Promote fossil fuel use","Support monoculture farming","Encourage eco-restoration via credit incentives","Increase mining leases"],2,"GCP gives credit incentives for afforestation, wetland restoration & biodiversity protection — promoting sustainable practices."],
+["Assertion(A): National Green Hydrogen Mission aims to reduce fossil-fuel dependency. Reason(R): Implemented by MoEFCC.",["Both true, R explains A","Both true, R doesn't explain A","A true, R false","A false, R true"],2,"Mission is implemented by Ministry of New & Renewable Energy (MNRE), NOT MoEFCC — so R is false."],
+["Which pairs of Scheme–Nodal Ministry are correctly matched? 1) PM-AASHA–Consumer Affairs/FPD 2) e-NAM–Agriculture & FW 3) PMKSY–Water Resources/Ganga Rejuvenation 4) RODTEP–Finance",["1 & 2 only","2 & 3 only","2 only","1, 2 & 4"],2,"Only e-NAM–Ministry of Agriculture & Farmers Welfare is correctly matched among the given pairs."],
+["Objective of India's new Eco-Tourism Policy in protected areas?",["Ban human activity","Maximize profit without community","Balance conservation & livelihoods","Turn areas into resorts"],2,"Policy promotes responsible tourism balancing wildlife/habitat protection with local community livelihoods."],
+["MISHTI initiative statements: 1) Increases mangrove cover & coastal livelihoods 2) Initiated under Ministry of Rural Development 3) Financed via CAMPA + MGNREGS.",["1 & 2","1 & 3","2 & 3","All 3"],1,"MISHTI is under Ministry of Environment, Forest & Climate Change (MoEF&CC), NOT Rural Development — statement 2 wrong; funding via CAMPA+MGNREGS is correct."],
+["Which scheme promotes organic farming?",["PM-KMY","PKVY (Paramparagat Krishi Vikas Yojana)","SHC (Soil Health Card)","ATMA"],1,"PKVY supports farmers to adopt eco-friendly practices, form clusters & get organic certification."],
+["The slogan 'Har Khet Ko Pani' belongs to:",["Paramparagat Krishi Vikas Yojana","Pradhan Mantri Fasal Bima Yojana","Pradhan Mantri Krishi Sinchayee Yojana","Rashtriya Krishi Vikas Yojana"],2,"PMKSY (launched 2015) — assured irrigation to every field, alongside 'Per Drop More Crop'."],
+["Assertion(A): SVAMITVA scheme provides property cards using drone technology. Reason(R): It covers rural and urban areas.",["Both true, R explains A","Both true, R doesn't explain A","A true, R false","A false, R true"],2,"SVAMITVA uses drones to map RURAL 'Abadi' (inhabited) land only — R's claim of covering rural AND urban is false."],
+["Assertion(A): Mission Amrit Sarovar promotes water conservation. Reason(R): It aims to construct 75 ponds in each district by 2024.",["Both true, R explains A","Both true, R doesn't explain A","A true, R false","A false, R true"],0,"Constructing/rejuvenating 75 ponds per district directly boosts water conservation & groundwater recharge — R correctly explains A."],
+["Who launched 'Ek Ped Maa Ke Naam' campaign in 2024?",["Narendra Modi","Leena Nandan","Bhupender Yadav","Ashwini Vaishnaw"],0,"PM Modi launched it on World Environment Day, 5 June 2024 — plant trees in honour of mothers & Mother Earth."],
+["Which scheme promotes crop diversification through cluster-based planning?",["PM-AASHA","RKVY (Rashtriya Krishi Vikas Yojana)","SMAM","AIF"],1,"RKVY promotes area-specific, cluster-based crop planning aligned to local agro-climatic conditions."],
+["Which campaign did Education Minister Dharmendra Pradhan promote on World Environment Day 2025?",["Plastic-Free India Campaign","Ek Ped Maa Ke Naam 2.0 tree-planting","Clean Ganga Youth Movement","National Coastal Cleanup Drive"],1,"He promoted 'Ek Ped Maa Ke Naam 2.0' under Mission LIFE — planting millions of trees."],
+["What is the primary aim of TIES?",["Export infra development","Cold storage for dairy","PMFBY support","Drug pricing regulation"],0,"TIES (Trade Infrastructure for Export Scheme) funds testing labs, cold chains, warehousing, border haats etc. to boost export competitiveness."],
+["Which initiative under NAFCC improves micro-climate resilience via community-led water harvesting in semi-arid zones?",["Jal Urja Yojana","Climate Resilient Watershed Programme","Hariyali Mission","Jal Mitra Scheme"],1,"Sanctioned to Odisha under NAFCC (2015–16); NABARD is National Implementing Entity for NAFCC."],
+["Which 2025 initiative combines mangrove regeneration with rural employment under MGNREGS?",["Mission Mangrove Mitra","Sagar Suraksha Yojana","EcoJobs for Coasts","Blue Belt Programme"],0,"Mission Mangrove Mitra integrates environmental restoration with MGNREGS-based rural livelihoods."],
+["Purpose of the Gobar-Dhan Scheme?",["Promote solar panels in rural areas","Convert cattle dung/waste into bio-CNG & compost","Interest-free loans for cattle purchase","Ensure fodder in drought-prone areas"],1,"Converts biodegradable/cattle waste into biogas, bio-CNG & organic manure — village cleanliness + wealth generation."],
+["Atal Innovation Mission (AIM) — key component/program?",["Skill India Centers","Startup India Seed Fund Scheme","Atal Tinkering Labs (ATLs)","PMKVY"],2,"ATLs promote innovation among school students — hands-on with 3D printing, robotics, IoT."],
+["Key objective of Green Credit Programme (operationalised under EPA, 1986)?",["Generate green bonds for renewables","Reward voluntary environmental actions by individuals/entities","Penalize high-carbon industries","Enforce green finance for real estate"],1,"Market-based scheme rewarding voluntary eco-actions (afforestation, water conservation) with tradable 'Green Credits'."],
+["Primary aim of the Soil Health Card Scheme?",["Improve seed quality","Promote organic farming","Assess nutrient status","Prevent land acquisition"],2,"SHC gives farmers a report on soil nutrient status to guide fertilizer use — doesn't directly target seed/organic/land issues."],
+["'Green Credit Programme' (Environment Ministry) rewards individuals/companies for which activity?",["Water conservation only","Forest & ecosystem restoration","Air pollution monitoring","Solar panel installation"],1,"GCP rewards tree plantation, water conservation & ecosystem restoration through tradable Green Credits."],
+["Which initiative focuses on learning outcomes & digital literacy in schools?",["Swachh Bharat Abhiyan","Digital India Mission","PM Gati Shakti National Master Plan","PM eVIDYA"],3,"PM eVIDYA specifically targets school education via online content & virtual classrooms."],
+["PRITHVI Vigyan Mission statements: 1) Unifies ocean, weather & geoscience observations 2) Supports tsunami/cyclone early-warning systems 3) Launched by Ministry of Health & FW.",["Only 1 & 2 correct","Only 2 & 3 correct","Only 1 & 3 correct","All correct"],0,"Launched by Ministry of Earth Sciences (MoES), NOT Health & FW — statement 3 wrong."],
+["Under PM-KMY, monthly pension provided to eligible farmers after age 60?",["₹1,000","₹2,000","₹3,000","₹5,000"],2,"Assured monthly pension of ₹3,000 after 60, based on monthly contributions (₹55–₹200) during working years."],
+["Which initiative focuses on rural road infrastructure in India?",["Bharatmala Pariyojana","Pradhan Mantri Gram Sadak Yojana (PMGSY)","National Highways Development Project","Setu Bharatam Programme"],1,"PMGSY (launched 2000) gives all-weather road connectivity to unconnected villages — others focus on national/state highways."],
+["Under UIP, how many diseases are covered nationally + sub-nationally for free immunisation?",["5","7","9","12"],3,"12 diseases total — 9 covered nationally, 3 sub-nationally in high-risk areas (diphtheria, pertussis, tetanus, polio, measles, rubella, TB, hepatitis B, Hib, rotavirus, JE, pneumococcal pneumonia)."],
+["Which scheme gives financial support to senior citizens who lost their means of sustenance?",["Indira Gandhi National Old Age Pension Scheme (IGNOAPS)","Atal Pension Yojana (APY)","Pradhan Mantri Vaya Vandana Yojana (PMVVY)","National Social Assistance Programme (NSAP)"],0,"IGNOAPS gives monthly pension to seniors 60+ with little/no regular income; part of broader NSAP but specifically targets old-age pensions."],
+["Green Hydrogen Mission statements: 1) Global hub for production/export 2) Targets 10 MMT by 2030 3) Produced via electrolysis using renewable energy.",["Only 1 & 2 correct","Only 2 & 3 correct","Only 1 & 3 correct","All correct"],2,"Target is 5 MMT per annum by 2030, NOT 10 MMT — statement 2 wrong."],
+["National Beekeeping & Honey Mission — under which Union Ministry?",["Finance","Rural Development","Agriculture & Farmers Welfare","Health & Family Welfare"],2,"Promotes beekeeping as extra income source; supports crop pollination & rural employment too."],
+["Which initiative in Visakhapatnam gives an inclusive space for differently-abled children?",["Smart school initiative","Solar post light project","All-Abilities Park","Green Mobility Project"],2,"Developed under Vizag Smart City project — wheelchair-friendly pathways, sensory play elements."],
+["Which initiative improves urban infra — water supply, sewerage, urban transport?",["Smart Cities Mission","AMRUT","Swachh Bharat Mission (Urban)","Housing for All by 2022"],1,"AMRUT focuses on water supply, sewerage, drainage, green spaces & non-motorized transport."],
+["Which initiative gives a unified platform for citizens to access govt services online?",["DigiLocker","UMANG","MyGov","National e-Governance Plan (NeGP)"],1,"UMANG provides access to 1,200+ services from central/state/local bodies on one app."],
+["PMAY-Urban key component to address housing shortage?",["Focus only on rental housing for migrants","Financial assistance for construction/purchase/enhancement of housing","Mandating indigenous building materials only","Concentrating efforts on Tier-1/2 cities"],1,"PMAY-U gives Central Assistance (BLC) + interest subsidy (CLSS) for construction, purchase or enhancement of affordable housing."],
+["Primary objective of PM-KUSUM scheme?",["Free electricity to all agri consumers","Promote chemical fertilizers/pesticides","Solar pumps & grid-connected solar plants in rural areas","Enhance rural electricity grid infra"],2,"PM-KUSUM promotes renewable energy in agriculture — standalone solar pumps + solar power plants on barren/fallow land."],
+["Primary goal behind the Production Linked Incentive (PLI) scheme?",["Reduce fiscal deficit","Boost domestic manufacturing & attract investments","Promote agri-commodity exports","Improve workforce skill development"],1,"PLI gives incentives based on incremental sales of domestically-made goods to strengthen manufacturing & attract investment."],
+["Which scheme aims social security for unorganized-sector workers?",["MGNREGA","Atal Pension Yojana (APY)","Pradhan Mantri Jan Dhan Yojana","National Health Mission (NHM)"],1,"APY is a govt-backed pension scheme for unorganized-sector workers, guaranteeing fixed monthly pension post-retirement."],
+["Which initiative empowers women through skill development & entrepreneurship support?",["Beti Bachao Beti Padhao","Mahila Shakti Kendra Scheme","Pradhan Mantri Mudra Yojana (PMMY)","National Mission for Empowerment of Women"],2,"PMMY gives collateral-free loans up to ₹10 lakh, enabling women to start/expand businesses in non-farm sectors."],
+["Jal Jeevan Mission aims FHTCs to all rural households by 2024. Key challenge in achieving this?",["Lack of funding allocation","Sustainability of water sources & water quality","Limited local community participation","Absence of monitoring mechanism"],1,"Merely installing connections is insufficient — long-term water source sustainability & safe water quality is the real challenge."],
+["Which scheme gives financial assistance to women Self-Help Groups (SHGs)?",["Rashtriya Mahila Kosh (RMK)","DAY-NRLM","Pradhan Mantri Jan Dhan Yojana","Mahila E-Haat"],1,"DAY-NRLM organizes rural women into SHGs, providing credit, skill-development & capacity-building — broader SHG-centric framework."],
+["Key feature/objective of the Smart Cities Mission?",["Build new satellite towns around metros","Apply smart solutions & technology to improve urban infra/services","Focus only on heritage cities/tourist spots","Ensure uniform urban planning rules nationwide"],1,"Mission uses smart tech for water/electricity supply, sanitation, waste management, transport & e-governance."],
+["PLI scheme statements: 1) Incentives based on incremental sales of India-made goods 2) Applicable uniformly across ALL sectors 3) Goal — attract FDI & boost domestic manufacturing 4) Incentives mainly for MSMEs.",["I and III only","II and IV only","I and IV only","II and III only"],0,"Scheme is NOT uniform across all sectors (specific sectors only) and NOT primarily for MSMEs — only statements I & III correct."],
+["Primary purpose of the DigiLocker initiative?",["Free internet access","Secure platform to store & share digital documents","Tracking goods/services movement","Facilitating online voting"],1,"DigiLocker (under Digital India) lets citizens securely store, access & share digitally-issued documents — paperless governance."],
+["National Green Hydrogen Mission statements: I) Global hub for production/use/export II) Primarily uses fossil fuels with carbon capture III) Supports R&D IV) Reduces dependence on imported fossil fuels.",["I and III only","II and IV only","I, III and IV only","II and III only"],2,"Green hydrogen is produced via electrolysis using renewable energy, NOT fossil fuels with carbon capture — II is wrong, so I, III, IV correct."],
+["Which state government launched 'Mukhyamantri Ladli Behna Yojana'?",["Rajasthan","Madhya Pradesh","Maharashtra","Gujarat"],1,"Launched by Govt of Madhya Pradesh — financial assistance to eligible women for economic security."],
+["Objectives of Swachh Bharat Mission-Urban statements: I) Achieve ODF status in urban areas II) Scientific processing/disposal of solid waste III) Promotes household toilets but EXCLUDES community toilets IV) Includes cleanliness of public spaces & citizen participation.",["I and III only","I, II and IV only","I, III and IV only","II, III and IV only"],1,"SBM-U promotes BOTH household AND community/public toilets — statement III (excludes community toilets) is wrong."],
+["Which programme was introduced for national rural employment during the Seventh Five-Year Plan?",["IRDP","NREP","RLEGP","JRY"],3,"JRY (1989) was formed by merging NREP + RLEGP — provided wage employment + community asset creation via Panchayati Raj bodies."],
+["PM-KUSUM scheme statements: I) Supports standalone solar agri pumps II) Encourages solar plants on barren/fallow land III) Promotes diesel-based irrigation pumps IV) Requires farmers to sell ALL solar power to grid.",["I and III only","I and II only","I, III and IV only","II, III and IV only"],1,"Scheme promotes renewable energy (NOT diesel pumps) and does NOT mandate selling all power to grid — only I & II correct."],
+["Which initiative promotes manufacturing in India & attracts investment in the manufacturing sector?",["Digital India","Make in India","Smart Cities Mission","National Health Policy"],1,"Make in India (2014) improves business environment & attracts domestic/foreign investment across manufacturing & services."],
+["Which programme focuses on conservation & rejuvenation of the Ganga?",["Namami Gange Programme","National Clean Air Programme","Jal Jeevan Mission","Swachh Bharat Mission"],0,"Namami Gange covers sewage treatment, pollution reduction, river-surface cleaning & biodiversity conservation."],
+["Which programme promotes sustainable agriculture through organic farming?",["PM-KISAN","Pradhan Mantri Fasal Bima Yojana","Paramparagat Krishi Vikas Yojana","National Rural Livelihoods Mission"],2,"PKVY promotes cluster-based organic farming, reducing dependence on synthetic chemical inputs."],
+["Which digital initiative improves Ease of Doing Business?",["Increasing tariffs on digital imports","Increasing paperwork for online transactions","Restricting internet access","Implementing national single-window systems"],3,"Single-window systems give unified digital access to multiple approvals, reducing paperwork & delays."],
+["Major objective of the Indian Space Policy 2023?",["End all govt involvement in space","Merge ISRO with NASA","Create regulatory framework supporting private participation & innovation","Restrict private-sector entry into space"],2,"Policy expands India's space ecosystem — encourages private participation while defining institutional roles."],
+["Which scheme gives financial support to farmers under PM-KISAN?",["Pradhan Mantri Fasal Bima Yojana","Pradhan Mantri Krishi Sinchayee Yojana","Pradhan Mantri Kisan Samman Nidhi","Soil Health Card Scheme"],2,"PM-KISAN = Pradhan Mantri Kisan Samman Nidhi — ₹6,000/year income support via DBT to landholding farmer families."],
+["Which initiative focuses specifically on improving energy efficiency across sectors?",["National Solar Mission","National Mission for Enhanced Energy Efficiency (NMEEE)","National Wind Energy Mission","National Action Plan on Climate Change"],1,"NMEEE is designed specifically to promote energy efficiency & conservation across sectors — part of India's climate strategy."],
+["Major criticism associated with the Smart Cities Mission?",["Excessive focus only on rural development","Concerns about equity & inclusiveness","Absence of technological integration","Excessive decentralisation across cities"],1,"Some projects concentrate benefits on selected areas/sections — raising concerns about equitable urban development."],
+["Which scheme focuses on improving access to banking, insurance & remittance for all households?",["PMJJBY","PMSBY","Pradhan Mantri Jan Dhan Yojana (PMJDY)","Stand-Up India Scheme"],2,"PMJDY is India's flagship financial inclusion programme — savings a/c, remittance, credit, insurance & pension access."],
+["Main beneficiaries of PM-Kisan Maandhan Yojana? (SSC CPO)",["Fishermen","Women SHGs","Marginal farmers","Retired civil servants"],2,"PM-KMY is a voluntary pension scheme specifically for small & marginal farmers aged 18–40."],
+["GOBARdhan scheme converts which into valuable resources like compost & biogas? (SSC CPO)",["Industrial effluents & hazardous waste","Agricultural waste & cattle dung","Plastic waste & e-waste","Marine waste & fish residues"],1,"GOBARdhan (Galvanizing Organic Bio-Agro Resources Dhan) converts cattle dung + agri residue into biogas, bio-CNG & compost."],
+["Key objective of the National Health Mission (NHM)? (SSC CPO)",["Industrial growth","Child mortality reduction","Space exploration","Wildlife protection"],1,"NHM's key objectives include child mortality reduction, maternal mortality reduction & universal healthcare access."],
+["Which initiative–objective pairing is correctly matched? (SSC CPO)",["UDAN – Road Safety","PM PRANAM – Fertilizer diversification","NBS – Airline support","NSWS – Social welfare"],1,"PM PRANAM (Restoration, Awareness, Nourishment & Amelioration of Mother Earth) promotes alternative fertilizers/balanced nutrient use."],
+["LiFE (Lifestyle for Environment) initiative statements: 1) Launched at COP26 2) Emphasizes govt regulation over citizen participation 3) Promotes reduce-reuse-recycle habits. (SSC CPO)",["Only 1 & 2 correct","Only 1 & 3 correct","Only 2 & 3 correct","All correct"],1,"LiFE emphasizes CITIZEN participation (not govt regulation) alongside sustainable habits — statement 2 wrong."],
+["Nutrient Based Subsidy (NBS) scheme: Statement 1 – fixed per-kg subsidy for N,P,K,S in non-urea fertilizers. Statement 2 – freight assistance also provided. (SSC CPO)",["Only 1","Only 2","Both 1 and 2","Neither"],2,"NBS (April 2010) gives fixed nutrient-based subsidy AND freight assistance to ensure uniform prices nationwide."],
+["SHC (Soil Health Card) scheme is implemented by which ministry? (SSC CPO)",["Environment, Forest & Climate Change","Jal Shakti","Agriculture & Farmers Welfare","Statistics & Programme Implementation"],1,"SHC (Sujalam 2.0) is implemented by Ministry of Jal Shakti, Dept. of Land Resources."],
+["Urea Subsidy Scheme: Statement 1 – Urea sold at fixed MRP. Statement 2 – Subsidy directly transferred to farmers' bank accounts. (SSC CPO)",["Only Statement 1 correct","Only Statement 2 correct","Both correct","Neither correct"],0,"Urea's MRP is fixed (~₹242/45kg bag); subsidy goes to MANUFACTURERS/importers via DBT, NOT to farmers directly — Statement 2 wrong."],
+["Primary focus of National Mission on Edible Oils–Oil Palm (NMEO-OP)? (SSC CPO)",["Enhancing oilseed storage capacity","Promoting cultivation of tropical oil-rich crops","Diversifying inland fisheries","Supporting aromatic plant-based biofuels"],1,"NMEO-OP (Aug 2021) promotes oil palm cultivation to reduce India's ~60–70% edible oil import dependency."],
+["Which scheme provides insurance to farmers against crop failure? (SSC CPO)",["RKVY","PMFBY (Pradhan Mantri Fasal Bima Yojana)","SMAM","AIF"],1,"PMFBY (2016) gives comprehensive crop insurance against natural calamities, pests & diseases."],
+["Under PM Gati Shakti, who is responsible for nodal planning? (SSC CPO)",["MoF","DPIIT","MHA","TRAI"],1,"DPIIT hosts the Network Planning Group (NPG) coordinating infra planning across ministries via integrated GIS platform."],
+["National Electricity Plan 2023 statements: 1) Projects >50% installed capacity from non-fossil sources by 2030 2) Proposes nationwide shutdown of thermal plants older than 25 years. (SSC CPO)",["Only 1","Only 2","Both 1 and 2","Neither"],0,"Plan projects >50% non-fossil capacity by 2029-30; it suggests PHASED retirement (not blanket shutdown) of old thermal plants — statement 2 wrong."],
+["What does MGNREGA stand for? (SSC CPO)",["Mahatma Gandhi National Rural Employment Generation Act","Mahatma Gandhi National Rural Employment Guarantee Act","Mahatma Gandhi National Regulated Employment Generation Act","Mahatma Gandhi National Regulated Employment Guarantee Act"],1,"Enacted 2005 (renamed from NREGA in 2009) — guarantees 100 days wage employment/household/year."],
+["Rashtriya Bal Swasthya Karyakram (RBSK) screens & manages children up to what age? (SSC CPO)",["5 years","10 years","18 years","21 years"],2,"RBSK (Feb 2013, under NHM) covers 0–18 years — screening for the '4 D's': Defects, Deficiencies, Diseases, Development delays."],
+["Key benefit under Janani Shishu Suraksha Karyakram (JSSK)? (SSC CPO)",["Free ration to pregnant women","Free delivery & C-section services","Paid ambulance transport","Subsidized infant clothing"],1,"JSSK (June 2011) provides completely free delivery (normal + C-section), medicines, diagnostics, blood & diet."],
+["The introduction of the Indian Penal Code (IPC) in 1860 aimed to: (SSC CPO)",["Codify & standardize criminal laws across British India","Promote traditional Indian legal systems","Grant autonomy to village courts","Exclusively protect British ruling class interests"],0,"IPC (in force Jan 1862), drafted under Macaulay, created uniform criminal law replacing diverse local customs — replaced by BNS 2023 (July 2024)."],
+["Major focus of Bharatiya Sakshya Adhiniyam (BSA) — broadens 'documents' to include: (SSC CPO)",["Only paper-based records","Electronic records incl. emails, server logs, digital signatures","Only certified public records","Oral testimonies transcribed manually"],1,"BSA (replacing Indian Evidence Act 1872) recognizes emails, server logs, digital signatures, blockchain records etc. as valid documents."],
+["Which BNSS offence: min. imprisonment 3 yrs, extendable to 10 yrs + fine, triable by Magistrate First Class? (SSC CPO)",["Kidnapping a minor","Hiring/engaging a child to commit an offence","Abandoning a child under 12","Using a child for begging"],3,"'Using a child for begging' under BNSS carries 3–10 yrs imprisonment + fine; cognizable & non-bailable, triable by First Class Magistrate."],
+["BNSS timeframe for pronouncing judgment after conclusion of arguments? (SSC CPO)",["Within 7 days","Within 15 days","Within 30 days (extendable to 45)","Within 60 days"],2,"BNSS mandates judgment within 30 days of concluding arguments, extendable to 45 days with recorded reasons."],
+["BNSS allows trials in absence of accused — applies specifically to: (SSC CPO)",["Any accused who fails to appear","Only foreign nationals","Proclaimed offenders who abscond","Accused persons who are gravely ill"],2,"Applies to 'proclaimed offenders' (declared after repeated non-appearance) for offences punishable with death/life/10+yrs imprisonment."],
+["Max imprisonment allowed in a summary trial under BNSS, 2023? (SSC CPO)",["1 month","3 months","12 months","24 months"],1,"Summary trials (fast-track, for petty offences) cap imprisonment at 3 months regardless of the offence's regular punishment."],
+["Key technological integration mandated by BNSS? (SSC CPO)",["Mandatory AI for investigations","Videography of search/seizure operations & crime scenes","Robot-assisted policing","Automated judgment delivery system"],1,"BNSS mandates videography of search & seizure ops and crime scenes to ensure transparency & prevent evidence tampering."],
+["Which is now explicitly a 'document' under Bharatiya Sakshya Adhiniyam? (SSC CPO)",["A verbal agreement","A gesture or sign language","A server log file","A spontaneous thought"],2,"BSA recognizes electronic records (emails, server logs, digital signatures) as documents — verbal agreements are NOT documents."],
+["Which offence has been newly & clearly defined under Bharatiya Nyaya Sanhita (BNS), 2023? (SSC CPO)",["Mob lynching","Defamation","Theft","Cheating"],0,"BNS Section 103(2) defines mob lynching — murder by 5+ persons based on race/caste/community/sex/other grounds; punishable with death/life imprisonment."],
+["Assertion(A): India Industrial Land Bank (IILB) provides GIS-based info. Reason(R): It works as a separate ministry.",["Both true, R explains A","Both true, R doesn't explain A","A true, R false","A false, R true"],2,"IILB is managed by DPIIT (under Commerce & Industry) — NOT a separate ministry, so R is false."],
+["Which department launched 'Dak Karmayogi'?",["MoCA","DoF","DoP (Dept. of Posts)","MoHUA"],2,"Capacity-building initiative for postal employees under Postal HR Modernization program — training & skill development."],
+["Who launched the Bharatpol portal?",["Amit Shah","Narendra Modi","Droupadi Murmu","Ashwini Vaishnaw"],0,"Union Home Minister Amit Shah launched BHARATPOL (developed by CBI) on 7 Jan 2025 — facilitates INTERPOL requests."],
+["Assertion(A): National Single Window System (NSWS) supports investor clearances. Reason(R): It works as a separate ministry.",["Both true, R explains A","Both true, R doesn't explain A","A true, R false","A false, R true"],2,"NSWS is a digital portal under DPIIT, NOT a separate ministry — R is false."],
+["eSanjeevani initiative: Statement 1 – OPD enables remote doctor consultation online. Statement 2 – AB-HWC connects citizens with Ayushman Bharat Health & Wellness Centres.",["Only Statement 1 correct","Only Statement 2 correct","Both correct","Neither correct"],2,"eSanjeevani OPD = patient-to-doctor telemedicine; AB-HWC = doctor-to-doctor telemedicine linking HWCs with specialists."],
+["What initiative did Dr. Jitendra Singh launch in May 2025 (as MoS PMO & MoS Personnel)?",["National Grievance Redress Portal","e-Civil List 2025 e-book","Central Police Commemoration Day","Digital Land Records Survey"],1,"Launched the 70th edition of IAS Civil List in e-book format (19 May 2025) — improves transparency & supports Digital India."],
+["Purpose of the National Single Window System (NSWS) portal (Ministry of Commerce & Industry)?",["Streamline pension disbursal for unorganized workers","Facilitate industrial clearances/approvals via single digital platform","Monitor school enrollments via Aadhaar linkage","Centralize water quality testing"],1,"NSWS (DPIIT-led) integrates Central & State business approvals — Know Your Approvals (KYA), real-time tracking, one-time doc submission."],
+["e-NAM is primarily aimed at which of the following? (SSC CPO)",["Farm insurance","Online crop procurement","National digital market","Agro-export facilitation"],2,"e-NAM (launched 2016) is a pan-India electronic trading platform connecting APMCs into 'One Nation, One Market' for agri produce."],
+["Under DBT system in fertilizers, which statement accurately reflects the actual mechanism? (SSC CPO)",["States get direct benefit","Farmers pay post-usage","Real-time subsidy to farmer","Subsidy is paid to companies post-sale"],3,"Farmers buy at fixed subsidized MRP; subsidy is paid to manufacturers/importers (companies) post-sale via PoS device data — NOT to farmers directly."]
+];
+
+/* ---------------- QUIZ ENGINE ---------------- */
+const optLabels = ['A','B','C','D'];
+const TOTAL = mcqs.length;
+let current = 0;          // 0-indexed question pointer
+let score = 0;
+let attempted = 0;
+let selectedIdx = null;
+let answered = new Array(TOTAL).fill(false);   // has this question been checked?
+let userChoice = new Array(TOTAL).fill(null);  // what did user pick
+
+const quizStart   = document.getElementById('quizStart');
+const quizArea    = document.getElementById('quizArea');
+const quizResult  = document.getElementById('quizResult');
+const startBtn    = document.getElementById('startQuizBtn');
+const restartBtn  = document.getElementById('restartBtn');
+const retakeBtn   = document.getElementById('retakeBtn');
+const checkBtn    = document.getElementById('checkBtn');
+const nextBtn     = document.getElementById('nextBtn');
+const prevQBtn    = document.getElementById('prevQBtn');
+const skipQBtn    = document.getElementById('skipQBtn');
+const jumpBtn     = document.getElementById('jumpBtn');
+const jumpInput   = document.getElementById('jumpInput');
+
+startBtn.addEventListener('click', ()=>{
+  quizStart.style.display='none';
+  quizArea.style.display='block';
+  loadQuestion(0);
+});
+restartBtn.addEventListener('click', resetQuiz);
+retakeBtn.addEventListener('click', ()=>{
+  resetQuiz();
+  quizResult.style.display='none';
+  quizStart.style.display='none';
+  quizArea.style.display='block';
+  loadQuestion(0);
+});
+
+function resetQuiz(){
+  current = 0; score = 0; attempted = 0; selectedIdx = null;
+  answered = new Array(TOTAL).fill(false);
+  userChoice = new Array(TOTAL).fill(null);
+  quizArea.style.display='none';
+  quizResult.style.display='none';
+  quizStart.style.display='block';
+}
+
+function loadQuestion(idx){
+  current = idx;
+  selectedIdx = userChoice[idx];
+  const [q, opts, ansIdx, exp] = mcqs[idx];
+
+  document.getElementById('quizQNum').textContent = `Q${idx+1}.`;
+  document.getElementById('quizQText').textContent = q;
+  document.getElementById('quizProgressText').textContent = `Question ${idx+1} / ${TOTAL}`;
+  document.getElementById('quizProgressFill').style.width = ((idx+1)/TOTAL*100)+'%';
+  document.getElementById('quizScore').textContent = score;
+  document.getElementById('quizAttempted').textContent = attempted;
+
+  const optWrap = document.getElementById('quizOptions');
+  optWrap.innerHTML = '';
+  opts.forEach((o,j)=>{
+    const div = document.createElement('div');
+    div.className = 'quiz-opt';
+    div.innerHTML = `<span class="opt-letter">${optLabels[j]}</span><span>${o}</span>`;
+    div.dataset.idx = j;
+    div.addEventListener('click', ()=> selectOption(j));
+    optWrap.appendChild(div);
+  });
+
+  const feedback = document.getElementById('quizFeedback');
+  const explan = document.getElementById('quizExplanation');
+  feedback.style.display='none';
+  explan.style.display='none';
+  checkBtn.style.display='inline-block';
+  nextBtn.style.display='none';
+  checkBtn.disabled = true;
+
+  prevQBtn.disabled = (idx===0);
+  skipQBtn.textContent = (idx===TOTAL-1) ? 'Finish →' : 'Skip →';
+
+  // if already answered before, show locked result state
+  if(answered[idx]){
+    revealAnswer(idx, false);
+  }
+}
+
+function selectOption(j){
+  if(answered[current]) return; // locked after checking
+  selectedIdx = j;
+  userChoice[current] = j;
+  document.querySelectorAll('#quizOptions .quiz-opt').forEach(el=>{
+    el.classList.toggle('selected', parseInt(el.dataset.idx)===j);
+  });
+  checkBtn.disabled = false;
+}
+
+checkBtn.addEventListener('click', ()=>{
+  if(selectedIdx===null) return;
+  if(!answered[current]){
+    attempted++;
+    const ansIdx = mcqs[current][2];
+    if(selectedIdx === ansIdx) score++;
+    answered[current] = true;
+  }
+  revealAnswer(current, true);
+});
+
+function revealAnswer(idx, isFresh){
+  const [q, opts, ansIdx, exp] = mcqs[idx];
+  const chosen = userChoice[idx];
+  document.querySelectorAll('#quizOptions .quiz-opt').forEach(el=>{
+    const j = parseInt(el.dataset.idx);
+    el.classList.add('locked');
+    el.classList.remove('selected');
+    if(j===ansIdx) el.classList.add('correct-ans');
+    if(j===chosen && chosen!==ansIdx) el.classList.add('wrong-ans');
+  });
+  const feedback = document.getElementById('quizFeedback');
+  feedback.style.display='block';
+  if(chosen===ansIdx){
+    feedback.className='quiz-feedback correct';
+    feedback.textContent = '✅ Correct!';
+  } else {
+    feedback.className='quiz-feedback wrong';
+    feedback.textContent = `❌ Not quite. Correct answer: ${optLabels[ansIdx]}) ${opts[ansIdx]}`;
+  }
+  const explan = document.getElementById('quizExplanation');
+  explan.style.display='block';
+  explan.innerHTML = `<b>Explanation:</b> ${exp}`;
+
+  checkBtn.style.display='none';
+  nextBtn.style.display='inline-block';
+  nextBtn.textContent = (idx===TOTAL-1) ? 'See Result →' : 'Next Question →';
+
+  document.getElementById('quizScore').textContent = score;
+  document.getElementById('quizAttempted').textContent = attempted;
+}
+
+nextBtn.addEventListener('click', ()=>{
+  if(current===TOTAL-1){ showResult(); return; }
+  loadQuestion(current+1);
+});
+prevQBtn.addEventListener('click', ()=>{
+  if(current>0) loadQuestion(current-1);
+});
+skipQBtn.addEventListener('click', ()=>{
+  if(current===TOTAL-1){ showResult(); return; }
+  loadQuestion(current+1);
+});
+jumpBtn.addEventListener('click', ()=>{
+  let n = parseInt(jumpInput.value);
+  if(!n || n<1 || n>TOTAL) return;
+  loadQuestion(n-1);
+  jumpInput.value='';
+});
+jumpInput.addEventListener('keypress', (e)=>{ if(e.key==='Enter') jumpBtn.click(); });
+
+function showResult(){
+  quizArea.style.display='none';
+  quizResult.style.display='block';
+  const pct = attempted>0 ? Math.round(score/attempted*100) : 0;
+  let msg = '';
+  if(pct>=80) msg='🌟 Excellent work! You know your schemes well.';
+  else if(pct>=60) msg='👍 Good effort — revise the ones you missed.';
+  else msg='📚 Keep revising — go through the notes tabs again.';
+  document.getElementById('resultText').innerHTML =
+    `You attempted <b>${attempted}/${TOTAL}</b> questions and scored <b>${score}/${attempted}</b> (${pct}%).<br><br>${msg}`;
+}
+</script>
+
+</body>
+</html>
