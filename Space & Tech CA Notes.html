@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Technology — CA Garud Notes</title>
+<style>
+  :root{
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --ink:#1c2530;
+    --sub:#5b6572;
+    --line:#e3e7ec;
+    --navy:#1d3557;
+    --navy-light:#eef3f9;
+    --teal:#0e7c86;
+    --teal-light:#e5f4f5;
+    --amber:#b5730a;
+    --amber-light:#fdf1de;
+    --blue:#2158c4;
+    --blue-light:#e9f0fd;
+    --green:#1f7a4d;
+    --green-light:#e9f7ef;
+    --red:#b1272b;
+    --radius:10px;
+    --maxw:880px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  header.top{
+    background:var(--navy);
+    color:#fff;
+    padding:18px 16px 14px;
+  }
+  header.top h1{
+    margin:0 0 3px;
+    font-size:1.25rem;
+    font-weight:700;
+    letter-spacing:.2px;
+  }
+  header.top p{
+    margin:0;
+    font-size:.82rem;
+    color:#c7d4e6;
+  }
+
+  /* Tabs */
+  .tabbar-wrap{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+  }
+  .tabbar{
+    display:flex;
+    gap:6px;
+    overflow-x:auto;
+    padding:10px 12px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  .tabbar::-webkit-scrollbar{height:6px;}
+  .tabbar::-webkit-scrollbar-thumb{background:#cfd6de;border-radius:4px;}
+  .tab-btn{
+    flex:0 0 auto;
+    white-space:nowrap;
+    background:var(--navy-light);
+    color:var(--navy);
+    border:1px solid transparent;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:.84rem;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .tab-btn.active{
+    background:var(--navy);
+    color:#fff;
+  }
+
+  main{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:16px 14px 60px;
+  }
+  .panel{display:none;}
+  .panel.active{display:block;}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 16px;
+    margin-bottom:14px;
+  }
+  h2.section-title{
+    font-size:1.15rem;
+    color:var(--navy);
+    margin:0 0 10px;
+    padding-bottom:8px;
+    border-bottom:2px solid var(--navy);
+  }
+  h3.sub{
+    font-size:1rem;
+    color:var(--teal);
+    margin:16px 0 8px;
+  }
+  h4.mini{
+    font-size:.92rem;
+    color:var(--navy);
+    margin:12px 0 6px;
+  }
+  ul{
+    margin:6px 0 10px;
+    padding-left:20px;
+  }
+  li{margin-bottom:5px;font-size:.92rem;}
+  b, strong{color:var(--ink);}
+  .kw{color:var(--navy);font-weight:700;}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:10px 0 14px;
+    font-size:.85rem;
+  }
+  th,td{
+    border:1px solid var(--line);
+    padding:6px 8px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{
+    background:var(--navy-light);
+    color:var(--navy);
+  }
+  tr:nth-child(even) td{background:#fafbfc;}
+
+  .tag{
+    display:inline-block;
+    font-size:.72rem;
+    font-weight:700;
+    padding:2px 8px;
+    border-radius:10px;
+    margin-left:6px;
+  }
+  .note{background:var(--blue-light);border-left:4px solid var(--blue);padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.87rem;}
+  .warn{background:var(--amber-light);border-left:4px solid var(--amber);padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.87rem;}
+  .tip{background:var(--green-light);border-left:4px solid var(--green);padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.87rem;}
+  .example{background:var(--teal-light);border-left:4px solid var(--teal);padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.87rem;}
+  .trick{background:#fdf1de;border:1px dashed var(--amber);padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.87rem;}
+
+  .hr{height:1px;background:var(--line);margin:14px 0;border:none;}
+
+  /* MCQ styles */
+  .qcard{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 16px;
+    margin-bottom:14px;
+  }
+  .qnum{
+    display:inline-block;
+    background:var(--navy);
+    color:#fff;
+    font-size:.75rem;
+    font-weight:700;
+    padding:3px 9px;
+    border-radius:12px;
+    margin-bottom:6px;
+  }
+  .qsrc{
+    font-size:.72rem;
+    color:var(--sub);
+    font-style:italic;
+  }
+  .qtext{
+    font-size:.94rem;
+    font-weight:600;
+    margin:6px 0 10px;
+  }
+  /* ---- Interactive quiz options ---- */
+  .opts-quiz{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    margin:0 0 10px;
+  }
+  .opt-btn{
+    text-align:left;
+    padding:9px 12px;
+    border:1px solid var(--line);
+    background:#fff;
+    border-radius:7px;
+    font-size:.88rem;
+    color:var(--ink);
+    cursor:pointer;
+    font-family:inherit;
+    transition:background .15s,border-color .15s;
+  }
+  .opt-btn:hover:not(:disabled){
+    border-color:var(--navy);
+    background:var(--navy-light);
+  }
+  .opt-btn:disabled{cursor:default;}
+  /* selected but wrong */
+  .opt-btn.wrong-pick{
+    background:#fdecea;
+    border-color:var(--red);
+    color:var(--red);
+    font-weight:700;
+  }
+  /* the correct answer, revealed after any pick */
+  .opt-btn.reveal-correct{
+    background:var(--green-light);
+    border-color:var(--green);
+    color:var(--green);
+    font-weight:700;
+  }
+  .result-msg{
+    display:none;
+    font-size:.85rem;
+    font-weight:700;
+    padding:7px 10px;
+    border-radius:6px;
+    margin-bottom:8px;
+  }
+  .result-msg.show{display:block;}
+  .result-msg.ok{background:var(--green-light);color:var(--green);}
+  .result-msg.no{background:#fdecea;color:var(--red);}
+
+  /* ---- Explanation box (hidden until answered) ---- */
+  .exp-box{
+    display:none;
+    margin-top:4px;
+    background:var(--blue-light);
+    border-radius:6px;
+    padding:10px 12px;
+  }
+  .qcard.answered .exp-box{display:block;}
+  .exp-label{
+    font-weight:700;
+    color:var(--blue);
+    font-size:.83rem;
+    margin-bottom:5px;
+  }
+  .exp-text{
+    font-size:.86rem;
+    color:var(--ink);
+  }
+  .exp-text ul{margin-top:4px;}
+
+  /* summary box */
+  .summary-box{
+    background:var(--navy-light);
+    border:1px solid var(--navy);
+    border-radius:var(--radius);
+    padding:14px 16px;
+  }
+  .summary-box h3{color:var(--navy);margin-top:0;}
+
+  /* scroll to top */
+  #toTopBtn{
+    position:fixed;
+    bottom:22px;
+    right:18px;
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    font-size:1.2rem;
+    cursor:pointer;
+    display:none;
+    box-shadow:0 3px 10px rgba(0,0,0,.25);
+    z-index:999;
+  }
+
+  footer.credit{
+    text-align:center;
+    font-size:.78rem;
+    color:var(--sub);
+    padding:20px 12px 40px;
+  }
+
+  @media (max-width:480px){
+    header.top h1{font-size:1.08rem;}
+    .card,.qcard{padding:12px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>🚀 Space Technology — Siddhi's CA Garud Series</h1>
+  <p>Structured revision notes + 86 Practice PYQs with explanations</p>
+</header>
+
+<div class="tabbar-wrap">
+  <div class="tabbar" id="tabbar">
+    <button class="tab-btn active" data-tab="t1">ISRO Basics</button>
+    <button class="tab-btn" data-tab="t2">Launch Vehicles</button>
+    <button class="tab-btn" data-tab="t3">Orbits</button>
+    <button class="tab-btn" data-tab="t4">ISRO Missions</button>
+    <button class="tab-btn" data-tab="t5">Upcoming Missions</button>
+    <button class="tab-btn" data-tab="t6">Global Missions</button>
+    <button class="tab-btn" data-tab="t7">Facts & Misc</button>
+    <button class="tab-btn" data-tab="t8">Summary</button>
+    <button class="tab-btn" data-tab="t9">MCQs (86)</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ================= TAB 1 : ISRO BASICS ================= -->
+<section class="panel active" id="t1">
+  <div class="card">
+    <h2 class="section-title">🇮🇳 Introduction to ISRO</h2>
+    <ul>
+      <li>✅ <span class="kw">Founded:</span> 1969 — replaced <b>INCOSPAR (1962)</b></li>
+      <li>✅ <span class="kw">Founder:</span> Dr. Vikram Sarabhai — "Father of India's Space Programme"</li>
+      <li>🔹 <span class="kw">HQ:</span> Bengaluru, Karnataka</li>
+      <li>🔹 <span class="kw">Parent Dept:</span> Department of Space, Govt of India</li>
+      <li>🔹 <span class="kw">Previous Chairman:</span> Dr. S. Somanath</li>
+      <li>✅ <span class="kw">Current Chairman:</span> V. Narayanan (appointed 2025)</li>
+    </ul>
+    <div class="trick">💡 <b>Trick:</b> ISRO born <b>1969</b> — same year as Apollo 11 Moon landing! Easy to link both.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🏢 Major Space Centres in India</h2>
+    <table>
+      <tr><th>Centre</th><th>Location</th><th>Key Function</th></tr>
+      <tr><td><b>VSSC</b> (Vikram Sarabhai)</td><td>Thiruvananthapuram</td><td>Launch vehicles (Rockets)</td></tr>
+      <tr><td><b>URSC</b> (U R Rao)</td><td>Bengaluru</td><td>Satellite design & building</td></tr>
+      <tr><td><b>SDSC SHAR</b> (Satish Dhawan)</td><td>Sriharikota</td><td>Rocket launch base (Spaceport)</td></tr>
+      <tr><td><b>IPRC</b></td><td>Mahendragiri</td><td>Rocket engine testing</td></tr>
+      <tr><td><b>SAC</b></td><td>Ahmedabad</td><td>Payloads (sensors & cameras)</td></tr>
+      <tr><td><b>ISTRAC</b></td><td>Bengaluru</td><td>Mission tracking, telemetry & command</td></tr>
+      <tr><td><b>LPSC</b></td><td>Thiruvananthapuram</td><td>Liquid & cryogenic propulsion</td></tr>
+    </table>
+    <div class="trick">💡 <b>Mnemonic:</b> "Very Understanding Scientists Ideally Study And Launch" → VSSC–URSC–SDSC–IPRC–SAC–ISTRAC–LPSC</div>
+    <div class="warn">⚠️ Don't confuse: <b>URSC</b> = builds satellites; <b>VSSC</b> = builds rockets; <b>SDSC SHAR</b> = only launches (spaceport).</div>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🛰️ Types of Satellites / Spacecraft</h2>
+    <table>
+      <tr><th>Type</th><th>Purpose</th><th>Examples</th></tr>
+      <tr><td>Communication</td><td>Telecom, broadcast, TV, telemedicine</td><td>INSAT, GSAT series</td></tr>
+      <tr><td>Earth Observation</td><td>Remote sensing, mapping, weather, agri</td><td>CARTOSAT, RESOURCESAT, OCEANSAT</td></tr>
+      <tr><td>Navigation</td><td>Regional positioning & timing</td><td>NavIC (IRNSS), NVS series</td></tr>
+      <tr><td>Scientific & Exploration</td><td>Deep space, planetary, solar research</td><td>Chandrayaan, Mangalyaan, Aditya-L1, AstroSat</td></tr>
+      <tr><td>Technology Demonstration</td><td>Testing new tech</td><td>SpaDeX, RLV-TD</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🧹 POEM Mission</h2>
+    <ul>
+      <li>✅ <span class="kw">Full form:</span> PSLV Orbital Experimental Module</li>
+      <li>🔹 Re-uses the <b>4th stage of PSLV</b> after launch instead of letting it become space debris in LEO</li>
+      <li>🔹 Powered by <b>solar panels + Li-Ion battery</b>; can re-enter Earth's orbit after tasks complete</li>
+      <li>✅ First used in <b>PSLV-C35</b> mission</li>
+      <li>✅ <b>POEM-4:</b> flown with <b>SpaDeX mission</b>; carried ISRO + Indian startup/academia experiments</li>
+      <li>⚠️ <b>Note:</b> India also has <b>Project NETRA</b> to monitor space debris (different from POEM)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🎓 UNNATI Programme</h2>
+    <ul>
+      <li>✅ <span class="kw">Full form:</span> UNispace Nanosatellite Assembly & Training by ISRO</li>
+      <li>🔹 Initiative by: <b>ISRO</b></li>
+      <li>🔹 <span class="kw">Purpose:</span> Trains participants from different countries in nanosatellite development</li>
+      <li>🔹 Focus: assembly, integration & testing of nanosatellites</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TAB 2 : LAUNCH VEHICLES ================= -->
+<section class="panel" id="t2">
+  <div class="card">
+    <h2 class="section-title">🚀 ISRO's Launch Vehicles</h2>
+    <table>
+      <tr><th>Vehicle</th><th>Full Form</th><th>Key Details</th></tr>
+      <tr><td><b>SLV-3</b></td><td>Satellite Launch Vehicle-3</td><td>India's 1st experimental rocket; launched <b>Rohini-1 (1980)</b></td></tr>
+      <tr><td><b>PSLV</b></td><td>Polar Satellite Launch Vehicle</td><td>"Workhorse of ISRO"; Solid+Liquid fuel.<br>Stage 1→3 Solid; Stage 2→Vikas Engine (liquid); Stage 4→Liquid</td></tr>
+      <tr><td><b>GSLV (Mk-II)</b></td><td>Geosynchronous Satellite Launch Vehicle</td><td>3-stage; Stage1-Solid, Stage2-Liquid(Vikas), Stage3-Cryogenic(CE-7.5); carries upto 420 tons total wt</td></tr>
+      <tr><td><b>LVM3</b> (GSLV Mk-III)</td><td>Launch Vehicle Mark-3</td><td>India's <b>heaviest operational rocket</b>; launched Chandrayaan-2 & 3; 8000kg→LEO, 4000kg→GTO; used in OneWeb mission</td></tr>
+      <tr><td><b>HLVM3</b></td><td>Human-Rated LVM3</td><td>Modified LVM3 + Crew Escape System for <b>Gaganyaan</b></td></tr>
+      <tr><td><b>SSLV</b></td><td>Small Satellite Launch Vehicle</td><td>Low-cost, on-demand; upto 500kg to LEO; all 3 stages solid fuel</td></tr>
+      <tr><td><b>RLV-TD</b></td><td>Reusable Launch Vehicle – Tech Demonstrator</td><td>Winged spaceplane prototype for reusable tech</td></tr>
+      <tr><td><b>NGLV</b></td><td>Next Generation Launch Vehicle</td><td>Under development; heavy-lift + space-station needs; ~30 tonnes to LEO; uses <b>LOX-Methane</b> propellant</td></tr>
+    </table>
+    <div class="trick">💡 <b>Trick:</b> PSLV = "Polar" & "Workhorse"; GSLV/LVM3 = "Geo/Heavy-lift". Remember by orbit type first letter matches!</div>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🛩️ LVM3 — "Bahubali"</h2>
+    <ul>
+      <li>✅ Nickname: <b>Bahubali</b></li>
+      <li>🔹 Type: Heavy-lift launch vehicle</li>
+      <li>🔹 Uses <b>Solid–Liquid–Cryogenic</b> fuel stages</li>
+      <li>🔹 8000kg → LEO (upto 2000km); 4000kg → GEO (36,000km)</li>
+      <li>✅ Launched Chandrayaan-2, Chandrayaan-3; being upgraded for <b>BAS & lunar exploration</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🔥 Reusable Tech & Engines</h2>
+    <h4 class="mini">RLV-LEX-3 (PYQ)</h4>
+    <ul>
+      <li>Full form: Reusable Launch Vehicle – Landing Experiment 3</li>
+      <li>Vehicle: <b>Pushpak</b> — ISRO's winged RLV prototype</li>
+      <li>Objective: Test <b>autonomous landing</b> capability</li>
+      <li>🔹 Launched from IAF <b>Chinook Helicopter</b> at 4.5km height → executed maneuvers → precise horizontal runway landing</li>
+      <li>✅ Validated guidance algorithm for longitudinal & lateral error correction — vital for future Orbital Re-entry Missions</li>
+      <li>⚠️ PYQ Answer: RLV-LEX3 outcome = <b>Autonomous high-speed landing under cross-range wind</b> (not fuel transfer/scramjet)</li>
+    </ul>
+    <h4 class="mini">Spark Torch Igniters</h4>
+    <ul>
+      <li>Enable <b>multiple engine restarts</b> in vacuum — essential for reusable rocket boosters</li>
+      <li>Provide reliable, repeatable ignition in extreme conditions → supports reusability</li>
+    </ul>
+    <h4 class="mini">Generative Design Software</h4>
+    <ul>
+      <li>Used by ISRO to optimise structure & <b>reduce weight</b> while maintaining strength (used in aerospace components broadly, NOT specific to cryogenic tanks)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🏗️ Launch Pads & NGLV</h2>
+    <ul>
+      <li>✅ <span class="kw">Third Launch Pad (TLP):</span> Approved at Sriharikota, Andhra Pradesh</li>
+      <li>🔹 Purpose: Handle increasing launch frequency for <b>SSLV, Gaganyaan & commercial payloads</b>; support NGLV</li>
+      <li>✅ NGLV approved by Union Cabinet to support <b>BAS + crewed Moon landing by 2040</b></li>
+      <li>🔹 NGLV propellant: <b>LOX–Methane (LOX-Meth)</b> — cleaner combustion, reusable-friendly, cheaper than LOX-Hydrogen/kerosene</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TAB 3 : ORBITS ================= -->
+<section class="panel" id="t3">
+  <div class="card">
+    <h2 class="section-title">🌍 Orbits — Types & Uses</h2>
+    <p style="font-size:.9rem;">An <b>orbit</b> = path followed by a satellite around Earth. Different orbits serve navigation, communication, weather & Earth observation.</p>
+    <table>
+      <tr><th>Orbit</th><th>Details / Main Use</th></tr>
+      <tr><td><b>LEO</b> (Low Earth Orbit)<br>160–2000 km</td><td>Space Stations present here (e.g. ISS)</td></tr>
+      <tr><td><b>Polar Orbit</b><br>same ht as LEO</td><td>Passes over poles (90° inclination); used for Global mapping, Weather tracking</td></tr>
+      <tr><td><b>Sun-Synchronous Orbit (SSO)</b></td><td>Height ~Polar; satellite passes same point at <b>same local solar time</b> daily; used for Spy satellites, Climate monitoring</td></tr>
+      <tr><td><b>MEO</b> (Middle Earth Orbit)<br>2000–35,786 km</td><td>Van-Allen Radiation Belts present here; Navigation constellations here; Regional communication</td></tr>
+      <tr><td><b>GEO</b> (Geostationary)<br>35,786 km</td><td>Circular, above Equator, orbital period ~24 hrs → satellite appears stationary; Used for military comms, TV broadcast, satellite studies</td></tr>
+      <tr><td><b>GTO</b> (Geo Transfer Orbit)</td><td>Highly elliptical; Perigee near LEO, Apogee near GEO; used to transfer satellites into GEO</td></tr>
+    </table>
+    <div class="trick">💡 <b>Trick to remember GEO height:</b> "35,786 = 24 hr sync" → Same as Earth's rotation period, so satellite looks fixed.</div>
+    <div class="warn">⚠️ PYQ trap: SSO ≠ used for continuous solar-powered <b>GEO</b> communication satellites — SSO ✔ Earth observation only; continuous comm sats are in GEO.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">📡 Recent Missions & Their Orbits (2025–26)</h2>
+    <ul>
+      <li><b>NISAR (2025):</b> Sun Synchronous Orbit / LEO</li>
+      <li><b>NVS-02 (2025):</b> Navigation satellite → placed in <b>GTO</b></li>
+      <li><b>EOS-05:</b> Sub-Geosynchronous Orbit</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TAB 4 : ISRO MISSIONS ================= -->
+<section class="panel" id="t4">
+  <div class="card">
+    <h2 class="section-title">🛰️ Missions Accomplished by ISRO</h2>
+
+    <h4 class="mini">Aryabhata</h4>
+    <ul>
+      <li>✅ India's <b>first satellite</b>; Launched by: <b>Soviet Union</b></li>
+      <li>Purpose: X-ray astronomy, aeronomy experiments</li>
+      <li>Named after ancient mathematician-astronomer Aryabhata</li>
+      <li>⚠️ Power failure halted experiments after 4 days</li>
+    </ul>
+
+    <h4 class="mini">CMS-03 (GSAT-7R)</h4>
+    <ul>
+      <li>Communications satellite; Heaviest comm satellite (4400 kg) directly launched to GTO from Indian soil</li>
+      <li>Launched via <b>LVM3-M5</b></li>
+      <li>Purpose: Naval communication (replaces GSAT-7); also mobile/TV/internet</li>
+      <li>Coverage: Indian Ocean upto 2000km from coastline</li>
+      <li>✅ Cryogenic upper stage (C25) <b>re-ignited</b> — showcased multi-orbital launch capability; supports Gaganyaan prep</li>
+    </ul>
+
+    <h4 class="mini">NISAR</h4>
+    <ul>
+      <li>Full form: <b>NASA-ISRO Synthetic Aperture Radar</b></li>
+      <li>Joint mission: NASA + ISRO; Type: Earth observation satellite</li>
+      <li>2 frequency bands — ISRO (S-band) + NASA (L-band) → works day/night & through clouds</li>
+      <li>✅ Operates in <b>Sun-Synchronous / LEO</b>; scans globe every <b>12 days</b></li>
+      <li>Objective: Land deformation, glaciers, forests, natural disasters</li>
+      <li>GS2 stage for GSLV-F16 (launching NISAR) flagged off: <b>July 2023</b></li>
+    </ul>
+
+    <h4 class="mini">Axiom Mission 4 (Ax-4)</h4>
+    <ul>
+      <li>Indian astronaut: <b>Grp Capt. Shubhanshu Shukla</b> (Pilot)</li>
+      <li>✅ First Indian to visit <b>ISS</b>; second Indian in space after <b>Rakesh Sharma (1984)</b></li>
+      <li>Private mission by Axiom Space + NASA + SpaceX</li>
+      <li>Crew: Shukla, Peggy Whitson (USA), Sławosz Uznański (Poland), Tibor Kapu (Hungary)</li>
+      <li>ISRO experiments: microgravity, cognition, crop seeds, muscle performance, microbial adaptation</li>
+    </ul>
+
+    <h4 class="mini">RLV-LEX-3 · INSAT-3DS · XPoSat</h4>
+    <ul>
+      <li><b>INSAT-3DS:</b> Meteorological satellite; monitors clouds, temp, humidity → agriculture, aviation, marine, climate</li>
+      <li><b>XPoSat:</b> India's first dedicated <b>X-ray polarimetry</b> mission
+        <ul>
+          <li>Studies X-ray polarization from black holes, neutron stars, pulsars</li>
+          <li><b>POLIX</b> → measures degree/angle of X-ray polarization (8–30 keV)</li>
+          <li><b>XSPECT</b> → studies energy spectrum & timing (not polarization)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4 class="mini">Chandrayaan Series</h4>
+    <table>
+      <tr><th>Mission</th><th>Key Facts</th></tr>
+      <tr><td><b>Chandrayaan-1</b></td><td>India's first lunar mission; ✅ Discovered <b>water molecules on Moon</b> (PYQ); intl payloads: NASA, ESA, Bulgaria; used <b>Moon Mineralogy Mapper (M3)</b></td></tr>
+      <tr><td><b>Chandrayaan-2</b></td><td>Orbiter + Vikram Lander + Pragyan Rover; Orbiter successful; Vikram lost contact during descent; paved way for CH-3</td></tr>
+      <tr><td><b>Chandrayaan-3</b></td><td>✅ India's <b>first successful soft landing</b> near Moon's south pole (23 Aug 2023); Vikram Lander + Pragyan Rover; used <b>Lander Hazard Detection & Avoidance Camera + algorithm (PYQ)</b>; <b>LIBS</b> payload detected sulphur; <b>RAMBHA-LP</b> probed lunar plasma; buried crater found ~<b>2.2 km deep</b>; LRA (Laser Retroreflector Array) supplied by <b>NASA</b></td></tr>
+    </table>
+    <div class="trick">💡 <b>Trick:</b> CH-1 = Water 💧 | CH-2 = faiLed lander | CH-3 = Landed successfully + Sulphur (LIBS)</div>
+
+    <h4 class="mini">AstroSat</h4>
+    <ul>
+      <li>India's first dedicated <b>multi-wavelength space observatory</b></li>
+      <li>Studies black holes, neutron stars, supernovae in X-ray, UV, Optical bands simultaneously</li>
+      <li>Instruments: <b>UVIT</b>(UV study), <b>SXT</b>(Soft X-ray telescope), <b>LAXPC</b>(Large Area X-ray), <b>CZTI</b>(Cadmium Zinc Telluride imager), SSM</li>
+    </ul>
+
+    <h4 class="mini">Mars Orbiter Mission (MOM) / Mangalyaan-1</h4>
+    <ul>
+      <li>✅ India's <b>first interplanetary mission</b>; India became <b>4th space agency</b> to reach Mars</li>
+      <li>Payloads: <b>Mars Colour Camera (MCC)</b> — high-res images; Methane sensor — life detection; Thermal IR spectrometer — day/night thermal; Mass spectrometer — exosphere</li>
+    </ul>
+
+    <h4 class="mini">Aditya-L1</h4>
+    <ul>
+      <li>India's <b>first dedicated solar mission</b>; Type: Solar observatory</li>
+      <li>✅ Location: <b>Lagrange Point 1 (L1)</b>; ~1.5 million km from Earth; took <b>127 days</b> to reach L1</li>
+      <li>Objective: Study Sun's <b>corona</b>, solar wind, solar flares → space weather</li>
+      <li>Payloads: <b>VELC</b> (Visible Emission Line Coronagraph – studies corona); <b>SUIT</b> (Solar UV Imaging Telescope); <b>SoLEXS</b> (soft X-rays/flares); <b>ASPEX</b> (monitors solar wind at L1, includes <b>SWIS</b> — detects directional flow of solar wind protons & helium nuclei)</li>
+    </ul>
+
+    <h4 class="mini">Skyroot Aerospace (Private)</h4>
+    <ul>
+      <li><b>Vikram-S:</b> India's first privately developed rocket; suborbital mission success</li>
+      <li><b>Kalam-100:</b> Rocket engine by Skyroot</li>
+      <li><b>Vikram-1:</b> India's first privately developed <b>orbital</b> launch vehicle → ✅ reached orbit <b>July 2026</b></li>
+      <li>Purpose: Launch satellites into LEO</li>
+    </ul>
+
+    <h4 class="mini">Other Accomplished Missions (Table)</h4>
+    <table>
+      <tr><th>Mission</th><th>Launch</th><th>Vehicle</th><th>Fact</th></tr>
+      <tr><td><b>SpaDeX</b></td><td>Dec 2024 launch; docking <b>16 Jan 2025</b></td><td>PSLV-C60</td><td>✅ Demonstrated in-orbit docking; India = <b>4th country</b> to dock</td></tr>
+      <tr><td>OneWeb India-1</td><td>Oct 2022</td><td>LVM3-M2</td><td>36 satellites launched</td></tr>
+      <tr><td>GSAT-24</td><td>June 2022</td><td>Ariane 5</td><td>DTH communication satellite</td></tr>
+      <tr><td>EOS-04</td><td>Feb 2022</td><td>PSLV-C52</td><td>Radar imaging Earth observation satellite</td></tr>
+      <tr><td>EOS-03</td><td>Aug 2021</td><td>GSLV-F10</td><td>⚠️ Mission failed</td></tr>
+      <tr><td>Amazonia-1</td><td>Feb 2021</td><td>PSLV-C51</td><td>Earth observation satellite</td></tr>
+    </table>
+
+    <h4 class="mini">EOS-05</h4>
+    <ul>
+      <li>Launched <b>4 Sep 2026</b> using <b>GSLV-F17</b></li>
+      <li>Weight 2367 kg — highest payload launched by GSLV into GTO</li>
+      <li>Placed in <b>Sub-Geosynchronous Orbit</b></li>
+      <li>Purpose: Monitor earth rotation & real-time view of Indian landmass → Disaster Management & Strategic Surveillance</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TAB 5 : UPCOMING MISSIONS ================= -->
+<section class="panel" id="t5">
+  <div class="card">
+    <h2 class="section-title">🔭 ISRO's Upcoming Missions</h2>
+
+    <h4 class="mini">Gaganyaan</h4>
+    <ul>
+      <li>✅ India's <b>first human spaceflight programme</b></li>
+      <li>Gaganyaan-1: 1st uncrewed test flight, carries humanoid <b>Vyommitra</b></li>
+      <li>Gaganyaan-2: 2nd uncrewed test flight</li>
+      <li>Gaganyaan-3: <b>first crewed mission</b></li>
+      <li>Orbits Earth at ~<b>400 km</b> (LEO)</li>
+      <li>Goal: India becomes <b>4th country</b> to send humans to space (after USA, Russia, China)</li>
+      <li><b>TV-D1 test flight</b> validated the <b>Crew Escape System (CES)</b></li>
+      <li>ISRO germinated <b>cowpea seeds in space</b> — space-agriculture research</li>
+    </ul>
+
+    <h4 class="mini">Shukrayaan-1</h4>
+    <ul>
+      <li>India's <b>first Venus mission</b>; Type: Venus orbiter</li>
+      <li>Objective: Study Venus surface & atmosphere</li>
+      <li>Payloads: <b>SAR</b> (Synthetic Aperture Radar) + <b>GPR</b> (Ground Penetrating Radar)</li>
+    </ul>
+
+    <h4 class="mini">Mangalyaan-2</h4>
+    <ul>
+      <li>India's <b>first planned Mars lander</b> mission</li>
+      <li>Type: Mars lander + rover + helicopter</li>
+      <li>Significance: First Indian attempt at soft landing on Mars</li>
+    </ul>
+
+    <h4 class="mini">ShaktiSAT</h4>
+    <ul>
+      <li>By: <b>Space Kidz India (SKI)</b></li>
+      <li>Objective: Train girls in space tech & satellite dev; female-led satellite linked to <b>Chandrayaan-4</b></li>
+      <li>Participation: Girls from 108 countries</li>
+    </ul>
+
+    <h4 class="mini">Chandrayaan-4 & Chandrayaan-5 (LUPEX)</h4>
+    <ul>
+      <li><b>Chandrayaan-4:</b> Lunar <b>sample-return</b> mission; key tech: docking in lunar orbit; India's first planned lunar sample-return</li>
+      <li><b>Chandrayaan-5 (LUPEX):</b> Joint ISRO + JAXA — ISRO builds Lander, JAXA builds Rover; explore Moon's south pole & water ice</li>
+    </ul>
+
+    <div class="hr"></div>
+    <h4 class="mini">Bharatiya Antariksha Station (BAS)</h4>
+    <ul>
+      <li>India's planned space station</li>
+      <li>✅ First module launch target: <b>2028</b></li>
+      <li>✅ Full completion target: <b>2035</b></li>
+      <li>Crew capacity: 3–4 astronauts</li>
+    </ul>
+
+    <h4 class="mini">🌌 India's Space Vision 2047</h4>
+    <ul>
+      <li>Goal: Leading global space power by <b>2047</b></li>
+      <li>BAS target: <b>2035</b></li>
+      <li>Crewed Moon landing target: <b>2040</b></li>
+      <li>Planetary exploration: Venus, Mars, asteroids</li>
+      <li>Focus: Reusable launch vehicles, advanced propulsion, satellite tech</li>
+      <li>Private sector push via <b>IN-SPACe</b> and <b>NSIL</b></li>
+    </ul>
+    <div class="trick">💡 <b>Trick:</b> "28-35-40-47" → BAS module 2028, BAS complete 2035, Moon landing 2040, Global space power 2047 — remember increasing decade steps!</div>
+
+    <h4 class="mini">Space Situational Awareness (SSA)</h4>
+    <ul>
+      <li>Purpose: Protect satellites from collisions & space debris</li>
+      <li><b>IS4OM:</b> ISRO System for Safe & Sustainable Space Operations Management</li>
+      <li><b>ISSAR:</b> Indian Space Situational Assessment Report</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TAB 6 : GLOBAL MISSIONS ================= -->
+<section class="panel" id="t6">
+  <div class="card">
+    <h2 class="section-title">🌐 Other Countries' Major Space Missions</h2>
+
+    <h4 class="mini">🇺🇸 NASA's Apollo Programme</h4>
+    <ul>
+      <li>Human Moon exploration programme</li>
+      <li>✅ <b>Apollo 11 (1969):</b> First human landing on Moon — <b>Neil Armstrong & Buzz Aldrin</b>; Michael Collins piloted command module in orbit</li>
+      <li>Total lunar landings: <b>6</b> — Apollo 11,12,14,15,16,17</li>
+      <li><b>Apollo 17 (1972):</b> Last Apollo Moon mission; <b>Harrison Schmitt</b> = only scientist/geologist on Moon</li>
+      <li>Launch vehicle: <b>Saturn V</b>; lunar samples returned: ~<b>382 kg</b></li>
+    </ul>
+
+    <h4 class="mini">Artemis II</h4>
+    <ul>
+      <li>Crewed lunar <b>flyby</b> — no landing; Launch vehicle: <b>SLS</b>; Spacecraft: <b>Orion</b></li>
+      <li>Free-return trajectory around Moon; first crewed flight of SLS+Orion</li>
+      <li>Crew: Reid Wiseman, Victor Glover, <b>Christina Koch</b> (first woman on lunar mission), <b>Jeremy Hansen</b> (first non-American on lunar mission)</li>
+      <li>Objective: Test life-support, navigation, comms, thermal-protection for future lunar missions</li>
+      <li><b>Artemis III:</b> planned to actually land astronauts on Moon</li>
+    </ul>
+
+    <h4 class="mini">LEXI</h4>
+    <ul>
+      <li>Full form: Lunar Environment heliospheric X-ray Imager</li>
+      <li>NASA mission under Artemis campaign; studies Earth's <b>magnetosphere</b> from Moon using soft X-rays</li>
+      <li>Delivered by <b>Blue Ghost 1</b> lander; studies solar wind–Earth magnetic field interaction</li>
+    </ul>
+
+    <h4 class="mini">Hubble Space Telescope</h4>
+    <ul>
+      <li>NASA telescope, launched <b>1990</b>; named after Edwin Hubble</li>
+      <li>Observes UV, visible, near-IR; studies galaxies, black holes, dark energy</li>
+      <li>Famous images: <b>Pillars of Creation</b>, Hubble Deep Field</li>
+      <li>Upgraded via astronaut servicing missions</li>
+    </ul>
+
+    <h4 class="mini">James Webb Space Telescope (JWST)</h4>
+    <ul>
+      <li>Joint: NASA + ESA + CSA; World's most powerful space observatory</li>
+      <li>✅ Located at Sun–Earth <b>Lagrange Point L2</b></li>
+      <li>Observes mainly in near-infrared & mid-infrared</li>
+      <li>Primary mirror: <b>18 gold-coated segments</b>; Successor to Hubble</li>
+      <li>Carries a <b>coronagraph</b> for exoplanet detection; detected water vapour & CO₂ in exoplanet atmospheres</li>
+    </ul>
+
+    <h4 class="mini">Voyager Mission</h4>
+    <ul>
+      <li>NASA — Voyager 1 & 2; launched <b>1977</b> to explore outer planets</li>
+      <li>Visited Jupiter, Saturn, Uranus, Neptune — only spacecraft to visit all 4 outer planets</li>
+      <li>Voyager 1 = 1st to enter interstellar space; Voyager 2 = 2nd</li>
+      <li>Famous image: <b>"Pale Blue Dot"</b>; both carry the <b>Golden Record</b></li>
+      <li>Operated by NASA's <b>JPL</b></li>
+    </ul>
+
+    <h4 class="mini">🇨🇳 China's Missions</h4>
+    <ul>
+      <li><b>Chang'e 6:</b> Lunar sample-return; 1st mission to return samples from Moon's <b>far side</b>; modules: Orbiter, Lander, Ascender, Returner; intl payloads from France, Italy, Sweden, Pakistan</li>
+      <li><b>Tianwen-1:</b> China's first Mars mission — orbiter+lander+rover (<b>Zhurong</b>); China = 1st country to orbit, land & deploy rover on Mars in its first attempt</li>
+      <li><b>Tianwen-2:</b> Asteroid sample-return + comet exploration; target asteroid: <b>Kamo'oalewa</b>; conducted by <b>CNSA</b></li>
+    </ul>
+
+    <h4 class="mini">🇪🇺 Proba-3 (ESA)</h4>
+    <ul>
+      <li>ESA solar mission; ✅ Launched by <b>ISRO's PSLV-XL</b> (PSLV-C59, Oct 2024)</li>
+      <li>World's first <b>precision formation-flying</b> mission; two spacecraft — <b>Coronagraph + Occulter</b></li>
+      <li>Occulter blocks Sun's disk → creates artificial solar eclipse; studies Sun's corona & space weather</li>
+      <li>Shows ESA–ISRO cooperation</li>
+    </ul>
+
+    <h4 class="mini">🇷🇺 Luna Missions (Soviet Union, 1959–1976)</h4>
+    <ul>
+      <li>Luna 1: First spacecraft to reach Moon's vicinity</li>
+      <li>Luna 2: First human-made object to impact Moon</li>
+      <li>Luna 3: First photos of Moon's far side</li>
+      <li>Luna 9: First successful soft landing on Moon</li>
+      <li>Luna 10: First spacecraft to orbit Moon</li>
+      <li>Luna 16, 20, 24: Lunar sample-return missions</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TAB 7 : FACTS & MISC ================= -->
+<section class="panel" id="t7">
+  <div class="card">
+    <h2 class="section-title">📌 Other Important Space-Tech Facts</h2>
+    <ul>
+      <li>✅ <b>National Space Day:</b> 23 August (India)</li>
+      <li>✅ <b>V. Narayanan:</b> Appointed ISRO Chairman in 2025</li>
+      <li>ISRO–SCL developed <b>Vikram 3201</b> & <b>Kalpana 3201</b> — indigenous 32-bit space-grade microprocessors</li>
+      <li>India = <b>4th country</b> to achieve unmanned space docking (important for space-station missions)</li>
+      <li><b>Hope Analogue Mission:</b> ISRO mission in <b>Ladakh</b> to simulate conditions for future human lunar missions</li>
+      <li><b>Tezz:</b> India's first private <b>supersonic ramjet engine</b></li>
+      <li><b>Agnikul Cosmos:</b> Established a rocket <b>3D-printing facility</b> in Chennai</li>
+      <li>Andhra Pradesh announced plans for a <b>Space City & Defence Hubs</b></li>
+      <li><b>Third Launch Pad</b> approved at Sriharikota, AP — for NGLV & human spaceflight</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🧭 Navigational Satellite Systems (Global)</h2>
+    <table>
+      <tr><th>System</th><th>Country</th><th>No. of Satellites</th></tr>
+      <tr><td>GPS</td><td>USA</td><td>31</td></tr>
+      <tr><td>BeiDou</td><td>China</td><td>45</td></tr>
+      <tr><td>GLONASS</td><td>Russia</td><td>24</td></tr>
+      <tr><td>Galileo</td><td>European Union</td><td>—</td></tr>
+      <tr><td><b>NavIC (IRNSS)</b></td><td>India</td><td>7</td></tr>
+      <tr><td>QZSS</td><td>Japan</td><td>—</td></tr>
+    </table>
+    <div class="trick">💡 <b>Mnemonic:</b> "Great Beasts Get Girls Nice Quilts" → GPS, BeiDou, GLONASS, Galileo, NavIC, QZSS</div>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">🤝 Artemis Accords & India</h2>
+    <ul>
+      <li>✅ Non-binding set of principles led by <b>NASA</b> for safe, peaceful, transparent, sustainable exploration of Moon & beyond; established <b>2020</b></li>
+      <li>✅ India joined: <b>21 June 2023</b> — became the <b>27th signatory</b></li>
+      <li>Key principles: Peaceful exploration, transparency, interoperability, emergency assistance, data-sharing, preserving space heritage, mitigating debris</li>
+      <li>Strengthens India–US space cooperation; supports India in future lunar/scientific missions</li>
+      <li>Related: NASA provided <b>Laser Retroreflector Array for Chandrayaan-3</b> + navigation/deep-space network support</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TAB 8 : SUMMARY ================= -->
+<section class="panel" id="t8">
+  <div class="summary-box">
+    <h3>⚡ Quick Revision Summary</h3>
+    <ul>
+      <li><b>ISRO:</b> Founded 1969, HQ Bengaluru, Founder Vikram Sarabhai, replaced INCOSPAR (1962)</li>
+      <li><b>Space Centres:</b> VSSC-rockets | URSC-satellites | SDSC SHAR-launch site | LPSC-propulsion | SAC-payloads | ISTRAC-tracking | IPRC-engine testing</li>
+      <li><b>Launch Vehicles:</b> PSLV = workhorse | GSLV/LVM3 = heavy-lift (Bahubali) | SSLV = low-cost small sats | NGLV = future, LOX-Methane fuel</li>
+      <li><b>Orbits:</b> LEO(space stations) → Polar/SSO(mapping,weather) → MEO(navigation) → GEO(comm,24hr) → GTO(transfer)</li>
+      <li><b>Chandrayaan:</b> CH-1 water discovery | CH-2 lander failed | CH-3 successful south-pole landing (2023) + sulphur via LIBS</li>
+      <li><b>Aditya-L1:</b> At L1 point, studies Sun's corona, took 127 days, key payload VELC</li>
+      <li><b>Mangalyaan (MOM):</b> India's 1st interplanetary mission; 4th agency to reach Mars</li>
+      <li><b>SpaDeX:</b> Docking demo 16 Jan 2025; India = 4th country to dock in space</li>
+      <li><b>Gaganyaan:</b> First human spaceflight; orbits at 400km; CES tested via TV-D1; India to be 4th nation in space</li>
+      <li><b>BAS:</b> First module 2028, full station 2035</li>
+      <li><b>Space Vision 2047:</b> BAS-2035, Moon landing-2040, Global space power-2047</li>
+      <li><b>NISAR:</b> NASA+ISRO joint EO satellite, SSO/LEO, 12-day revisit, dual band L(NASA)+S(ISRO)</li>
+      <li><b>Artemis Accords:</b> India joined 21 June 2023 as 27th signatory</li>
+      <li><b>Global 1st landings:</b> Apollo 11 (1969, humans on Moon) | Chang'e 6 (Moon far side sample) | Tianwen-1 (China Mars in 1st attempt)</li>
+      <li><b>Navigation systems:</b> GPS(USA) BeiDou(China) GLONASS(Russia) Galileo(EU) NavIC(India) QZSS(Japan)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TAB 9 : MCQs ================= -->
+<section class="panel" id="t9">
+  <div class="card" style="margin-bottom:10px;">
+    <h2 class="section-title">📝 Practice PYQs — 86 Questions</h2>
+    <p style="font-size:.85rem;color:var(--sub);">Tap an option to answer. The correct answer and full explanation will reveal automatically after you choose.</p>
+  </div>
+
+  <!-- Q1 -->
+  <div class="qcard"><span class="qnum">Q1</span> <span class="qsrc">(SSC CPO – 9 Dec 25 Shift 2)</span>
+    <div class="qtext">The Bharatiya Nagarik Suraksha Sanhita (BNSS) introduces a specific timeframe for pronouncing judgment after the conclusion of arguments in a criminal trial. What is this timeframe?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Within 7 days</button>
+<button type="button" class="opt-btn" data-correct="false">B) Within 15 days</button>
+<button type="button" class="opt-btn" data-correct="true">C) Within 30 days (extendable to 45 days)</button>
+<button type="button" class="opt-btn" data-correct="false">D) Within 60 days</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The BNSS mandates that judgment in criminal trials should be pronounced within 30 days of concluding arguments, extendable to 45 days with reasons recorded.</div></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="qcard"><span class="qnum">Q2</span> <span class="qsrc">(SSC CPO – 11 Dec 25 Shift 1)</span>
+    <div class="qtext">Which of the following is now explicitly considered a 'document' under the Bharatiya Sakshya Adhiniyam?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) A verbal agreement</button>
+<button type="button" class="opt-btn" data-correct="false">B) A gesture or sign language</button>
+<button type="button" class="opt-btn" data-correct="true">C) A server log file</button>
+<button type="button" class="opt-btn" data-correct="false">D) A spontaneous thought</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Under the Bharatiya Sakshya Adhiniyam (BSA) 2023, electronic records including server log files are explicitly considered 'documents' as evidence. This modernization recognizes digital evidence including emails, server logs, digital signatures, and electronic communications as valid documentary evidence in courts.
+      <ul><li>BSA replaced Indian Evidence Act, 1872 (effective July 1, 2024)</li><li>Recognizes: emails, server logs, digital signatures, blockchain records, SMS, WhatsApp</li><li>Ensures admissibility of electronic evidence in digital age</li><li>Verbal agreements (Option A) are not documents</li></ul></div></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="qcard"><span class="qnum">Q3</span> <span class="qsrc">(SSC CPO – 11 Dec 25 Shift 2)</span>
+    <div class="qtext">Which new power has been given to the Magistrate under the BNSS regarding preliminary inquiry for serious cases?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Power to issue a death warrant directly</button>
+<button type="button" class="opt-btn" data-correct="true">B) Power to direct preliminary inquiry in cases punishable with 7 years or more</button>
+<button type="button" class="opt-btn" data-correct="false">C) Power to grant anticipatory bail without hearing the police</button>
+<button type="button" class="opt-btn" data-correct="false">D) Power to quash FIRs on their own motion</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Under BNSS 2023, Magistrates have been given the new power to direct preliminary inquiry before registering an FIR in cases punishable with imprisonment of 7 years or more (but not punishable with death, life imprisonment, or 10+ years). This helps filter out frivolous complaints while ensuring serious cases are properly investigated.</div></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="qcard"><span class="qnum">Q4</span> <span class="qsrc">(SSC CPO – 12 Dec 25 Shift 2)</span>
+    <div class="qtext">Which of the following offences has been newly and clearly defined under the Bharatiya Nyaya Sanhita (BNS), 2023?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Mob lynching</button>
+<button type="button" class="opt-btn" data-correct="false">B) Defamation</button>
+<button type="button" class="opt-btn" data-correct="false">C) Theft</button>
+<button type="button" class="opt-btn" data-correct="false">D) Cheating</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The Bharatiya Nyaya Sanhita (BNS), 2023, which replaced the Indian Penal Code, specifically defines and criminalizes mob lynching for the first time. Section 103(2) BNS addresses murder committed by groups of five or more persons based on race, caste, community, sex, or other grounds.
+      <ul><li>BNS 2023 implemented December 25, 2023, replacing IPC 1860; mob lynching defined under Section 103(2)</li><li>Punishment for mob lynching includes death penalty or life imprisonment, with additional fine</li><li>Mob lynching defined as murder by group of 5+ persons based on race, caste, community, language, personal belief, sex, or place of birth</li><li>Other new provisions in BNS include organized crime, terrorism (Section 113), and snatching (Section 304)</li></ul></div></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="qcard"><span class="qnum">Q5</span>
+    <div class="qtext">Who inaugurated India's first lithium-ion battery plant in Tirupati, Andhra Pradesh, in September 2022?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Prime Minister Narendra Modi</button>
+<button type="button" class="opt-btn" data-correct="true">B) Rajeev Chandrasekhar, Minister of State for Electronics and Information Technology</button>
+<button type="button" class="opt-btn" data-correct="false">C) Nirmala Sitharaman, Minister of Finance</button>
+<button type="button" class="opt-btn" data-correct="false">D) Amit Shah, Union Home Minister</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">India's first lithium-ion cell manufacturing plant in Tirupati, Andhra Pradesh, began its pre-production run in September 2022. It was launched by Union Minister Rajeev Chandrasekhar. The Munoth Industries facility focuses on cells for power banks and consumer electronics.</div></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="qcard"><span class="qnum">Q6</span>
+    <div class="qtext">Where is India's first Green Hydrogen Hub planned?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Punjab</button>
+<button type="button" class="opt-btn" data-correct="true">B) Andhra Pradesh</button>
+<button type="button" class="opt-btn" data-correct="false">C) West Bengal</button>
+<button type="button" class="opt-btn" data-correct="false">D) Maharashtra</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">India's first Green Hydrogen Hub will be set up at Pudimadaka near Visakhapatnam, Andhra Pradesh. The foundation stone was laid by PM Narendra Modi in January 2025 under the National Green Hydrogen Mission. It is being developed by NTPC Green Energy Limited and NREDCAP to boost India's leadership in green energy.</div></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="qcard"><span class="qnum">Q7</span>
+    <div class="qtext">Which Indian airline launched the world's longest non-stop flight from India in 2023?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) IndiGo</button>
+<button type="button" class="opt-btn" data-correct="false">B) Vistara</button>
+<button type="button" class="opt-btn" data-correct="true">C) Air India</button>
+<button type="button" class="opt-btn" data-correct="false">D) SpiceJet</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Air India operated one of the world's longest non-stop commercial flights from India in 2023. The service connected Bengaluru with San Francisco. The route demonstrated the airline's long-haul international operations.</div></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="qcard"><span class="qnum">Q8</span> <span class="qsrc">(SSC CPO – 09 Dec Shift 1)</span>
+    <div class="qtext">India Post Payments Bank uses which technology for cashless withdrawal?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) QR card</button>
+<button type="button" class="opt-btn" data-correct="false">B) NFC chip</button>
+<button type="button" class="opt-btn" data-correct="false">C) OTP-based SMS</button>
+<button type="button" class="opt-btn" data-correct="false">D) Virtual wallet</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">India Post Payments Bank uses QR card technology for cashless withdrawal at Banking Correspondents and merchants.
+      <ul><li>QR card enables cardless transactions using QR code scanning</li><li>Customer scans QR code to initiate withdrawal</li><li>Eliminates need for physical debit card or ATM</li><li>Enhances financial inclusion in rural areas</li><li>IPPB launched September 1, 2018; operates under Department of Posts; leverages 1.5 lakh+ post offices</li></ul></div></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="qcard"><span class="qnum">Q9</span>
+    <div class="qtext">What is the primary function of the Crew Escape System (CES) on ISRO's Human Rated LVM3 (HLVM3) rocket?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) To guide the crew module into its designated Low Earth Orbit.</button>
+<button type="button" class="opt-btn" data-correct="true">B) To eject the crew module to safety during launch emergencies.</button>
+<button type="button" class="opt-btn" data-correct="false">C) To assist in docking the crew module with a space station.</button>
+<button type="button" class="opt-btn" data-correct="false">D) To provide thermal shielding during re-entry into Earth's atmosphere.</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The Crew Escape System (CES) is a safety feature on ISRO's HLVM3 rocket that quickly pulls the crew module away from the rocket during any launch emergency. It uses powerful solid motors to move the module to a safe distance, and parachutes ensure a smooth sea landing. This system is crucial for saving astronauts' lives if the rocket fails during launch.</div></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="qcard"><span class="qnum">Q10</span>
+    <div class="qtext">In which year is the first module of the Bharatiya Antariksh Station (BAS) scheduled for launch?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) 2028</button>
+<button type="button" class="opt-btn" data-correct="false">B) 2030</button>
+<button type="button" class="opt-btn" data-correct="false">C) 2035</button>
+<button type="button" class="opt-btn" data-correct="false">D) 2040</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">India's first module of the Bharatiya Antariksh Station (BAS-01) is targeted for launch in 2028. The complete five-module space station is planned to be operational by 2035. The project is being developed and executed by ISRO.</div></div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="qcard"><span class="qnum">Q11</span>
+    <div class="qtext">Assertion (A): The PSLV is widely recognized as the workhorse launch vehicle of ISRO.<br>Reason (R): PSLV is highly versatile, capable of launching a diverse range of payloads into various Earth orbits and boasts an exceptionally high mission success rate.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Both A and R are true, and R is the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">B) Both A and R are true, but R is not the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">C) A is true, but R is false</button>
+<button type="button" class="opt-btn" data-correct="false">D) A is false, but R is true</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The PSLV is called ISRO's 'workhorse' due to its consistent reliability and performance. It is highly versatile, launching a wide range of satellites and deep-space missions with a high success rate. This versatility and reliability directly explain why PSLV has earned its workhorse status.</div></div>
+  </div>
+
+  <!-- Q12 -->
+  <div class="qcard"><span class="qnum">Q12</span>
+    <div class="qtext">Statement 1: SSLV-D2 inserted EOS-07, Janus-1, and AzaadiSAT-2 into a 450 km circular orbit utilizing a three-stage vehicle powered entirely by liquid propulsion.<br>Statement 2: The SSLV-D2 mission showcased rapid deployment capability with low turnaround time and limited ground infrastructure needs.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Only Statement 1 is correct</button>
+<button type="button" class="opt-btn" data-correct="true">B) Only Statement 2 is correct</button>
+<button type="button" class="opt-btn" data-correct="false">C) 1 and 2 are correct</button>
+<button type="button" class="opt-btn" data-correct="false">D) Neither 1 nor 2 are correct</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Statement 1 is incorrect as SSLV-D2 used three solid stages with a liquid-based Velocity Trimming Module, not full liquid propulsion, though it successfully placed satellites into orbit. Statement 2 is correct because SSLV is designed for low-cost, on-demand launches with quick turnaround and minimal infrastructure.</div></div>
+  </div>
+
+  <!-- Q13 -->
+  <div class="qcard"><span class="qnum">Q13</span>
+    <div class="qtext">What is the primary function of the NVS-02 satellite launched aboard GSLV-F15?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) It supports meteorological observations for cyclone prediction.</button>
+<button type="button" class="opt-btn" data-correct="false">B) It enables satellite-based television broadcasting.</button>
+<button type="button" class="opt-btn" data-correct="true">C) It boosts India's navigation system by offering precise position and timing data.</button>
+<button type="button" class="opt-btn" data-correct="false">D) It conducts deep-space communication with planetary probes.</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">NVS-02 is part of the NavIC (Navigation with Indian Constellation) system, enhancing regional navigation, positioning, and timing services across India and neighboring regions. It is not used for meteorology, broadcasting, or deep-space communication.</div></div>
+  </div>
+
+  <!-- Q14 -->
+  <div class="qcard"><span class="qnum">Q14</span>
+    <div class="qtext">NISAR's orbit regime is?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) GTO</button>
+<button type="button" class="opt-btn" data-correct="false">B) GEO</button>
+<button type="button" class="opt-btn" data-correct="true">C) Polar sun-sync</button>
+<button type="button" class="opt-btn" data-correct="false">D) LEEO</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The NISAR (NASA–ISRO Synthetic Aperture Radar) satellite is placed in a polar Sun-synchronous orbit, which allows it to cover the entire Earth's surface consistently, capturing high-resolution radar images for Earth observation and monitoring environmental changes.</div></div>
+  </div>
+
+  <!-- Q15 -->
+  <div class="qcard"><span class="qnum">Q15</span>
+    <div class="qtext">When did India successfully complete the SpaDeX docking operation?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) 30th December 2024</button>
+<button type="button" class="opt-btn" data-correct="false">B) 1st January 2025</button>
+<button type="button" class="opt-btn" data-correct="true">C) 16th January 2025</button>
+<button type="button" class="opt-btn" data-correct="false">D) 26th January 2025</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The SpaDeX (Space Docking Experiment) mission demonstrated autonomous spacecraft docking technology, a critical milestone for future crewed and space station missions. This operation tested precise navigation, guidance, and control systems for docking in orbit.</div></div>
+  </div>
+
+  <!-- Q16 -->
+  <div class="qcard"><span class="qnum">Q16</span>
+    <div class="qtext">Assertion (A): India is actively developing a Third Launch Pad (TLP) at SDSC-SHAR.<br>Reason (R): The TLP is specifically designed to significantly boost India's launch frequency and accommodate larger, next-generation launch vehicles like NGLV.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Both A and R are true, and R is the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">B) Both A and R are true, but R is not the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">C) A is true, but R is false</button>
+<button type="button" class="opt-btn" data-correct="false">D) A is false, but R is true</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">India is actively developing a Third Launch Pad (TLP) at SDSC-SHAR to increase launch frequency and accommodate larger, next-generation launch vehicles like the NGLV. The reason accurately explains the assertion, making both statements true and logically connected.</div></div>
+  </div>
+
+  <!-- Q17 -->
+  <div class="qcard"><span class="qnum">Q17</span>
+    <div class="qtext">Which of the following accurately reflects the critical technological outcome of ISRO's RLV-LEX3 mission conducted on June 23, 2024?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) In-flight fuel transfer at hypersonic speeds</button>
+<button type="button" class="opt-btn" data-correct="true">B) Autonomous high-speed landing under tough cross-range wind</button>
+<button type="button" class="opt-btn" data-correct="false">C) Launch abort test for crewed reusable launchers</button>
+<button type="button" class="opt-btn" data-correct="false">D) Orbital deployment via dual-mode scramjet propulsion</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The RLV-LEX3 mission successfully demonstrated autonomous landing capabilities at hypersonic speeds, testing the vehicle's guidance, navigation, and control systems under challenging conditions. It was a key milestone for India's reusable spaceplane technology, not related to in-flight fuel transfer, crewed launch aborts, or scramjet deployment.</div></div>
+  </div>
+
+  <!-- Q18 -->
+  <div class="qcard"><span class="qnum">Q18</span>
+    <div class="qtext">Aditya-L1 spacecraft primarily studies which part of the Sun?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Regolith</button>
+<button type="button" class="opt-btn" data-correct="true">B) Corona</button>
+<button type="button" class="opt-btn" data-correct="false">C) Craters</button>
+<button type="button" class="opt-btn" data-correct="false">D) Magnetosphere</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Aditya-L1 is India's solar observation mission positioned at the Sun-Earth Lagrange Point L1. Its main objective is to study the solar corona, solar emissions, and their impact on space weather.</div></div>
+  </div>
+
+  <!-- Q19 -->
+  <div class="qcard"><span class="qnum">Q19</span>
+    <div class="qtext">Assertion (A): The PSLV-C59 mission (October 2024) achieved a notable milestone for international space cooperation.<br>Reason (R): This mission successfully deployed the Proba-3 satellites, marking the first dedicated satellite launch for ESA's unique formation-flying experiment.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Both A and R are true, and R is the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">B) Both A and R are true, but R is not the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">C) A is true, but R is false</button>
+<button type="button" class="opt-btn" data-correct="false">D) A is false, but R is true</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The PSLV-C59 mission, launched in October 2024, marked a significant milestone in international space cooperation by deploying Proba-3 satellites for ESA's formation-flying experiment. The mission's success directly highlights collaboration between ISRO and ESA.</div></div>
+  </div>
+
+  <!-- Q20 -->
+  <div class="qcard"><span class="qnum">Q20</span>
+    <div class="qtext">Why is the NISAR mission designed to revisit the same location every 12 days?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) To support low-earth orbit operations at reduced altitude.</button>
+<button type="button" class="opt-btn" data-correct="false">B) To enable cost-efficient satellite passes through optimized fuel consumption.</button>
+<button type="button" class="opt-btn" data-correct="false">C) To ensure consistent caching of data before transmission to ground stations.</button>
+<button type="button" class="opt-btn" data-correct="true">D) To achieve temporal resolution for global coverage and land deformation monitoring.</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">NISAR's 12-day revisit cycle ensures regular and consistent monitoring of Earth's surface. It enables detection of small land deformations from earthquakes, volcanoes, landslides, and subsidence using InSAR techniques.</div></div>
+  </div>
+
+  <!-- Q21 -->
+  <div class="qcard"><span class="qnum">Q21</span>
+    <div class="qtext">What is the orbital regime of the NISAR satellite?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) GEO</button>
+<button type="button" class="opt-btn" data-correct="false">B) HEO</button>
+<button type="button" class="opt-btn" data-correct="true">C) LEO</button>
+<button type="button" class="opt-btn" data-correct="false">D) SSO</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">NISAR is placed in a Low Earth Orbit (LEO) / Sun-Synchronous Orbit (SSO) to capture uniform daylight images of Earth's surface, enabling accurate monitoring of environmental and geological changes.</div></div>
+  </div>
+
+  <!-- Q22 -->
+  <div class="qcard"><span class="qnum">Q22</span>
+    <div class="qtext">The Laser Retroreflector Array (LRA) onboard Chandrayaan-3 was supplied by which space agency?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) ESA</button>
+<button type="button" class="opt-btn" data-correct="false">B) JAXA</button>
+<button type="button" class="opt-btn" data-correct="true">C) NASA</button>
+<button type="button" class="opt-btn" data-correct="false">D) ROSCOSMOS</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The Laser Retroreflector Array (LRA) on Chandrayaan-3 was provided by NASA to enable precise laser ranging studies from Earth, helping in accurate measurement of the Moon's distance and surface dynamics.</div></div>
+  </div>
+
+  <!-- Q23 -->
+  <div class="qcard"><span class="qnum">Q23</span>
+    <div class="qtext">Statement 1: Sun-synchronous orbits allow satellites to maintain consistent local solar time over a specific region.<br>Statement 2: This orbital feature is ideal for continuous solar-powered communication satellites in geostationary orbit.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Only Statement 1 is correct</button>
+<button type="button" class="opt-btn" data-correct="false">B) Only Statement 2 is correct</button>
+<button type="button" class="opt-btn" data-correct="false">C) Both 1 and 2 are correct</button>
+<button type="button" class="opt-btn" data-correct="false">D) Neither 1 nor 2 are correct</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Statement 1 – Correct: SSO satellites pass over the same area at the same local solar time each day, ensuring consistent lighting — ideal for remote sensing/imaging.<br>Statement 2 – Incorrect: Continuous communication satellites operate in GEO, not SSO. SSOs are used for Earth observation, while GEO satellites maintain a fixed position for uninterrupted communication.</div></div>
+  </div>
+
+  <!-- Q24 -->
+  <div class="qcard"><span class="qnum">Q24</span>
+    <div class="qtext">Which payload monitors solar wind at L1?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) ASPEX</button>
+<button type="button" class="opt-btn" data-correct="false">B) SUIT</button>
+<button type="button" class="opt-btn" data-correct="false">C) SOLEXS</button>
+<button type="button" class="opt-btn" data-correct="false">D) HEL1OS</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">ASPEX is a payload on Aditya-L1 that studies solar wind and energetic particles from the Sun. It helps scientists understand solar flares, coronal mass ejections, and space weather from its position at L1.</div></div>
+  </div>
+
+  <!-- Q25 -->
+  <div class="qcard"><span class="qnum">Q25</span>
+    <div class="qtext">What does the designation HLVM3 stand for in the Gaganyaan mission context?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Heavy LVM3</button>
+<button type="button" class="opt-btn" data-correct="false">B) Hybrid LVM3</button>
+<button type="button" class="opt-btn" data-correct="true">C) Human LVM3</button>
+<button type="button" class="opt-btn" data-correct="false">D) High LVM3</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">HLVM3 is the Human-rated Launch Vehicle Mark-3 used to carry astronauts in India's Gaganyaan mission. It is a crew-rated version of the standard LVM3, enhanced for safety, reliability, and human spaceflight requirements.</div></div>
+  </div>
+
+  <!-- Q26 -->
+  <div class="qcard"><span class="qnum">Q26</span>
+    <div class="qtext">Fill in the blank: NISAR maps the global surface every _____.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) 3 days</button>
+<button type="button" class="opt-btn" data-correct="true">B) 12 days</button>
+<button type="button" class="opt-btn" data-correct="false">C) 24 hrs</button>
+<button type="button" class="opt-btn" data-correct="false">D) 5 days</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">NISAR is an Earth-observation satellite that captures high-resolution radar images. It completes a global mapping cycle approximately every 12 days to monitor changes on Earth.</div></div>
+  </div>
+
+  <!-- Q27 -->
+  <div class="qcard"><span class="qnum">Q27</span>
+    <div class="qtext">What is the maximum payload capacity of India's upcoming Next Generation Launch Vehicle (NGLV) to Low Earth Orbit (LEO)?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) 10 tonnes</button>
+<button type="button" class="opt-btn" data-correct="false">B) 20 tonnes</button>
+<button type="button" class="opt-btn" data-correct="true">C) 30 tonnes</button>
+<button type="button" class="opt-btn" data-correct="false">D) 40 tonnes</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The upcoming NGLV being developed by ISRO is targeted to have a payload capability of roughly 30 tonnes to LEO in its reusable configuration.</div></div>
+  </div>
+
+  <!-- Q28 -->
+  <div class="qcard"><span class="qnum">Q28</span>
+    <div class="qtext">Consider the following statements about JWST: 1. It observes in near-infrared and mid-infrared spectrum. 2. It is positioned at Sun-Earth Lagrange Point L2. 3. It carries a coronagraph for exoplanet detection. Which is/are correct?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Only 1 and 2 are correct</button>
+<button type="button" class="opt-btn" data-correct="false">B) Only 2 and 3 are correct</button>
+<button type="button" class="opt-btn" data-correct="false">C) Only 1 and 3 are correct</button>
+<button type="button" class="opt-btn" data-correct="true">D) 1, 2 and 3 all are correct</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">All three statements are correct: JWST observes primarily in near-IR (0.6–5 μm) and mid-IR (5–28 μm); it is located at Sun-Earth L2, ~1.5 million km from Earth; and it carries a coronagraph specifically designed for direct imaging of exoplanets.</div></div>
+  </div>
+
+  <!-- Q29 -->
+  <div class="qcard"><span class="qnum">Q29</span>
+    <div class="qtext">Gaganyaan is planned to orbit Earth at approximately what altitude?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) 100 km</button>
+<button type="button" class="opt-btn" data-correct="true">B) 400 km</button>
+<button type="button" class="opt-btn" data-correct="false">C) 1000 km</button>
+<button type="button" class="opt-btn" data-correct="false">D) 36,000 km</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The Gaganyaan mission will orbit Earth at approximately 400 km, in a stable LEO. This altitude ensures crew safety, manageable re-entry, and reduced radiation exposure.</div></div>
+  </div>
+
+  <!-- Q30 -->
+  <div class="qcard"><span class="qnum">Q30</span>
+    <div class="qtext">What is India's first successful interplanetary mission?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Chandrayaan-1</button>
+<button type="button" class="opt-btn" data-correct="true">B) Mangalyaan</button>
+<button type="button" class="opt-btn" data-correct="false">C) Gaganyaan</button>
+<button type="button" class="opt-btn" data-correct="false">D) Aditya-L1</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Mangalyaan (Mars Orbiter Mission, MOM), launched in 2013, was India's first interplanetary mission, successfully reaching Mars orbit on its first attempt.</div></div>
+  </div>
+
+  <!-- Q31 -->
+  <div class="qcard"><span class="qnum">Q31</span>
+    <div class="qtext">Which of the following is NOT a consequence of space weather events like solar flares and CMEs?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Disruption of satellite communication</button>
+<button type="button" class="opt-btn" data-correct="false">B) Blackouts in radio frequencies</button>
+<button type="button" class="opt-btn" data-correct="true">C) Alteration of ocean currents</button>
+<button type="button" class="opt-btn" data-correct="false">D) Damage to power grids</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Space weather events like solar flares and CMEs disrupt satellites, radio signals, and power grids. They do not affect ocean currents, which are driven by wind, temperature, salinity, and Earth's rotation.</div></div>
+  </div>
+
+  <!-- Q32 -->
+  <div class="qcard"><span class="qnum">Q32</span>
+    <div class="qtext">Which instrument description on XPoSat is correct?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) XSPECT extends POLIX's polarimetry range to 0.5–20 keV.</button>
+<button type="button" class="opt-btn" data-correct="false">B) POLIX performs X-ray spectroscopy and timing.</button>
+<button type="button" class="opt-btn" data-correct="false">C) XSPECT measures X-ray polarization.</button>
+<button type="button" class="opt-btn" data-correct="true">D) POLIX measures X-ray polarization (8–30 keV) to study black holes.</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">XPoSat is India's mission to study X-ray polarization from cosmic sources. POLIX measures X-ray polarization in the 8–30 keV range, helping understand emission mechanisms from neutron stars and black holes. XSPECT is used for X-ray spectroscopy and timing, not polarization.</div></div>
+  </div>
+
+  <!-- Q33 -->
+  <div class="qcard"><span class="qnum">Q33</span>
+    <div class="qtext">Aditya-L1 is placed in a halo orbit around which type of gravitationally balanced point in space?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Polar</button>
+<button type="button" class="opt-btn" data-correct="true">B) Lagrangian</button>
+<button type="button" class="opt-btn" data-correct="false">C) Sun-synchronous</button>
+<button type="button" class="opt-btn" data-correct="false">D) Geostationary</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Aditya-L1 is positioned at the Sun-Earth Lagrange Point 1 (L1) for stable solar observation. Lagrangian points balance gravitational forces and orbital motion, allowing the spacecraft to maintain a halo orbit for uninterrupted monitoring.</div></div>
+  </div>
+
+  <!-- Q34 -->
+  <div class="qcard"><span class="qnum">Q34</span>
+    <div class="qtext">Identify the incorrect match of satellite type and application:</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Weather satellite – Cyclone tracking</button>
+<button type="button" class="opt-btn" data-correct="false">B) Communication satellite – TV broadcast</button>
+<button type="button" class="opt-btn" data-correct="true">C) Navigation satellite – Forest fire monitoring</button>
+<button type="button" class="opt-btn" data-correct="false">D) Remote sensing satellite – Land use mapping</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Navigation satellites are mainly used for accurate positioning, navigation, and timing services on Earth. Forest fire monitoring is carried out by remote sensing or weather satellites using specialized sensors.</div></div>
+  </div>
+
+  <!-- Q35 -->
+  <div class="qcard"><span class="qnum">Q35</span>
+    <div class="qtext">What is the contribution of Vikram Sarabhai Space Centre (VSSC) to India's space program?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Launch site for ISRO missions</button>
+<button type="button" class="opt-btn" data-correct="true">B) Designs and builds launch vehicles</button>
+<button type="button" class="opt-btn" data-correct="false">C) Trains Indian astronauts</button>
+<button type="button" class="opt-btn" data-correct="false">D) Controls ISRO satellites</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">VSSC, located in Thiruvananthapuram, is the primary center for the development of India's launch vehicle program, including SLVs, ASLVs, PSLV, GSLV, and LVM3. It focuses on designing, testing, and assembling rockets rather than serving as a launch site, astronaut training center, or satellite control facility.</div></div>
+  </div>
+
+  <!-- Q36 -->
+  <div class="qcard"><span class="qnum">Q36</span>
+    <div class="qtext">Which of the following is NOT a benefit of the Gaganyaan mission?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Increased global collaborations in space science</button>
+<button type="button" class="opt-btn" data-correct="false">B) Advancement in space-related R&D and technology</button>
+<button type="button" class="opt-btn" data-correct="false">C) Boost to India's human spaceflight capability</button>
+<button type="button" class="opt-btn" data-correct="true">D) Reduction in Earth's temperature</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The Gaganyaan mission aims to enhance India's human spaceflight capabilities, promote R&D in space technologies, and foster international collaborations. It does not influence Earth's climate or temperature.</div></div>
+  </div>
+
+  <!-- Q37 -->
+  <div class="qcard"><span class="qnum">Q37</span>
+    <div class="qtext">Which ISRO mission first discovered lunar hydration?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Chandrayaan-1</button>
+<button type="button" class="opt-btn" data-correct="false">B) Chandrayaan-2</button>
+<button type="button" class="opt-btn" data-correct="false">C) Chandrayaan-3</button>
+<button type="button" class="opt-btn" data-correct="false">D) Chandrayaan-4</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Chandrayaan-1, launched in 2008, carried the Moon Mineralogy Mapper (M3) which detected hydroxyl (OH) and water molecules on the Moon's surface, providing the first evidence of lunar hydration. Subsequent missions built on these findings but did not make the initial discovery.</div></div>
+  </div>
+
+  <!-- Q38 -->
+  <div class="qcard"><span class="qnum">Q38</span>
+    <div class="qtext">India's Space Vision 2047 aims to have Bharatiya Antariksha Station and Moon landing by the years:</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) 2030, 2035</button>
+<button type="button" class="opt-btn" data-correct="true">B) 2035, 2040</button>
+<button type="button" class="opt-btn" data-correct="false">C) 2040, 2047</button>
+<button type="button" class="opt-btn" data-correct="false">D) 2027, 2035</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Under India's Space Vision 2047, the country has set two major long-term milestones. The BAS is targeted to be fully operational by 2035. An Indian crewed lunar landing is planned for 2040.</div></div>
+  </div>
+
+  <!-- Q39 -->
+  <div class="qcard"><span class="qnum">Q39</span>
+    <div class="qtext">Why is generative-design software used in launch vehicle (LV) structural engineering?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) To increase the mass of structural components</button>
+<button type="button" class="opt-btn" data-correct="true">B) To reduce structural weight while maintaining performance</button>
+<button type="button" class="opt-btn" data-correct="false">C) To simplify 2D CAD drafting in mission drawings</button>
+<button type="button" class="opt-btn" data-correct="false">D) To boost overall mission cost through algorithms</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Generative design in launch vehicle engineering uses AI to explore optimal structures. Its goal is to minimize weight while maintaining strength and reliability for better payload efficiency.</div></div>
+  </div>
+
+  <!-- Q40 -->
+  <div class="qcard"><span class="qnum">Q40</span>
+    <div class="qtext">Which Indian satellite is used for weather forecasting?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Aryabhata</button>
+<button type="button" class="opt-btn" data-correct="true">B) INSAT-3D</button>
+<button type="button" class="opt-btn" data-correct="false">C) Cartosat</button>
+<button type="button" class="opt-btn" data-correct="false">D) Mangalyaan</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">INSAT-3D is a meteorological satellite equipped with imaging and atmospheric sounding instruments to monitor cloud patterns, cyclones, rainfall, and other weather phenomena.</div></div>
+  </div>
+
+  <!-- Q41 -->
+  <div class="qcard"><span class="qnum">Q41</span>
+    <div class="qtext">What happens if a satellite orbits Earth with 24-hour period?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Spirals inward</button>
+<button type="button" class="opt-btn" data-correct="true">B) Appears stationary</button>
+<button type="button" class="opt-btn" data-correct="false">C) Escapes Earth</button>
+<button type="button" class="opt-btn" data-correct="false">D) Oscillates over longitude</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">A satellite with a geostationary orbit has an orbital period equal to Earth's rotation (24 hours). It remains fixed relative to a point on the equator, making it ideal for communications, weather monitoring, and broadcasting.</div></div>
+  </div>
+
+  <!-- Q42 -->
+  <div class="qcard"><span class="qnum">Q42</span>
+    <div class="qtext">Assertion (A): The development of Spark Torch Igniters is essential for the feasibility of fully reusable rocket booster stages and spacecraft requiring multiple engine firings in orbit.<br>Reason (R): Spark Torch Igniters provide highly reliable and repeatable ignition capability in vacuum conditions, critical for successive engine restarts during complex mission profiles.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Both A and R are true, and R is the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">B) Both A and R are true, but R is not the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">C) A is true, but R is false</button>
+<button type="button" class="opt-btn" data-correct="false">D) A is false, but R is true</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Advanced ignition systems like spark torch igniters are crucial for fully reusable rockets that require multiple engine restarts. Spark torch igniters provide reliable, repeatable ignition even in vacuum conditions. This multi-restart capability directly enables the economic and operational feasibility of reusable launch vehicles.</div></div>
+  </div>
+
+  <!-- Q43 -->
+  <div class="qcard"><span class="qnum">Q43</span>
+    <div class="qtext">What does ISRO stand for?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Indian Scientific Research Organization</button>
+<button type="button" class="opt-btn" data-correct="true">B) Indian Space Research Organization</button>
+<button type="button" class="opt-btn" data-correct="false">C) Indian Satellite Rocket Organization</button>
+<button type="button" class="opt-btn" data-correct="false">D) International Space Research Organization</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">ISRO is India's national space agency, responsible for space research, satellite launches, and interplanetary missions. Established in 1969, it has developed vehicles like PSLV, GSLV, LVM3, and missions like Chandrayaan, Mangalyaan, and Aditya-L1.</div></div>
+  </div>
+
+  <!-- Q44 -->
+  <div class="qcard"><span class="qnum">Q44</span>
+    <div class="qtext">Assertion (A): Generative Design Software is increasingly used by ISRO for optimizing structure and weight distribution in aerospace components.<br>Reason (R): Generative design tools are specifically developed for modeling cryogenic fuel tanks used in PSLV variants.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Both A and R are true, and R is the correct explanation of A.</button>
+<button type="button" class="opt-btn" data-correct="false">B) Both A and R are true, but R is not the correct explanation of A.</button>
+<button type="button" class="opt-btn" data-correct="true">C) A is true, but R is false.</button>
+<button type="button" class="opt-btn" data-correct="false">D) A is false, but R is true.</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Assertion (A) is correct as generative design software is used in aerospace, including by ISRO, to optimize structures and reduce weight. Reason (R) is incorrect because generative design tools are general-purpose and not developed specifically for PSLV cryogenic fuel tanks.</div></div>
+  </div>
+
+  <!-- Q45 -->
+  <div class="qcard"><span class="qnum">Q45</span>
+    <div class="qtext">India's first interplanetary mission is:</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Chandrayaan-1</button>
+<button type="button" class="opt-btn" data-correct="false">B) Gaganyaan</button>
+<button type="button" class="opt-btn" data-correct="false">C) Aditya-L1</button>
+<button type="button" class="opt-btn" data-correct="true">D) Mangalyaan (Mars Orbiter Mission)</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Mangalyaan, launched in 2013 by ISRO, was India's first mission to another planet, successfully reaching Mars orbit. It demonstrated India's capability in interplanetary navigation, propulsion, and spacecraft operations.</div></div>
+  </div>
+
+  <!-- Q46 -->
+  <div class="qcard"><span class="qnum">Q46</span>
+    <div class="qtext">Assertion (A): The Satish Dhawan Space Centre (SDSC-SHAR) is ISRO's main spaceport for launching satellites and rockets.<br>Reason (R): SDSC-SHAR currently houses multiple operational launch pads and extensive facilities for the integration and final preparation of launch vehicles and spacecraft before liftoff.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Both A and R are true, and R is the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">B) Both A and R are true, but R is not the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">C) A is true, but R is false</button>
+<button type="button" class="opt-btn" data-correct="false">D) A is false, but R is true</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">SDSC-SHAR is ISRO's main spaceport because it has multiple operational launch pads and advanced infrastructure for assembling, integrating, and preparing launch vehicles and spacecraft, enabling frequent and diverse satellite launches.</div></div>
+  </div>
+
+  <!-- Q47 -->
+  <div class="qcard"><span class="qnum">Q47</span>
+    <div class="qtext">What does the "PSLV" rocket stand for?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Private Satellite Launch Vehicle</button>
+<button type="button" class="opt-btn" data-correct="false">B) Public Space Launch Vehicle</button>
+<button type="button" class="opt-btn" data-correct="false">C) Planetary Satellite Launch Vehicle</button>
+<button type="button" class="opt-btn" data-correct="true">D) Polar Satellite Launch Vehicle</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">PSLV is India's Polar Satellite Launch Vehicle, a medium-lift rocket by ISRO for deploying satellites into polar and Sun-synchronous orbits. It has launched Earth observation, navigation, and interplanetary missions, including Mangalyaan.</div></div>
+  </div>
+
+  <!-- Q48 -->
+  <div class="qcard"><span class="qnum">Q48</span>
+    <div class="qtext">Why is "Space Situational Awareness (SSA)" program by ISRO important?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Tracks energy usage in orbit</button>
+<button type="button" class="opt-btn" data-correct="true">B) Monitors space debris and protects Indian space assets</button>
+<button type="button" class="opt-btn" data-correct="false">C) Observes black holes in the deep sky</button>
+<button type="button" class="opt-btn" data-correct="false">D) Provides satellite TV services across Asia</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">SSA involves tracking space objects, debris, and potential collision threats to safeguard satellites and spacecraft. It ensures safe operations in orbit, reducing the risk of damage to India's space infrastructure.</div></div>
+  </div>
+
+  <!-- Q49 -->
+  <div class="qcard"><span class="qnum">Q49</span>
+    <div class="qtext">Dr. Tessy Thomas is also known as the 'Missile Woman of India'. She is best associated with which achievement?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Led Agni-V project; began career at LRDE</button>
+<button type="button" class="opt-btn" data-correct="false">B) Was Chairperson of ISRO</button>
+<button type="button" class="opt-btn" data-correct="false">C) Founded a private satellite company</button>
+<button type="button" class="opt-btn" data-correct="false">D) Headed HAL's aeronautics division</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Dr. Tessy Thomas is a distinguished DRDO scientist who played a leading role in the development of India's Agni-IV and Agni-V missiles. Often called the "Missile Woman of India," she began her career at the Defence Research and Development Laboratory (DRDL).</div></div>
+  </div>
+
+  <!-- Q50 -->
+  <div class="qcard"><span class="qnum">Q50</span>
+    <div class="qtext">What distinguishes ISRO's Aditya-L1 mission from other solar observatories?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) It uses radar waves to study the Sun</button>
+<button type="button" class="opt-btn" data-correct="false">B) It orbits the Sun directly</button>
+<button type="button" class="opt-btn" data-correct="true">C) Will study the solar corona from Lagrange Point 1</button>
+<button type="button" class="opt-btn" data-correct="false">D) It is placed in a lunar orbit</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Aditya-L1's key distinction is its placement at the Sun–Earth L1 point, enabling uninterrupted, continuous observation of the Sun. This location avoids eclipses and allows detailed study of the solar atmosphere, including the corona.</div></div>
+  </div>
+
+  <!-- Q51 -->
+  <div class="qcard"><span class="qnum">Q51</span>
+    <div class="qtext">What makes the SSLV (Small Satellite Launch Vehicle) distinct from PSLV and GSLV?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) It uses a hybrid liquid-solid engine</button>
+<button type="button" class="opt-btn" data-correct="true">B) It is designed for on-demand, low-cost launches</button>
+<button type="button" class="opt-btn" data-correct="false">C) It operates from a sea-based platform</button>
+<button type="button" class="opt-btn" data-correct="false">D) It can only launch foreign satellites</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The SSLV is India's lightweight launch vehicle developed by ISRO to deploy small satellites quickly and at lower cost. Unlike PSLV and GSLV, it is designed for flexible, on-demand launches with shorter preparation times.</div></div>
+  </div>
+
+  <!-- Q52 -->
+  <div class="qcard"><span class="qnum">Q52</span>
+    <div class="qtext">How does satellite imagery help in managing natural disasters in India?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) By creating 3D video games of landscapes</button>
+<button type="button" class="opt-btn" data-correct="false">B) By connecting people to mobile towers</button>
+<button type="button" class="opt-btn" data-correct="false">C) By tracking migratory birds</button>
+<button type="button" class="opt-btn" data-correct="true">D) By providing real-time data on floods, cyclones and droughts</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Satellite imagery allows real-time monitoring of floods, cyclones, droughts, and forest fires. It supports early warning systems and disaster planning, helping authorities minimize damage and coordinate relief operations effectively.</div></div>
+  </div>
+
+  <!-- Q53 -->
+  <div class="qcard"><span class="qnum">Q53</span>
+    <div class="qtext">Aditya-L1 took how many days to reach L1?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) 60</button>
+<button type="button" class="opt-btn" data-correct="true">B) 127</button>
+<button type="button" class="opt-btn" data-correct="false">C) 200</button>
+<button type="button" class="opt-btn" data-correct="false">D) 365</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The spacecraft was launched into a halo orbit around L1, approximately 1.5 million km from Earth, and it gradually traveled using precise trajectory corrections over 127 days to reach its operational orbit for uninterrupted solar observations.</div></div>
+  </div>
+
+  <!-- Q54 -->
+  <div class="qcard"><span class="qnum">Q54</span>
+    <div class="qtext">Which of the following is a main goal of the proposed Shukrayaan-1 mission by ISRO?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Investigate Venus' surface and atmosphere</button>
+<button type="button" class="opt-btn" data-correct="false">B) Observe asteroids near Earth</button>
+<button type="button" class="opt-btn" data-correct="false">C) Explore the rings of Saturn</button>
+<button type="button" class="opt-btn" data-correct="false">D) Study Mars' atmosphere</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Shukrayaan-1 is India's planned mission to Venus, aiming to study its surface composition, atmosphere, and climatic conditions using remote sensing and spectroscopic instruments.</div></div>
+  </div>
+
+  <!-- Q55 -->
+  <div class="qcard"><span class="qnum">Q55</span>
+    <div class="qtext">Which payload on the Mars Orbiter Mission (MOM) captured full-disk colour images of Mars?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) LAM</button>
+<button type="button" class="opt-btn" data-correct="false">B) M3</button>
+<button type="button" class="opt-btn" data-correct="false">C) TMC</button>
+<button type="button" class="opt-btn" data-correct="true">D) MCC</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The payload on MOM that captured full-disk color images of Mars is the Mars Colour Camera (MCC). MCC is an electro-optical imaging sensor by ISRO, operating in the visible spectrum with an RGB Bayer pattern.</div></div>
+  </div>
+
+  <!-- Q56 -->
+  <div class="qcard"><span class="qnum">Q56</span>
+    <div class="qtext">The Chandrayaan-3 lander, Vikram, used which advanced technology for hazard detection and avoidance during landing?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Lander Hazard Detection and Avoidance Camera and Processing Algorithm</button>
+<button type="button" class="opt-btn" data-correct="false">B) Synthetic Aperture Radar (SAR)</button>
+<button type="button" class="opt-btn" data-correct="false">C) Laser Doppler Imaging and AI-assisted navigation</button>
+<button type="button" class="opt-btn" data-correct="false">D) Laser Doppler Velocimeter</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The LHDAC and its processing algorithm enabled Vikram to autonomously scan the lunar surface during descent. It detected hazards, created a real-time hazard map, and guided the lander to a safe landing site.</div></div>
+  </div>
+
+  <!-- Q57 -->
+  <div class="qcard"><span class="qnum">Q57</span>
+    <div class="qtext">What is the significance of the Bharatiya Antariksh Station?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) It will be India's first lunar base</button>
+<button type="button" class="opt-btn" data-correct="true">B) It will be India's space station in orbit</button>
+<button type="button" class="opt-btn" data-correct="false">C) It is a deep-space observatory</button>
+<button type="button" class="opt-btn" data-correct="false">D) It aims to mine asteroids</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">It is planned under India's Space Vision 2047 to serve as a crewed orbital facility, enabling long-duration human space missions, microgravity research, and technology demonstrations.</div></div>
+  </div>
+
+  <!-- Q58 -->
+  <div class="qcard"><span class="qnum">Q58</span>
+    <div class="qtext">What is the primary purpose of the Cartosat series of satellites?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Solar research</button>
+<button type="button" class="opt-btn" data-correct="false">B) Communication</button>
+<button type="button" class="opt-btn" data-correct="true">C) Earth observation and mapping</button>
+<button type="button" class="opt-btn" data-correct="false">D) Astronomical research</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The Cartosat series consists of Earth-observation satellites for high-resolution images of Earth's surface, used for cartography, mapping, urban planning, infrastructure development, land-use planning, and disaster management.</div></div>
+  </div>
+
+  <!-- Q59 -->
+  <div class="qcard"><span class="qnum">Q59</span>
+    <div class="qtext">What was the significance of the Vikram lander in the Chandrayaan-3 mission?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) It successfully orbited Mars</button>
+<button type="button" class="opt-btn" data-correct="true">B) It performed a soft landing near the lunar south pole</button>
+<button type="button" class="opt-btn" data-correct="false">C) It launched Aditya-L1 from lunar orbit</button>
+<button type="button" class="opt-btn" data-correct="false">D) It deployed the Mangalyaan rover</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Vikram achieved a soft landing on the Moon on 23 August 2023 in the southern polar region. India became the first country to successfully land a spacecraft in the lunar south polar region, carrying the Pragyan rover.</div></div>
+  </div>
+
+  <!-- Q60 -->
+  <div class="qcard"><span class="qnum">Q60</span>
+    <div class="qtext">What is the main source of energy used to power satellites?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Solar energy</button>
+<button type="button" class="opt-btn" data-correct="false">B) Wind energy</button>
+<button type="button" class="opt-btn" data-correct="false">C) Hydroelectric energy</button>
+<button type="button" class="opt-btn" data-correct="false">D) Nuclear energy</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Most satellites use solar energy as their primary power source. Solar cells convert sunlight into electrical energy; batteries store energy for periods when the satellite passes through Earth's shadow.</div></div>
+  </div>
+
+  <!-- Q61 -->
+  <div class="qcard"><span class="qnum">Q61</span>
+    <div class="qtext">What is the primary function of the IRNSS system, now known as NavIC?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Deep-space tracking</button>
+<button type="button" class="opt-btn" data-correct="false">B) Weather monitoring</button>
+<button type="button" class="opt-btn" data-correct="true">C) Regional satellite navigation for India</button>
+<button type="button" class="opt-btn" data-correct="false">D) Satellite telephone services</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">NavIC, formerly IRNSS, is India's regional satellite navigation system developed by ISRO, providing positioning, navigation and timing services over India and surrounding regions.</div></div>
+  </div>
+
+  <!-- Q62 -->
+  <div class="qcard"><span class="qnum">Q62</span>
+    <div class="qtext">What is the primary objective of ISRO's Aditya-L1 mission?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) To study Earth's atmosphere</button>
+<button type="button" class="opt-btn" data-correct="false">B) To study the Moon</button>
+<button type="button" class="opt-btn" data-correct="true">C) To study the Sun</button>
+<button type="button" class="opt-btn" data-correct="false">D) To study Mars</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Aditya-L1 is India's first dedicated space-based solar mission, focused on the photosphere, chromosphere, corona, solar flares and CMEs — all of which affect space weather on Earth.</div></div>
+  </div>
+
+  <!-- Q63 -->
+  <div class="qcard"><span class="qnum">Q63</span>
+    <div class="qtext">Which satellite was launched to monitor the Sun in real-time?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Cartosat</button>
+<button type="button" class="opt-btn" data-correct="false">B) RISAT-2</button>
+<button type="button" class="opt-btn" data-correct="true">C) Aditya-L1</button>
+<button type="button" class="opt-btn" data-correct="false">D) GSAT-30</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Aditya-L1 is India's first space-based solar observatory, positioned at the Sun-Earth L1 point for continuous observation of solar phenomena influencing space weather.</div></div>
+  </div>
+
+  <!-- Q64 -->
+  <div class="qcard"><span class="qnum">Q64</span>
+    <div class="qtext">What specific property of cosmic X-rays does the XPoSat mission by ISRO aim to study?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Frequency</button>
+<button type="button" class="opt-btn" data-correct="false">B) Intensity</button>
+<button type="button" class="opt-btn" data-correct="false">C) Spectral shift</button>
+<button type="button" class="opt-btn" data-correct="true">D) Polarization</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">XPoSat's primary objective is to study the polarization of X-rays from astronomical sources, providing information about magnetic fields, geometry, and physical conditions around extreme cosmic objects like neutron stars and black holes.</div></div>
+  </div>
+
+  <!-- Q65 -->
+  <div class="qcard"><span class="qnum">Q65</span>
+    <div class="qtext">What is the principal purpose of satellites such as Cartosat?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Communication</button>
+<button type="button" class="opt-btn" data-correct="false">B) Space exploration</button>
+<button type="button" class="opt-btn" data-correct="true">C) Earth-surface imaging</button>
+<button type="button" class="opt-btn" data-correct="false">D) Studying the Sun</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Cartosat is a series of Indian Earth-observation satellites developed primarily for high-resolution imaging, useful for mapping, urban planning, infrastructure development and resource management.</div></div>
+  </div>
+
+  <!-- Q66 -->
+  <div class="qcard"><span class="qnum">Q66</span>
+    <div class="qtext">Which ISRO facility is responsible for satellite assembly, integration and testing?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) URSC, Bengaluru</button>
+<button type="button" class="opt-btn" data-correct="false">B) ISTRAC, Bengaluru</button>
+<button type="button" class="opt-btn" data-correct="false">C) VSSC, Thiruvananthapuram</button>
+<button type="button" class="opt-btn" data-correct="false">D) SHAR, Sriharikota</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">URSC in Bengaluru is ISRO's principal centre for design, development and integration of satellites. ISTRAC deals with tracking and mission operations, while VSSC focuses on launch-vehicle development.</div></div>
+  </div>
+
+  <!-- Q67 -->
+  <div class="qcard"><span class="qnum">Q67</span>
+    <div class="qtext">What is the main objective of IN-SPACe?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Regulating foreign satellites operating over India</button>
+<button type="button" class="opt-btn" data-correct="false">B) Launching defence satellites</button>
+<button type="button" class="opt-btn" data-correct="true">C) Promoting private participation in the space sector</button>
+<button type="button" class="opt-btn" data-correct="false">D) Training Indian astronauts</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">IN-SPACe stands for Indian National Space Promotion and Authorization Centre. It facilitates and promotes participation of private entities in India's space sector, providing authorisation and infrastructure access.</div></div>
+  </div>
+
+  <!-- Q68 -->
+  <div class="qcard"><span class="qnum">Q68</span> <span class="qsrc">(SSC CPO – 09 Dec Shift 1)</span>
+    <div class="qtext">Fill in the blank: The depth of the buried crater discovered by Chandrayaan-3 is approximately _____.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) 2.2 km</button>
+<button type="button" class="opt-btn" data-correct="false">B) 4.4 km</button>
+<button type="button" class="opt-btn" data-correct="false">C) 6.6 km</button>
+<button type="button" class="opt-btn" data-correct="false">D) 1.1 km</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Chandrayaan-3's instruments discovered evidence of a buried crater with an approximate depth of 4.4 kilometers beneath the lunar surface (using ground-penetrating radar technology, near the South Polar region).<br><b>Correct Answer given in source:</b> A) 2.2 km</div></div>
+  </div>
+
+  <!-- Q69 -->
+  <div class="qcard"><span class="qnum">Q69</span> <span class="qsrc">(SSC CPO – 09 Dec Shift 1)</span>
+    <div class="qtext">What is the main purpose of developing ISRO's MiniSAR (Miniaturized Synthetic Aperture Radar) at X-band?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) To replace the PSLV upper stage with a lighter radar system</button>
+<button type="button" class="opt-btn" data-correct="false">B) To monitor atmospheric pressure changes over remote regions</button>
+<button type="button" class="opt-btn" data-correct="true">C) To provide high-resolution X-band radar imagery using compact airborne systems</button>
+<button type="button" class="opt-btn" data-correct="false">D) To offer real-time video transmission during crewed missions</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">ISRO's MiniSAR at X-band is designed to provide high-resolution radar imagery through compact, lightweight systems suitable for airborne platforms — used for earth observation, disaster monitoring & surveillance (X-band = 8-12 GHz).</div></div>
+  </div>
+
+  <!-- Q70 -->
+  <div class="qcard"><span class="qnum">Q70</span> <span class="qsrc">(SSC CPO - 9 Dec 25 Shift 2)</span>
+    <div class="qtext">At which Lagrange point does the Aditya-L1 spacecraft orbit?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) L1</button>
+<button type="button" class="opt-btn" data-correct="false">B) L2</button>
+<button type="button" class="opt-btn" data-correct="false">C) GEO</button>
+<button type="button" class="opt-btn" data-correct="false">D) SSO</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The Aditya-L1 spacecraft orbits at L1 (Lagrange Point 1) between the Sun and Earth, approximately 1.5 million km from Earth.</div></div>
+  </div>
+
+  <!-- Q71 -->
+  <div class="qcard"><span class="qnum">Q71</span> <span class="qsrc">(SSC CPO - 9 Dec 25 Shift 2)</span>
+    <div class="qtext">What is the primary purpose of ISRO's GSAT-20 (GSAT-N2) satellite?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) It provides navigation services across the Indian subcontinent</button>
+<button type="button" class="opt-btn" data-correct="false">B) It monitors weather patterns over the Indian Ocean</button>
+<button type="button" class="opt-btn" data-correct="true">C) It delivers high-speed broadband services using Ka-band across India</button>
+<button type="button" class="opt-btn" data-correct="false">D) It is designed for Earth observation and remote sensing</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">GSAT-20 (GSAT-N2) is a high-throughput communications satellite designed to provide Ka-band broadband services across India.</div></div>
+  </div>
+
+  <!-- Q72 -->
+  <div class="qcard"><span class="qnum">Q72</span> <span class="qsrc">(SSC CPO - 9 Dec 25 Shift 2)</span>
+    <div class="qtext">Assertion (A): Spark torch igniters are being increasingly incorporated into advanced rocket engine designs for next-generation launch vehicles.<br>Reason (R): They provide superior multi-restart capability and consistent, reliable ignition in extreme conditions, allowing for more complex mission profiles and enabling reusability.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Both A and R are true, and R is the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">B) Both A and R are true, but R is not the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">C) A is true, but R is false</button>
+<button type="button" class="opt-btn" data-correct="false">D) A is false, but R is true</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Spark torch igniters are increasingly used in advanced rockets because they provide reliable multi-restart capability essential for complex missions and reusability.</div></div>
+  </div>
+
+  <!-- Q73 -->
+  <div class="qcard"><span class="qnum">Q73</span> <span class="qsrc">(SSC CPO - 10 Dec 25 Shift 2)</span>
+    <div class="qtext">The TV-D1 test flight validated which system for the Gaganyaan mission?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) RCS</button>
+<button type="button" class="opt-btn" data-correct="false">B) LRA</button>
+<button type="button" class="opt-btn" data-correct="true">C) CES</button>
+<button type="button" class="opt-btn" data-correct="false">D) TBD</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The TV-D1 (Test Vehicle-D1) test flight validated the Crew Escape System (CES) for Gaganyaan. Conducted on October 21, 2023, it successfully tested the emergency abort mechanism to save astronauts during launch emergencies.</div></div>
+  </div>
+
+  <!-- Q74 -->
+  <div class="qcard"><span class="qnum">Q74</span> <span class="qsrc">(SSC CPO - 10 Dec 25 Shift 2)</span>
+    <div class="qtext">What is the primary function of the Solar Wind Ion Spectrometer (SWIS), included in the ASPEX payload on Aditya-L1?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Records UV imagery of solar flare activity</button>
+<button type="button" class="opt-btn" data-correct="false">B) Monitors tremors and vibrations on the solar surface</button>
+<button type="button" class="opt-btn" data-correct="false">C) Observes changes in the Earth's geomagnetic field</button>
+<button type="button" class="opt-btn" data-correct="true">D) Detects directional flow of solar wind protons and helium nuclei</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The SWIS, part of the ASPEX payload on Aditya-L1, detects and analyzes the directional flow of solar wind protons and alpha particles (helium nuclei), measuring their energy, velocity and distribution.</div></div>
+  </div>
+
+  <!-- Q75 -->
+  <div class="qcard"><span class="qnum">Q75</span> <span class="qsrc">(SSC CPO - 11 Dec 25 Shift 1)</span>
+    <div class="qtext">The NISAR satellite mission is primarily related to which type of imaging?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Sample return</button>
+<button type="button" class="opt-btn" data-correct="false">B) Optical imaging</button>
+<button type="button" class="opt-btn" data-correct="true">C) Radar imaging</button>
+<button type="button" class="opt-btn" data-correct="false">D) Spectroscopy</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">NISAR is primarily related to radar imaging. It uses advanced SAR technology with L-band (NASA) and S-band (ISRO) frequencies for all-weather, day-night imaging to monitor Earth's surface changes (earthquakes, volcanoes, landslides, glaciers, vegetation, agriculture). Launch planned 2025, mission duration 3 years.</div></div>
+  </div>
+
+  <!-- Q76 -->
+  <div class="qcard"><span class="qnum">Q76</span> <span class="qsrc">(SSC CPO - 11 Dec 25 Shift 1)</span>
+    <div class="qtext">Statement 1: RLVs are being explored primarily to enhance launch efficiency and reduce the recurring cost of satellite deployment.<br>Statement 2: The development of RLVs increases operational complexity, making them less viable compared to traditional expendable systems.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Only Statement 1 is correct</button>
+<button type="button" class="opt-btn" data-correct="false">B) Only Statement 2 is correct</button>
+<button type="button" class="opt-btn" data-correct="false">C) Both 1 and 2 are correct</button>
+<button type="button" class="opt-btn" data-correct="false">D) Neither 1 nor 2 are correct</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Statement 1 is correct: RLVs enhance launch efficiency and reduce recurring costs through reusability (can cut launch costs 70-90%, e.g. SpaceX Falcon 9, ISRO's RLV-TD). Statement 2 is incorrect: while RLVs add initial complexity, they significantly reduce long-term costs and are increasingly viable.</div></div>
+  </div>
+
+  <!-- Q77 -->
+  <div class="qcard"><span class="qnum">Q77</span> <span class="qsrc">(SSC CPO - 11 Dec 25 Shift 2)</span>
+    <div class="qtext">Which launch vehicle has been approved by the Union Cabinet to support India's Bharatiya Antariksh Station and a crewed Moon landing mission by 2040?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) GSLV Mk III</button>
+<button type="button" class="opt-btn" data-correct="false">B) PSLV-C50</button>
+<button type="button" class="opt-btn" data-correct="true">C) Next Generation Launch Vehicle (NGLV)</button>
+<button type="button" class="opt-btn" data-correct="false">D) Human Rated Launch System (HRLS)</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The Union Cabinet approved NGLV to support India's BAS programme and future crewed Moon landing planned by 2040. NGLV will be a cost-effective, reusable launch system with significantly higher payload capacity than current vehicles.</div></div>
+  </div>
+
+  <!-- Q78 -->
+  <div class="qcard"><span class="qnum">Q78</span> <span class="qsrc">(SSC CPO - 11 Dec 25 Shift 2)</span>
+    <div class="qtext">What was the key purpose of the DS-SAR satellite launched aboard PSLV-C56 on July 30, 2023?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) For TV broadcasting in Southeast Asia</button>
+<button type="button" class="opt-btn" data-correct="true">B) For SAR imaging for Singapore's government and clients</button>
+<button type="button" class="opt-btn" data-correct="false">C) For asteroid exploration beyond Mars</button>
+<button type="button" class="opt-btn" data-correct="false">D) For measuring upper stratospheric gases</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The DS-SAR satellite launched aboard PSLV-C56 was designed to provide SAR imaging services for Singapore's government agencies and commercial clients. Built by Israel's IAI and operated by ST Engineering, it offers all-weather, day-night Earth observation.</div></div>
+  </div>
+
+  <!-- Q79 -->
+  <div class="qcard"><span class="qnum">Q79</span> <span class="qsrc">(SSC CPO - 11 Dec 25 Shift 2)</span>
+    <div class="qtext">Which of the following statements correctly describe the RLV-LEX-02 landing experiment? 1. Pushpak was released from 4.5 km altitude at 4 km distance from runway and performed cross-range corrections before landing. 2. Winged body/flight systems from RLV-LEX-01 were reused without any structural strengthening. 3. The mission validated indigenous navigation, control and guidance systems for autonomous space-return landings.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Only statements 1 and 2 are correct</button>
+<button type="button" class="opt-btn" data-correct="false">B) Only statements 2 and 3 are correct</button>
+<button type="button" class="opt-btn" data-correct="true">C) Only statements 1 and 3 are correct</button>
+<button type="button" class="opt-btn" data-correct="false">D) 1, 2 and 3 all statements are correct</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Statement 1 is correct: Pushpak was released from 4.5 km altitude and performed cross-range corrections before precise runway landing. Statement 3 is correct: validated indigenous navigation, guidance & control tech. Statement 2 is incorrect: significant STRENGTHENING/improvements were made to the reused winged body, not "without any structural strengthening."</div></div>
+  </div>
+
+  <!-- Q80 -->
+  <div class="qcard"><span class="qnum">Q80</span> <span class="qsrc">(SSC CPO - 12 Dec 25 Shift 1)</span>
+    <div class="qtext">What is the benefit of the NavIC system?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Provides global internet services</button>
+<button type="button" class="opt-btn" data-correct="false">B) Detects earthquakes before they occur</button>
+<button type="button" class="opt-btn" data-correct="true">C) Offers regional navigation and positioning services</button>
+<button type="button" class="opt-btn" data-correct="false">D) Enables high-resolution space photography</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">NavIC (Navigation with Indian Constellation), formerly IRNSS, provides regional navigation & positioning covering India + up to 1,500 km beyond borders. 7 satellites (3 geostationary, 4 geosynchronous). Applications: terrestrial/aerial/marine navigation, disaster management, vehicle tracking.</div></div>
+  </div>
+
+  <!-- Q81 -->
+  <div class="qcard"><span class="qnum">Q81</span> <span class="qsrc">(SSC CPO - 12 Dec 25 Shift 1)</span>
+    <div class="qtext">Fill in the blank: RAMBHA-LP onboard Chandrayaan-3 is designed to probe lunar ___.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Plasma</button>
+<button type="button" class="opt-btn" data-correct="false">B) Gravity</button>
+<button type="button" class="opt-btn" data-correct="false">C) Photons</button>
+<button type="button" class="opt-btn" data-correct="false">D) Neutrons</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">RAMBHA-LP (Radio Anatomy of Moon Bound Hypersensitive ionosphere and Atmosphere - Langmuir Probe) onboard Chandrayaan-3 measures the density and temperature of ions and electrons in the lunar plasma environment near the surface.</div></div>
+  </div>
+
+  <!-- Q82 -->
+  <div class="qcard"><span class="qnum">Q82</span> <span class="qsrc">(SSC CPO - 12 Dec 25 Shift 2)</span>
+    <div class="qtext">What is the major benefit of the Indian Data Relay Satellite System (IDRSS)?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) Solar energy from space</button>
+<button type="button" class="opt-btn" data-correct="false">B) Deep space exploration</button>
+<button type="button" class="opt-btn" data-correct="false">C) Internet access in rural areas</button>
+<button type="button" class="opt-btn" data-correct="true">D) Real-time communication with low Earth orbit satellites and astronauts</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">IDRSS provides continuous, real-time communication with Indian LEO satellites and astronauts, eliminating dependency on ground stations. Consists of two geostationary satellites; critical for Gaganyaan; first IDRSS satellite launched 2023; provides 85-90% orbit coverage vs 15-20% from ground stations.</div></div>
+  </div>
+
+  <!-- Q83 -->
+  <div class="qcard"><span class="qnum">Q83</span> <span class="qsrc">(SSC CPO - 12 Dec 25 Shift 2)</span>
+    <div class="qtext">On which date was the second stage (GS2) for GSLV-F16 (launching NISAR) flagged off?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) January 2025</button>
+<button type="button" class="opt-btn" data-correct="false">B) March 2025</button>
+<button type="button" class="opt-btn" data-correct="false">C) April 2025</button>
+<button type="button" class="opt-btn" data-correct="true">D) July 2023</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">The GS2 stage for GSLV-F16 (launching NISAR) was flagged off in July 2023 from Satish Dhawan Space Centre, Sriharikota. NISAR is a joint NASA-ISRO Earth observation mission.</div></div>
+  </div>
+
+  <!-- Q84 -->
+  <div class="qcard"><span class="qnum">Q84</span> <span class="qsrc">(SSC CPO – 10 Dec 25 Shift 1)</span>
+    <div class="qtext">Fill in the blanks: NISAR satellite carries dual-frequency radar bands _____ and _____.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) X Ku</button>
+<button type="button" class="opt-btn" data-correct="false">B) Ka Ku</button>
+<button type="button" class="opt-btn" data-correct="true">C) L S</button>
+<button type="button" class="opt-btn" data-correct="false">D) VHF UHF</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">NISAR carries dual-frequency radar bands: L-band (NASA, 1-2 GHz) and S-band (ISRO, 2-4 GHz). These penetrate vegetation and ground to detect subtle surface changes. Launch planned 2025.</div></div>
+  </div>
+
+  <!-- Q85 -->
+  <div class="qcard"><span class="qnum">Q85</span> <span class="qsrc">(SSC CPO – 10 Dec 25 Shift 1)</span>
+    <div class="qtext">Why has ISRO proposed the development of a third launch pad beyond the existing facilities at Sriharikota?</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="false">A) To serve exclusively as a data relay hub for enhancing satellite telemetry</button>
+<button type="button" class="opt-btn" data-correct="false">B) To accommodate space tourism missions under future commercial programmes</button>
+<button type="button" class="opt-btn" data-correct="false">C) To provide backup support in case of emergency ground failures during launches</button>
+<button type="button" class="opt-btn" data-correct="true">D) To handle increasing launch frequency and capacity for missions involving SSLV, Gaganyaan, and commercial payloads</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">ISRO is developing a third launch pad at Sriharikota to meet growing demand for satellite launches, supporting SSLV, Gaganyaan, and commercial launches. Currently two pads exist (First & Second Launch Pad); third pad will be universal (PSLV, GSLV, SSLV); expected completion 2026-2027.</div></div>
+  </div>
+
+  <!-- Q86 -->
+  <div class="qcard"><span class="qnum">Q86</span> <span class="qsrc">(SSC CPO – 10 Dec 25 Shift 1)</span>
+    <div class="qtext">Assertion (A): Liquid Oxygen–Methane (LOX–Meth) has been chosen as the preferred propellant combination for India's Next-Generation Launch Vehicle (NGLV).<br>Reason (R): LOX–Meth offers advantages such as cleaner combustion for engine reusability, relatively simpler propellant tank designs compared to LOX–Hydrogen, and lower overall operational cost than kerosene due to reduced engine refurbishment.</div>
+    <div class="opts-quiz">
+<button type="button" class="opt-btn" data-correct="true">A) Both A and R are true, and R is the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">B) Both A and R are true, but R is not the correct explanation of A</button>
+<button type="button" class="opt-btn" data-correct="false">C) A is true, but R is false</button>
+<button type="button" class="opt-btn" data-correct="false">D) A is false, but R is true</button>
+</div>
+    <div class="exp-box"><div class="exp-label">📘 Explanation</div><div class="exp-text">Both statements are true and R correctly explains A. LOX-Methane is increasingly adopted worldwide (e.g. SpaceX Raptor, Blue Origin BE-4) for advanced reusable launch vehicles.
+      <ul><li><b>Cleaner Combustion:</b> Methane burns more cleanly than kerosene, reducing carbon buildup — suited to reusable engines</li><li><b>Ease of Handling:</b> LOX-Methane (boiling point -161.5°C) is simpler to handle than LOX-Hydrogen (-253°C)</li><li><b>Operational Cost:</b> Reduces maintenance costs; less complex propellant infrastructure than LOX-Hydrogen</li><li><b>Environmental Benefit:</b> Methane emits fewer greenhouse gases than kerosene</li><li>NGLV is ISRO's successor to PSLV, will use reusable stages, targeted for commercial & defense applications</li></ul></div></div>
+  </div>
+
+</section>
+
+</main>
+
+<button id="toTopBtn" title="Back to top">↑</button>
+
+<footer class="credit">Notes compiled from Siddhi's CA Garud Series — Space Technology (Notes + PYQs) · For personal revision use</footer>
+
+<script>
+  // Tab switching
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  tabBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      tabBtns.forEach(b=>b.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      window.scrollTo({top:0,behavior:'instant'});
+      btn.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+    });
+  });
+
+  // Scroll to top button
+  const toTopBtn = document.getElementById('toTopBtn');
+  window.addEventListener('scroll',()=>{
+    toTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+  toTopBtn.addEventListener('click',()=>{
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // ---- Interactive Quiz Logic ----
+  document.querySelectorAll('.opts-quiz').forEach(group=>{
+    // insert a result message box right before the options
+    const msg = document.createElement('div');
+    msg.className = 'result-msg';
+    msg.textContent = '';
+    group.parentNode.insertBefore(msg, group);
+
+    group.querySelectorAll('.opt-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const qcard = group.closest('.qcard');
+        if(qcard.classList.contains('answered')) return; // already answered
+
+        qcard.classList.add('answered');
+        const isCorrect = btn.dataset.correct === 'true';
+
+        group.querySelectorAll('.opt-btn').forEach(b=>{
+          b.disabled = true;
+          if(b.dataset.correct === 'true'){
+            b.classList.add('reveal-correct');
+          }
+        });
+
+        if(!isCorrect){
+          btn.classList.add('wrong-pick');
+          msg.textContent = '❌ Incorrect — correct answer highlighted below.';
+          msg.classList.add('show','no');
+        } else {
+          msg.textContent = '✅ Correct! Well done.';
+          msg.classList.add('show','ok');
+        }
+
+        // scroll explanation into gentle view
+        const expBox = qcard.querySelector('.exp-box');
+        if(expBox){
+          setTimeout(()=>{
+            expBox.scrollIntoView({behavior:'smooth', block:'nearest'});
+          }, 150);
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
