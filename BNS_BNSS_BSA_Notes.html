@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BNS · BNSS · BSA — Visual Notes</title>
+<style>
+  :root{
+    --bg:#f7f9fc;
+    --card:#ffffff;
+    --border:#e2e8f0;
+    --text:#1e293b;
+    --muted:#64748b;
+    --primary:#1d4ed8;
+    --primary-dark:#1e3a8a;
+    --accent:#0f766e;
+    --warn:#b45309;
+    --danger:#b91c1c;
+    --easy:#15803d;
+    --medium:#b45309;
+    --hard:#b91c1c;
+    --highlight:#fff7cc;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  header.top{
+    background:linear-gradient(135deg,var(--primary-dark),var(--primary));
+    color:#fff;
+    padding:22px 16px 18px;
+    text-align:center;
+  }
+  header.top h1{
+    margin:0 0 4px;
+    font-size:1.5rem;
+    letter-spacing:.5px;
+  }
+  header.top p{
+    margin:0;
+    font-size:.9rem;
+    opacity:.9;
+  }
+  /* Tabs */
+  .tabs-wrap{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    overflow-x:auto;
+    white-space:nowrap;
+    padding:8px 10px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .tabs-wrap::-webkit-scrollbar{height:6px;}
+  .tabs-wrap::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px;}
+  .tab-btn{
+    display:inline-block;
+    padding:8px 16px;
+    margin-right:8px;
+    border-radius:20px;
+    border:1px solid var(--border);
+    background:#f1f5f9;
+    color:var(--text);
+    font-size:.85rem;
+    font-weight:600;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .tab-btn.active{
+    background:var(--primary);
+    color:#fff;
+    border-color:var(--primary);
+  }
+  main{
+    max-width:900px;
+    margin:0 auto;
+    padding:16px 14px 60px;
+  }
+  .panel{display:none;}
+  .panel.active{display:block; animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:16px 18px;
+    margin-bottom:16px;
+    box-shadow:0 1px 3px rgba(0,0,0,.04);
+  }
+  h2.section-title{
+    font-size:1.15rem;
+    color:var(--primary-dark);
+    border-bottom:2px solid var(--primary);
+    padding-bottom:6px;
+    margin-top:0;
+  }
+  h3.sub-title{
+    font-size:1rem;
+    color:var(--accent);
+    margin:18px 0 8px;
+  }
+  ul{padding-left:20px; margin:8px 0;}
+  li{margin-bottom:6px;}
+  .kw{font-weight:700; color:var(--primary-dark);}
+  .box{
+    background:#f8fafc;
+    border-left:4px solid var(--primary);
+    padding:10px 12px;
+    border-radius:6px;
+    margin:10px 0;
+    font-size:.92rem;
+  }
+  .highlight{background:var(--highlight); padding:1px 4px; border-radius:3px;}
+  .tip{color:var(--accent); font-weight:600;}
+  .note-tag{
+    display:inline-block;
+    font-size:.75rem;
+    font-weight:700;
+    padding:2px 8px;
+    border-radius:12px;
+    margin-bottom:6px;
+  }
+  .tag-mnemonic{background:#e0f2fe;color:#075985;}
+  .tag-trick{background:#fef3c7;color:#92400e;}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.85rem;
+    margin:10px 0;
+  }
+  table caption{caption-side:top;font-weight:700;margin-bottom:6px;text-align:left;color:var(--primary-dark);}
+  th,td{
+    border:1px solid var(--border);
+    padding:7px 8px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{background:#eef2ff; color:var(--primary-dark);}
+  tr:nth-child(even) td{background:#fafbfc;}
+  .scroll-x{overflow-x:auto;}
+
+  /* MCQ styles */
+  .q-block{
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:12px 14px;
+    margin-bottom:12px;
+    background:#fdfdfe;
+  }
+  .q-head{display:flex; justify-content:space-between; align-items:flex-start; gap:8px;}
+  .q-num{font-weight:700; color:var(--primary-dark);}
+  .diff{
+    font-size:.72rem;
+    font-weight:700;
+    color:#fff;
+    padding:2px 8px;
+    border-radius:10px;
+    white-space:nowrap;
+  }
+  .diff-easy{background:var(--easy);}
+  .diff-medium{background:var(--medium);}
+  .diff-hard{background:var(--hard);}
+  .options{margin:8px 0; padding-left:0; list-style:none;}
+  .options li{margin-bottom:4px; font-size:.9rem;}
+  .ans-line{font-weight:700; color:var(--danger); margin-top:6px;}
+  details{margin-top:8px;}
+  summary{
+    cursor:pointer;
+    color:var(--primary);
+    font-weight:600;
+    font-size:.85rem;
+  }
+  .explanation{
+    margin-top:6px;
+    font-size:.87rem;
+    background:#f1f5f9;
+    padding:8px 10px;
+    border-radius:6px;
+  }
+  .correct-ans{font-weight:700; color:var(--easy);}
+
+  /* summary box */
+  .summary-box{
+    background:#ecfdf5;
+    border:1px solid #a7f3d0;
+    border-radius:10px;
+    padding:14px 16px;
+  }
+  .summary-box h3{margin-top:0; color:#065f46;}
+
+  /* scroll to top */
+  #toTopBtn{
+    position:fixed;
+    bottom:22px;
+    right:18px;
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    border-radius:50%;
+    width:46px;
+    height:46px;
+    font-size:1.2rem;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 3px 8px rgba(0,0,0,.25);
+    z-index:999;
+  }
+  #toTopBtn.show{display:flex;}
+  .contact{
+    text-align:center;
+    font-size:.8rem;
+    color:var(--muted);
+    margin-top:20px;
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>⚖️ BNS · BNSS · BSA — Visual Notes</h1>
+  <p>Siddhi Prep — GS ASTRA Series | SSC Exams 2026</p>
+</header>
+
+<div class="tabs-wrap" id="tabsWrap">
+  <button class="tab-btn active" data-tab="t1">📘 Overview</button>
+  <button class="tab-btn" data-tab="t2">🩸 BNS – Offences</button>
+  <button class="tab-btn" data-tab="t3">🚓 BNSS – Procedure</button>
+  <button class="tab-btn" data-tab="t4">🔍 BSA – Evidence</button>
+  <button class="tab-btn" data-tab="t5">📑 Sections Table</button>
+  <button class="tab-btn" data-tab="t6">📊 Weightage</button>
+  <button class="tab-btn" data-tab="t7">📝 MCQs (28)</button>
+  <button class="tab-btn" data-tab="t8">✅ Summary</button>
+</div>
+
+<main>
+
+<!-- TAB 1: OVERVIEW -->
+<section class="panel active" id="t1">
+  <div class="card">
+    <h2 class="section-title">📘 Introduction</h2>
+    <div class="box">
+      ✅ On <span class="kw">1 July 2024</span> — new criminal laws <span class="kw">BNS, BNSS, BSA</span> replaced old colonial laws:
+      <ul>
+        <li><span class="kw">IPC</span> (Indian Penal Code) → <span class="kw">BNS</span></li>
+        <li><span class="kw">CrPC</span> (Criminal Procedure Code) → <span class="kw">BNSS</span></li>
+        <li><span class="kw">Indian Evidence Act, 1872</span> → <span class="kw">BSA</span></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-title">🔹 Indian Penal Code (IPC) — Background</h3>
+    <ul>
+      <li>Introduced by <span class="kw">Macaulay in 1860</span></li>
+      <li>1st Law Commission established under <span class="kw">Charter Act 1833</span></li>
+      <li>💡 Earlier: <span class="kw">Codification of Gentoo Laws, 1776</span> (situation before 1860)</li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Core Philosophy of IPC — British Utilitarianism</h3>
+    <ul>
+      <li>Actions right if they promote happiness; wrong if they cause suffering</li>
+      <li>⚠️ Intentions don't matter — only <span class="kw">outcomes</span> matter</li>
+      <li>Impartiality to be maintained while applying laws</li>
+    </ul>
+
+    <h3 class="sub-title">⚠️ Issues in IPC (1860)</h3>
+    <ul>
+      <li>Primary goal = <span class="kw">Punishment</span> (old justice system) vs modern goal = <span class="kw">Reform</span></li>
+      <li>New-age offences not covered: Terrorism, Organised Crime, Mob Lynching, Cyber Crime, Digital offences</li>
+      <li>Crimes against women/children scattered across multiple chapters (unorganised)</li>
+      <li>Courts struck down colonial sections post-independence:
+        <ul>
+          <li>🔹 Sec 377 (homosexuality criminalised) → struck in <span class="kw">Navtej Singh Johar v. UOI</span></li>
+          <li>🔹 Sec 497 (adultery) → struck in <span class="kw">Joseph Shine v. UOI</span></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="box">
+      💡 <b>Why replaced?</b> To overhaul laws, consolidate & reorganise offences, add digital-age crimes, and ensure citizen-friendly justice delivery.
+    </div>
+
+    <h3 class="sub-title">🔹 Components of Overhaul (examples)</h3>
+    <ul>
+      <li>IPC Sec 302 (Culpable homicide → murder) → <span class="kw">BNS Sec 101</span> (verbatim)</li>
+      <li>IPC Sec 375 (Rape) → <span class="kw">BNS Sec 63</span> — now allows digital/electronic evidence recognition</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">📌 Types of Questions Asked (Exam Focus)</h2>
+    <table>
+      <tr><th>Act</th><th>Focus Areas</th></tr>
+      <tr><td><b>BNS</b></td><td>New types of crimes; Crimes against women</td></tr>
+      <tr><td><b>BNSS</b></td><td>Custody procedures; Evidence recording (Panchnama); FIR procedures/portals; Bail provisions; e-FIR; Witness protection; Cyber crime</td></tr>
+      <tr><td><b>BSA</b></td><td>New ways to manage evidence; Digital evidence criterion; Types of evidence; Oral evidence; Secondary evidence</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <span class="note-tag tag-trick">💡 Memory Trick</span>
+    <p>Remember order as <b>"B-N-S → B-N-S-S → B-S-A"</b> = <i>"Bina Nyaya Sahi, Bina Nagarik Suraksha Sahi, Bina Sakshya Adhura"</i> (loose mnemonic for offence→procedure→evidence flow).</p>
+    <p>🔹 <b>Date to remember:</b> <span class="highlight">1 July 2024</span> — all three Acts enforced together.</p>
+  </div>
+</section>
+
+<!-- TAB 2: BNS -->
+<section class="panel" id="t2">
+  <div class="card">
+    <h2 class="section-title">🩸 BNS — Bharatiya Nyaya Sanhita (replaces IPC)</h2>
+
+    <h3 class="sub-title">🔹 The Sedition Debate (old Sec 124A)</h3>
+    <div class="box">
+      Old definition: Words/signs/visible representation bringing hatred/contempt/disaffection against Government → punishable with life imprisonment or up to 3 years + fine.
+    </div>
+    <ul>
+      <li>⚠️ Leaders imprisoned under sedition (historical):
+        <ul>
+          <li>Bal Gangadhar Tilak — 1908 (Kesari newspaper)</li>
+          <li>Gandhi — 1922 Gujarat trials (Young India writings)</li>
+          <li>Maulana Abul Kalam Azad — 1922</li>
+          <li>Jogendra Chandra Bose — 1891</li>
+        </ul>
+      </li>
+      <li>💡 <span class="tip">Trick:</span> "T-G-A-J" → Tilak, Gandhi, Azad, Jogendra (in order 1891→1908→1922→1922)</li>
+      <li>Sedition was misused → <span class="kw">removed</span> in BNS; replaced by <span class="kw">Section 152</span></li>
+    </ul>
+
+    <div class="box">
+      <b>Sec 152 — Acts endangering sovereignty, unity & integrity of India</b><br>
+      Exciting/attempting secession, armed rebellion, subversive activities, separatist feelings, endangering sovereignty/unity/integrity → punishable with <span class="kw">life imprisonment or up to 7 years + fine</span>.
+    </div>
+    <p>⚠️ <b>Criticism:</b> Wording "excites or attempts to excite secession/armed rebellion/subversive activities" still broad enough to suppress dissent.</p>
+
+    <h3 class="sub-title">🔹 Terrorism Defined — Section 113 (new)</h3>
+    <ul>
+      <li>Terrorist act = any act intending to:
+        <ul>
+          <li>Threaten unity, integrity, sovereignty, security or economic security of India, <b>OR</b></li>
+          <li>Intimidate the general public, <b>OR</b></li>
+          <li>Disturb public order</li>
+        </ul>
+      </li>
+      <li>Punishment: <span class="kw">Death penalty or fine ≥ ₹10 Lakh</span> (if act causes death)</li>
+      <li>If death doesn't occur: Imprisonment + fine, <span class="kw">both not less than 5 years / ₹5 Lakh</span></li>
+      <li>⚠️ Officer not below rank of <span class="kw">Superintendent of Police (SP)</span> decides whether to register under Sec 113 (BNS) or invoke <span class="kw">UAPA, 1967</span></li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Mob Lynching, Organised & Petty Organised Crime (New Concepts)</h3>
+    <ul>
+      <li><b>Organised crime:</b> kidnapping, extortion, cyber-crime committed on behalf of a crime syndicate</li>
+      <li><b>Mob Lynching:</b> murder by <span class="kw">5+ persons</span> on grounds of caste, language, personal belief etc. → Punishment: <span class="kw">7 years to life imprisonment or death</span></li>
+      <li><b>Petty Organised Crime (Sec 112):</b> vehicle theft, house/business/cargo theft, snatching & organised pickpocketing, shoplifting/card skimming, ATM thefts, cheating & trick theft
+        <ul><li>Cognizable (no warrant), No bail, Prison 1–7 years</li></ul>
+      </li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Crimes Against Women & Children</h3>
+    <ul>
+      <li>All such crimes now organised into a <span class="kw">single chapter</span></li>
+      <li>Age to classify rape victim as major: <span class="highlight">16 → 18 years</span></li>
+      <li>Sexual intercourse via false promise (marriage/job/fake identity) = <span class="kw">offence</span></li>
+      <li>Free first aid/medical treatment guaranteed to victims at <span class="kw">all hospitals</span></li>
+      <li>Statement of victim (delicate offences) recorded by <span class="kw">woman Magistrate</span>; in her absence, male Magistrate + woman present</li>
+      <li>'Beggary' introduced as a form of exploitation for trafficking — punishable under <span class="kw">Sec 143</span></li>
+      <li>Theft now includes <span class="kw">digital theft</span></li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Community Service (New Punishment)</h3>
+    <ul>
+      <li>For <span class="kw">minor offences</span> only</li>
+      <li>To be ordered by the <span class="kw">court</span></li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Unsound Mind → Mental Illness</h3>
+    <div class="box">
+      BNS replaces 'unsound mind' with 'mental illness' as defined in <span class="kw">Mental Healthcare Act, 2017</span> — a substantial disorder of thinking/orientation/memory that grossly impairs capacity to recognise reality. <br>
+      ⚠️ Excludes mental retardation/incomplete mind development.
+    </div>
+
+    <h3 class="sub-title">🔹 Minimum Age of Criminal Responsibility</h3>
+    <ul>
+      <li>Below <span class="kw">7 years</span> — no offence (retained from IPC)</li>
+      <li>7–12 years — offence <b>only if</b> child lacks maturity to understand nature/consequences</li>
+      <li>⚠️ Higher than several jurisdictions; UN Committee (2007) recommended raising age above 12 years</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TAB 3: BNSS -->
+<section class="panel" id="t3">
+  <div class="card">
+    <h2 class="section-title">🚓 BNSS — Bharatiya Nagarik Suraksha Sanhita (replaces CrPC)</h2>
+    <ul>
+      <li>CrPC: first enacted <span class="kw">1861</span>, replaced in <span class="kw">1974</span> — procedure for investigation, arrest, search & seizure, evidence collection, trials</li>
+      <li><b>Cognizable offence:</b> serious crime, arrest without warrant, FIR mandatory</li>
+      <li><b>Compoundable offence:</b> legal compromise / out-of-court settlement allowed</li>
+      <li>💡 <b>Reason for replacement:</b> improvise investigation with modern tech + speedy justice</li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Key Improvisations</h3>
+    <ul>
+      <li>1️⃣ Forensics in investigation</li>
+      <li>2️⃣ E-Trial — all trials/inquiries/proceedings may be held in <span class="kw">electronic mode</span>; production of electronic devices likely containing digital evidence needs <span class="kw">digital signature</span></li>
+      <li>3️⃣ Detention procedures</li>
+      <li>4️⃣ Bail procedures</li>
+      <li>5️⃣ Timelines for procedures</li>
+      <li>6️⃣ Zero FIR</li>
+      <li>7️⃣ Power to attach properties — movable & immovable</li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Zero FIR — Section 173 BNSS</h3>
+    <div class="box">
+      ✅ For cognizable offences only<br>
+      ➡️ Can be filed at <b>any</b> police station (regardless of jurisdiction)<br>
+      ➡️ FIR copy marked with "<b>0</b>"; Investigating Officer conducts preliminary investigation & forwards to concerned P.S.<br>
+      ➡️ Concerned P.S. re-registers the case
+    </div>
+
+    <h3 class="sub-title">🔹 e-FIR Registration — Step-by-Step</h3>
+    <table>
+      <tr><th>Step</th><th>Detail</th></tr>
+      <tr><td>1. Initiation</td><td>Complainant logs into official police e-FIR portal / sends complaint electronically; entered in e-complaint/e-FIR register</td></tr>
+      <tr><td>2. Verification & Preliminary Enquiry</td><td>Forwarded for verification; officer may do preliminary enquiry within <b>14 days</b></td></tr>
+      <tr><td>3. Registration within 3 Days</td><td>Info sent electronically must be signed within <b>3 days</b> for FIR to be registered</td></tr>
+      <tr><td>4. Assignment</td><td>SHO reviews FIR & assigns to Investigating Officer</td></tr>
+      <tr><td>5. Investigation</td><td>IO conducts investigation per standard procedure</td></tr>
+    </table>
+    <p>🔹 Portal: <span class="kw">Digital Police Portal</span></p>
+
+    <h3 class="sub-title">🔹 CCTNS</h3>
+    <div class="box">
+      <b>Crime and Criminal Tracking Network & Systems (CCTNS)</b> — nationwide project under <span class="kw">Ministry of Home Affairs</span> + <span class="kw">NCRB</span>. Connects police stations & higher offices → centralised database of crime/criminal records. ✅ Used for accessing FIRs digitally.
+    </div>
+
+    <h3 class="sub-title">🔹 Custody & Detention (High-Yield for Exams)</h3>
+    <ul>
+      <li>⚠️ Max <span class="kw">police custody</span> = <span class="highlight">15 days total</span> (even if sought in parts) — must be within initial remand stage</li>
+      <li>Total detention (investigation) cannot exceed:
+        <ul>
+          <li>Ordinary offences (punishment &lt; 10 yrs): <span class="kw">60 days</span> → default bail after</li>
+          <li>Serious offences (punishment ≥ 10 yrs / life / death): <span class="kw">90 days</span> → default bail after</li>
+        </ul>
+      </li>
+      <li>💡 <b>Trick:</b> 15 (custody) is inside 60/90 (total detention) — doesn't extend total time</li>
+      <li>Protects <span class="kw">Article 21</span> — right to personal liberty</li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Search & Seizure — Section 105 BNSS</h3>
+    <div class="box">
+      Every search/seizure must be <span class="kw">audio-video recorded</span>, preferably via mobile phone — includes list of seized items + witnesses' signatures on video. Recording sent promptly to District/Sub-divisional/1st Class Judicial Magistrate. ✅ Ensures transparency & prevents misuse of power.
+    </div>
+
+    <h3 class="sub-title">🔹 Witness Protection — Section 398</h3>
+    <ul>
+      <li>Every state must create a <span class="kw">Witness Protection Scheme</span> (risk-based levels)</li>
+      <li>Allows <span class="kw">video conferencing</span> for statements/court attendance</li>
+      <li>Identity concealment for vulnerable witnesses</li>
+      <li>⚠️ NOT included: anonymous juries, SMS-based statements</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TAB 4: BSA -->
+<section class="panel" id="t4">
+  <div class="card">
+    <h2 class="section-title">🔍 BSA — Bharatiya Sakshya Adhiniyam (replaces Indian Evidence Act, 1872)</h2>
+    <ul>
+      <li>Scope: <span class="kw">all judicial proceedings including court martials</span></li>
+      <li>Key change areas: Digital evidence, Oral evidence, Secondary evidence, Evidence before police officer, Expert advice</li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Digital Evidence</h3>
+    <ul>
+      <li>Emails, server logs, smartphone messages, location data, video files, blockchain records → all considered "<span class="kw">Document</span>" (digital evidence)</li>
+      <li>⚠️ Under old IPC/Evidence Act: electronic record = <span class="kw">secondary evidence</span></li>
+      <li>✅ Under BSA: electronic record = <span class="kw">primary evidence</span></li>
+      <li>Admissible only with a <span class="kw">Technical Certificate</span> (Section 65B)</li>
+    </ul>
+
+    <div class="box">
+      <b>Technical Certificate — 2 Parts:</b>
+      <ul>
+        <li><b>Part A:</b> filled by person producing record — states it was under their lawful possession</li>
+        <li><b>Part B:</b> certified by technical expert</li>
+        <li>Must give <span class="kw">metadata</span> + <span class="kw">digital hash value</span></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-title">🔹 Direct Oral Evidence — Section 55</h3>
+    <ul>
+      <li>Must be <span class="kw">direct</span>, <span class="kw">first-hand</span></li>
+      <li>⚠️ Explicitly excludes <span class="kw">hearsay</span> and <span class="kw">assumptions</span></li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Confessions Before Police Officer — Section 23</h3>
+    <ul>
+      <li>⚠️ Generally <span class="kw">inadmissible</span> in court</li>
+      <li>✅ Exception: admissible if confession leads to <span class="kw">recovery of an artifact</span></li>
+      <li>Only voluntary confessions before a <span class="kw">Magistrate</span> are admissible</li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Expert Opinion</h3>
+    <ul>
+      <li>Forensic analysts, medical officers etc. — opinion is only <span class="kw">advisory & persuasive</span>, not binding</li>
+    </ul>
+
+    <h3 class="sub-title">🔹 Secondary Evidence — Section 60</h3>
+    <ul>
+      <li>Rule: documents ordinarily proved by <span class="kw">primary evidence</span> (original)</li>
+      <li>Secondary evidence (photocopies/scans) admissible only if:
+        <ul>
+          <li>Original lost/destroyed</li>
+          <li>Held by opposite party / beyond court's reach</li>
+          <li>Certified copies of public documents produced</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- TAB 5: SECTIONS TABLE -->
+<section class="panel" id="t5">
+  <div class="card">
+    <h2 class="section-title">📑 High-Yield Sections to Remember</h2>
+    <div class="scroll-x">
+    <table>
+      <tr><th>BNS — Offences</th><th>BNSS — Procedure</th><th>BSA — Evidence</th></tr>
+      <tr><td><b>Sec 63</b> — Rape: definition & circumstances</td><td><b>Sec 35</b> — Arrest: when police may arrest without warrant</td><td><b>Sec 3</b> — Relevant facts: evidence re: facts in issue + legally relevant facts</td></tr>
+      <tr><td><b>Sec 69</b> — Deceitful means: sex via false promise to marry</td><td><b>Sec 173</b> — FIR: info on cognizable offence, basis of registration</td><td><b>Sec 23</b> — Police confession: generally inadmissible</td></tr>
+      <tr><td><b>Sec 70</b> — Gang rape: by 1+ persons acting as group/common intention</td><td><b>Sec 187</b> — Remand: when investigation can't finish in 24 hrs</td><td><b>Sec 26</b> — Statements by unavailable persons (dead/untraceable) incl. dying declaration</td></tr>
+      <tr><td><b>Sec 80</b> — Dowry death</td><td>—</td><td><b>Sec 55</b> — Direct oral evidence must generally be direct</td></tr>
+      <tr><td><b>Sec 85</b> — Cruelty by husband/relatives</td><td><b>Sec 210</b> — Cognizance: when Magistrate takes judicial cognizance</td><td><b>Sec 57</b> — Primary evidence: original doc/evidence</td></tr>
+      <tr><td><b>Sec 101</b> — Murder: when culpable homicide amounts to murder</td><td><b>Sec 356</b> — Trial in absentia (proclaimed offender)</td><td><b>Sec 61</b> — Electronic/digital record recognised as documentary evidence</td></tr>
+      <tr><td>—</td><td><b>Sec 478</b> — Bailable cases</td><td><b>Sec 63</b> — Electronic evidence: admissibility conditions</td></tr>
+      <tr><td><b>Sec 109</b> — Attempt to murder</td><td><b>Sec 480</b> — Non-bailable cases</td><td><b>Sec 104</b> — Burden of proof: general rules</td></tr>
+      <tr><td><b>Sec 111</b> — Organised crime</td><td><b>Sec 482</b> — Anticipatory bail</td><td><b>Sec 118</b> — Dowry-death presumption</td></tr>
+      <tr><td><b>Sec 113</b> — Terrorist act: defines & penalises</td><td><b>Sec 530</b> — Electronic proceedings (trials via electronic mode)</td><td><b>Sec 120</b> — Rape-consent presumption in specified prosecutions</td></tr>
+    </table>
+    </div>
+    <div class="box">💡 <b>Tip:</b> Notice how <b>Sec numbers rarely repeat across Acts</b> — memorise them Act-wise using the three columns above rather than mixing.</div>
+  </div>
+</section>
+
+<!-- TAB 6: Weightage -->
+<section class="panel" id="t6">
+  <div class="card">
+    <h2 class="section-title">📊 Topic Analytics & Weightage</h2>
+    <p><b>Total:</b> 28 questions across 1 subject (Gs)</p>
+    <table>
+      <tr><th>Subject</th><th>Weightage</th></tr>
+      <tr><td>Gs</td><td>28 (100%)</td></tr>
+    </table>
+    <table>
+      <tr><th>Subject / Topic</th><th>Qs</th><th>%</th></tr>
+      <tr><td>Gs → Polity → Miscellaneous</td><td>28</td><td>100%</td></tr>
+    </table>
+    <div class="box">✅ All 28 PYQs fall under <b>Gs → Polity → Miscellaneous (BNS/BNSS/BSA)</b> — high-priority, must-revise topic for SSC 2026.</div>
+  </div>
+</section>
+
+<!-- TAB 7: MCQs -->
+<section class="panel" id="t7">
+  <div class="card">
+    <h2 class="section-title">📝 Most Important PYQs (28 Questions)</h2>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q1.</span><span class="diff diff-easy">Easy</span></div>
+      <p>The BNS explicitly defines & criminalizes 'organized crime' and 'petty organized crime'. Which is an example of <b>petty organized crime</b>?</p>
+      <ul class="options"><li>A) Terrorist Act</li><li>B) Large-scale Drug Trafficking</li><li>C) Chain snatching by a gang</li><li>D) Murder for hire</li></ul>
+      <p class="ans-line">Ans: C</p>
+      <details><summary>View Explanation</summary><div class="explanation">Under <b>Section 112</b> of BNS, chain snatching by a gang falls under petty organised crime — includes snatching by organised group/gang, theft, cheating, unauthorized betting, ticket selling.<br>Correct Answer: <span class="correct-ans">C) Chain snatching by a gang</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q2.</span><span class="diff diff-easy">Easy</span></div>
+      <p>BSA emphasizes use of technology for authenticity of evidence, particularly relevant for:</p>
+      <ul class="options"><li>A) Physical exhibits from crime scenes</li><li>B) Hand-written diaries</li><li>C) Digital and electronic evidence</li><li>D) Oral confessions</li></ul>
+      <p class="ans-line">Ans: C</p>
+      <details><summary>View Explanation</summary><div class="explanation">BSA formally includes digital/electronic evidence, mandates technological authentication (certificates, hash values).<br>Correct Answer: <span class="correct-ans">C) Digital and electronic evidence</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q3.</span><span class="diff diff-hard">Hard</span></div>
+      <p>Under BNSS, max period a person can be held in <b>police custody</b> in total, even if remanded periodically?</p>
+      <ul class="options"><li>A) 30 days</li><li>B) 60 days</li><li>C) 90 days</li><li>D) 15 days</li></ul>
+      <p class="ans-line">Ans: D</p>
+      <details><summary>View Explanation</summary><div class="explanation">Police custody limited to max <b>15 days total</b>, must be sought during initial remand stage. Total detention: 60 days (ordinary offences), 90 days (serious); beyond → default bail.<br>Correct Answer: <span class="correct-ans">D) 15 days</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q4.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Which change has BNSS brought to criminal procedure?</p>
+      <ul class="options"><li>A) Replaced all IPC sections</li><li>B) Video-recorded confessions</li><li>C) Presumption of guilt</li><li>D) Scrapping of all bail rights</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNSS mandates audio-video recording of victim/witness statements & search-seizure operations using mobile phones — strengthens evidence credibility.<br>Correct Answer: <span class="correct-ans">B) Video-recorded confessions</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q5.</span><span class="diff diff-easy">Easy</span></div>
+      <p>BSA aims to align Indian evidence law with advancements in:</p>
+      <ul class="options"><li>A) Forensic science and digital technology</li><li>B) Traditional agricultural practices</li><li>C) Ancient philosophical texts</li><li>D) Oral storytelling traditions</li></ul>
+      <p class="ans-line">Ans: A</p>
+      <details><summary>View Explanation</summary><div class="explanation">BSA recognizes electronic/digital records as valid evidence, aligning with forensic science & tech; elevates digital evidence to primary evidence status.<br>Correct Answer: <span class="correct-ans">A) Forensic science and digital technology</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q6.</span><span class="diff diff-hard">Hard</span></div>
+      <p>Which section of BNSS mandates video-recording of search and seizure operations?</p>
+      <ul class="options"><li>A) Section 50</li><li>B) Section 62</li><li>C) Section 105</li><li>D) Section 176</li></ul>
+      <p class="ans-line">Ans: C</p>
+      <details><summary>View Explanation</summary><div class="explanation">Sec 105 BNSS: every search/seizure recorded via audio/video (mobile phone) incl. list of seized items + witness signatures; sent to District/Sub-divisional/1st Class Judicial Magistrate.<br>Correct Answer: <span class="correct-ans">C) Section 105</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q7.</span><span class="diff diff-easy">Easy</span></div>
+      <p>BNS, 2023 consolidates & amends provisions related to which branch of law?</p>
+      <ul class="options"><li>A) Civil Procedure Law</li><li>B) Criminal Substantive Law</li><li>C) Evidence Law</li><li>D) Contract Law</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNS replaces IPC & updates criminal substantive law — defines crimes, punishments, offender rights; adds terrorism, organised crime; recognises transgender persons.<br>Correct Answer: <span class="correct-ans">B) Criminal Substantive Law</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q8.</span><span class="diff diff-easy">Easy</span></div>
+      <p>BNSS ensures access to FIR through which portal?</p>
+      <ul class="options"><li>A) National Crime Portal</li><li>B) CCTNS</li><li>C) BHAVISHYA</li><li>D) DIGI-FIR</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">Citizens access FIRs digitally via <b>CCTNS</b> (Crime and Criminal Tracking Network & Systems). National Crime Portal = general reporting; BHAVISHYA = pensions; DIGI-FIR isn't an official BNSS platform.<br>Correct Answer: <span class="correct-ans">B) CCTNS</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q9.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Max detention a Magistrate can authorise under BNSS for offences punishable with less than 10 years, before default bail applies?</p>
+      <ul class="options"><li>A) 15 days</li><li>B) 30 days</li><li>C) 60 days</li><li>D) 90 days</li></ul>
+      <p class="ans-line">Ans: C</p>
+      <details><summary>View Explanation</summary><div class="explanation">Max detention for offences &lt;10 yrs = 60 days; if chargesheet not filed within 60 days → default bail. Police custody up to 15 days within this 60-day period, doesn't extend total time.<br>Correct Answer: <span class="correct-ans">C) 60 days</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q10.</span><span class="diff diff-hard">Hard</span></div>
+      <p>Under BNSS, period for default bail in minor offences is capped at?</p>
+      <ul class="options"><li>A) 30 days</li><li>B) 45 days</li><li>C) 60 days</li><li>D) 90 days</li></ul>
+      <p class="ans-line">Ans: C</p>
+      <details><summary>View Explanation</summary><div class="explanation">Offence &lt;10 yrs: investigation must finish in 60 days; ≥10 yrs: 90 days limit. Failure → default bail, protecting Article 21.<br>Correct Answer: <span class="correct-ans">C) 60 days</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q11.</span><span class="diff diff-easy">Easy</span></div>
+      <p>BNS was introduced as part of:</p>
+      <ul class="options"><li>A) Effort to codify personal laws</li><li>B) Effort to modernize & decolonize India's criminal justice system</li><li>C) New taxation policy</li><li>D) A trade agreement</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNS introduced to replace colonial-era laws (IPC, CrPC, Evidence Act) — modernize & decolonize criminal justice, make it citizen-centric.<br>Correct Answer: <span class="correct-ans">B) The effort to modernize and decolonize India's criminal justice system</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q12.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Under BSA, what is required for digital evidence to be presented in court?</p>
+      <ul class="options"><li>A) Must be presented in hard copy form only</li><li>B) Must come from a reliable, government-approved platform</li><li>C) Must be accompanied by a valid digital signature</li><li>D) Must be verified by a government official before submission</li></ul>
+      <p class="ans-line">Ans: C</p>
+      <details><summary>View Explanation</summary><div class="explanation">Digital evidence valid only if properly authenticated — accompanied by certificate confirming production, integrity (device used, control, digital hash values) — acts as digital signature. No hard copy/govt pre-verification required.<br>Correct Answer: <span class="correct-ans">C) It must be accompanied by a valid digital signature</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q13.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Which witness type is formally recognized in BSA, 2023?</p>
+      <ul class="options"><li>A) Political representatives</li><li>B) Character witnesses only</li><li>C) Mythological witnesses</li><li>D) Expert witnesses such as forensic analysts</li></ul>
+      <p class="ans-line">Ans: D</p>
+      <details><summary>View Explanation</summary><div class="explanation">BSA recognises expert, eye, character, hostile, child, accomplice witnesses. No category for political/mythological witnesses.<br>Correct Answer: <span class="correct-ans">D) Expert witnesses such as forensic analysts</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q14.</span><span class="diff diff-easy">Easy</span></div>
+      <p>Which law replaced the Indian Penal Code (IPC), 1860?</p>
+      <ul class="options"><li>A) Uniform Civil Code</li><li>B) Bharatiya Sakshya Adhiniyam</li><li>C) Bharatiya Nyaya Sanhita</li><li>D) Bharatiya Nagarik Suraksha Sanhita</li></ul>
+      <p class="ans-line">Ans: C</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNS replaced IPC, 1860 from <b>1 July 2024</b>. Keeps key provisions but adds new offences, increases punishment for crimes vs women/children, removes colonial rules.<br>Correct Answer: <span class="correct-ans">C) Bharatiya Nyaya Sanhita</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q15.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Which major legal framework does BSA, 2023 seek to align with, in recognizing electronic evidence?</p>
+      <ul class="options"><li>A) Information Technology Act, 2000</li><li>B) Indian Evidence Act, 1872</li><li>C) National Investigation Agency Act, 2008</li><li>D) Protection of Women from Domestic Violence Act, 2005</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BSA replaces & largely retains core framework of Indian Evidence Act, 1872 (confessions, relevancy, burden of proof) with added emphasis on electronic/digital records.<br>Correct Answer: <span class="correct-ans">B) The Indian Evidence Act, 1872</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q16.</span><span class="diff diff-easy">Easy</span></div>
+      <p>Which digital reform included under BNS for courts?</p>
+      <ul class="options"><li>A) No trials allowed</li><li>B) Introduction of virtual court hearings</li><li>C) Online registration for judges</li><li>D) Abolition of police reports</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNS promotes digital integration — recognises electronic records, enables virtual hearings via video conferencing (e-Summon, Nyaya Setu, e-Sakshya initiatives).<br>Correct Answer: <span class="correct-ans">B) Introduction of virtual court hearings</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q17.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Technological advancement explicitly incorporated in BNSS, 2023 for faster justice delivery?</p>
+      <ul class="options"><li>A) Use of blockchain in contracts</li><li>B) Electronic recording of witness testimony</li><li>C) Live broadcast of trials</li><li>D) Use of drones for crime scene inspection</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNSS introduces electronic audio-video recording of witness testimony; facilitates e-FIRs, virtual proceedings, e-summons, mandatory video recording of search/seizure.<br>Correct Answer: <span class="correct-ans">B) Electronic recording of witness testimony</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q18.</span><span class="diff diff-easy">Easy</span></div>
+      <p>BSA, 2023 replaces which previous law?</p>
+      <ul class="options"><li>A) Indian Penal Code</li><li>B) Contract Act, 1872</li><li>C) Consumer Protection Act</li><li>D) Indian Evidence Act, 1872</li></ul>
+      <p class="ans-line">Ans: D</p>
+      <details><summary>View Explanation</summary><div class="explanation">BSA replaced Indian Evidence Act, 1872 — modernizes evidence law, keeps core principles (relevance, burden of proof, confessions), adds electronic records rules; safeguards vulnerable witnesses. Effective 1 July 2024.<br>Correct Answer: <span class="correct-ans">D) Indian Evidence Act, 1872</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q19.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Major reform in BNSS, 2023 w.r.t. FIRs?</p>
+      <ul class="options"><li>A) FIRs must be filed by a judge</li><li>B) E-FIRs permitted for certain offenses</li><li>C) FIRs no longer required for non-cognizable offenses</li><li>D) FIRs can only be filed physically at police stations</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNSS introduces e-FIRs — info on cognizable offence submitted orally or electronically (portal/email); informant's signature must be obtained within 3 days for it to be formally recorded.<br>Correct Answer: <span class="correct-ans">B) E-FIRs are permitted for certain offenses</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q20.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Which change introduced to ensure faster trials under BNSS?</p>
+      <ul class="options"><li>A) Video recording of statements</li><li>B) Ban on legal representation</li><li>C) Removal of judges</li><li>D) Delay in filing chargesheets</li></ul>
+      <p class="ans-line">Ans: A</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNSS integrates electronic data — mandatory audio-video recording of searches, seizures, witness statements to minimize delays & enhance transparency.<br>Correct Answer: <span class="correct-ans">A) Video recording of statements</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q21.</span><span class="diff diff-medium">Medium</span></div>
+      <p><b>Assertion (A):</b> A confession made to a police officer is inadmissible in court.<br><b>Reason (R):</b> Section 23 of BSA retains the principle of voluntariness in confession.</p>
+      <ul class="options"><li>A) Both A and R are true, and R is the correct explanation of A</li><li>B) Both A and R true, but R not correct explanation</li><li>C) A true, R false</li><li>D) A false, R true</li></ul>
+      <p class="ans-line">Ans: A</p>
+      <details><summary>View Explanation</summary><div class="explanation">Both true & R correctly explains A. Sec 23 BSA makes police confessions inadmissible; only voluntary confessions before a Magistrate are admissible — prevents coerced confessions.<br>Correct Answer: <span class="correct-ans">A) Both A and R are true, and R is the correct explanation of A</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q22.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Under BSA, oral evidence must be:</p>
+      <ul class="options"><li>A) Direct and related to what the witness saw or heard</li><li>B) Based on assumptions</li><li>C) Only admissible if in English</li><li>D) Hearsay only</li></ul>
+      <p class="ans-line">Ans: A</p>
+      <details><summary>View Explanation</summary><div class="explanation">Sec 55 BSA: oral evidence must be direct — based on personal knowledge (what witness saw/heard/perceived), not hearsay or assumptions.<br>Correct Answer: <span class="correct-ans">A) Direct and related to what the witness saw or heard</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q23.</span><span class="diff diff-medium">Medium</span></div>
+      <p><b>Assertion (A):</b> BSA recognizes electronic records as primary evidence.<br><b>Reason (R):</b> Section 62 states electronic records are secondary unless accompanied by printed certificate.</p>
+      <ul class="options"><li>A) Both A and R true, R correct explanation</li><li>B) Both A and R true, R not correct explanation</li><li>C) A is true, R is false</li><li>D) A is false, R is true</li></ul>
+      <p class="ans-line">Ans: C</p>
+      <details><summary>View Explanation</summary><div class="explanation">BSA treats electronic records as primary evidence when original/lawful copy produced. Sec 62 only defines primary evidence — doesn't say electronic records are secondary. Certificate requirement is under Sec 65B, not Sec 62.<br>Correct Answer: <span class="correct-ans">C) A is true, R is false</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q24.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Which is a cybercrime related to identity theft under BNS, 2023?</p>
+      <ul class="options"><li>A) Using public Wi-Fi to access online accounts</li><li>B) Stealing personal details to create fake identities and commit fraud</li><li>C) Downloading free music from unofficial websites</li><li>D) Posting harmless pictures on a social media profile</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">Stealing personal data to create fake identities/commit fraud = identity theft, a serious cybercrime — unauthorized use of names/passwords/financial data for illegal gain; BNS covers such cyber frauds.<br>Correct Answer: <span class="correct-ans">B) Stealing personal details to create fake identities and commit fraud</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q25.</span><span class="diff diff-medium">Medium</span></div>
+      <p>In BNSS, what provision strengthens witness protection during trial?</p>
+      <ul class="options"><li>A) Anonymous jury system</li><li>B) Use of video conferencing and identity concealment for vulnerable witnesses</li><li>C) Witnesses can choose to record statements via SMS</li><li>D) Witnesses are not required to attend trial</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">Sec 398 BNSS: every state must create Witness Protection Scheme with risk-based protection levels. Allows video conferencing for statements/attendance + identity concealment. Anonymous juries/SMS statements NOT part of reforms.<br>Correct Answer: <span class="correct-ans">B) Use of video conferencing and identity concealment for vulnerable witnesses</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q26.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Key technological shift in BNSS includes introduction of which system?</p>
+      <ul class="options"><li>A) AI-based trial judgment generator</li><li>B) Drone-based crime scene scanning</li><li>C) Virtual trial-only courts for all offenses</li><li>D) e-FIR, e-summons and e-warrants</li></ul>
+      <p class="ans-line">Ans: D</p>
+      <details><summary>View Explanation</summary><div class="explanation">BNSS digitizes key processes: e-FIRs, e-summons, e-warrants; mandates audio-visual recording of searches/seizures/forensic collection/witness statements; enables digital case records & electronic-mode trials.<br>Correct Answer: <span class="correct-ans">D) e-FIR, e-summons and e-warrants</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q27.</span><span class="diff diff-medium">Medium</span></div>
+      <p>What does BSA, 2023 provide about secondary evidence (photocopies/scanned docs)?</p>
+      <ul class="options"><li>A) Always preferred over primary evidence</li><li>B) Admissible only if original is lost, destroyed, or unavailable for valid reasons</li><li>C) Must be printed in color only</li><li>D) Cannot be used in criminal cases</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BSA upholds rule: documents ordinarily proved by primary evidence (original). Secondary evidence admissible only in exceptional situations under Sec 60 — original lost/destroyed, held by opposite party/beyond court reach, or certified copies of public docs.<br>Correct Answer: <span class="correct-ans">B) It is admissible only if the original is lost, destroyed, or unavailable for valid reasons</span></div></details>
+    </div>
+
+    <div class="q-block">
+      <div class="q-head"><span class="q-num">Q28.</span><span class="diff diff-medium">Medium</span></div>
+      <p>Which is the objective of BSA?</p>
+      <ul class="options"><li>A) Reduce the role of evidence in trials</li><li>B) Ensure admissibility of modern evidence</li><li>C) Make only physical evidence valid</li><li>D) Allow anonymous evidence without checks</li></ul>
+      <p class="ans-line">Ans: B</p>
+      <details><summary>View Explanation</summary><div class="explanation">BSA modernizes evidence law to include electronic/digital records; upholds relevancy, burden of proof, confessions; recognises electronic evidence as primary evidence — ensures fair, efficient trials adapting to tech advances.<br>Correct Answer: <span class="correct-ans">B) Ensure admissibility of modern evidence</span></div></details>
+    </div>
+
+  </div>
+</section>
+
+<!-- TAB 8: SUMMARY -->
+<section class="panel" id="t8">
+  <div class="card summary-box">
+    <h3>✅ Quick Revision Summary</h3>
+    <ul>
+      <li><b>1 July 2024</b> — BNS, BNSS, BSA came into force, replacing IPC, CrPC, Indian Evidence Act (1872) respectively</li>
+      <li><b>BNS</b> = Offences (Sedition removed → Sec 152; Terrorism → Sec 113; Mob Lynching, Organised/Petty Organised crime new; Crimes vs women/children in single chapter; age of rape victim 16→18; Community service for minor offences)</li>
+      <li><b>BNSS</b> = Procedure (Police custody max <b>15 days</b>; total detention 60 days/90 days; Zero FIR Sec 173; e-FIR via Digital Police Portal; CCTNS for FIR access; Search/Seizure video recording Sec 105; Witness Protection Sec 398)</li>
+      <li><b>BSA</b> = Evidence (Digital records = <b>primary evidence</b> now; Technical Certificate Sec 65B (Part A + B); Oral evidence must be direct Sec 55; Police confessions inadmissible Sec 23 (except artifact recovery); Secondary evidence only in exceptions Sec 60; Expert opinion advisory only)</li>
+      <li>⚠️ Common trap: BSA doesn't have a "Section 62=secondary" trick — Sec 62 defines primary evidence; certificate requirement is Sec 65B</li>
+      <li>💡 <b>28/28 PYQs</b> in this set are from <b>Gs → Polity → Miscellaneous</b> — very high exam weightage topic</li>
+    </ul>
+    <p>🔹 <b>Fast recall trick:</b> "15 goes into 60, 60 goes into 90" — custody(15) ⊂ ordinary detention(60) ⊂ serious detention(90)</p>
+  </div>
+</section>
+
+</main>
+
+<button id="toTopBtn" title="Back to top">↑</button>
+
+<p class="contact">📌 Siddhi Prep — GS ASTRA Series | For queries: WhatsApp 9030898917</p>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      tabs.forEach(b=>b.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+
+  const toTopBtn = document.getElementById('toTopBtn');
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 300){ toTopBtn.classList.add('show'); }
+    else { toTopBtn.classList.remove('show'); }
+  });
+  toTopBtn.addEventListener('click', ()=>{
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+</script>
+
+</body>
+</html>
